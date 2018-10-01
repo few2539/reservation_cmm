@@ -1,0 +1,118 @@
+body,
+html {
+  font-family: "Prompt-Light";
+  height: 100%; }
+
+.font-display {
+  font-size: -webkit-calc(5.44118vw + 18.58824px);
+  font-size: calc(5.44118vw + 18.58824px); }
+  @media (max-width: 320px) {
+    .font-display {
+      font-size: 36px; } }
+  @media (min-width: 1680px) {
+    .font-display {
+      font-size: 110px; } }
+
+.font-display2 {
+  font-size: -webkit-calc(4.04412vw + 2.05882px);
+  font-size: calc(4.04412vw + 2.05882px); }
+  @media (max-width: 320px) {
+    .font-display2 {
+      font-size: 15px; } }
+  @media (min-width: 1680px) {
+    .font-display2 {
+      font-size: 70px; } }
+
+.font-title {
+  font-size: -webkit-calc(1.25vw + 11px);
+  font-size: calc(1.25vw + 11px); }
+  @media (max-width: 320px) {
+    .font-title {
+      font-size: 15px; } }
+  @media (min-width: 1680px) {
+    .font-title {
+      font-size: 32px; } }
+
+.font-regular {
+  font-weight: 400; }
+
+.font-smallTitle {
+  font-size: 20px; }
+
+.special-link {
+  -webkit-transform: translate(5%, 0);
+      -ms-transform: translate(5%, 0);
+          transform: translate(5%, 0); }
+
+h1,
+.h1 {
+  font-size: 48px;
+  margin: 0 0;
+  line-height: 1em; }
+
+h2,
+.h2 {
+  font-size: -webkit-calc(1.17647vw + 26.23529px);
+  font-size: calc(1.17647vw + 26.23529px);
+  line-height: 1em;
+  margin: 0 0; }
+  @media (max-width: 320px) {
+    h2,
+    .h2 {
+      font-size: 30px; } }
+  @media (min-width: 1680px) {
+    h2,
+    .h2 {
+      font-size: 46px; } }
+
+h3,
+.h3 {
+  font-size: 32px;
+  line-height: 1em;
+  margin: 0 0; }
+
+h4,
+.h4 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: -webkit-calc(0vw + 16px);
+  font-size: calc(0vw + 16px); }
+  @media (max-width: 320px) {
+    h4,
+    .h4 {
+      font-size: 16px; } }
+  @media (min-width: 1680px) {
+    h4,
+    .h4 {
+      font-size: 16px; } }
+
+h5,
+.h5 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: -webkit-calc(0vw + 16px);
+  font-size: calc(0vw + 16px); }
+  @media (max-width: 320px) {
+    h5,
+    .h5 {
+      font-size: 16px; } }
+  @media (min-width: 1680px) {
+    h5,
+    .h5 {
+      font-size: 16px; } }
+
+p,
+.p {
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 0 0;
+  margin: 0 0; }
+
+a {
+  color: #000; }
+
+a:link {
+  text-decoration: none; }
+
+a:visited {
+  text-decoration: none; }

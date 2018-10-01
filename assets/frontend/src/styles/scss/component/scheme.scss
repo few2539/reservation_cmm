@@ -1,0 +1,382 @@
+@import '../include.scss';
+
+section {
+	&.course-env {
+		.menu-infomation {
+			position: relative;
+			bottom: 0;
+			left: 50%;
+			width: 100%;
+			transform: translate(-50%, 0);
+
+			.container-info {
+				margin-left: percentage(105/1366);
+				margin-right: percentage(105/1366);
+
+				@media (max-width: $sd-plus) {
+					margin-left: 15px;
+					margin-right: 15px;
+				}
+
+				.row-info {
+					.main-menu {
+						width: 100%;
+						display: flex;
+						flex-wrap: wrap;
+
+						span {
+							transform: translate(0, 5px);
+						}
+
+						.plus {
+							background-image: url("../image/plus.png");
+							background-position-x: center;
+							background-position-y: center;
+							background-size: initial;
+							background-repeat-x: no-repeat;
+							background-repeat-y: no-repeat;
+							background-attachment: initial;
+							background-origin: initial;
+							background-clip: initial;
+							background-color: initial;
+							height: 15px;
+							width: 15px;
+							display: inline-block;
+							margin-right: 5px;
+						}
+
+						a {
+							text-transform: uppercase;
+							text-align: center;
+							max-height: 65px;
+							padding-top: 25px;
+							padding-bottom: 25px;
+							flex: 0 0 25%;
+							max-width: 25%;
+							color: $black;
+							background-color: $light-grey;
+							transition: all 0.8s ease;
+
+							@media (max-width: $md) {
+								flex: 0 0 100%;
+								max-width: 100%;
+							}
+
+							.plus {
+								transition-property: tranform;
+								transition: transform 0.8s;
+								transform: translate(0, 2px) rotate(0deg);
+							}
+
+							&:hover {
+								transition: all 0.8s ease;
+								color: $kmutt;
+								background-color: $fog;
+
+								.plus {
+									transform: translate(0, 2px) rotate(315deg);
+									transition: transform 0.8s;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.show-current {
+			padding-top: percentage(10/768);
+			padding-bottom: percentage(10/768);
+
+			.container {
+				margin-left: percentage(105/1366);
+				margin-right: percentage(105/1366);
+
+				.row {
+					.box-text {
+						.page-current {
+							list-style: none;
+							display: flex;
+
+							li {
+								margin-right: percentage(20/1366);
+
+								&.active {
+									color: $soft-grey;
+
+									&::before {
+										content: ">";
+										padding-right: 5px;
+									}
+								}
+
+								a {
+									color: $black;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.interest-topic {
+			* {
+				box-sizing: border-box;
+			}
+
+			.container {
+				margin-left: percentage(105/1366);
+				margin-right: percentage(105/1366);
+
+				.row {
+					display: flex;
+					flex-wrap: wrap;
+
+					.left {
+						flex-basis: 50%;
+						max-width: 50%;
+						padding-right: percentage(50/1366);
+
+						@media(max-width: $md) {
+							flex-basis: 100%;
+							max-width: 100%;
+							padding-right: 0;
+						}
+
+						.box-pic {
+							position: relative;
+							padding-top: 55%;
+
+							img {
+								position: absolute;
+								left: 0;
+								top: 0;
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+							}
+						}
+					}
+
+					.right {
+						flex-basis: 50%;
+						max-width: 50%;
+
+						@media(max-width: $md) {
+							flex-basis: 100%;
+							max-width: 100%;
+							padding-right: 0;
+						}
+
+						.box-text {
+							.topic {
+								.title {
+									.sub-topic {
+										padding-bottom: percentage(20/768);
+										padding-top: percentage(20/768);
+										position: relative;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.detail-course {
+			.container {
+				margin-left: percentage(105/1366);
+				margin-right: percentage(105/1366);
+
+				.row {
+					display: flex;
+					flex-wrap: wrap;
+					margin-top: percentage(40/768);
+					padding-bottom: percentage(40/768);
+
+					@media (max-width: $sd-plus) {
+						flex-direction: row-reverse;
+					}
+
+					.left {
+						flex: 0 0 80%;
+						max-width: 80%;
+						padding-right: percentage(50/1366);
+
+						@media (max-width: $sd-plus) {
+							flex: 0 0 100%;
+							max-width: 100%;
+							order: 0;
+						}
+
+						.box {
+							@media (max-width: $md) {
+								width: 100%;
+							}
+
+							.interest-topic {
+								* {
+									box-sizing: border-box;
+								}
+
+								.container {
+									margin-left: percentage(105/1366);
+									margin-right: percentage(105/1366);
+									margin-top: percentage(30/768);
+
+									@media(max-width: $sd-plus) {
+										margin-left: 15px;
+										margin-right: 15px;
+									}
+
+									.row {
+										display: flex;
+										flex-wrap: wrap;
+
+										.left {
+											flex-basis: 50%;
+											max-width: 50%;
+
+											@media(max-width: $md) {
+												flex-basis: 100%;
+												max-width: 100%;
+											}
+
+											@media(max-width: $sd-plus) {
+												margin-right: 0;
+											}
+
+											.box-pic {
+												position: relative;
+												padding-top: 50%;
+
+												img {
+													position: absolute;
+													left: 0;
+													top: 0;
+													width: 100%;
+													height: 100%;
+													object-fit: cover;
+												}
+											}
+										}
+
+										.right {
+											flex-basis: 50%;
+											max-width: 50%;
+											padding-left: percentage(70/1366);
+
+											@media(max-width: $md) {
+												flex-basis: 100%;
+												max-width: 100%;
+												padding-left: 0;
+											}
+
+											.box-text {
+												padding-top: percentage(20/768);
+
+												.topic {
+													.title {
+														text-align: center;
+
+														.sub-topic {
+															padding-bottom: percentage(20/768);
+															padding-top: percentage(20/768);
+															position: relative;
+
+															@media(max-width: $md) {
+																display: flex;
+																justify-content: center;
+															}
+
+															a {
+																display: flex;
+
+																&::after {
+																	color: $kmutt;
+																	position: absolute;
+																	right: 0;
+																}
+
+																&:hover {
+																	color: $kmutt;
+																}
+
+																.arrow {
+																	background-image: url("../image/arrow-right.png");
+																	background-position-x: center;
+																	background-position-y: center;
+																	background-size: initial;
+																	background-repeat-x: no-repeat;
+																	background-repeat-y: no-repeat;
+																	background-attachment: initial;
+																	background-origin: initial;
+																	background-clip: initial;
+																	background-color: initial;
+																	height: 15px;
+																	width: 15px;
+																	display: inline-block;
+																	// margin-left: percentage(130/1366);
+																	transform: translate(20px, 4.25px);
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+
+							.title {
+								padding-bottom: percentage(20/768);
+							}
+
+							.subscription {
+								&:not(:last-child) {
+									padding-bottom: percentage(50/768);
+								}
+							}
+						}
+					}
+
+					.right {
+						flex: 0 0 20%;
+						max-width: 20%;
+
+						@media (max-width: $sd-plus) {
+							flex: 0 0 100%;
+							max-width: 100%;
+							order: 1;
+							text-align: center;
+						}
+
+						.menu {
+							a {
+								h4 {
+									padding-bottom: 5px;
+									padding-top: 5px;
+									border-bottom: 1px solid $fog;
+									margin-bottom: percentage(40/768);
+
+									&:first-child {
+										border-bottom: 1px solid $fog;
+									}
+								}
+
+								color: $black;
+
+								&:hover {
+									color: $kmutt;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

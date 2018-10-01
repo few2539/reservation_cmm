@@ -1,0 +1,217 @@
+.table > tbody > tr > td.text-middle {
+	vertical-align: middle;
+}
+
+.label-disabled {
+	opacity: 1;
+	cursor: not-allowed;
+}
+
+
+/* Status Label */
+.label-status-a01 {
+	color: #FB8C00;
+	border: 1px solid #FB8C00;
+}
+.label-status-a10 {
+	color: #43A047;
+	border: 1px solid #43A047;
+}
+.label-status-a20 {
+	color: #e53935;
+	border: 1px solid #e53935;
+}
+.label-status-b01 {
+	color: #1E88E5;
+	border: 1px solid #1E88E5;
+}
+.label-status-b10 {
+	color: #FB8C00;
+	border: 1px solid #FB8C00;
+}
+.label-status-b20 {
+	color: #8E24AA;
+	border: 1px solid #8E24AA;
+}
+.label-status-c01 {
+	color: #009688;
+	border: 1px solid #009688;
+}
+.label-status-c10 {
+	color: #303F9F;
+	border: 1px solid #303F9F;
+}
+.label-status-c20 {
+	color: #C2185B;
+	border: 1px solid #C2185B;
+}
+
+/* Button Detail */
+.btn-detail {
+	color: #fff;
+  	background-color: #3F51B5;
+  	border-color: #303F9F;
+}
+.btn-detail:hover {
+  color: #fff;
+  background-color: #283593;
+  border-color: #1A237E;
+}
+.btn-detail:active,
+.btn-detail:focus,
+.btn-detail.focus {
+  color: #fff;
+  background-color: #4527A0;
+  border-color: #311B92;
+}
+
+/* Button Accept */
+.btn-accept {
+	color: #fff;
+  	background-color: #43A047;
+  	border-color: #388E3C;
+}
+.btn-accept:hover {
+  color: #fff;
+  background-color: #2E7D32;
+  border-color: #1B5E20;
+}
+.btn-accept:active,
+.btn-accept:focus,
+.btn-accept.focus {
+  color: #fff;
+  background-color: #00695C;
+  border-color: #004D40;
+}
+
+/* Button Reject */
+.btn-reject {
+	color: #fff;
+  	background-color: #e53935;
+  	border-color: #c62828;
+}
+.btn-reject:hover {
+  color: #fff;
+  background-color: #c62828;
+  border-color: #b71c1c;
+}
+.btn-reject:active,
+.btn-reject:focus,
+.btn-reject.focus {
+  color: #fff;
+  background-color: #AD1457;
+  border-color: #880E4F;
+}
+
+/* Button Requestfinishjob */
+.btn-requestfinishjob {
+	color: #fff;
+  	background-color: #E91E63;
+  	border-color: #C2185B;
+}
+.btn-requestfinishjob:hover {
+  color: #fff;
+  background-color: #AD1457;
+  border-color: #880E4F
+}
+.btn-requestfinishjob:active,
+.btn-requestfinishjob:focus,
+.btn-requestfinishjob.focus {
+  color: #fff;
+  background-color: #c62828;
+  border-color: #b71c1c;
+}
+
+/* Button Update Requestfinishjob */
+.btn-update-requestfinishjob {
+	color: #fff;
+  	background-color: #009688;
+  	border-color: #00796B;
+}
+.btn-update-requestfinishjob:hover {
+  color: #fff;
+  background-color: #00695C;
+  border-color: #004D40;
+}
+.btn-update-requestfinishjob:active,
+.btn-update-requestfinishjob:focus,
+.btn-update-requestfinishjob.focus {
+  color: #fff;
+  background-color: #2E7D32;
+  border-color: #1B5E20;
+}
+
+/* Button Update Requestfinishjob Again */
+.btn-update-requestfinishjob-again {
+  color: #fff;
+    background-color: #FB8C00;
+    border-color: #F57C00;
+}
+.btn-update-requestfinishjob-again:hover {
+  color: #fff;
+  background-color: #FF8F00;
+  border-color: #FF6F00;
+}
+.btn-update-requestfinishjob-again:active,
+.btn-update-requestfinishjob-again:focus,
+.btn-update-requestfinishjob-again.focus {
+  color: #fff;
+  background-color: #EF6C00;
+  border-color: #E65100;
+}
+
+/* Button Summary */
+.btn-summary {
+	color: #fff;
+  	background-color: #FF9800;
+  	border-color: #F57C00;
+}
+.btn-summary:hover {
+  color: #fff;
+  background-color: #EF6C00;
+  border-color: #E65100;
+}
+.btn-summary:active,
+.btn-summary:focus,
+.btn-summary.focus {
+  color: #fff;
+  background-color: #D84315;
+  border-color: #BF360C;
+}
+
+/* Button Summary Finish */
+.btn-summary-finish {
+  color: #fff;
+    background-color: #26A69A;
+    border-color: #009688;
+}
+.btn-summary-finish:hover {
+  color: #fff;
+  background-color: #00897B;
+  border-color: #00796B;
+}
+.btn-summary-finish:active,
+.btn-summary-finish:focus,
+.btn-summary-finish.focus {
+  color: #fff;
+  background-color: #00695C;
+  border-color: #004D40;
+}
+
+/* Detail Zone */
+.list-group-item > .detail-span {
+  float: right;
+}
+
+.detail-span {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 9px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #16a085;
+  border-radius: 4px; 
+}

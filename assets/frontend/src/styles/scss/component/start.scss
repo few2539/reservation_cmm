@@ -1,0 +1,13 @@
+@import '../include.scss';
+
+section {
+	&.welcome-page {
+		
+		.container-page {
+			width: 100%;
+			height: 100vh;
+			background: linear-gradient(-45deg, #FFB88C, #DE6262);
+			.row-welcome {}
+		}  
+	}
+}

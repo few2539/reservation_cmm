@@ -1,0 +1,35 @@
+.table > tbody > tr > td.text-middle {
+	vertical-align: middle;
+}
+
+/* เมนูด้านบน */
+.navbar-inverse{
+	background-color: #1A237E;
+	border-color: #311B92;
+}
+.navbar-inverse .navbar-brand {
+	color: #fff;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	border-color: #9C27B0;
+}
+.top-nav > li > a {
+	color: #fff;
+}
+/* เมนูด้านซ้าย */
+.side-nav {
+	background-color: #3F51B5;
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: #fff;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+	background-color: #283593;
+}
+.side-nav > li > ul > li > a {
+	color: #fff;
+}
+/* ตัวชิ้นงาน */
+body {
+	background-color: #fff;
+}
