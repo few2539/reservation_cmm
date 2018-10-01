@@ -8,7 +8,7 @@
 <link rel="shortcut icon" type="image/jpg" href="<?php echo base_url();?>assets/main/img/favicon_logo.jpg"/>
 
 <!-- Bootstrap core CSS -->
-<!-- <link href="<?php echo base_url();?>assets/main/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+<link href="<?php echo base_url();?>assets/frontend/dist/styles/css/vendor/bootstrap.min.css" rel="stylesheet" type="text/css">
 
 <!-- Custom CSS -->
 <link href="<?php echo base_url();?>assets/frontend/dist/styles/css/main.css" rel="stylesheet">

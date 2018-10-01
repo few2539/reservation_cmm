@@ -529,6 +529,12 @@ html {
   font-family: "Prompt-Light";
   height: 100%; }
 
+a:link, a:visited {
+  text-decoration: none; }
+
+.upper-font {
+  text-transform: uppercase; }
+
 .font-display {
   font-size: -webkit-calc(5.44118vw + 18.58824px);
   font-size: calc(5.44118vw + 18.58824px); }
@@ -643,8 +649,480 @@ a:link {
 a:visited {
   text-decoration: none; }
 
+section.welcome-page a {
+  color: inherit;
+  text-decoration: inherit;
+  /* no underline */ }
+
 section.welcome-page .container-page {
   width: 100%;
   height: 100vh;
   background: -webkit-linear-gradient(135deg, #FFB88C, #DE6262);
   background: linear-gradient(-45deg, #FFB88C, #DE6262); }
+  section.welcome-page .container-page .wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  section.welcome-page .container-page .button {
+    touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: inline-block;
+    border: .2em solid;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0.6;
+    color: #FFF; }
+    section.welcome-page .container-page .button__text {
+      display: block;
+      padding: 1em 2em;
+      text-transform: uppercase;
+      font-weight: bold; }
+      section.welcome-page .container-page .button__text:before {
+        content: attr(title); }
+      section.welcome-page .container-page .button__text--bis {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-transform: translateX(-1em);
+            -ms-transform: translateX(-1em);
+                transform: translateX(-1em);
+        opacity: 0; }
+    section.welcome-page .container-page .button__mask {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      -webkit-transform: translateX(-100%) rotate(45deg);
+          -ms-transform: translateX(-100%) rotate(45deg);
+              transform: translateX(-100%) rotate(45deg);
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+  section.welcome-page .container-page .button:hover {
+    opacity: 1; }
+    section.welcome-page .container-page .button:hover .button__text {
+      -webkit-animation: fx-text .3s ease-out;
+              animation: fx-text .3s ease-out; }
+      section.welcome-page .container-page .button:hover .button__text--bis {
+        -webkit-animation: fx-text-bis .3s ease-out;
+                animation: fx-text-bis .3s ease-out; }
+    section.welcome-page .container-page .button:hover .button__mask {
+      -webkit-animation: fx-mask .3s ease-out;
+              animation: fx-mask .3s ease-out; }
+  section.welcome-page .container-page .button:active {
+    opacity: 1;
+    background: white;
+    color: inherit; }
+
+@-webkit-keyframes fx-mask {
+  0% {
+    -webkit-transform: translateX(-100%) rotate(45deg);
+            transform: translateX(-100%) rotate(45deg); }
+  100% {
+    -webkit-transform: translateX(100%) rotate(45deg);
+            transform: translateX(100%) rotate(45deg); } }
+
+@keyframes fx-mask {
+  0% {
+    -webkit-transform: translateX(-100%) rotate(45deg);
+            transform: translateX(-100%) rotate(45deg); }
+  100% {
+    -webkit-transform: translateX(100%) rotate(45deg);
+            transform: translateX(100%) rotate(45deg); } }
+
+@-webkit-keyframes fx-text {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(1em);
+            transform: translateX(1em);
+    opacity: 0; } }
+
+@keyframes fx-text {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(1em);
+            transform: translateX(1em);
+    opacity: 0; } }
+
+@-webkit-keyframes fx-text-bis {
+  0% {
+    -webkit-transform: translateX(-1em);
+            transform: translateX(-1em);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes fx-text-bis {
+  0% {
+    -webkit-transform: translateX(-1em);
+            transform: translateX(-1em);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+section.login {
+  /**
+   * Bounce to the left side
+   */
+  /**
+   * Bounce to the left side
+   */
+  /**
+   * Show Sign Up form
+   */
+  /**
+   * Page background
+   */
+  /**
+   * Registered and Unregistered user box and text
+   */
+  /**
+   * Login and signup forms
+   */
+  /**
+   * Triggers
+   */
+  /**
+   * Responsive 990px
+   */ }
+  section.login * {
+    box-sizing: border-box;
+    font-family: 'Prompt-Regular'; }
+  section.login button {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer; }
+  section.login input {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    outline: 0; }
+  section.login input[type="submit"] {
+    cursor: pointer; }
+  section.login input::-webkit-input-placeholder {
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #a8a8a8; }
+  section.login input:-ms-input-placeholder {
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #a8a8a8; }
+  section.login input::-ms-input-placeholder {
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #a8a8a8; }
+  section.login input::-moz-placeholder {
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #a8a8a8; }
+  section.login input::placeholder {
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #a8a8a8; }
+
+@-webkit-keyframes bounceLeft {
+  0% {
+    -webkit-transform: translate3d(100%, -50%, 0);
+    transform: translate3d(100%, -50%, 0); }
+  50% {
+    -webkit-transform: translate3d(-30px, -50%, 0);
+    transform: translate3d(-30px, -50%, 0); }
+  100% {
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0); } }
+
+@keyframes bounceLeft {
+  0% {
+    -webkit-transform: translate3d(100%, -50%, 0);
+    transform: translate3d(100%, -50%, 0); }
+  50% {
+    -webkit-transform: translate3d(-30px, -50%, 0);
+    transform: translate3d(-30px, -50%, 0); }
+  100% {
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0); } }
+
+@-webkit-keyframes bounceRight {
+  0% {
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0); }
+  50% {
+    -webkit-transform: translate3d(-webkit-calc(100% + 30px), -50%, 0);
+    transform: translate3d(calc(100% + 30px), -50%, 0); }
+  100% {
+    -webkit-transform: translate3d(100%, -50%, 0);
+    transform: translate3d(100%, -50%, 0); } }
+
+@keyframes bounceRight {
+  0% {
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0); }
+  50% {
+    -webkit-transform: translate3d(-webkit-calc(100% + 30px), -50%, 0);
+    transform: translate3d(calc(100% + 30px), -50%, 0); }
+  100% {
+    -webkit-transform: translate3d(100%, -50%, 0);
+    transform: translate3d(100%, -50%, 0); } }
+
+@-webkit-keyframes showSignUp {
+  100% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes showSignUp {
+  100% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+  section.login .user {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: -webkit-linear-gradient(135deg, #EA5C54 0%, #bb6dec 100%);
+    background: linear-gradient(-45deg, #EA5C54 0%, #bb6dec 100%);
+    background-size: cover; }
+  section.login .user_options-container {
+    position: relative;
+    width: 80%; }
+  section.login .user_options-text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.85);
+    border-radius: 3px; }
+    @media (max-width: 414px) {
+      section.login .user_options-text {
+        display: none; } }
+  section.login .user_options-registered,
+  section.login .user_options-unregistered {
+    width: 50%;
+    padding: 75px 45px;
+    color: #fff;
+    font-weight: 300; }
+  section.login .user_registered-title,
+  section.login .user_unregistered-title {
+    margin-bottom: 15px;
+    line-height: 1em; }
+  section.login .user_unregistered-text,
+  section.login .user_registered-text {
+    font-family: 'Prompt-Light';
+    line-height: 1.4em; }
+  section.login .user_registered-login,
+  section.login .user_unregistered-signup {
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: 0.2rem;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
+  section.login .user_registered-login:hover,
+  section.login .user_unregistered-signup:hover {
+    color: rgba(34, 34, 34, 0.85);
+    background-color: #ccc; }
+  section.login .user_options-forms {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+    min-height: 420px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    -webkit-transform: translate3d(100%, -50%, 0);
+    transform: translate3d(100%, -50%, 0);
+    transition: -webkit-transform 0.4s ease-in-out;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out; }
+    @media (max-width: 414px) {
+      section.login .user_options-forms {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+        left: 0px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out; } }
+  section.login .user_options-forms .user_forms-login {
+    -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out; }
+  section.login .user_options-forms .forms_title {
+    margin-bottom: 45px;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #e8716d;
+    letter-spacing: 0.1rem; }
+  section.login .user_options-forms .forms_field:not(:last-of-type) {
+    margin-bottom: 20px; }
+  section.login .user_options-forms .forms_field-input {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 20px 6px 6px;
+    font-weight: 300;
+    color: gray;
+    letter-spacing: 0.1rem;
+    -webkit-transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out; }
+  section.login .user_options-forms .forms_field-input:focus {
+    border-color: gray; }
+  section.login .user_options-forms .forms_buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 35px; }
+  section.login .user_options-forms .forms_buttons-forgot {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.1rem;
+    color: #ccc;
+    text-decoration: underline;
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out; }
+  section.login .user_options-forms .forms_buttons-forgot:hover {
+    color: #b3b3b3; }
+  section.login .user_options-forms .forms_buttons-action {
+    background-color: #e8716d;
+    border-radius: 3px;
+    padding: 10px 35px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out; }
+  section.login .user_options-forms .forms_buttons-action:hover {
+    background-color: #e14641; }
+  section.login .user_options-forms .user_forms-signup,
+  section.login .user_options-forms .user_forms-login {
+    position: absolute;
+    top: 70px;
+    left: 40px;
+    width: -webkit-calc(100% - 80px);
+    width: calc(100% - 80px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+  section.login .user_options-forms .user_forms-signup {
+    -webkit-transform: translate3d(120px, 0, 0);
+    transform: translate3d(120px, 0, 0); }
+  section.login .user_options-forms .user_forms-signup .forms_buttons {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  section.login .user_options-forms .user_forms-login {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible; }
+  section.login .user_options-forms.bounceLeft {
+    -webkit-animation: bounceLeft 1s forwards;
+    animation: bounceLeft 1s forwards; }
+  section.login .user_options-forms.bounceLeft .user_forms-signup {
+    -webkit-animation: showSignUp 1s forwards;
+    animation: showSignUp 1s forwards; }
+  section.login .user_options-forms.bounceLeft .user_forms-login {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate3d(-120px, 0, 0);
+    transform: translate3d(-120px, 0, 0); }
+  section.login .user_options-forms.bounceRight {
+    -webkit-animation: bounceRight 1s forwards;
+    animation: bounceRight 1s forwards; }
+  @media screen and (max-width: 990px) {
+    section.login .user_options-forms {
+      min-height: 350px; }
+    section.login .user_options-forms .forms_buttons {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    section.login .user_options-forms .user_forms-login .forms_buttons-action {
+      margin-top: 30px; }
+    section.login .user_options-forms .user_forms-signup,
+    section.login .user_options-forms .user_forms-login {
+      top: 40px; }
+    section.login .user_options-registered,
+    section.login .user_options-unregistered {
+      padding: 50px 45px; } }

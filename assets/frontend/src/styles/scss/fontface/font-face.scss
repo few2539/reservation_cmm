@@ -1,4 +1,4 @@
-// @font-face {
+ // @font-face {
 //     font-family: 'Gilda Display';
 //     src: url('../font/GildaDisplay-Regular.woff2') format('woff2'), url('../font/GildaDisplay-Regular.woff') format('woff'), url('../font/GildaDisplay-Regular.ttf') format('ttf');
 //     font-weight: normal;
@@ -12,60 +12,60 @@
 //     font-style: normal;
 // }
 
-
+ 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../font/OpenSans-Regular.eot');
-    src: url('../font/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../font/OpenSans-Regular.woff2') format('woff2'),
-        url('../font/OpenSans-Regular.woff') format('woff'),
-        url('../font/OpenSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Open Sans';
+  src: url('../font/OpenSans-Regular.eot');
+  src: url('../font/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../font/OpenSans-Regular.woff2') format('woff2'),
+      url('../font/OpenSans-Regular.woff') format('woff'),
+      url('../font/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Open Sans bold';
-    src: url('../font/OpenSans-Bold.eot');
-    src: url('../font/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../font/OpenSans-Bold.woff2') format('woff2'),
-        url('../font/OpenSans-Bold.woff') format('woff'),
-        url('../font/OpenSans-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Open Sans bold';
+  src: url('../font/OpenSans-Bold.eot');
+  src: url('../font/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../font/OpenSans-Bold.woff2') format('woff2'),
+      url('../font/OpenSans-Bold.woff') format('woff'),
+      url('../font/OpenSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Quark bold';
-    src: url('../font/Quark-Bold.eot');
-    src: url('../font/Quark-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../font/Quark-Bold.woff2') format('woff2'),
-        url('../font/Quark-Bold.woff') format('woff'),
-        url('../font/Quark-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Quark bold';
+  src: url('../font/Quark-Bold.eot');
+  src: url('../font/Quark-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../font/Quark-Bold.woff2') format('woff2'),
+      url('../font/Quark-Bold.woff') format('woff'),
+      url('../font/Quark-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Quark';
-    src: url('../font/Quark-Light.eot');
-    src: url('../font/Quark-Light.eot?#iefix') format('embedded-opentype'),
-        url('../font/Quark-Light.woff2') format('woff2'),
-        url('../font/Quark-Light.woff') format('woff'),
-        url('../font/Quark-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'Quark';
+  src: url('../font/Quark-Light.eot');
+  src: url('../font/Quark-Light.eot?#iefix') format('embedded-opentype'),
+      url('../font/Quark-Light.woff2') format('woff2'),
+      url('../font/Quark-Light.woff') format('woff'),
+      url('../font/Quark-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'TH Sarabun New';
-    src: url('../font/THSarabunNew.eot');
-    src: url('../font/THSarabunNew.eot?#iefix') format('embedded-opentype'),
-        url('../font/THSarabunNew.woff2') format('woff2'),
-        url('../font/THSarabunNew.woff') format('woff'),
-        url('../font/THSarabunNew.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'TH Sarabun New';
+  src: url('../font/THSarabunNew.eot');
+  src: url('../font/THSarabunNew.eot?#iefix') format('embedded-opentype'),
+      url('../font/THSarabunNew.woff2') format('woff2'),
+      url('../font/THSarabunNew.woff') format('woff'),
+      url('../font/THSarabunNew.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
@@ -74,276 +74,277 @@
 /***********************************************************************************************/
 
 @font-face {
-  font-family: 'Prompt-BoldItalic';
-  src: url('../font/Prompt-BoldItalic.eot');
-  src: url('../font/Prompt-BoldItalic.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-BoldItalic.woff2') format('woff2'),
-      url('../font/Prompt-BoldItalic.woff') format('woff'),
-      url('../font/Prompt-BoldItalic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
+font-family: 'Prompt-BoldItalic';
+src: url('../font/Prompt-BoldItalic.eot');
+src: url('../font/Prompt-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-BoldItalic.woff2') format('woff2'),
+    url('../font/Prompt-BoldItalic.woff') format('woff'),
+    url('../font/Prompt-BoldItalic.ttf') format('truetype');
+font-weight: bold;
+font-style: italic;
 }
 
 @font-face {
-  font-family: 'Prompt-LightItalic';
-  src: url('../font/Prompt-LightItalic.eot');
-  src: url('../font/Prompt-LightItalic.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-LightItalic.woff2') format('woff2'),
-      url('../font/Prompt-LightItalic.woff') format('woff'),
-      url('../font/Prompt-LightItalic.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
+font-family: 'Prompt-LightItalic';
+src: url('../font/Prompt-LightItalic.eot');
+src: url('../font/Prompt-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-LightItalic.woff2') format('woff2'),
+    url('../font/Prompt-LightItalic.woff') format('woff'),
+    url('../font/Prompt-LightItalic.ttf') format('truetype');
+font-weight: 300;
+font-style: italic;
 }
 
 @font-face {
-  font-family: 'Prompt-Regular';
-  src: url('../font/Prompt-Regular.eot');
-  src: url('../font/Prompt-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-Regular.woff2') format('woff2'),
-      url('../font/Prompt-Regular.woff') format('woff'),
-      url('../font/Prompt-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+font-family: 'Prompt-Regular';
+src: url('../font/Prompt-Regular.eot');
+src: url('../font/Prompt-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-Regular.woff2') format('woff2'),
+    url('../font/Prompt-Regular.woff') format('woff'),
+    url('../font/Prompt-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
 }
 
 @font-face {
-  font-family: 'Prompt-Thin';
-  src: url('../font/Prompt-Thin.eot');
-  src: url('../font/Prompt-Thin.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-Thin.woff2') format('woff2'),
-      url('../font/Prompt-Thin.woff') format('woff'),
-      url('../font/Prompt-Thin.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
+font-family: 'Prompt-Thin';
+src: url('../font/Prompt-Thin.eot');
+src: url('../font/Prompt-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-Thin.woff2') format('woff2'),
+    url('../font/Prompt-Thin.woff') format('woff'),
+    url('../font/Prompt-Thin.ttf') format('truetype');
+font-weight: 100;
+font-style: normal;
 }
 
 @font-face {
-  font-family: 'Prompt-ThinItalic';
-  src: url('../font/Prompt-ThinItalic.eot');
-  src: url('../font/Prompt-ThinItalic.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-ThinItalic.woff2') format('woff2'),
-      url('../font/Prompt-ThinItalic.woff') format('woff'),
-      url('../font/Prompt-ThinItalic.ttf') format('truetype');
-  font-weight: 100;
-  font-style: italic;
+font-family: 'Prompt-ThinItalic';
+src: url('../font/Prompt-ThinItalic.eot');
+src: url('../font/Prompt-ThinItalic.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-ThinItalic.woff2') format('woff2'),
+    url('../font/Prompt-ThinItalic.woff') format('woff'),
+    url('../font/Prompt-ThinItalic.ttf') format('truetype');
+font-weight: 100;
+font-style: italic;
 }
 
 @font-face {
-  font-family: 'Prompt-Medium';
-  src: url('../font/Prompt-Medium.eot');
-  src: url('../font/Prompt-Medium.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-Medium.woff2') format('woff2'),
-      url('../font/Prompt-Medium.woff') format('woff'),
-      url('../font/Prompt-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
+font-family: 'Prompt-Medium';
+src: url('../font/Prompt-Medium.eot');
+src: url('../font/Prompt-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-Medium.woff2') format('woff2'),
+    url('../font/Prompt-Medium.woff') format('woff'),
+    url('../font/Prompt-Medium.ttf') format('truetype');
+font-weight: 500;
+font-style: normal;
 }
 
 @font-face {
-  font-family: 'Prompt-Bold';
-  src: url('../font/Prompt-Bold.eot');
-  src: url('../font/Prompt-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-Bold.woff2') format('woff2'),
-      url('../font/Prompt-Bold.woff') format('woff'),
-      url('../font/Prompt-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+font-family: 'Prompt-Bold';
+src: url('../font/Prompt-Bold.eot');
+src: url('../font/Prompt-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-Bold.woff2') format('woff2'),
+    url('../font/Prompt-Bold.woff') format('woff'),
+    url('../font/Prompt-Bold.ttf') format('truetype');
+font-weight: bold;
+font-style: normal;
 }
 
 @font-face {
-  font-family: 'Prompt-Light';
-  src: url('../font/Prompt-Light.eot');
-  src: url('../font/Prompt-Light.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-Light.woff2') format('woff2'),
-      url('../font/Prompt-Light.woff') format('woff'),
-      url('../font/Prompt-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+font-family: 'Prompt-Light';
+src: url('../font/Prompt-Light.eot');
+src: url('../font/Prompt-Light.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-Light.woff2') format('woff2'),
+    url('../font/Prompt-Light.woff') format('woff'),
+    url('../font/Prompt-Light.ttf') format('truetype');
+font-weight: 300;
+font-style: normal;
 }
 
 @font-face {
-  font-family: 'Prompt-ExtraBoldItalic';
-  src: url('../font/Prompt-ExtraBoldItalic.eot');
-  src: url('../font/Prompt-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-ExtraBoldItalic.woff2') format('woff2'),
-      url('../font/Prompt-ExtraBoldItalic.woff') format('woff'),
-      url('../font/Prompt-ExtraBoldItalic.ttf') format('truetype');
-  font-weight: 800;
-  font-style: italic;
+font-family: 'Prompt-ExtraBoldItalic';
+src: url('../font/Prompt-ExtraBoldItalic.eot');
+src: url('../font/Prompt-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-ExtraBoldItalic.woff2') format('woff2'),
+    url('../font/Prompt-ExtraBoldItalic.woff') format('woff'),
+    url('../font/Prompt-ExtraBoldItalic.ttf') format('truetype');
+font-weight: 800;
+font-style: italic;
 }
 
 @font-face {
-  font-family: 'Prompt-Black';
-  src: url('../font/Prompt-Black.eot');
-  src: url('../font/Prompt-Black.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-Black.woff2') format('woff2'),
-      url('../font/Prompt-Black.woff') format('woff'),
-      url('../font/Prompt-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
+font-family: 'Prompt-Black';
+src: url('../font/Prompt-Black.eot');
+src: url('../font/Prompt-Black.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-Black.woff2') format('woff2'),
+    url('../font/Prompt-Black.woff') format('woff'),
+    url('../font/Prompt-Black.ttf') format('truetype');
+font-weight: 900;
+font-style: normal;
 }
 
 @font-face {
-  font-family: 'Prompt-ExtraBold';
-  src: url('../font/Prompt-ExtraBold.eot');
-  src: url('../font/Prompt-ExtraBold.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-ExtraBold.woff2') format('woff2'),
-      url('../font/Prompt-ExtraBold.woff') format('woff'),
-      url('../font/Prompt-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
+font-family: 'Prompt-ExtraBold';
+src: url('../font/Prompt-ExtraBold.eot');
+src: url('../font/Prompt-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-ExtraBold.woff2') format('woff2'),
+    url('../font/Prompt-ExtraBold.woff') format('woff'),
+    url('../font/Prompt-ExtraBold.ttf') format('truetype');
+font-weight: 800;
+font-style: normal;
 }
 
 @font-face {
-  font-family: 'Prompt-MediumItalic';
-  src: url('../font/Prompt-MediumItalic.eot');
-  src: url('../font/Prompt-MediumItalic.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-MediumItalic.woff2') format('woff2'),
-      url('../font/Prompt-MediumItalic.woff') format('woff'),
-      url('../font/Prompt-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
+font-family: 'Prompt-MediumItalic';
+src: url('../font/Prompt-MediumItalic.eot');
+src: url('../font/Prompt-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-MediumItalic.woff2') format('woff2'),
+    url('../font/Prompt-MediumItalic.woff') format('woff'),
+    url('../font/Prompt-MediumItalic.ttf') format('truetype');
+font-weight: 500;
+font-style: italic;
 }
 
 @font-face {
-  font-family: 'Prompt-SemiBold';
-  src: url('../font/Prompt-SemiBold.eot');
-  src: url('../font/Prompt-SemiBold.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-SemiBold.woff2') format('woff2'),
-      url('../font/Prompt-SemiBold.woff') format('woff'),
-      url('../font/Prompt-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
+font-family: 'Prompt-SemiBold';
+src: url('../font/Prompt-SemiBold.eot');
+src: url('../font/Prompt-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-SemiBold.woff2') format('woff2'),
+    url('../font/Prompt-SemiBold.woff') format('woff'),
+    url('../font/Prompt-SemiBold.ttf') format('truetype');
+font-weight: 600;
+font-style: normal;
 }
 
 @font-face {
-  font-family: 'Prompt-ExtraLightItalic';
-  src: url('../font/Prompt-ExtraLightItalic.eot');
-  src: url('../font/Prompt-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-ExtraLightItalic.woff2') format('woff2'),
-      url('../font/Prompt-ExtraLightItalic.woff') format('woff'),
-      url('../font/Prompt-ExtraLightItalic.ttf') format('truetype');
-  font-weight: 200;
-  font-style: italic;
+font-family: 'Prompt-ExtraLightItalic';
+src: url('../font/Prompt-ExtraLightItalic.eot');
+src: url('../font/Prompt-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-ExtraLightItalic.woff2') format('woff2'),
+    url('../font/Prompt-ExtraLightItalic.woff') format('woff'),
+    url('../font/Prompt-ExtraLightItalic.ttf') format('truetype');
+font-weight: 200;
+font-style: italic;
 }
 
 @font-face {
-  font-family: 'Prompt-ExtraLight';
-  src: url('../font/Prompt-ExtraLight.eot');
-  src: url('../font/Prompt-ExtraLight.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-ExtraLight.woff2') format('woff2'),
-      url('../font/Prompt-ExtraLight.woff') format('woff'),
-      url('../font/Prompt-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
+font-family: 'Prompt-ExtraLight';
+src: url('../font/Prompt-ExtraLight.eot');
+src: url('../font/Prompt-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-ExtraLight.woff2') format('woff2'),
+    url('../font/Prompt-ExtraLight.woff') format('woff'),
+    url('../font/Prompt-ExtraLight.ttf') format('truetype');
+font-weight: 200;
+font-style: normal;
 }
 
 @font-face {
-  font-family: 'Prompt-BlackItalic';
-  src: url('../font/Prompt-BlackItalic.eot');
-  src: url('../font/Prompt-BlackItalic.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-BlackItalic.woff2') format('woff2'),
-      url('../font/Prompt-BlackItalic.woff') format('woff'),
-      url('../font/Prompt-BlackItalic.ttf') format('truetype');
-  font-weight: 900;
-  font-style: italic;
+font-family: 'Prompt-BlackItalic';
+src: url('../font/Prompt-BlackItalic.eot');
+src: url('../font/Prompt-BlackItalic.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-BlackItalic.woff2') format('woff2'),
+    url('../font/Prompt-BlackItalic.woff') format('woff'),
+    url('../font/Prompt-BlackItalic.ttf') format('truetype');
+font-weight: 900;
+font-style: italic;
 }
 
 @font-face {
-  font-family: 'Promp-ThinItalict';
-  src: url('../font/Prompt-ThinItalic_1.eot');
-  src: url('../font/Prompt-ThinItalic_1.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-ThinItalic_1.woff2') format('woff2'),
-      url('../font/Prompt-ThinItalic_1.woff') format('woff'),
-      url('../font/Prompt-ThinItalic_1.ttf') format('truetype');
-  font-weight: 100;
-  font-style: italic;
+font-family: 'Promp-ThinItalict';
+src: url('../font/Prompt-ThinItalic_1.eot');
+src: url('../font/Prompt-ThinItalic_1.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-ThinItalic_1.woff2') format('woff2'),
+    url('../font/Prompt-ThinItalic_1.woff') format('woff'),
+    url('../font/Prompt-ThinItalic_1.ttf') format('truetype');
+font-weight: 100;
+font-style: italic;
 }
 
 @font-face {
-  font-family: 'Prompt-SemiBoldItalic';
-  src: url('../font/Prompt-SemiBoldItalic.eot');
-  src: url('../font/Prompt-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-SemiBoldItalic.woff2') format('woff2'),
-      url('../font/Prompt-SemiBoldItalic.woff') format('woff'),
-      url('../font/Prompt-SemiBoldItalic.ttf') format('truetype');
-  font-weight: 600;
-  font-style: italic;
+font-family: 'Prompt-SemiBoldItalic';
+src: url('../font/Prompt-SemiBoldItalic.eot');
+src: url('../font/Prompt-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-SemiBoldItalic.woff2') format('woff2'),
+    url('../font/Prompt-SemiBoldItalic.woff') format('woff'),
+    url('../font/Prompt-SemiBoldItalic.ttf') format('truetype');
+font-weight: 600;
+font-style: italic;
 }
 
 @font-face {
-  font-family: 'Prompt-italic';
-  src: url('../font/Prompt-Italic.eot');
-  src: url('../font/Prompt-Italic.eot?#iefix') format('embedded-opentype'),
-      url('../font/Prompt-Italic.woff2') format('woff2'),
-      url('../font/Prompt-Italic.woff') format('woff'),
-      url('../font/Prompt-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+font-family: 'Prompt-italic';
+src: url('../font/Prompt-Italic.eot');
+src: url('../font/Prompt-Italic.eot?#iefix') format('embedded-opentype'),
+    url('../font/Prompt-Italic.woff2') format('woff2'),
+    url('../font/Prompt-Italic.woff') format('woff'),
+    url('../font/Prompt-Italic.ttf') format('truetype');
+font-weight: normal;
+font-style: italic;
 }
 
 
 
 //****************************************ICON***********************************************/
 
+ 
 @font-face {
-    font-family: 'icomoon';
-    src:  url('../font/icomoon.eot?g2henx');
-    src:  url('../font/icomoon.eot?g2henx#iefix') format('embedded-opentype'),
-      url('../font/icomoon.ttf?g2henx') format('truetype'),
-      url('../font/icomoon.woff?g2henx') format('woff'),
-      url('../font/icomoon.svg?g2henx#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change ../font */
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-facebook:before {
-    content: "\e900";
-    color: #3b5998;
-  }
-  .icon-plex:before {
-    content: "\e902";
-    color: #e5a00d;
-  }
-  .icon-plex1::after {
-    content: "\e902";
-    color: #FA4616;
-    position: absolute;
-    right: 0;
-    @media only screen and (max-width: 767px){   
-      display: none;
-    
-    }
-  }
+  font-family: 'icomoon';
+  src:  url('../font/icomoon.eot?g2henx');
+  src:  url('../font/icomoon.eot?g2henx#iefix') format('embedded-opentype'),
+    url('../font/icomoon.ttf?g2henx') format('truetype'),
+    url('../font/icomoon.woff?g2henx') format('woff'),
+    url('../font/icomoon.svg?g2henx#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  .icon-youtube:before {
-    content: "\e901";
-    color: #f00;
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change ../font */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\e900";
+  color: #3b5998;
+}
+.icon-plex:before {
+  content: "\e902";
+  color: #e5a00d;
+}
+.icon-plex1::after {
+  content: "\e902";
+  color: #FA4616;
+  position: absolute;
+  right: 0;
+  @media only screen and (max-width: 767px){   
+    display: none;
+  
   }
-  .icon-search:before {
-    content: "\e986";
-  }
-  .icon-menu:before {
-    content: "\e9bd";
-  }
-  .icon-facebook2:before {
-    content: "\ea91";
-  }
-  .icon-youtube2:before {
-    content: "\ea9e";
-  }
+}
+
+.icon-youtube:before {
+  content: "\e901";
+  color: #f00;
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-youtube2:before {
+  content: "\ea9e";
+}

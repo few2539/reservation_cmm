@@ -65,8 +65,22 @@ $test2 =[
 
 	<section class="welcome-page">
 		<div class="container-page">
-			<div class="row">
-				ff
+			<div class="wrapper">
+
+				<div class="button">
+					<span class="button__mask"></span>
+					<span class="button__text">.:: LOGIN ::.</span>
+					<a href="https://www.google.co.th/"> <span class="button__text button__text--bis">.:: LOGIN ::.</span><a />
+				</div>
+
+				<br>
+
+				<div class="button">
+					<span class="button__mask"></span>
+					<span class="button__text">RESERVATION</span>
+					<span class="button__text button__text--bis">RESERVATION</span>
+				</div>
+
 			</div>
 		</div>
 

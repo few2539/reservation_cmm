@@ -9,7 +9,19 @@ html {
 	height: 100%;
 }
 
+a:link, a:visited {
+ 
+    text-decoration: none;
+   
+}
+
+
+
 //over size
+.upper-font{
+	text-transform: uppercase;
+}
+
 .font-display {
 	@include fp(font-size, 36, 110);
 	// font-size: 110px;

@@ -3,6 +3,12 @@ html {
   font-family: "Prompt-Light";
   height: 100%; }
 
+a:link, a:visited {
+  text-decoration: none; }
+
+.upper-font {
+  text-transform: uppercase; }
+
 .font-display {
   font-size: -webkit-calc(5.44118vw + 18.58824px);
   font-size: calc(5.44118vw + 18.58824px); }
