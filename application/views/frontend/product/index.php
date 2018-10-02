@@ -84,7 +84,7 @@ $product = [
 ],
 
 [
-    'groups' => 'flash',
+    'groups' =>'["flash"]',
     'title' =>'flash1',
     'product_type'=> 'flash',
     'img' => 'https://images.pexels.com/photos/1413906/pexels-photo-1413906.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -92,7 +92,7 @@ $product = [
     'detail' => 'Lorem ipsum, dolor sit amet consectetur'
 ],
 [
-    'groups' => 'tripod',
+    'groups' => '["tripod"]',
     'title' =>'tripod1',
     'product_type'=> 'tripod',
     'img' => 'https://images.pexels.com/photos/289796/pexels-photo-289796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -101,7 +101,7 @@ $product = [
 ],
 
 [
-    'groups' => 'light_set',
+    'groups' => '["light_set"]',
     'title' =>'light_set1',
     'product_type'=> 'light_set',
     'img' => 'https://images.pexels.com/photos/134469/pexels-photo-134469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -110,7 +110,7 @@ $product = [
 ],
 
 [
-    'groups' => 'accessary',
+    'groups' => '["accessary"]',
     'title' =>'accessary1',
     'product_type'=> 'accessary',
     'img' => 'https://images.pexels.com/photos/821750/pexels-photo-821750.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -119,7 +119,7 @@ $product = [
 ],
 
 [
-    'groups' => 'accessary',
+    'groups' =>'["accessary"]',
     'title' =>'accessary1',
     'product_type'=> 'accessary',
     'img' => 'http://www.ec-mall.com/wp-content/uploads/2017/10/Phottix-Strato-II-Multi-5-in-1-Trigger-Set_1.jpg',
@@ -127,7 +127,7 @@ $product = [
     'detail' => 'Lorem ipsum, dolor sit amet consectetur'
 ],
 [
-    'groups' => 'computer',
+    'groups' => '["computer"]',
     'title' =>'computer1',
     'product_type'=> 'computer',
     'img' => 'https://images.pexels.com/photos/877695/pexels-photo-877695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -135,7 +135,7 @@ $product = [
     'detail' => 'Lorem ipsum, dolor sit amet consectetur'
 ],
 [
-    'groups' => 'other',
+    'groups' =>'["other"]',
     'title' =>'background-paper1',
     'product_type'=> 'other',
     'img' => 'https://www.freestylephoto.biz/static/images/product/921253/lg/921253_1.jpg',
@@ -179,14 +179,18 @@ $product = [
 		<button id='btn-camera'>camera</button>
 		<button id='btn-mic'>mic</button>
 		<button id='btn-lens'>lens</button>
-
-
-		<div class="wrap my-shuffle-container ">
-			<div class="container-product picture-item">
+		<button id='btn-flash'>flash</button>
+		<button id='btn-tripod'>tripod</button>
+		<button id='btn-light_set'>light_set</button>
+		<button id='btn-accessary'>accessary</button>
+		<button id='btn-computer'>computer</button>
+		<button id='btn-other'>other</button>
+		<div class="wrap">
+			<div class="container-product my-shuffle-container">
 				<?php foreach($product as $count):?>
-				<div class="item" data-groups=<?=$count['groups'];?>>
+				<div class="item picture-item" data-groups=<?=$count['groups'];?>>
 					<div class="box">
-						<div class="thumb ">
+						<div class="thumb">
 							<img src=<?=$count["img"];?> alt="" data-title=
 							<?=$count["title"];?>>
 
@@ -211,8 +215,8 @@ $product = [
 					</div>
 				</div>
 				<?php endforeach ?>
-            </div>
-            <div class="col-1@sm my-sizer-element"></div>
+			</div>
+			<div class="col-1@sm my-sizer-element"></div>
 		</div>
 
 
@@ -224,6 +228,73 @@ $product = [
 
 
 <script>
+	// window.env_shuffle = {
+
+
+	// 	init: function () {
+	// 		window.env_shuffle.onReady();
+
+
+	// 	},
+
+
+	// 	initSlick: function () {
+	// 		var Shuffle = window.Shuffle;
+	// 		var element = document.querySelector('.my-shuffle-container');
+	// 		var sizer = element.querySelector('.my-sizer-element');
+
+	// 		var shuffleInstance = new Shuffle(element, {
+	// 			itemSelector: '.picture-item',
+	// 			sizer: sizer // could also be a selector: '.my-sizer-element'
+	//         });
+
+	// 		$("#all").on("click", function () {
+	//             shuffleInstance.filter();
+	//             console.log( shuffleInstance.filter);
+	// 		});
+	// 		$("#btn-camera").on("click", function () {
+	//             shuffleInstance.filter('camera');
+	//             console.log( shuffleInstance.filter);
+	// 		});
+	// 		$("#btn-mic").on("click", function () {
+	// 			shuffleInstance.filter('mic');
+	// 		});
+	// 		$("#btn-lens").on("click", function () {
+	// 			shuffleInstance.filter('lens');
+	// 		});
+
+
+	// 	},
+	// 	onReady: function () {
+	// 		window.env_shuffle.initSlick();
+	// 	}
+	// }
+
+	// $(window.env_shuffle).ready(env_shuffle.init);
+
+	Shuffle.options = {
+		buffer: 0, // Useful for percentage based heights when they might not always be exactly the same (in pixels).
+		columnThreshold: 0.01, // Reading the width of elements isn't precise enough and can cause columns to jump between values.
+		columnWidth: 0, // A static number or function that returns a number which tells the plugin how wide the columns are (in pixels).
+		delimiter: null, // If your group is not json, and is comma delimeted, you could set delimiter to ','.
+		easing: 'cubic-bezier(0.4, 0.0, 0.2, 1)', // CSS easing function to use.
+		filterMode: Shuffle.FilterMode.ANY, // When using an array with filter(), the element passes the test if any of its groups are in the array. With "all", the element only passes if all groups are in the array.
+		group: Shuffle.ALL_ITEMS, // Initial filter group.
+		gutterWidth: 0, // A static number or function that tells the plugin how wide the gutters between columns are (in pixels).
+		initialSort: null, // Shuffle can be initialized with a sort object. It is the same object given to the sort method.
+		isCentered: false, // Attempt to center grid items in each row.
+		itemSelector: '*', // e.g. '.picture-item'.
+		roundTransforms: true, // Whether to round pixel values used in translate(x, y). This usually avoids blurriness.
+		sizer: null, // Element or selector string. Use an element to determine the size of columns and gutters.
+		speed: 250, // Transition/animation speed (milliseconds).
+		staggerAmount: 15, // Transition delay offset for each item in milliseconds.
+		staggerAmountMax: 150, // Maximum stagger delay in milliseconds.
+
+		throttleTime: 300, // How often shuffle can be called on resize (in milliseconds).
+		useTransforms: true, // Whether to use transforms or absolute positioning.
+	};
+
+
 	var Shuffle = window.Shuffle;
 	var element = document.querySelector('.my-shuffle-container');
 	var sizer = element.querySelector('.my-sizer-element');
@@ -232,18 +303,41 @@ $product = [
 		itemSelector: '.picture-item',
 		sizer: sizer // could also be a selector: '.my-sizer-element'
 	});
-	// shuffleInstance.filter('animal');
+
+
+
 	$("#all").on("click", function () {
 		shuffleInstance.filter();
 	});
 	$("#btn-camera").on("click", function () {
-		shuffleInstance.filter('camera');
+		shuffleInstance.filter("camera");
+
 	});
 	$("#btn-mic").on("click", function () {
-		shuffleInstance.filter('mic');
+		shuffleInstance.filter("mic");
 	});
 	$("#btn-lens").on("click", function () {
-		shuffleInstance.filter('lens');
+		shuffleInstance.filter("lens");
+	});
+	$("#btn-flash").on("click", function () {
+		shuffleInstance.filter("flash");
+	});
+	$("#btn-tripod").on("click", function () {
+		shuffleInstance.filter("tripod");
+	});
+	$("#btn-light_set").on("click", function () {
+		shuffleInstance.filter("light_set");
+	});
+
+	$("#btn-accessary").on("click", function () {
+		shuffleInstance.filter("accessary");
+	});
+	$("#btn-computer").on("click", function () {
+		shuffleInstance.filter("computer");
+	});
+
+	$("#btn-other").on("click", function () {
+		shuffleInstance.filter("other");
 	});
 
 </script>
