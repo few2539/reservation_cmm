@@ -1121,3 +1121,41 @@ section.login {
     section.login .user_options-registered,
     section.login .user_options-unregistered {
       padding: 50px 45px; } }
+
+section.product {
+  margin-left: 7.68668%;
+  margin-right: 7.68668%; }
+  section.product .wrap {
+    width: 100%;
+    overflow: hidden; }
+    section.product .wrap .container-product {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      margin: 0 -5px; }
+      section.product .wrap .container-product .item {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 33.33333333333333%;
+            -ms-flex: 0 0 33.33333333333333%;
+                flex: 0 0 33.33333333333333%;
+        max-width: 33.33333333333333%;
+        padding: 0 5px;
+        margin-bottom: 10px; }
+        section.product .wrap .container-product .item .box {
+          display: block;
+          width: 100%; }
+          section.product .wrap .container-product .item .box .thumb {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; }
+            section.product .wrap .container-product .item .box .thumb img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover; }
