@@ -174,17 +174,21 @@ $product = [
 			<h1>Welcome to reservation system</h1>
 		</div>
 
+		<div class="button-product">
+			<button type="button" id='all'class=" btn btn-warning">All</button>
+			<button id='btn-camera' class="btn btn-primary">camera</button>
+			<button id='btn-mic'class="btn btn-primary">mic</button>
+			<button id='btn-lens'class="btn btn-primary">lens</button>
+			<button id='btn-flash'class="btn btn-primary">flash</button>
+			<button id='btn-tripod'class="btn btn-primary">tripod</button>
+			<button id='btn-light_set'class="btn btn-primary">light_set</button>
+			<button id='btn-accessary'class="btn btn-primary">accessary</button>
+			<button id='btn-computer'class="btn btn-primary">computer</button>
+			<button id='btn-other'class="btn btn-primary">other</button>
+			
+		</div>
 
-		<button id='all'>All</button>
-		<button id='btn-camera'>camera</button>
-		<button id='btn-mic'>mic</button>
-		<button id='btn-lens'>lens</button>
-		<button id='btn-flash'>flash</button>
-		<button id='btn-tripod'>tripod</button>
-		<button id='btn-light_set'>light_set</button>
-		<button id='btn-accessary'>accessary</button>
-		<button id='btn-computer'>computer</button>
-		<button id='btn-other'>other</button>
+
 		<div class="wrap">
 			<div class="container-product my-shuffle-container">
 				<?php foreach($product as $count):?>

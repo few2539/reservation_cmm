@@ -248,6 +248,7 @@ section {
 			// transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 
 			@media (max-width: $sd-plus) {
+			
 				width: 100%;
 				position: absolute;
 				top: 50%;
@@ -303,7 +304,7 @@ section {
 		}
 
 		.user_options-forms .forms_buttons-forgot {
-			font-family: "Montserrat", sans-serif;
+			
 			letter-spacing: 0.1rem;
 			color: #ccc;
 			text-decoration: underline;

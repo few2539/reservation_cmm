@@ -4,15 +4,30 @@ section {
 	&.product {
 		margin-left: percentage(105/1366);
 		margin-right: percentage(105/1366);
-
+		.text-welcome{
+			margin-bottom: 15px;
+		}
+		.button-product{
+			margin-bottom: 15px;
+		}
 		.wrap {
 			width: 100%;
 			overflow: hidden;
 
 			.container-product {
 				display: flex;
-				flex-wrap: wrap;
+
 				margin: 0 -5px;
+
+				@media(max-width: $lg) {
+					flex: 0 0 100%;
+					flex-wrap: wrap;
+				}
+
+				@media(max-width: $md-laptop) {
+					flex: 0 0 100%;
+					flex-wrap: wrap;
+				}
 
 				.item {
 					flex: 0 0 33.33333333333333%;
@@ -20,10 +35,21 @@ section {
 					padding: 0 5px;
 					margin-bottom: 10px;
 
+					flex-wrap: flex;
+
+					@media(max-width: $lg) {
+						width: 20%;
+					}
+
+					@media(max-width: $md-laptop) {
+						width: 33.33333333333333%;
+						width: 25%;
+					}
+
 					.box {
 						display: block;
 						width: 100%;
-					
+
 
 						.thumb {
 							position: relative;

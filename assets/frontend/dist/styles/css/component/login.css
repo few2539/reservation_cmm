@@ -247,7 +247,6 @@ section.login {
             align-items: center;
     margin-top: 35px; }
   section.login .user_options-forms .forms_buttons-forgot {
-    font-family: "Montserrat", sans-serif;
     letter-spacing: 0.1rem;
     color: #ccc;
     text-decoration: underline;

@@ -1044,7 +1044,6 @@ section.login {
             align-items: center;
     margin-top: 35px; }
   section.login .user_options-forms .forms_buttons-forgot {
-    font-family: "Montserrat", sans-serif;
     letter-spacing: 0.1rem;
     color: #ccc;
     text-decoration: underline;
@@ -1125,6 +1124,10 @@ section.login {
 section.product {
   margin-left: 7.68668%;
   margin-right: 7.68668%; }
+  section.product .text-welcome {
+    margin-bottom: 15px; }
+  section.product .button-product {
+    margin-bottom: 15px; }
   section.product .wrap {
     width: 100%;
     overflow: hidden; }
@@ -1133,10 +1136,25 @@ section.product {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
       margin: 0 -5px; }
+      @media (max-width: 1920px) {
+        section.product .wrap .container-product {
+          -webkit-box-flex: 0;
+          -webkit-flex: 0 0 100%;
+              -ms-flex: 0 0 100%;
+                  flex: 0 0 100%;
+          -webkit-flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap; } }
+      @media (max-width: 1366px) {
+        section.product .wrap .container-product {
+          -webkit-box-flex: 0;
+          -webkit-flex: 0 0 100%;
+              -ms-flex: 0 0 100%;
+                  flex: 0 0 100%;
+          -webkit-flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap; } }
       section.product .wrap .container-product .item {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 33.33333333333333%;
@@ -1144,7 +1162,17 @@ section.product {
                 flex: 0 0 33.33333333333333%;
         max-width: 33.33333333333333%;
         padding: 0 5px;
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        -webkit-flex-wrap: flex;
+            -ms-flex-wrap: flex;
+                flex-wrap: flex; }
+        @media (max-width: 1920px) {
+          section.product .wrap .container-product .item {
+            width: 20%; } }
+        @media (max-width: 1366px) {
+          section.product .wrap .container-product .item {
+            width: 33.33333333333333%;
+            width: 25%; } }
         section.product .wrap .container-product .item .box {
           display: block;
           width: 100%; }
