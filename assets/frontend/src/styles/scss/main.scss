@@ -1,14 +1,15 @@
  //vendor
 
-@import 'vendor/normalize';
-@import 'vendor/slick.css';
-//set default on website     
-;
-@import 'fontface/font-face.scss';
-@import 'set/typo.scss';
-@import 'set/variable.scss';
-@import 'mixin/mixin.scss';
-//cumtom scss 
-@import 'component/start.scss';
-@import 'component/login.scss';
-@import 'component/product.scss';
+ @import 'vendor/normalize';
+ @import 'vendor/slick.css';
+ //set default on website     
+ ;
+ @import 'fontface/font-face.scss';
+ @import 'set/typo.scss';
+ @import 'set/variable.scss';
+ @import 'mixin/mixin.scss';
+ //cumtom scss 
+ @import 'component/start.scss';
+ @import 'component/login.scss';
+ @import 'component/product.scss';
+ @import 'component/free.scss';
