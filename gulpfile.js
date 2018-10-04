@@ -90,13 +90,14 @@ var Js = {
 	src: [
 
 		//vender
-	
+		
 		'./' + BASE.src + 'styles/js/vender/jquery-3.3.1.min.js',
 		'./' + BASE.src + 'styles/js/vender/smooth-scrollbar.js',
 		'./' + BASE.src + 'styles/js/vender/shuffle.js',
 		'./' + BASE.src + 'styles/js/vender/slick.js',
-	
-
+		'./' + BASE.src + 'styles/js/vender/picker.js',
+		'./' + BASE.src + 'styles/js/vender/picker.date.js',
+		
 		//Js      
 		'./' + BASE.src + 'styles/js/test.js',
 		'./' + BASE.src + 'styles/js/navbar.js',
