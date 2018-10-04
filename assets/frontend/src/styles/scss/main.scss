@@ -2,6 +2,8 @@
 
  @import 'vendor/normalize';
  @import 'vendor/slick.css';
+ @import 'vendor/default.css';
+ @import 'vendor/default.date.css';
  //set default on website     
  ;
  @import 'fontface/font-face.scss';
@@ -13,3 +15,4 @@
  @import 'component/login.scss';
  @import 'component/product.scss';
  @import 'component/free.scss';
+ @import 'component/reserved.scss';
