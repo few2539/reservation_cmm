@@ -52,9 +52,18 @@ a:link, a:visited {
 
 h1,
 .h1 {
-  font-size: 48px;
+  font-size: -webkit-calc(1.32353vw + 25.76471px);
+  font-size: calc(1.32353vw + 25.76471px);
   margin: 0 0;
   line-height: 1em; }
+  @media (max-width: 320px) {
+    h1,
+    .h1 {
+      font-size: 30px; } }
+  @media (min-width: 1680px) {
+    h1,
+    .h1 {
+      font-size: 48px; } }
 
 h2,
 .h2 {

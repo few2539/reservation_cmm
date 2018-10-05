@@ -1,0 +1,12 @@
+@import '../include.scss';
+
+section.header{
+    .container{
+        .row{
+            background: linear-gradient(to left, #ed4264, #ffedbc);
+            .name-login{
+                padding: 10px 10px;
+            }
+        }
+    }
+}

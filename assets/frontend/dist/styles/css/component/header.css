@@ -1,0 +1,6 @@
+section.header .container .row {
+  background: -webkit-gradient(linear, right top, left top, from(#ed4264), to(#ffedbc));
+  background: -webkit-linear-gradient(right, #ed4264, #ffedbc);
+  background: linear-gradient(to left, #ed4264, #ffedbc); }
+  section.header .container .row .name-login {
+    padding: 10px 10px; }

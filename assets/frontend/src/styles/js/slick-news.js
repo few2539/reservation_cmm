@@ -1,55 +1,55 @@
-// window.env_shuffle = {
-// 	CONTAINER_SELECTOR: 'js-slick-container',
+window.env_shuffle = {
+	CONTAINER_SELECTOR: 'js-slick-container',
 
-// 	init: function () {
-//         window.env_shuffle.onReady();
+	init: function () {
+        window.env_shuffle.onReady();
      
 
-// 	},
+	},
 
 
-// 	initSlick: function () {
-// 		$('.js-slick-container').slick({
-// 			dots: true,
-// 			arrows: false,
-// 			// infinite: false,
-// 			autoplay: true,
-// 			autoplaySpeed: 1000,
-// 			speed: 300,
-// 			slidesToShow: 4,
-// 			slidesToScroll: 4,
-// 			responsive: [{
-// 					breakpoint: 1024,
-// 					settings: {
-// 						slidesToShow: 3,
-// 						slidesToScroll: 3,
-// 						infinite: true,
-// 						dots: true
-// 					}
-// 				},
-// 				{
-// 					breakpoint: 600,
-// 					settings: {
-// 						slidesToShow: 2,
-// 						slidesToScroll: 2
-// 					}
-// 				},
-// 				{
-// 					breakpoint: 480,
-// 					settings: {
-// 						slidesToShow: 1,
-// 						slidesToScroll: 1
-// 					}
-// 				}
-// 				// You can unslick at a given breakpoint now by adding:
-// 				// settings: "unslick"
-// 				// instead of a settings object
-// 			]
-// 		});
-// 	},
-// 	onReady: function () {
-// 		window.env_shuffle.initSlick();
-// 	}
-// }
+	initSlick: function () {
+		$('.js-slick-container').slick({
+			dots: true,
+			arrows: false,
+			// infinite: false,
+			autoplay: true,
+			autoplaySpeed: 1000,
+			speed: 300,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			responsive: [{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+				// You can unslick at a given breakpoint now by adding:
+				// settings: "unslick"
+				// instead of a settings object
+			]
+		});
+	},
+	onReady: function () {
+		window.env_shuffle.initSlick();
+	}
+}
 
-// $(window.env_shuffle).ready(env_shuffle.init);
+$(window.env_shuffle).ready(env_shuffle.init);

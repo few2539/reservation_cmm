@@ -15,5 +15,11 @@ class login extends CI_Controller {
 		$this->load->view('frontend/login/index',$data);
 	}
 
+	public function indexv2()
+	{
+		
+        $data['title_page'] = 'Title Page : login';
+		$this->load->view('frontend/login/indexv2',$data);
+	}
 
 }

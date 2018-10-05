@@ -1,0 +1,21 @@
+@import '../include.scss';
+
+section.wrap-user-history {
+	.title-history {
+		margin-left: percentage(105/1366);
+		margin-right: percentage(105/1366);
+	}
+
+	.row {
+		margin-left: percentage(105/1366);
+		margin-right: percentage(105/1366);
+		margin-top: percentage(20/1366);
+		border-bottom: 3px solid transparent;
+		border-image: linear-gradient(to left, #FFEDBC 0%, #ED4264 100%);
+		border-image-slice: 1;
+padding-bottom: 10px;
+		.user-history {
+			display: flex;
+		}
+	}
+}

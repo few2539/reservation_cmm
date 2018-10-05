@@ -51,7 +51,7 @@ a:link, a:visited {
 
 h1,
 .h1 {
-	font-size: 48px;
+	@include fp(font-size, 30, 48);
 	margin: 0 0;
 	line-height: $line-heightBase;
 }
