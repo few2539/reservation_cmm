@@ -4,6 +4,7 @@ section {
 	&.product {
 		margin-left: percentage(105/1366);
 		margin-right: percentage(105/1366);
+		margin-top: percentage(70/1366);
 		.text-welcome{
 			margin-bottom: 15px;
 		}
@@ -30,20 +31,29 @@ section {
 				}
 
 				.item {
-					flex: 0 0 33.33333333333333%;
-					max-width: 33.33333333333333%;
+					
 					padding: 0 5px;
 					margin-bottom: 10px;
 
 					flex-wrap: flex;
-
+				
 					@media(max-width: $lg) {
 						width: 20%;
+						flex: 0 0 20%;
+					max-width: 20%; 
 					}
 
 					@media(max-width: $md-laptop) {
-						width: 33.33333333333333%;
+						flex: 0 0 25%;
+					max-width: 25%; 
 						width: 25%;
+					}
+
+					@media(max-width: $sd-plus) {
+						flex: 0 0 100%;
+						max-width: 100%; 
+							
+						width: 100%; 
 					}
 
 					.box {

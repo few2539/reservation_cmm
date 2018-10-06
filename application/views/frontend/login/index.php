@@ -25,7 +25,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 <body>
-	<?php $this->load->view('frontend/template/header'); ?>
+	<!-- <?php $this->load->view('frontend/template/header'); ?> -->
 
 
 	<section class="login">
