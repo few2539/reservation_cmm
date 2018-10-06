@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Edit KMUTT</title>
+  <title>Edit KMUTT XXX</title>
   <?php $this->load->view('backend/structure/headtag');?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
