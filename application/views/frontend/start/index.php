@@ -69,7 +69,7 @@ $test2 =[
 
 				<div class="button">
 					<span class="button__mask"></span>
-					<span class="button__text">.:: LOGIN TEST TEST::.</span>
+					<span class="button__text">.:: LOGIN TEST TEST TEST::.</span>
 					<a href="https://www.google.co.th/"> <span class="button__text button__text--bis">.:: LOGIN ::.</span><a />
 				</div>
 
