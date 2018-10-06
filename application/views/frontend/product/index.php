@@ -176,45 +176,37 @@ $product = [
 
 		<div class="button-product">
 			<button type="button" id='all'class=" btn btn-warning">All</button>
-			<button id='btn-camera' class="btn btn-primary">camera</button>
-			<button id='btn-mic'class="btn btn-primary">mic</button>
-			<button id='btn-lens'class="btn btn-primary">lens</button>
-			<button id='btn-flash'class="btn btn-primary">flash</button>
-			<button id='btn-tripod'class="btn btn-primary">tripod</button>
-			<button id='btn-light_set'class="btn btn-primary">light_set</button>
-			<button id='btn-accessary'class="btn btn-primary">accessary</button>
-			<button id='btn-computer'class="btn btn-primary">computer</button>
-			<button id='btn-other'class="btn btn-primary">other</button>
-			
+			<?php foreach($categorys as $category): ?>
+				<button id='btn-<?=$category['category_code']?>' class="btn btn-primary">
+					<?=$category['category_name']?> / <?=$category['category_name_en']?>
+				</button>
+			<?php endforeach; ?>
 		</div>
 
 
 		<div class="wrap">
 			<div class="container-product my-shuffle-container">
-				<?php foreach($product as $count):?>
-				<div class="item picture-item" data-groups=<?=$count['groups'];?>>
+				<?php foreach($products as $product):?>
+				<div class="item picture-item" data-groups='["<?=$product['category_code'];?>"]'>
 					<div class="box">
 						<div class="thumb">
-							<img src=<?=$count["img"];?> alt="" data-title=
-							<?=$count["title"];?>>
-
+							<img src="<?=base_url();?>assets/frontend/img/product_thumbnail/<?=$product["product_thumbnail"];?>" alt="" data-title="<?=$product["product_thumbnail"];?>">
 						</div>
 						<div class="property">
 							<p class="name_product">
-								<?=$count["name_product"];?>
+								<?=$product["product_name"];?>
 							</p>
 							<p class="product_type">
-								<?=$count["product_type"];?>
+								<?=$product["category_name_en"];?>
 							</p>
 							<p class="detail">
-								<?=$count["detail"];?>
+								<?=$product["product_intro"];?>
 							</p>
-
 						</div>
 						<div class="content">
-							<button type="button" class="btn btn-success">free</button>
-							<button type="button" class="btn btn-danger">reserved</button>
-
+							<a href="<?=site_url('product/free');?>/<?=$product["product_id"];?>" type="button" class="btn btn-<?php if($product["product_amount"] == 0) { echo "danger"; }else{ echo "success"; }?> btn-block btn-status" data-prodcut="<?=$product['product_id']?>">
+								<?php if($product["product_amount"] == 0) { echo "Out of Stock"; }else{ echo "Free"; }?>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -228,6 +220,24 @@ $product = [
 
 	<?php $this->load->view('frontend/template/footer'); ?>
 	<?php $this->load->view('frontend/template/javascript_frontend');?>
+
+	<script>
+	/*
+	var ajax_call = function() {
+		$.ajax({
+			url : "<?php echo site_url('product/ajax'); ?>/" + val,
+			type : "GET",
+			success: function(data) {
+				if(data != null) { $('#usergroupname').text(data); }
+			},
+		});
+	};
+
+	var interval = 1000; // where X is your every X minutes
+
+	setInterval(ajax_call, interval);
+	*/
+	</script>
 </body>
 
 

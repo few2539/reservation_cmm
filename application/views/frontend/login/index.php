@@ -1,9 +1,5 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +23,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
 	<!-- <?php $this->load->view('frontend/template/header'); ?> -->
 
-
 	<section class="login">
 		<section class="user">
 			<div class="user_options-container">
@@ -43,20 +38,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="user_options-forms" id="user_options-forms">
 					<div class="user_forms-login">
 						<h2 class="forms_title">Login</h2>
-						<form class="forms_form">
+						<?php
+							$attribute = array('id'=>'login_form','class'=>'forms_form');
+							$hidden = array('status' => 'check');
+						?>
+						<?= form_open('login/index',$attribute,$hidden); ?>
 							<fieldset class="forms_fieldset">
 								<div class="forms_field">
-									<input type="text" placeholder="Email" class="forms_field-input" required autofocus />
+									<input type="email" name="email" placeholder="Email" class="forms_field-input" value="<?=$email?>" required autofocus />
 								</div>
 								<div class="forms_field">
-									<input type="password" placeholder="Password" class="forms_field-input" required />
+									<input type="password" name="password" placeholder="Password" class="forms_field-input" value="<?=$password?>" required />
 								</div>
 							</fieldset>
 							<div class="forms_buttons">
 								<!-- <button type="button" class="forms_buttons-forgot">Forgot password?</button> -->
 								<input type="submit" value="Log In" class="forms_buttons-action">
 							</div>
-						</form>
+						<?= form_close(); ?>
                     </div>
                     <!-- sign up condition -->
 					<!-- <div class="user_forms-signup">
@@ -86,6 +85,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<?php $this->load->view('frontend/template/footer'); ?>
 	<?php $this->load->view('frontend/template/javascript_frontend');?>
+
+	<?php if($result == 'error'): ?>
+	<script>
+		alert("กรุณาตรวจสอบความถูกต้อง");
+	</script>
+	<?php endif; ?>
 </body>
 
 

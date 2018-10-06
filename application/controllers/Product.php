@@ -11,9 +11,26 @@ class product extends CI_Controller {
 	public function index()
 	{
 		
-        $data['title_page'] = 'Title Page : product';
+		$data['title_page'] = 'Title Page : product';
+		
+		$data['categorys'] = $this->frontend_model->getallcategorys();
+		$data['products'] = $this->frontend_model->getallproducts();
+
 		$this->load->view('frontend/product/index',$data);
 	}
 
+	public function free()
+	{
+		
+		$data['title_page'] = 'Title Page : product';
+		$product_id = $this->uri->segment(3);
 
+		$data['product'] = $this->frontend_model->getproduct($product_id);
+
+		$this->load->view('frontend/free/index',$data);
+	}
+
+	public function ajax() {
+		//
+	}
 }

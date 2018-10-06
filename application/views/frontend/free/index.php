@@ -15,20 +15,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<?php $this->load->view('frontend/template/headtag_frontend');?>
 </head>
-<?php
-$product = [
-
-[
-    'groups' => '["camera"]',
-    'title' =>'camera1',
-    'product_type'=> 'camera',
-    'img' => 'https://images.pexels.com/photos/243757/pexels-photo-243757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    'name_product'=> 'sony1',
-    'detail' => 'Lorem ipsum, dolor sit amet consectetur'
-],
-];
-?>
-
 
 <body>
 
@@ -43,23 +29,21 @@ $product = [
 
 		<div class="container-product">
 			<div class="row-product">
-				<?php foreach($product as $count):?>
-				<div class="item" data-groups=<?=$count['groups'];?>>
+				<div class="item" data-groups="<?=$product->category_code?>">
 					<div class="box">
 						<div class="thumb">
-							<img src=<?=$count["img"];?> alt="" data-title=
-							<?=$count["title"];?>>
+							<img src="<?=base_url();?>assets/frontend/img/product_thumbnail/<?=$product->product_thumbnail?>" alt="" data-title="<?=$product->product_name;?>">
 						</div>
 						<div class="text-detail">
 							<div class="property">
 								<p class="name_product">
-									<?=$count["name_product"];?>
+									<?=$product->product_name;?>
 								</p>
 								<p class="product_type">
-									<?=$count["product_type"];?>
+									<?=$product->category_code;?>
 								</p>
 								<p class="detail">
-									<?=$count["detail"];?>
+									<?=$product->product_detail;?>
 								</p>
 
 							</div>
@@ -70,7 +54,6 @@ $product = [
 
 					</div>
 				</div>
-				<?php endforeach ?>
 			</div>
 
 		</div>

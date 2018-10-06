@@ -5,16 +5,41 @@
 			parent::__construct();
 		}
 
-
-		//----------------------- HOME -----------------------//
-		public function getallprofessors(){
-			$sql = "SELECT * FROM professor";
-			$sql.= " ORDER BY professor_id";
+		public function getallcategorys(){
+			$sql = "SELECT * FROM category";
+			$sql.= " ORDER BY category_id";
 			$query = $this->db->query($sql);
 			$result_data = $query->result_array();
 
 			return $result_data;
 		}
+
+		public function getallproducts(){
+			$sql = "SELECT * FROM product";
+			$sql.= " LEFT JOIN category ON product.product_category_id = category.category_id";
+			$sql.= " ORDER BY product_category_id";
+			$query = $this->db->query($sql);
+			$result_data = $query->result_array();
+
+			return $result_data;
+		}
+
+		public function getproduct($product_id){
+			$sql = "SELECT * FROM product";
+			$sql.= " LEFT JOIN category ON product.product_category_id = category.category_id";
+			$sql.= " WHERE product_id = '$product_id' ";
+			$query = $this->db->query($sql);
+			$result_data = $query->row();
+
+			return $result_data;
+		}
+
+
+		// Old
+
+		
+		//----------------------- HOME -----------------------//
+		
 
 		public function getsetting($id){
 			if($id != null) {
