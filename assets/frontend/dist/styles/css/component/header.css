@@ -1,6 +1,8 @@
 section.header .container .row {
-  background: -webkit-gradient(linear, right top, left top, from(#ed4264), to(#ffedbc));
-  background: -webkit-linear-gradient(right, #ed4264, #ffedbc);
-  background: linear-gradient(to left, #ed4264, #ffedbc); }
+  background: -webkit-gradient(linear, right top, left top, from(#ff334f), to(#ff8e5c));
+  background: -webkit-linear-gradient(right, #ff334f, #ff8e5c);
+  background: linear-gradient(to left, #ff334f, #ff8e5c); }
   section.header .container .row .name-login {
-    padding: 10px 10px; }
+    padding: 10px 10px;
+    font-weight: 500;
+    color: #fff; }

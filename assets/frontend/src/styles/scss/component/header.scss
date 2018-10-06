@@ -3,9 +3,12 @@
 section.header{
     .container{
         .row{
-            background: linear-gradient(to left, #ed4264, #ffedbc);
+            background: linear-gradient(to left, $gd2,$gd1 );
             .name-login{
                 padding: 10px 10px;
+                font-weight: 500; 
+                color: $white;
+               
             }
         }
     }

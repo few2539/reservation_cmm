@@ -76,7 +76,7 @@ $product = [
 		</div>
 
 		<div class="insert-pdf">
-			<h2>fill pdf here</h2>
+			<h2>insert info here</h2>
 			<div class="user-info">
 				<div class="box-user-info">
 					<div class="input-group date-today">
