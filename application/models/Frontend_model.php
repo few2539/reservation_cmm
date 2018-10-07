@@ -34,6 +34,20 @@
 			return $result_data;
 		}
 
+		public function checkstockproduct($product_id) {
+			$sql = "SELECT * FROM product";
+			$sql.= " LEFT JOIN category ON product.product_category_id = category.category_id";
+			$sql.= " WHERE product_id = '$product_id' ";
+			$query = $this->db->query($sql);
+			$result_data = $query->row();
+
+			if($result_data->product_amount != 0){
+				return TRUE;
+			}else{
+				return FALSE;
+			}
+		}
+
 
 		// Old
 

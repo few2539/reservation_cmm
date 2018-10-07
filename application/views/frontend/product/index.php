@@ -220,24 +220,6 @@ $product = [
 
 	<?php $this->load->view('frontend/template/footer'); ?>
 	<?php $this->load->view('frontend/template/javascript_frontend');?>
-
-	<script>
-	/*
-	var ajax_call = function() {
-		$.ajax({
-			url : "<?php echo site_url('product/ajax'); ?>/" + val,
-			type : "GET",
-			success: function(data) {
-				if(data != null) { $('#usergroupname').text(data); }
-			},
-		});
-	};
-
-	var interval = 1000; // where X is your every X minutes
-
-	setInterval(ajax_call, interval);
-	*/
-	</script>
 </body>
 
 

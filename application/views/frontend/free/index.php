@@ -218,6 +218,27 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		$(window.free_pickadate).ready(free_pickadate.onReady);
 
 	</script>
+
+	<script>
+	/*
+	var ajax_call = function() {
+		var product_id = "<?=$product->product_id;?>";
+		
+		$.ajax({
+			url : "<?php echo site_url('product/ajax'); ?>/" + product_id,
+			type : "GET",
+			success: function(data) {
+				alert(data);
+				//if(data == 0) { alert("สินค้านี้ Out of Stock ระบบจะนำไปสู่หน้าก่อนหน้า"); window.location = "<?php echo site_url('product/index'); ?>"; }
+			},
+		});
+	};
+
+	var interval = 1000; // where X is your every X minutes
+
+	setInterval(ajax_call, interval);
+	*/
+	</script>
 </body>
 
 </html>
