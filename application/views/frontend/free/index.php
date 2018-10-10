@@ -61,12 +61,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 		<div class="insert-pdf">
 			<h2>insert info here</h2>
-			<form>
+			<?= form_open('free/index'); ?>
 				<div class="user-info">
 					<div class="box-user-info">
 						<div class="input-group date-today">
 							<span class="input-today" id="basic-addon1">Today</span>
-							<input type="text" class="datepicker" placeholder="Username">
+							<input type="text" class="datepicker" name="today" placeholder="Username">
 						</div>
 					</div>
 
@@ -74,28 +74,28 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="box-user-info">
 						<div class="input-group name">
 							<span class="input-group-addon" id="basic-addon1">name</span>
-							<input type="text" class="form-control " placeholder="Username" aria-describedby="basic-addon1">
+							<input type="text" class="form-control " name="studentname" placeholder="Username" aria-describedby="basic-addon1">
 						</div>
 					</div>
 
 					<div class="box-user-info">
 						<div class="input-group surename">
 							<span class="input-group-addon" id="basic-addon1">surename</span>
-							<input type="text" class="form-control" placeholder="surename" aria-describedby="basic-addon1">
+							<input type="text" class="form-control" name="Lname" placeholder="surename" aria-describedby="basic-addon1">
 
 						</div>
 					</div>
 					<div class="box-user-info">
 						<div class="input-group pw-student">
 							<span class="input-group-addon" id="basic-addon1">pw-student</span>
-							<input type="text" class="form-control" placeholder="pw-student" aria-describedby="basic-addon1">
+							<input type="text" class="form-control" name="idname" placeholder="pw-student" aria-describedby="basic-addon1">
 
 						</div>
 					</div>
 					<div class="box-user-info">
 						<div class="input-group degree">
 							<span class="input-group-addon" id="basic-addon1">your-degree</span>
-							<input type="text" class="form-control" placeholder="such as bachelor degree" aria-describedby="basic-addon1">
+							<input type="text" class="form-control" name="degreeid" placeholder="such as bachelor degree" aria-describedby="basic-addon1">
 
 						</div>
 					</div>
@@ -103,7 +103,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="box-user-info">
 						<div class="input-group Phone">
 							<span class="input-group-addon" id="basic-addon1">Phone</span>
-							<input type="text" class="form-control" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
+							<input type="text" class="form-control" name="phone" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
 
 						</div>
 					</div>
@@ -111,7 +111,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="box-user-info">
 						<div class="input-group Use-for">
 							<span class="input-group-addon" id="basic-addon1">Use for</span>
-							<input type="text" class="form-control" placeholder="like taking photo in some project" aria-describedby="basic-addon1">
+							<input type="text" class="form-control" name="detail" placeholder="like taking photo in some project" aria-describedby="basic-addon1">
 
 						</div>
 					</div>
@@ -119,7 +119,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="box-user-info">
 						<div class="input-group subject">
 							<span class="input-group-addon" id="basic-addon1">subject</span>
-							<input type="text" class="form-control" placeholder="CMM-444" aria-describedby="basic-addon1">
+							<input type="text" class="form-control" name="subject" placeholder="CMM-444" aria-describedby="basic-addon1">
 
 						</div>
 					</div>
@@ -127,19 +127,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="box">
 						<fieldset>
 							<h4>Form:</h4>
-							<input type="text" id="input_from">
+							<input type="date" name="reservdate" id="input_from">
 						</fieldset>
 
 						<fieldset>
 							<h4>To:</h4>
-							<input type="text" id="input_to">
+							<input type="date" name="returndate"id="input_to">
 						</fieldset>
 
 					</div>
 
-					<button type="submit" class="btn btn-default">Submit</button>
+					<button type="submit" name="insert" value="add to database"class="btn btn-default">Submit</button>
 
-			</form>
+			<?= form_close(); ?>
 
 		</div>
 		</div>

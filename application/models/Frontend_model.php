@@ -48,6 +48,13 @@
 			}
 		}
 
+		public function borrowdata() {
+			$sql = "INSERT INTO reservation (reservation_student_id,reservation_return_date,reservation_tackback_name,reservation_date)
+			VALUES ('".$_POST["idname"]."','".$_POST["returndate"]."','".$_POST["studentname"]."'
+					,'".$_POST["today"]."')";
+			$query = $this->db->query($sql);
+		}
+
 
 		// Old
 
