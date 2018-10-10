@@ -32,7 +32,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="item" data-groups="<?=$product->category_code?>">
 					<div class="box">
 						<div class="thumb">
-							<img src="<?=base_url();?>assets/frontend/img/product_thumbnail/<?=$product->product_thumbnail?>" alt="" data-title="<?=$product->product_name;?>">
+							<img src="<?=base_url();?>assets/frontend/img/product_thumbnail/<?=$product->product_thumbnail?>" alt=""
+							 data-title="<?=$product->product_name;?>">
 						</div>
 						<div class="text-detail">
 							<div class="property">
@@ -60,86 +61,87 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 		<div class="insert-pdf">
 			<h2>insert info here</h2>
-			<div class="user-info">
-				<div class="box-user-info">
-					<div class="input-group date-today">
-						<span class="input-today" id="basic-addon1">Today</span>
-						<input type="text" class="datepicker" placeholder="Username">
+			<form>
+				<div class="user-info">
+					<div class="box-user-info">
+						<div class="input-group date-today">
+							<span class="input-today" id="basic-addon1">Today</span>
+							<input type="text" class="datepicker" placeholder="Username">
+						</div>
 					</div>
-				</div>
 
 
-				<div class="box-user-info">
-					<div class="input-group name">
-						<span class="input-group-addon" id="basic-addon1">name</span>
-						<input type="text" class="form-control " placeholder="Username" aria-describedby="basic-addon1">
+					<div class="box-user-info">
+						<div class="input-group name">
+							<span class="input-group-addon" id="basic-addon1">name</span>
+							<input type="text" class="form-control " placeholder="Username" aria-describedby="basic-addon1">
+						</div>
 					</div>
-				</div>
 
-				<div class="box-user-info">
-					<div class="input-group surename">
-						<span class="input-group-addon" id="basic-addon1">surename</span>
-						<input type="text" class="form-control" placeholder="surename" aria-describedby="basic-addon1">
+					<div class="box-user-info">
+						<div class="input-group surename">
+							<span class="input-group-addon" id="basic-addon1">surename</span>
+							<input type="text" class="form-control" placeholder="surename" aria-describedby="basic-addon1">
+
+						</div>
+					</div>
+					<div class="box-user-info">
+						<div class="input-group pw-student">
+							<span class="input-group-addon" id="basic-addon1">pw-student</span>
+							<input type="text" class="form-control" placeholder="pw-student" aria-describedby="basic-addon1">
+
+						</div>
+					</div>
+					<div class="box-user-info">
+						<div class="input-group degree">
+							<span class="input-group-addon" id="basic-addon1">your-degree</span>
+							<input type="text" class="form-control" placeholder="such as bachelor degree" aria-describedby="basic-addon1">
+
+						</div>
+					</div>
+
+					<div class="box-user-info">
+						<div class="input-group Phone">
+							<span class="input-group-addon" id="basic-addon1">Phone</span>
+							<input type="text" class="form-control" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
+
+						</div>
+					</div>
+
+					<div class="box-user-info">
+						<div class="input-group Use-for">
+							<span class="input-group-addon" id="basic-addon1">Use for</span>
+							<input type="text" class="form-control" placeholder="like taking photo in some project" aria-describedby="basic-addon1">
+
+						</div>
+					</div>
+
+					<div class="box-user-info">
+						<div class="input-group subject">
+							<span class="input-group-addon" id="basic-addon1">subject</span>
+							<input type="text" class="form-control" placeholder="CMM-444" aria-describedby="basic-addon1">
+
+						</div>
+					</div>
+
+					<div class="box">
+						<fieldset>
+							<h4>Form:</h4>
+							<input type="text" id="input_from">
+						</fieldset>
+
+						<fieldset>
+							<h4>To:</h4>
+							<input type="text" id="input_to">
+						</fieldset>
 
 					</div>
-				</div>
-				<div class="box-user-info">
-					<div class="input-group pw-student">
-						<span class="input-group-addon" id="basic-addon1">pw-student</span>
-						<input type="text" class="form-control" placeholder="pw-student" aria-describedby="basic-addon1">
 
-					</div>
-				</div>
-				<div class="box-user-info">
-					<div class="input-group degree">
-						<span class="input-group-addon" id="basic-addon1">your-degree</span>
-						<input type="text" class="form-control" placeholder="such as bachelor degree" aria-describedby="basic-addon1">
+					<button type="submit" class="btn btn-default">Submit</button>
 
-					</div>
-				</div>
+			</form>
 
-				<div class="box-user-info">
-					<div class="input-group Phone">
-						<span class="input-group-addon" id="basic-addon1">Phone</span>
-						<input type="text" class="form-control" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
-
-					</div>
-				</div>
-
-				<div class="box-user-info">
-					<div class="input-group Use-for">
-						<span class="input-group-addon" id="basic-addon1">Use for</span>
-						<input type="text" class="form-control" placeholder="like taking photo in some project" aria-describedby="basic-addon1">
-
-					</div>
-				</div>
-
-				<div class="box-user-info">
-					<div class="input-group subject">
-						<span class="input-group-addon" id="basic-addon1">subject</span>
-						<input type="text" class="form-control" placeholder="CMM-444" aria-describedby="basic-addon1">
-
-					</div>
-				</div>
-
-				<div class="box">
-					<fieldset>
-						<h4>Form:</h4>
-						<input type="text" id="input_from">
-					</fieldset>
-
-					<fieldset>
-						<h4>To:</h4>
-						<input type="text" id="input_to">
-					</fieldset>
-
-				</div>
-
-				<button type="submit" class="btn btn-default">Submit</button>
-
-
-
-			</div>
+		</div>
 		</div>
 	</section>
 
@@ -220,7 +222,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</script>
 
 	<script>
-	/*
+		/*
 	var ajax_call = function() {
 		var product_id = "<?=$product->product_id;?>";
 		
@@ -238,6 +240,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	setInterval(ajax_call, interval);
 	*/
+
 	</script>
 </body>
 
