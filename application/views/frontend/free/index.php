@@ -170,7 +170,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				var to_$input = $('#input_to').pickadate(),
 					to_picker = to_$input.pickadate('picker')
 
-
+				hiddenName: true
 				// Check if there’s a “from” or “to” date to start with.
 				if (from_picker.get('value')) {
 					to_picker.set('min', from_picker.get('select'))
@@ -191,7 +191,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				var to_$input = $('#input_to').pickadate(),
 					to_picker = to_$input.pickadate('picker')
-
+					hiddenName: true
 
 				from_picker.on('set', function (event) {
 					if (event.select) {
