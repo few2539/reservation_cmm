@@ -50,4 +50,38 @@ class product extends CI_Controller {
 		
 		$this->load->view('backend/product/index',$data);
 	}
+
+	public function admin_add()
+	{
+		$data['title_page'] = 'Title Page : admin add product';
+
+		$action = "insert";
+		$data['products'] = $this->frontend_model->getallproducts();
+		
+		$this->load->view('backend/product/form',$data);
+	}
+
+	public function insert()
+	{
+		// Function Insert Product
+		
+		redirect('product/index');
+	}
+
+	public function admin_edit()
+	{
+		$data['title_page'] = 'Title Page : admin edit product';
+
+		$action = "update";
+		$data['products'] = $this->frontend_model->getallproducts();
+		
+		$this->load->view('backend/product/form',$data);
+	}
+
+	public function update()
+	{
+		// Function Update Product
+		
+		redirect('product/index');
+	}
 }

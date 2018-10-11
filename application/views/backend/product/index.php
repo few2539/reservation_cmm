@@ -31,14 +31,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </li>
               </ol>
           </div>
+          <div style="float: right;">
+              <a href="<?=site_url('product/admin_add');?>">เพิ่มรายการสินค้าใหม่</a>
+          </div>
           <!-- /.Breadcrumb -->
           <div class="clearfix"></div>
           
           <div class="panel panel-default">
             <div class="panel-heading">รายการ สินค้า</div>
             <div class="panel-body">
-              <div class="table-responsive">
-                <table id="data-table" class="table table-bordered table-condensed" width="100%">
+              <div class="table-responsive" style="overflow-y:hidden;">
+                <table id="data-table" class="table table-bordered table-condensed">
                   <thead>
                     <tr>
                       <th class="text-center text-middle">
@@ -56,7 +59,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <th class="text-center text-middle">
                         สถานะ
                       </th>
-                      <th class="text-center text-middle" style="min-width: 180px;"></th>
+                      <th class="text-center text-middle" style="min-width: 180px;">
+                        แก้ไข / ลบ
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -67,51 +72,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo $i; ?>
                       </td>
                       <td class="text-center text-middle">
-                        <?php echo $data['product_name']; ?>
+                        <?php echo $product['product_name']; ?>
                       </td>
                       <td class="text-center text-middle">
-                        <?php echo $data['product_amout']; ?>
+                        <?php echo $product['product_amount']; ?>
                       </td>
                       <td class="text-center text-middle">
-                        <?php echo $data['category_name']; ?>
+                        <?php echo $product['category_name']; ?>
                       </td>
                       <td class="text-center text-middle">
-                        <?php echo $data['product_status']; ?>
+                        <?php echo $product['product_status']; ?>
                       </td>
                       <td class="text-center text-middle">
-                        <a href="<?php echo site_url('admin/ticket/detail'); ?>/<?php echo $data['ticket_id']; ?>">
-                          <button class="btn btn-detail btn-sm" style="font-weight: bold;width: 100%;">
-                            <i class="fa fa-eye"></i> รายละเอียด
-                          </button>
-                        </a>
-                        <div class="clearfix"></div>
-                        <?php if($data['ticket_status'] == "B01"): ?>
                         <div style="margin-top:2%;">
-                          <a href="<?php echo site_url('admin/ticket/requestfinishjob_form'); ?>/<?php echo $data['ticket_id']; ?>">
-                            <button class="btn btn-requestfinishjob btn-sm" style="font-weight: bold;width: 100%;float: left;margin-right: 2%;">
-                              <i class="fa fa-check"></i> สรุปข้อมูลการดำเนินงาน
+                          <a href="<?php echo site_url('product/admin_edit'); ?>/<?php echo $product['product_id']; ?>">
+                            <button class="btn btn-primary btn-sm" style="font-weight: bold;width: 49%;float: left;margin-right: 2%;">
+                              <i class="fa fa-edit"></i> แก้ไข
                             </button>
                           </a>
                         </div>
-                        <?php endif; ?>
-                        <?php if($data['ticket_status'] == "B20"): ?>
                         <div style="margin-top:2%;">
-                          <a href="<?php echo site_url('admin/ticket/requestfinishjob_form_update'); ?>/<?php echo $data['ticket_id']; ?>">
-                            <button class="btn btn-update-requestfinishjob btn-sm" style="font-weight: bold;width: 100%;float: left;margin-right: 2%;">
-                              <i class="fa fa-edit"></i> แก้ไขสรุปข้อมูลการดำเนินงาน
+                          <a href="<?php echo site_url('product/admin_edit'); ?>/<?php echo $product['product_id']; ?>">
+                            <button class="btn btn-danger btn-sm" style="font-weight: bold;width: 49%;float: right;">
+                              <i class="fa fa-check"></i> ลบ
                             </button>
                           </a>
                         </div>
-                        <?php endif; ?>
-                        <?php if($data['ticket_status'] == "C20"): ?>
-                        <div style="margin-top:2%;">
-                          <a href="<?php echo site_url('admin/ticket/requestfinishjob_form_update'); ?>/<?php echo $data['ticket_id']; ?>">
-                            <button class="btn btn-update-requestfinishjob-again btn-sm" style="font-weight: bold;width: 100%;float: left;margin-right: 2%;">
-                              <i class="fa fa-check"></i> สรุปข้อมูลการดำเนินงานอีกครั้ง
-                            </button>
-                          </a>
-                        </div>
-                        <?php endif; ?>
                       </td>
                     </tr>
                     <?php $i++; ?>
@@ -132,24 +118,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!-- ./wrapper -->
 
-<?php $this->load->view('backend/structure/javascript');?>
-
-<script>
-  $('.selectpicker').change(function(){
-    $("#div1").fadeIn("fast")[ $.inArray('value1', $(this).val()) >= 0 ? 'show' : 'hide' ]();
-    $("#div2").fadeIn("fast")[ $.inArray('value2', $(this).val()) >= 0 ? 'show' : 'hide' ]();
-    $("#div3").fadeIn("fast")[ $.inArray('value3', $(this).val()) >= 0 ? 'show' : 'hide' ]();
-    $("#div4").fadeIn("fast")[ $.inArray('value4', $(this).val()) >= 0 ? 'show' : 'hide' ]();
-  });
-
-  $(".selectpicker").change();
-
-  $('#search_reset').click(function(){
-    $('#search_date').val('');
-    $('#search_problem_type').val('');
-    $('#search_district').val('');
-    $('#search_status').val('');
-  });
-</script>
+<?php $this->load->view('backend/template/javascript');?>
 </body>
 </html>

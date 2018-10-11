@@ -4,8 +4,8 @@
         <li class="<?php echo activate_menu('admin'); ?>">
             <a href="<?= site_url('admin/dashboard'); ?>"><i class="fa fa-fw fa-dashboard"></i> หนัาหลัก/ภาพรวม</a>
         </li>
-        <li class="<?php echo activate_menu('aboutus'); ?>">
-            <a href="<?= site_url('aboutus/admin'); ?>"><i class="fa fa-fw fa-plus"></i> เพิ่ม / แก้ไข อุปกรณ์</a>
+        <li class="<?php echo activate_menu('product'); ?>">
+            <a href="<?= site_url('product/admin'); ?>"><i class="fa fa-fw fa-plus"></i> เพิ่ม / แก้ไข อุปกรณ์</a>
         </li>
         <li class="hidden-md hidden-lg">
             <a href="<?php site_url('admin/user/profile'); ?>"><i class="fa fa-fw fa-desktop"></i> Profile</a>
