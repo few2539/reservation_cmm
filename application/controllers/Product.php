@@ -41,4 +41,13 @@ class product extends CI_Controller {
 		$product = $this->frontend_model->getproduct($product_id);
 		echo $product->product_id;
 	}
+
+	public function admin()
+	{
+		$data['title_page'] = 'Title Page : admin product';
+
+		$data['products'] = $this->frontend_model->getallproducts();
+		
+		$this->load->view('backend/product/index',$data);
+	}
 }
