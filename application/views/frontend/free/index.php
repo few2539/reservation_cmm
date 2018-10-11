@@ -66,7 +66,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="box-user-info">
 						<div class="input-group date-today">
 							<span class="input-today" id="basic-addon1">Today</span>
-							<input type="text" class="datepicker" name="today" placeholder="Username">
+							<input type="date" class="datepicker" name="today" placeholder="Username">
 						</div>
 					</div>
 
@@ -132,7 +132,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 						<fieldset>
 							<h4>To:</h4>
-							<input type="date" name="returndate"id="input_to">
+							<input type="date" name="returndate" id="input_to">
 						</fieldset>
 
 					</div>
