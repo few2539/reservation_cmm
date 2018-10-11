@@ -1,0 +1,123 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>สินค้า (กล้อง เลนส์)</title>
+  <?php $this->load->view('backend/template/headtag');?>
+</head>
+<body>
+<div id="wrapper">
+
+  <?php $this->load->view('backend/template/header');?>
+
+  <div id="page-wrapper">
+
+      <div class="container-fluid">
+          
+          <!-- Page Heading -->
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 class="page-header text-center">
+                      ข้อมูล รายการสินค้า
+                  </h1>
+              </div>
+          </div>
+          <div style="float: left;">
+              <ol class="breadcrumb">
+                  <li class="active">
+                      <i class="fa fa-table"></i> ข้อมูล รายการสินค้า
+                  </li>
+              </ol>
+          </div>
+          <div style="float: right;">
+              <a href="<?=site_url('product/admin_add');?>">เพิ่มรายการสินค้าใหม่</a>
+          </div>
+          <!-- /.Breadcrumb -->
+          <div class="clearfix"></div>
+          
+          <div class="panel panel-default">
+            <div class="panel-heading">รายการ สินค้า</div>
+            <div class="panel-body">
+              <div class="table-responsive" style="overflow-y:hidden;">
+                <table id="data-table" class="table table-bordered table-condensed">
+                  <thead>
+                    <tr>
+                      <th class="text-center text-middle">
+                        ลำดับ
+                      </th>
+                      <th class="text-center text-middle">
+                        ชื่อรายการ
+                      </th>
+                      <th class="text-center text-middle">
+                        จำนวน
+                      </th>
+                      <th class="text-center text-middle">
+                        ประเภทรายการ
+                      </th>
+                      <th class="text-center text-middle">
+                        สถานะ
+                      </th>
+                      <th class="text-center text-middle" style="min-width: 180px;">
+                        แก้ไข / ลบ
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $i = 1; ?>
+                    <?php foreach ($products as $product): ?>
+                    <tr>
+                      <td class="text-center text-middle">
+                        <?php echo $i; ?>
+                      </td>
+                      <td class="text-center text-middle">
+                        <?php echo $product['product_name']; ?>
+                      </td>
+                      <td class="text-center text-middle">
+                        <?php echo $product['product_amount']; ?>
+                      </td>
+                      <td class="text-center text-middle">
+                        <?php echo $product['category_name']; ?>
+                      </td>
+                      <td class="text-center text-middle">
+                        <?php echo $product['product_status']; ?>
+                      </td>
+                      <td class="text-center text-middle">
+                        <div style="margin-top:2%;">
+                          <a href="<?php echo site_url('product/admin_edit'); ?>/<?php echo $product['product_id']; ?>">
+                            <button class="btn btn-primary btn-sm" style="font-weight: bold;width: 49%;float: left;margin-right: 2%;">
+                              <i class="fa fa-edit"></i> แก้ไข
+                            </button>
+                          </a>
+                        </div>
+                        <div style="margin-top:2%;">
+                          <a href="<?php echo site_url('product/admin_edit'); ?>/<?php echo $product['product_id']; ?>">
+                            <button class="btn btn-danger btn-sm" style="font-weight: bold;width: 49%;float: right;">
+                              <i class="fa fa-check"></i> ลบ
+                            </button>
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                    <?php $i++; ?>
+                    <?php endforeach; ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- /.panel -->
+
+      </div>
+      <!-- /.container-fluid -->
+
+  </div>
+  <!-- /#page-wrapper -->
+
+</div>
+<!-- ./wrapper -->
+
+<?php $this->load->view('backend/template/javascript');?>
+</body>
+</html>
