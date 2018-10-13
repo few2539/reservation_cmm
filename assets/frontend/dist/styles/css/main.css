@@ -1514,3 +1514,12 @@ section.login-v2 .bg-bubbles li:nth-child(10) {
   100% {
     -webkit-transform: translateY(-700px) rotate(600deg);
     transform: translateY(-700px) rotate(600deg); } }
+
+.box-user-info .picker__header {
+  display: none; }
+
+.box-user-info .picker__table {
+  display: none; }
+
+.box-user-info .picker__box {
+  background-color: transparent; }
