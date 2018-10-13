@@ -18,7 +18,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<?php $this->load->view('backend/template/header');?>
 	<section class="profile-admin">
-
 		<div class="container emp-profile">
 			<form method="post">
 				<div class="row">

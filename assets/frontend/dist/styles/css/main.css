@@ -1595,3 +1595,6 @@ section.profile-admin {
   section.profile-admin .profile-tab p {
     font-weight: 600;
     color: #0062cc; }
+
+section.profile-admin-edit {
+  background-color: black; }
