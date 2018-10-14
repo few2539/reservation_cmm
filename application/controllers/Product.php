@@ -6,6 +6,7 @@ class product extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('frontend_model');
+		$this->load->model('backend/product_model');
     }
 
 	public function index($error=null)
@@ -44,9 +45,10 @@ class product extends CI_Controller {
 
 	public function admin()
 	{
+		
 		$data['title_page'] = 'Title Page : admin product';
 
-		$data['products'] = $this->frontend_model->getallproducts();
+		$data['products'] = $this->product_model->getallproducts();
 		
 		$this->load->view('backend/product/index',$data);
 	}
@@ -55,8 +57,8 @@ class product extends CI_Controller {
 	{
 		$data['title_page'] = 'Title Page : admin add product';
 
-		$action = "insert";
-		$data['products'] = $this->frontend_model->getallproducts();
+		$data['action'] = "insert";
+		$data['categorys'] = $this->frontend_model->getallcategorys();
 		
 		$this->load->view('backend/product/form',$data);
 	}
@@ -64,16 +66,20 @@ class product extends CI_Controller {
 	public function insert()
 	{
 		// Function Insert Product
+		$insert_id = $this->product_model->productinsert();
 		
-		redirect('product/index');
+		redirect('product/admin_detail/'.$insert_id);
 	}
 
 	public function admin_edit()
 	{
+		$product_id = $this->uri->segment(3);
+
 		$data['title_page'] = 'Title Page : admin edit product';
 
-		$action = "update";
-		$data['products'] = $this->frontend_model->getallproducts();
+		$data['action'] = "update";
+		$data['product'] = $this->product_model->getproductedit($product_id);
+		$data['categorys'] = $this->frontend_model->getallcategorys();
 		
 		$this->load->view('backend/product/form',$data);
 	}
@@ -81,7 +87,24 @@ class product extends CI_Controller {
 	public function update()
 	{
 		// Function Update Product
+		$this->product_model->productupdate();
 		
-		redirect('product/index');
+		redirect('product/admin');
+	}
+
+	public function admin_detail($product_id)
+	{
+		// Function Update Product
+		$data['product'] = $this->product_model->getproductedit($product_id);
+		
+		$this->load->view('backend/product/detail',$data);
+	}
+
+	public function delete()
+	{
+		// Function Update Product
+		$this->product_model->productdelete();
+		
+		redirect('product/admin');
 	}
 }

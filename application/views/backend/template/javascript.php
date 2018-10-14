@@ -142,6 +142,9 @@
 <script type="text/javascript" src="<?php echo base_url();?>assets/backend/librarys/bootstrap-datepicker-thai/js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/backend/librarys/bootstrap-datepicker-thai/js/bootstrap-datepicker-thai.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/backend/librarys/bootstrap-datepicker-thai/js/locales/bootstrap-datepicker.th.js"></script>
+<script type="text/javascript">
+	$('.datepicker').datepicker({autoclose: true});
+</script>
 
 <!-- Bootstrap Validator jQuery -->
 <script type="text/javascript" src="<?php echo base_url();?>assets/backend/librarys/bootstrap-validator-jquery/bootstrapValidator.min.js"></script>
