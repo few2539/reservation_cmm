@@ -119,12 +119,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="box">
 						<fieldset>
 							<h4>Form:</h4>
-							<input type="text" id="input_from" name:"reservation_date">
+							<input type="text" id="input_from" name="reservation_date">
 						</fieldset>
 
 						<fieldset>
 							<h4>To:</h4>
-							<input type="text" id="input_to" name:"reservation_return_date">
+							<input type="text" id="input_to" name="reservation_return_date">
 						</fieldset>
 
 					</div>
@@ -224,7 +224,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 			onReady: function () {
 				$("#input_from").pickadate({
-					formatSubmit: '["dd","mm","yyyy"]',
+					formatSubmit: 'dd/mm/yyyy',
 						// formatSubmit: '['dd','mm','yyyy']',
 						hiddenName: true
      				   });
@@ -232,7 +232,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				$("#input_to").pickadate({
 								
-								formatSubmit: '["dd","mm","yyyy"]',
+								formatSubmit: 'dd/mm/yyyy',
 								hiddenName: true
      				   });
 				window.free_pickadate.init();

@@ -55,14 +55,14 @@
 			 
 			$reservation_id = $this->input->post('reservation_id');
 
-			$reservation_date = $this->thdate2utcdate2($this->input->post('reservation_date'));
-			$reservation_return_date = $this->thdate2utcdate2($this->input->post('reservation_return_date'));
+			//$reservation_date = $this->thdate2utcdate2($this->input->post('reservation_date'));
+			//$reservation_return_date = $this->thdate2utcdate2($this->input->post('reservation_return_date'));
 
 			$data = array(
 				'reservation_tackback_name' => $this->input->post('reservation_tackback_name'),
 				'reservation_student_id' => $this->input->post('reservation_student_id'),
-				'reservation_date' => $reservation_date,
-				'reservation_return_date' => $reservation_return_date,
+				//'reservation_date' => $reservation_date,
+				//'reservation_return_date' => $reservation_return_date,
 			);
 
 			$query = $this->db->insert('reservation',$data);

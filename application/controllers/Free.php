@@ -10,14 +10,18 @@ class free extends CI_Controller {
 
     public function index()
 	{
-		
 		$data['title_page'] = 'Title Page : Free';
-
 		$data['reservation'] = $this->frontend_model->borrowdata();
-		echo 'test';
-		exit;
 
-		$this->load->view('frontend/free/index',$data);
+		$this->load->view('frontend/free/detail',$data);
 
 	}
+
+	public function detail()
+	{
+		$data['title_page'] = 'Title Page : Free';
+
+		$this->load->view('frontend/free/detail',$data);
+
+	}	
 }
