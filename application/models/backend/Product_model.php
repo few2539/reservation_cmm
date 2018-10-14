@@ -91,7 +91,7 @@
 			return $query;
 		}
 
-		function thdate2utcdate($thdate) {
+		 function thdate2utcdate($thdate) {
 			list($d,$m,$Y) = explode('/',$thdate);
 			$Y = $Y - 543;
 			$utcdate  =  $Y."-".$m."-".$d;

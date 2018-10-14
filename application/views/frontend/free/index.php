@@ -74,22 +74,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="box-user-info">
 						<div class="input-group name">
 							<span class="input-group-addon" id="basic-addon1">name</span>
-							<input type="text" class="form-control " name="studentname" placeholder="Username" aria-describedby="basic-addon1">
+							<input type="text" class="form-control " name="reservation_tackback_name" placeholder="Username" aria-describedby="basic-addon1">
 						</div>
 					</div>
 
-					<div class="box-user-info">
-						<div class="input-group surename">
-							<span class="input-group-addon" id="basic-addon1">surename</span>
-							<input type="text" class="form-control" name="Lname" placeholder="surename" aria-describedby="basic-addon1">
-
-						</div>
-					</div>
 					<div class="box-user-info">
 						<div class="input-group pw-student">
 							<span class="input-group-addon" id="basic-addon1">pw-student</span>
-							<input type="text" class="form-control" name="idname" placeholder="pw-student" aria-describedby="basic-addon1">
-
+							<input type="text" class="form-control" name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1">
 						</div>
 					</div>
 					<div class="box-user-info">
@@ -127,12 +119,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="box">
 						<fieldset>
 							<h4>Form:</h4>
-							<input type="text" id="input_from" name:"date_input">
+							<input type="text" id="input_from" name:"reservation_date">
 						</fieldset>
 
 						<fieldset>
 							<h4>To:</h4>
-							<input type="text" id="input_to" name:"date_input">
+							<input type="text" id="input_to" name:"reservation_return_date">
 						</fieldset>
 
 					</div>
@@ -154,11 +146,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
-	<?php $this->load->view('frontend/template/javascript_frontend');?>
+	<!-- <?php $this->load->view('frontend/template/javascript_frontend');?> -->
 
 	<script>
 		$(".datepicker").pickadate({
-            format: 'dd/m/yyyy',
+            format: 'dd/mm/yyyy',
 			
   			clear: '',
   			close: ''
@@ -166,6 +158,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 	</script>
+
 
 	<script>
 
@@ -231,14 +224,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 			onReady: function () {
 				$("#input_from").pickadate({
-							format: 'dd/m/yyyy',
-							formatSubmit: 'dd/m/yyyy',
-							hiddenName: true
+					formatSubmit: '["dd","mm","yyyy"]',
+						// formatSubmit: '['dd','mm','yyyy']',
+						hiddenName: true
      				   });
+					
 
 				$("#input_to").pickadate({
-								format: 'dd/m/yyyy',
-								formatSubmit: 'dd/m/yyyy',
+								
+								formatSubmit: '["dd","mm","yyyy"]',
 								hiddenName: true
      				   });
 				window.free_pickadate.init();

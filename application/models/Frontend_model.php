@@ -52,10 +52,36 @@
 		}
 
 		public function borrowdata() {
-			$sql = "INSERT INTO reservation (reservation_student_id,reservation_return_date,reservation_tackback_name,reservation_date)
-			VALUES ('".$_POST["idname"]."','".$_POST["returndate"]."','".$_POST["studentname"]."'
-					,'".$_POST["reservdate"]."')";
-			$query = $this->db->query($sql);
+			 
+			$reservation_id = $this->input->post('reservation_id');
+
+			$reservation_date = $this->thdate2utcdate2($this->input->post('reservation_date'));
+			$reservation_return_date = $this->thdate2utcdate2($this->input->post('reservation_return_date'));
+
+			$data = array(
+				'reservation_tackback_name' => $this->input->post('reservation_tackback_name'),
+				'reservation_student_id' => $this->input->post('reservation_student_id'),
+				'reservation_date' => $reservation_date,
+				'reservation_return_date' => $reservation_return_date,
+			);
+
+			$query = $this->db->insert('reservation',$data);
+			$insert_id = $this->db->insert_id();
+
+			return $insert_id;
+		}
+
+		function thdate2utcdate2($thdate) {
+			list($d,$m,$Y) = explode('/',$thdate);
+			$utcdate  =  $Y."-".$m."-".$d;
+
+			return $utcdate;
+		}
+
+		function thdate2utcdate3($reservation_return_date) {
+			list($d,$m,$Y) = explode('/',$reservation_return_date);
+			$reservation_return_date  =  $Y."-".$m."-".$d;
+			return $reservation_return_date;
 		}
 
 
