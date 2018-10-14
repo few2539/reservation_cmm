@@ -12,9 +12,9 @@ class free extends CI_Controller {
 	{
 		
 		$data['title_page'] = 'Title Page : Free';
-		
+
 		$date['reservation'] = $this->frontend_model->borrowdata();
-		
+
 
 		$this->load->view('frontend/free/index',$data);
 	}
