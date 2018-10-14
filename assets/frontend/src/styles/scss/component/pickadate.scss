@@ -1,0 +1,13 @@
+@import '../include.scss';
+
+.box-user-info{
+    .picker__header{
+        display: none;
+    }
+    .picker__table{
+        display: none;
+    }
+    .picker__box{
+        background-color: transparent;
+    }
+}

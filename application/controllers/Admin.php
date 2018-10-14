@@ -13,4 +13,18 @@ class admin extends CI_Controller {
         $data['title_page'] = 'Title Page : admin';
 		$this->load->view('backend/admin/index',$data);
 	}
+
+	
+    public function profile()
+	{
+        $data['title_page'] = 'Title Page : admin profile';
+		$this->load->view('backend/admin/profile',$data);
+	}
+
+	public function profile_edit()
+	{
+        $data['title_page'] = 'Title Page : profile_edit';
+		$this->load->view('backend/admin/profile_edit',$data);
+	}
+	
 }

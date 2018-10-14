@@ -19,7 +19,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
 
 
-	<?php $this->load->view('frontend/template/header'); ?>
+	<?php $this->load->view('frontend/template/header');?>
 
 
 	<section class="product-free">
@@ -127,12 +127,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="box">
 						<fieldset>
 							<h4>Form:</h4>
+<<<<<<< HEAD
 							<input type="date" name="reservdate" id="input_from">
+=======
+							<input type="text" id="input_from" name:"date_input">
+>>>>>>> 0f5f4b187a135ecf4a834262b7ba3c03b3e2e95d
 						</fieldset>
 
 						<fieldset>
 							<h4>To:</h4>
+<<<<<<< HEAD
 							<input type="date" name="returndate" id="input_to">
+=======
+							<input type="text" id="input_to" name:"date_input">
+>>>>>>> 0f5f4b187a135ecf4a834262b7ba3c03b3e2e95d
 						</fieldset>
 
 					</div>
@@ -146,7 +154,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</section>
 
 
-	<?php $this->load->view('frontend/template/footer'); ?>
+	<?php $this->load->view('frontend/template/footer');?>
 
 
 
@@ -157,20 +165,34 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<?php $this->load->view('frontend/template/javascript_frontend');?>
 
 	<script>
-		$('.datepicker').pickadate()
+		$(".datepicker").pickadate({
+            format: 'dd/m/yyyy',
+			
+  			clear: '',
+  			close: ''
+        });
+
 
 	</script>
 
 	<script>
+
+
+	</script>
+
+
+	<script>
 		window.free_pickadate = {
+
 			init: function () {
+
 				var from_$input = $('#input_from').pickadate(),
 					from_picker = from_$input.pickadate('picker')
 
 				var to_$input = $('#input_to').pickadate(),
 					to_picker = to_$input.pickadate('picker')
 
-				hiddenName: true
+
 				// Check if there’s a “from” or “to” date to start with.
 				if (from_picker.get('value')) {
 					to_picker.set('min', from_picker.get('select'))
@@ -191,7 +213,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				var to_$input = $('#input_to').pickadate(),
 					to_picker = to_$input.pickadate('picker')
-					hiddenName: true
+
 
 				from_picker.on('set', function (event) {
 					if (event.select) {
@@ -207,13 +229,32 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						from_picker.set('max', false)
 					}
 				})
+
+
+
+
 			},
+
 
 
 			onReady: function () {
+				$("#input_from").pickadate({
+							format: 'dd/m/yyyy',
+							formatSubmit: 'dd/m/yyyy',
+							hiddenName: true
+     				   });
+
+				$("#input_to").pickadate({
+								format: 'dd/m/yyyy',
+								formatSubmit: 'dd/m/yyyy',
+								hiddenName: true
+     				   });
 				window.free_pickadate.init();
 				window.free_pickadate.update();
+
 			},
+
+
 
 
 		}
@@ -225,7 +266,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		/*
 	var ajax_call = function() {
 		var product_id = "<?=$product->product_id;?>";
-		
+
 		$.ajax({
 			url : "<?php echo site_url('product/ajax'); ?>/" + product_id,
 			type : "GET",

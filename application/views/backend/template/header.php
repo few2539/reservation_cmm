@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand hidden-xs hidden-sm" href="<?=site_url();?>" target="_blank">ระบบจัดการ เว็บไซต์ ภาควิชาวิศวกรรมสิ่งแวดล้อม.</a>
+        <a class="navbar-brand hidden-xs hidden-sm" href="<?=site_url();?>" target="_blank">ระบบจองกล้อง ด้วยฟามรัก</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav hidden-xs hidden-sm">

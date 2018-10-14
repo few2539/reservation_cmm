@@ -18,7 +18,7 @@ function index(){
     $this->load->library('email', $config);
     $this->email->set_newline("\r\n");
     $this->email->from('maxbaeiei@gmail.com', 'Admin');
-    $this->email->to('pphuridatefew2539@gmail.com');
+    $this->email->to('phuridatefew2539@gmail.com');
     $this->email->subject('testtest');
     $this->email->message('test');
     
