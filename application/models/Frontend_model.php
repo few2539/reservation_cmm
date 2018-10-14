@@ -17,6 +17,7 @@
 		public function getallproducts(){
 			$sql = "SELECT * FROM product";
 			$sql.= " LEFT JOIN category ON product.product_category_id = category.category_id";
+			$sql.= " WHERE product_show = 'yes'";
 			$sql.= " ORDER BY product_category_id";
 			$query = $this->db->query($sql);
 			$result_data = $query->result_array();
@@ -28,6 +29,7 @@
 			$sql = "SELECT * FROM product";
 			$sql.= " LEFT JOIN category ON product.product_category_id = category.category_id";
 			$sql.= " WHERE product_id = '$product_id' ";
+			$sql.= " AND product_show = 'yes' ";
 			$query = $this->db->query($sql);
 			$result_data = $query->row();
 
@@ -38,10 +40,11 @@
 			$sql = "SELECT * FROM product";
 			$sql.= " LEFT JOIN category ON product.product_category_id = category.category_id";
 			$sql.= " WHERE product_id = '$product_id' ";
+			$sql.= " AND product_show = 'yes' ";
 			$query = $this->db->query($sql);
 			$result_data = $query->row();
 
-			if($result_data->product_amount != 0){
+			if($result_data->product_amount > 0){
 				return TRUE;
 			}else{
 				return FALSE;

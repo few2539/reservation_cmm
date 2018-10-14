@@ -16,6 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 
+  <div id="page-wrapper">
 	<?php $this->load->view('backend/template/header');?>
 	<section class="profile-admin">
 		<div class="container emp-profile">
@@ -167,7 +168,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 
 	</section>
-
+</div>
 
 	<?php $this->load->view('backend/template/javascript');?>
 </body>
