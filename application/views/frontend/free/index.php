@@ -127,20 +127,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="box">
 						<fieldset>
 							<h4>Form:</h4>
-<<<<<<< HEAD
-							<input type="date" name="reservdate" id="input_from">
-=======
 							<input type="text" id="input_from" name:"date_input">
->>>>>>> 0f5f4b187a135ecf4a834262b7ba3c03b3e2e95d
 						</fieldset>
 
 						<fieldset>
 							<h4>To:</h4>
-<<<<<<< HEAD
-							<input type="date" name="returndate" id="input_to">
-=======
 							<input type="text" id="input_to" name:"date_input">
->>>>>>> 0f5f4b187a135ecf4a834262b7ba3c03b3e2e95d
 						</fieldset>
 
 					</div>
