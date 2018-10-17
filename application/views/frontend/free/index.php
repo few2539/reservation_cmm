@@ -14,6 +14,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<?php $this->load->view('frontend/template/headtag_frontend');?>
+
+	<!-- Bootstrap Datepicker Thai -->
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/backend/librarys/bootstrap-datepicker-thai/css/datepicker.css">
 </head>
 
 <body>
@@ -62,78 +65,81 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<div class="insert-pdf">
 			<h2>insert info here</h2>
 			<?= form_open('free/index'); ?>
-				<div class="user-info">
-					<div class="box-user-info">
-						<div class="input-group date-today">
-							<span class="input-today" id="basic-addon1">Today</span>
-							<input type="date" class="datepicker" name="today" placeholder="Username">
-						</div>
+			<div class="user-info">
+				<div class="box-user-info">
+					<div class="input-group date-today">
+						<span class="input-group-addon" id="basic-addon1">Today</span>
+
+						<input type="text" class="form-control picktoday " name="today" aria-describedby="basic-addon1" data-date-format="dd/mm/yyyy">
+						<!-- <input type="date" class="picktoday" name="today" placeholder="Username"> -->
 					</div>
+				</div>
 
 
-					<div class="box-user-info">
-						<div class="input-group name">
-							<span class="input-group-addon" id="basic-addon1">name</span>
-							<input type="text" class="form-control " name="reservation_tackback_name" placeholder="Username" aria-describedby="basic-addon1">
-						</div>
+				<div class="box-user-info">
+					<div class="input-group name">
+						<span class="input-group-addon" id="basic-addon1">name</span>
+						<input type="text" class="form-control " name="reservation_tackback_name" placeholder="Username" aria-describedby="basic-addon1">
 					</div>
+				</div>
 
-					<div class="box-user-info">
-						<div class="input-group pw-student">
-							<span class="input-group-addon" id="basic-addon1">pw-student</span>
-							<input type="text" class="form-control" name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1">
-						</div>
+				<div class="box-user-info">
+					<div class="input-group pw-student">
+						<span class="input-group-addon" id="basic-addon1">pw-student</span>
+						<input type="text" class="form-control" name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1">
 					</div>
-					<div class="box-user-info">
-						<div class="input-group degree">
-							<span class="input-group-addon" id="basic-addon1">your-degree</span>
-							<input type="text" class="form-control" name="degreeid" placeholder="such as bachelor degree" aria-describedby="basic-addon1">
-
-						</div>
-					</div>
-
-					<div class="box-user-info">
-						<div class="input-group Phone">
-							<span class="input-group-addon" id="basic-addon1">Phone</span>
-							<input type="text" class="form-control" name="phone" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
-
-						</div>
-					</div>
-
-					<div class="box-user-info">
-						<div class="input-group Use-for">
-							<span class="input-group-addon" id="basic-addon1">Use for</span>
-							<input type="text" class="form-control" name="detail" placeholder="like taking photo in some project" aria-describedby="basic-addon1">
-
-						</div>
-					</div>
-
-					<div class="box-user-info">
-						<div class="input-group subject">
-							<span class="input-group-addon" id="basic-addon1">subject</span>
-							<input type="text" class="form-control" name="subject" placeholder="CMM-444" aria-describedby="basic-addon1">
-
-						</div>
-					</div>
-
-					<div class="box">
-						<fieldset>
-							<h4>Form:</h4>
-							<input type="text" id="input_from" name="reservation_date">
-						</fieldset>
-
-						<fieldset>
-							<h4>To:</h4>
-							<input type="text" id="input_to" name="reservation_return_date">
-						</fieldset>
+				</div>
+				<div class="box-user-info">
+					<div class="input-group degree">
+						<span class="input-group-addon" id="basic-addon1">your-degree</span>
+						<input type="text" class="form-control" name="degreeid" placeholder="such as bachelor degree" aria-describedby="basic-addon1">
 
 					</div>
+				</div>
 
-					<button type="submit" name="insert" value="add to database"class="btn btn-default">Submit</button>
+				<div class="box-user-info">
+					<div class="input-group Phone">
+						<span class="input-group-addon" id="basic-addon1">Phone</span>
+						<input type="text" class="form-control" name="phone" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
 
-			<?= form_close(); ?>
+					</div>
+				</div>
 
-		</div>
+				<div class="box-user-info">
+					<div class="input-group Use-for">
+						<span class="input-group-addon" id="basic-addon1">Use for</span>
+						<input type="text" class="form-control" name="detail" placeholder="like taking photo in some project"
+						 aria-describedby="basic-addon1">
+
+					</div>
+				</div>
+
+				<div class="box-user-info">
+					<div class="input-group subject">
+						<span class="input-group-addon" id="basic-addon1">subject</span>
+						<input type="text" class="form-control" name="subject" placeholder="CMM-444" aria-describedby="basic-addon1">
+
+					</div>
+				</div>
+
+				<div class="box">
+					<fieldset>
+						<h4>Form:</h4>
+						<input type="text" id="input_from" name="reservation_date">
+					</fieldset>
+
+					<fieldset>
+						<h4>To:</h4>
+						<input type="text" id="input_to" name="reservation_return_date">
+					</fieldset>
+
+				</div>
+
+				<button type="submit" name="insert" value="add to database" class="btn btn-default">Submit</button>
+
+				<?= form_close(); ?>
+
+			</div>
 		</div>
 	</section>
 
@@ -148,21 +154,32 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<!-- <?php $this->load->view('frontend/template/javascript_frontend');?> -->
 
-	<script>
-		$(".datepicker").pickadate({
-            format: 'dd/mm/yyyy',
-			
-  			clear: '',
-  			close: ''
-        });
 
 
-	</script>
+
+	<!-- <script>
+		$(".picktoday").pickadate({
+			format: 'dd/mm/yyyy',
+
+			clear: '',
+			close: ''
+		});
+
+	</script> -->
 
 
-	<script>
+	<!-- Bootstrap Datepicker Thai -->
+	<script type="text/javascript" src="<?php echo base_url();?>assets/backend/librarys/bootstrap-datepicker-thai/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/backend/librarys/bootstrap-datepicker-thai/js/bootstrap-datepicker-thai.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/backend/librarys/bootstrap-datepicker-thai/js/locales/bootstrap-datepicker.th.js"></script>
+	<script type="text/javascript">
+		// $(document).ready(function () {
+		// 	$(".picktoday").datepicker();
+		$('.picktoday').datepicker({ autoclose: true, });
+			$(".picktoday").datepicker("setDate", new Date());
 
-
+		// });
+		
 	</script>
 
 
@@ -225,16 +242,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			onReady: function () {
 				$("#input_from").pickadate({
 					formatSubmit: 'dd/mm/yyyy',
-						// formatSubmit: '['dd','mm','yyyy']',
-						hiddenName: true
-     				   });
-					
+					// formatSubmit: '['dd','mm','yyyy']',
+					hiddenName: true
+				});
+
 
 				$("#input_to").pickadate({
-								
-								formatSubmit: 'dd/mm/yyyy',
-								hiddenName: true
-     				   });
+
+					formatSubmit: 'dd/mm/yyyy',
+					hiddenName: true
+				});
 				window.free_pickadate.init();
 				window.free_pickadate.update();
 
