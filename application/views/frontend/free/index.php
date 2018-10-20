@@ -123,10 +123,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<div class="form-group">
 							<label for="sel1">Name (Teacher):</label>
 							<select class="form-control" id="sel1">
-								<option>teacher few</option>
-								<option>teacher not</option>
-								<option>teacher karn</option>
-								<option>teacher jib</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
 							</select>
 
 						</div>
@@ -179,11 +179,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</script>
 
 
-	<script>
-
-
-	</script>
-
+	
 
 	<script>
 		window.free_pickadate = {
