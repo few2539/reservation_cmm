@@ -61,79 +61,99 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 		<div class="insert-pdf">
 			<h2>insert info here</h2>
-			<?= form_open('free/index'); ?>
-				<div class="user-info">
-					<div class="box-user-info">
-						<div class="input-group date-today">
-							<span class="input-today" id="basic-addon1">Today</span>
-							<input type="date" class="datepicker" name="today" placeholder="Username">
+			<?=form_open('free/index');?>
+			<div class="user-info">
+				<div class="box-user-info">
+					<div class="input-group date-today">
+						<span class="input-today" id="basic-addon1">Today</span>
+						<input type="date" class="datepicker" name="today" placeholder="Username">
+					</div>
+				</div>
+
+
+				<div class="box-user-info">
+					<div class="input-group name">
+						<span class="input-group-addon" id="basic-addon1">name</span>
+						<input type="text" class="form-control " name="reservation_tackback_name" placeholder="Username" aria-describedby="basic-addon1">
+					</div>
+				</div>
+
+				<div class="box-user-info">
+					<div class="input-group pw-student">
+						<span class="input-group-addon" id="basic-addon1">pw-student</span>
+						<input type="text" class="form-control" name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1">
+					</div>
+				</div>
+				<div class="box-user-info">
+					<div class="input-group degree">
+						<span class="input-group-addon" id="basic-addon1">your-degree</span>
+						<input type="text" class="form-control" name="degreeid" placeholder="such as bachelor degree" aria-describedby="basic-addon1">
+
+					</div>
+				</div>
+
+				<div class="box-user-info">
+					<div class="input-group Phone">
+						<span class="input-group-addon" id="basic-addon1">Phone</span>
+						<input type="text" class="form-control" name="phone" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
+
+					</div>
+				</div>
+
+				<div class="box-user-info">
+					<div class="input-group Use-for">
+						<span class="input-group-addon" id="basic-addon1">Use for</span>
+						<input type="text" class="form-control" name="detail" placeholder="like taking photo in some project"
+						 aria-describedby="basic-addon1">
+
+					</div>
+				</div>
+
+				<div class="box-user-info">
+					<div class="input-group subject">
+						<span class="input-group-addon" id="basic-addon1">subject</span>
+						<input type="text" class="form-control" name="subject" placeholder="CMM-444" aria-describedby="basic-addon1">
+
+					</div>
+				</div>
+				<div class="container-teacher">
+					<h2>To some teacher</h2>
+					<p>send email to teacher:</p>
+					<form>
+						<div class="form-group">
+							<label for="sel1">Name (Teacher):</label>
+							<select class="form-control" id="sel1">
+								<option>teacher few</option>
+								<option>teacher not</option>
+								<option>teacher karn</option>
+								<option>teacher jib</option>
+							</select>
+
 						</div>
-					</div>
+					</form>
+				</div>
 
 
-					<div class="box-user-info">
-						<div class="input-group name">
-							<span class="input-group-addon" id="basic-addon1">name</span>
-							<input type="text" class="form-control " name="reservation_tackback_name" placeholder="Username" aria-describedby="basic-addon1">
-						</div>
-					</div>
 
-					<div class="box-user-info">
-						<div class="input-group pw-student">
-							<span class="input-group-addon" id="basic-addon1">pw-student</span>
-							<input type="text" class="form-control" name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1">
-						</div>
-					</div>
-					<div class="box-user-info">
-						<div class="input-group degree">
-							<span class="input-group-addon" id="basic-addon1">your-degree</span>
-							<input type="text" class="form-control" name="degreeid" placeholder="such as bachelor degree" aria-describedby="basic-addon1">
 
-						</div>
-					</div>
+				<div class="box">
+					<fieldset>
+						<h4>Form:</h4>
+						<input type="text" id="input_from" name="reservation_date">
+					</fieldset>
 
-					<div class="box-user-info">
-						<div class="input-group Phone">
-							<span class="input-group-addon" id="basic-addon1">Phone</span>
-							<input type="text" class="form-control" name="phone" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
+					<fieldset>
+						<h4>To:</h4>
+						<input type="text" id="input_to" name="reservation_return_date">
+					</fieldset>
 
-						</div>
-					</div>
+				</div>
 
-					<div class="box-user-info">
-						<div class="input-group Use-for">
-							<span class="input-group-addon" id="basic-addon1">Use for</span>
-							<input type="text" class="form-control" name="detail" placeholder="like taking photo in some project" aria-describedby="basic-addon1">
+				<button type="submit" name="insert" value="add to database" class="btn btn-default">Submit</button>
 
-						</div>
-					</div>
+				<?=form_close();?>
 
-					<div class="box-user-info">
-						<div class="input-group subject">
-							<span class="input-group-addon" id="basic-addon1">subject</span>
-							<input type="text" class="form-control" name="subject" placeholder="CMM-444" aria-describedby="basic-addon1">
-
-						</div>
-					</div>
-
-					<div class="box">
-						<fieldset>
-							<h4>Form:</h4>
-							<input type="text" id="input_from" name="reservation_date">
-						</fieldset>
-
-						<fieldset>
-							<h4>To:</h4>
-							<input type="text" id="input_to" name="reservation_return_date">
-						</fieldset>
-
-					</div>
-
-					<button type="submit" name="insert" value="add to database"class="btn btn-default">Submit</button>
-
-			<?= form_close(); ?>
-
-		</div>
+			</div>
 		</div>
 	</section>
 
@@ -150,12 +170,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<script>
 		$(".datepicker").pickadate({
-            format: 'dd/mm/yyyy',
-			
-  			clear: '',
-  			close: ''
-        });
+			format: 'dd/mm/yyyy',
 
+			clear: '',
+			close: ''
+		});
 
 	</script>
 
@@ -225,16 +244,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			onReady: function () {
 				$("#input_from").pickadate({
 					formatSubmit: 'dd/mm/yyyy',
-						// formatSubmit: '['dd','mm','yyyy']',
-						hiddenName: true
-     				   });
-					
+					// formatSubmit: '['dd','mm','yyyy']',
+					hiddenName: true
+				});
+
 
 				$("#input_to").pickadate({
-								
-								formatSubmit: 'dd/mm/yyyy',
-								hiddenName: true
-     				   });
+
+					formatSubmit: 'dd/mm/yyyy',
+					hiddenName: true
+				});
 				window.free_pickadate.init();
 				window.free_pickadate.update();
 
