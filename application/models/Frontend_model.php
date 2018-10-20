@@ -55,14 +55,14 @@
 			 
 			$reservation_id = $this->input->post('reservation_id');
 
-			//$reservation_date = $this->thdate2utcdate2($this->input->post('reservation_date'));
-			//$reservation_return_date = $this->thdate2utcdate2($this->input->post('reservation_return_date'));
+			$reservation_date = $this->thdate2utcdate2($this->input->post('reservation_date'));
+			$reservation_return_date = $this->thdate2utcdate2($this->input->post('reservation_return_date'));
 
 			$data = array(
 				'reservation_tackback_name' => $this->input->post('reservation_tackback_name'),
 				'reservation_student_id' => $this->input->post('reservation_student_id'),
-				//'reservation_date' => $reservation_date,
-				//'reservation_return_date' => $reservation_return_date,
+				'reservation_date' => $reservation_date,
+				'reservation_return_date' => $reservation_return_date,
 			);
 
 			$query = $this->db->insert('reservation',$data);
@@ -83,6 +83,39 @@
 			$reservation_return_date  =  $Y."-".$m."-".$d;
 			return $reservation_return_date;
 		}
+
+		function emailsend(){
+
+			$config = Array(
+				'protocol' => 'smtp',
+				'smtp_host' => 'ssl://smtp.googlemail.com',
+				'smtp_port' => 465,
+				'smtp_user' => 'maxbaeiei@gmail.com',
+				'smtp_pass' => 'notkaksud',
+				'mailtype'  => 'html', 
+				'charset'   => 'iso-8859-1'
+			);
+			$sendtoo = $this->input->post('emailto');
+		
+			$this->load->library('email', $config);
+			$this->email->set_newline("\r\n");
+			$this->email->from('maxbaeiei@gmail.com', 'Admin');
+			$this->email->to($sendtoo);
+			$this->email->subject('testoption');
+			$this->email->message('test');
+			
+			// Set to, from, message, etc.
+			
+			$result = $this->email->send();
+			if ( ! $this->email->send()) 
+			{
+				echo 'emailsend';
+			}
+			else
+			{
+				show_error($this->Email->print_debugger());
+			}
+			}
 
 
 		// Old

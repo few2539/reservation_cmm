@@ -15,11 +15,14 @@ function index(){
         'mailtype'  => 'html', 
         'charset'   => 'iso-8859-1'
     );
+    $sendto = 'phuridatefew2539@gmail.com';
+    $sendtoo = $this->input->post('emailto');
+
     $this->load->library('email', $config);
     $this->email->set_newline("\r\n");
     $this->email->from('maxbaeiei@gmail.com', 'Admin');
-    $this->email->to('phuridatefew2539@gmail.com');
-    $this->email->subject('testtest');
+    $this->email->to($sendtoo);
+    $this->email->subject('testoption');
     $this->email->message('test');
     
     // Set to, from, message, etc.
