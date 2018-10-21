@@ -204,7 +204,7 @@ $product = [
 							</p>
 						</div>
 						<div class="content">
-							<a href="<?=site_url('product/free');?>/<?=$product["product_id"];?>" type="button" class="btn btn-<?php if($product["product_amount"] == 0) { echo "danger"; }else{ echo "success"; }?> btn-block btn-status" data-prodcut="<?=$product['product_id']?>">
+							<a href="<?=site_url('free/index');?>/<?=$product["product_id"];?>" type="button" class="btn btn-<?php if($product["product_amount"] == 0) { echo "danger"; }else{ echo "success"; }?> btn-block btn-status" data-prodcut="<?=$product['product_id']?>">
 								<?php if($product["product_amount"] == 0) { echo "Out of Stock"; }else{ echo "Free"; }?>
 							</a>
 						</div>

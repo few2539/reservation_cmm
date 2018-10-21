@@ -52,23 +52,40 @@
 		}
 
 		public function borrowdata() {
-			 
-			$reservation_id = $this->input->post('reservation_id');
 
-			$reservation_date = $this->thdate2utcdate2($this->input->post('reservation_date'));
-			$reservation_return_date = $this->thdate2utcdate2($this->input->post('reservation_return_date'));
+			if((!empty($this->input->post('reservation_date'))) || (!empty($this->input->post('reservation_return_date')))) {
+				$reservation_date = $this->thdate2utcdate2($this->input->post('reservation_date'));
+				$reservation_return_date = $this->thdate2utcdate2($this->input->post('reservation_return_date'));
+			}else{
+				$reservation_date = '';
+				$reservation_return_date = '';
+			}
 
 			$data = array(
 				'reservation_tackback_name' => $this->input->post('reservation_tackback_name'),
 				'reservation_student_id' => $this->input->post('reservation_student_id'),
 				'reservation_date' => $reservation_date,
 				'reservation_return_date' => $reservation_return_date,
+				'reservation_product_id' => $this->input->post('product_id'),
+				'reservation_create_date' => date("Y-m-d")
 			);
-
+			
 			$query = $this->db->insert('reservation',$data);
 			$insert_id = $this->db->insert_id();
 
 			return $insert_id;
+		}
+
+		public function getreservation($reservation_id){
+			$sql = "SELECT * FROM reservation";
+			$sql.= " LEFT JOIN product ON reservation.reservation_product_id = product.product_id";
+			$sql.= " LEFT JOIN category ON product.product_category_id = category.category_id";
+			$sql.= " WHERE reservation_id = '$reservation_id' ";
+			$sql.= " AND product.product_show = 'yes' ";
+			$query = $this->db->query($sql);
+			$result_data = $query->row();
+
+			return $result_data;
 		}
 
 		function thdate2utcdate2($thdate) {
@@ -84,7 +101,12 @@
 			return $reservation_return_date;
 		}
 
-		function emailsend(){
+		function emailsend($reservation_id){
+			$this->load->model('frontend_model');
+			$reservation = $this->frontend_model->getreservation($reservation_id);
+
+			$accept_link = site_url("approve/accept/".$reservation->reservation_product_id);
+			$reject_link = site_url("approve/reject/".$reservation->reservation_product_id);
 
 			$config = Array(
 				'protocol' => 'smtp',
@@ -93,16 +115,33 @@
 				'smtp_user' => 'maxbaeiei@gmail.com',
 				'smtp_pass' => 'notkaksud',
 				'mailtype'  => 'html', 
-				'charset'   => 'iso-8859-1'
+				'charset'   => 'utf-8'
 			);
 			$sendtoo = $this->input->post('emailto');
-		
+
+    		$message = '<h2> Reservation Verification </h2>';
+			$message .= '<p>ชื่ออุปกรณ์ : '.$reservation->product_name.'</p>';
+			$message .= '<p>หมวดหมู่ : '.$reservation->product_category_id.'</p>';
+			$message .= '<p>ชื่อ : '.$reservation->reservation_tackback_name.'</p>';
+			$message .= '<p>รหัสนักศึกษา : '.$reservation->reservation_student_id.'</p>';
+			//$message .= '<p>เบอร์โทรศัพท์ : '.$reservation->reservation_phonenumber.'</p>';
+			//$message .= '<p>วิชา : '.$reservation->reservation_subject.'</p>';
+			//$message .= '<p>เพื่อ : '.$reservation->reservation_usefor.'</p>';
+			$message .= '<p>วันที่ยืม : '.$reservation->reservation_date.'</p>';
+			$message .= '<p>วันที่คืน : '.$reservation->reservation_return_date.'</p>';
+			$message .= '<div style="margin-top:30px;">';
+			$message .= '<a href="'.$accept_link.'" style="width:500px;margin-left:20px;margin-right:20px;background-color:#43A047;color:#fff;padding:20px;"> อนุมัติ </a>';
+			$message .= '<a href="'.$reject_link.'" style="width:500px;margin-left:20px;margin-right:20px;background-color:#e53935;color:#fff;padding:20px;"> ไม่อนุมัติ </a>';
+			$message .= '</div>';
+
+
+
 			$this->load->library('email', $config);
 			$this->email->set_newline("\r\n");
 			$this->email->from('maxbaeiei@gmail.com', 'Admin');
 			$this->email->to($sendtoo);
-			$this->email->subject('testoption');
-			$this->email->message('test');
+			$this->email->subject('testoptionselect');
+			$this->email->message($message);
 			
 			// Set to, from, message, etc.
 			
@@ -117,7 +156,7 @@
 			}
 			}
 
-
+		
 		// Old
 
 		

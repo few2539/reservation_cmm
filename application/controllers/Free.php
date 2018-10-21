@@ -9,22 +9,31 @@ class free extends CI_Controller {
 		
     }
 
-    public function index()
+    public function index($product_id)
 	{
 		$data['title_page'] = 'Title Page : Free';
-		$data['reservation'] = $this->frontend_model->borrowdata();
-		$this->frontend_model->emailsend();
-		$this->load->view('frontend/free/detail',$data);
+
+		if($this->frontend_model->checkstockproduct($product_id) == TRUE) {
+			$data['product'] = $this->frontend_model->getproduct($product_id);
+			$this->load->view('frontend/free/index',$data);
+		}else{
+			redirect('product/index/error');
+		}
 
 	}
 
 	public function detail()
 	{
 		$data['title_page'] = 'Title Page : Free';
+
+		$reservation_id = $this->frontend_model->borrowdata();
 		
-		
+		$this->frontend_model->emailsend($reservation_id);
+
+		$data['reservation'] = $this->frontend_model->getreservation($reservation_id);
 
 		$this->load->view('frontend/free/detail',$data);
 
 	}	
+
 }

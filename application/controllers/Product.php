@@ -24,20 +24,6 @@ class product extends CI_Controller {
 		$this->load->view('frontend/product/index',$data);
 	}
 
-	public function free()
-	{
-		
-		$data['title_page'] = 'Title Page : product';
-		$product_id = $this->uri->segment(3);
-
-		if($this->frontend_model->checkstockproduct($product_id) == TRUE) {
-			$data['product'] = $this->frontend_model->getproduct($product_id);
-			$this->load->view('frontend/free/index',$data);
-		}else{
-			redirect('product/index/error');
-		}
-	}
-
 	public function ajax($product_id) {
 		$product = $this->frontend_model->getproduct($product_id);
 		echo $product->product_id;

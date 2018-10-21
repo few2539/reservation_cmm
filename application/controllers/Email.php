@@ -15,15 +15,16 @@ function index(){
         'mailtype'  => 'html', 
         'charset'   => 'iso-8859-1'
     );
-    $sendto = 'phuridatefew2539@gmail.com';
     $sendtoo = $this->input->post('emailto');
+    $message = $this->input->post('reservation_tackback_name');
+    $message .= $this->input->post('detail');
 
     $this->load->library('email', $config);
     $this->email->set_newline("\r\n");
     $this->email->from('maxbaeiei@gmail.com', 'Admin');
     $this->email->to($sendtoo);
     $this->email->subject('testoption');
-    $this->email->message('test');
+    $this->email->message($message);
     
     // Set to, from, message, etc.
     
