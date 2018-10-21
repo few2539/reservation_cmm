@@ -1,3 +1,39 @@
+<style>
+
+
+	.eqWrap {
+	display: flex;
+	flex-wrap:wrap;
+}
+
+.eq {
+	padding: 10px;
+}
+
+.eq:nth-of-type(odd) {
+	background: yellow;
+}
+
+.eq:nth-of-type(even) {
+	background: lightblue;
+}
+
+.equalHW {
+	flex: 1;
+	max-width:25%;
+}
+
+.equalHWrap {
+	max-width:100%;
+}
+
+</style>
+
+
+
+
+
+
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
@@ -175,22 +211,63 @@ $product = [
 		</div>
 
 		<div class="button-product">
-			<button type="button" id='all'class=" btn btn-warning">All</button>
+			<button type="button" id='all' class="btn btn-warning">All</button>
 			<?php foreach($categorys as $category): ?>
-				<button id='btn-<?=$category['category_code']?>' class="btn btn-primary">
-					<?=$category['category_name']?> / <?=$category['category_name_en']?>
-				</button>
+			<button id='btn-<?=$category['category_code']?>' class="btn btn-primary">
+				<?=$category['category_name']?> /
+				<?=$category['category_name_en']?>
+			</button>
 			<?php endforeach; ?>
 		</div>
 
 
-		<div class="wrap">
-			<div class="container-product my-shuffle-container">
+		<div class="wrap ">
+			
+			<div class="equalHWrap eqWrap  my-shuffle-container ">
 				<?php foreach($products as $product):?>
-				<div class="item picture-item" data-groups='["<?=$product['category_code'];?>"]'>
+				<div class="equalHW eq picture-item " data-groups='["<?=$product['category_code'];?>"]'>
+					<div class="box-all ">
+						<div class="box-img">
+							<img src="<?=base_url();?>assets/frontend/img/product_thumbnail/<?=$product["product_thumbnail"];?>" alt=""
+							data-title="
+							<?=$product["product_thumbnail"];?>">
+						</div>
+						<div class="property">
+							<p class="name_product">
+								<?=$product["product_name"];?>
+							</p>
+							<p class="product_type">
+								<?=$product["category_name_en"];?>
+							</p>
+							<p class="detail">
+								<?=$product["product_intro"];?>
+							</p>
+							<div class="content">
+								<a href="<?=site_url('product/free');?>/<?=$product["product_id"];?>" type="button" class="btn btn-<?php if($product["product_amount"] == 0) { echo "danger"; }else{ echo "success"; }?> btn-block btn-status"
+									data-prodcut="
+									<?=$product['product_id']?>">
+									<?php if($product["product_amount"] == 0) { echo "Out of Stock"; }else{ echo "Free"; }?>
+								</a>
+							</div>
+							</div>
+						</div>
+						
+				</div>
+				<?php endforeach ?>
+
+			</div>
+		</div>
+
+
+		<!-- <div class="wrap">
+			<div class="container-product ">
+				<?php foreach($products as $product):?>
+				<div class="item " data-groups='["<?=$product['category_code'];?>"]'>
 					<div class="box">
 						<div class="thumb">
-							<img src="<?=base_url();?>assets/frontend/img/product_thumbnail/<?=$product["product_thumbnail"];?>" alt="" data-title="<?=$product["product_thumbnail"];?>">
+							<img src="<?=base_url();?>assets/frontend/img/product_thumbnail/<?=$product["product_thumbnail"];?>" alt=""
+							data-title="
+							<?=$product["product_thumbnail"];?>">
 						</div>
 						<div class="property">
 							<p class="name_product">
@@ -204,7 +281,10 @@ $product = [
 							</p>
 						</div>
 						<div class="content">
-							<a href="<?=site_url('product/free');?>/<?=$product["product_id"];?>" type="button" class="btn btn-<?php if($product["product_amount"] == 0) { echo "danger"; }else{ echo "success"; }?> btn-block btn-status" data-prodcut="<?=$product['product_id']?>">
+							<a href="<?=site_url('product/free');?>/<?=$product["product_id"];?>" type="button" class="btn btn-
+								<?php if($product["product_amount"] == 0) { echo "danger"; }else{ echo "success"; }?> btn-block btn-status"
+								data-prodcut="
+								<?=$product['product_id']?>">
 								<?php if($product["product_amount"] == 0) { echo "Out of Stock"; }else{ echo "Free"; }?>
 							</a>
 						</div>
@@ -213,7 +293,7 @@ $product = [
 				<?php endforeach ?>
 			</div>
 			<div class="col-1@sm my-sizer-element"></div>
-		</div>
+		</div> -->
 
 
 	</section>

@@ -167,7 +167,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
-	<!-- <?php $this->load->view('frontend/template/javascript_frontend');?> -->
+	<?php $this->load->view('frontend/template/javascript_frontend');?>
 
 	<script>
 		$(".datepicker").pickadate({
