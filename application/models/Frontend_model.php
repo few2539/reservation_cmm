@@ -67,7 +67,10 @@
 				'reservation_date' => $reservation_date,
 				'reservation_return_date' => $reservation_return_date,
 				'reservation_product_id' => $this->input->post('product_id'),
-				'reservation_create_date' => date("Y-m-d")
+				'reservation_create_date' => date("Y-m-d"),
+				'reservation_phonenumber' => $this->input->post('reservation_phonenumber'),
+				'reservation_usefor' => $this->input->post('reservation_usefor'),
+				'reservation_subject' => $this->input->post('reservation_subject'),
 			);
 			
 			$query = $this->db->insert('reservation',$data);
@@ -106,7 +109,7 @@
 			$reservation = $this->frontend_model->getreservation($reservation_id);
 
 			$accept_link = site_url("approve/accept/".$reservation->reservation_product_id);
-			$reject_link = site_url("approve/reject/".$reservation->reservation_product_id);
+			$reject_link = site_url("reject/denied/".$reservation->reservation_product_id);
 
 			$config = Array(
 				'protocol' => 'smtp',
@@ -121,12 +124,12 @@
 
     		$message = '<h2> Reservation Verification </h2>';
 			$message .= '<p>ชื่ออุปกรณ์ : '.$reservation->product_name.'</p>';
-			$message .= '<p>หมวดหมู่ : '.$reservation->product_category_id.'</p>';
+			$message .= '<p>หมวดหมู่ : '.$reservation->category_name.'</p>';
 			$message .= '<p>ชื่อ : '.$reservation->reservation_tackback_name.'</p>';
 			$message .= '<p>รหัสนักศึกษา : '.$reservation->reservation_student_id.'</p>';
-			//$message .= '<p>เบอร์โทรศัพท์ : '.$reservation->reservation_phonenumber.'</p>';
-			//$message .= '<p>วิชา : '.$reservation->reservation_subject.'</p>';
-			//$message .= '<p>เพื่อ : '.$reservation->reservation_usefor.'</p>';
+			$message .= '<p>เบอร์โทรศัพท์ : '.$reservation->reservation_phonenumber.'</p>';
+			$message .= '<p>วิชา : '.$reservation->reservation_subject.'</p>';
+			$message .= '<p>เพื่อ : '.$reservation->reservation_usefor.'</p>';
 			$message .= '<p>วันที่ยืม : '.$reservation->reservation_date.'</p>';
 			$message .= '<p>วันที่คืน : '.$reservation->reservation_return_date.'</p>';
 			$message .= '<div style="margin-top:30px;">';

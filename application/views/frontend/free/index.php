@@ -91,7 +91,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group Phone">
 						<span class="input-group-addon" id="basic-addon1">Phone</span>
-						<input type="text" class="form-control" name="phone" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
+						<input type="text" class="form-control" name="reservation_phonenumber" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
 
 					</div>
 				</div>
@@ -99,7 +99,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group Use-for">
 						<span class="input-group-addon" id="basic-addon1">Use for</span>
-						<input type="text" class="form-control" name="detail" placeholder="like taking photo in some project"
+						<input type="text" class="form-control" name="reservation_usefor" placeholder="like taking photo in some project"
 						 aria-describedby="basic-addon1">
 
 					</div>
@@ -108,7 +108,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group subject">
 						<span class="input-group-addon" id="basic-addon1">subject</span>
-						<input type="text" class="form-control" name="subject" placeholder="CMM-444" aria-describedby="basic-addon1">
+						<input type="text" class="form-control" name="reservation_subject" placeholder="CMM-444" aria-describedby="basic-addon1">
 
 					</div>
 				</div>
@@ -121,9 +121,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							<select class="form-control" id="sel1" name="emailto">
 								<option></option>
 								<option value="phuridatefew2539@gmail.com">few</option>
-								<option value="maxbaeiei@gmail.com">not</option>
-								<option>doot</option>
-								<option>dude</option>
+								<option value="maxbaeiei@gmail.com">not</option>-
 							</select>
 
 						</div>
@@ -163,7 +161,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
-	 <?php $this->load->view('frontend/template/javascript_frontend');?>
+	<?php $this->load->view('frontend/template/javascript_frontend');?>
 
 	<script>
 		$(".datepicker").pickadate({
