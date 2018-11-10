@@ -109,8 +109,8 @@
 				'allowed_types' => 'jpg|png|gif'
 			]);
 
-			if($this->upload->do_upload('file'))
-			{
+			if($this->upload->do_upload('file'))  
+			{  
 				return $this->load->view('upload' , [
 					'data' => $this->upload->data()
 				]);
