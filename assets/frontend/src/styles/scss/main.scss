@@ -2,10 +2,10 @@
 
  @import 'vendor/normalize';
  @import 'vendor/slick.css';
- @import 'vendor/default.css';
+ @import 'vendor/default.css'; 
+
  @import 'vendor/default.date.css';
  //set default on website     
- ;
  @import 'fontface/font-face.scss';
  @import 'set/typo.scss';
  @import 'set/variable.scss';
@@ -16,9 +16,9 @@
  @import 'component/product.scss';
  @import 'component/free.scss';
  @import 'component/reserved.scss';
- @import 'component/user-history.scss';
+ @import 'component/user-history.scss'; 
  @import 'component/header.scss';
- @import 'component/loginv2.scss';
+ @import 'component/loginv2.scss';  
  @import 'component/pickadate.scss';
  @import 'component/profile.scss';
  @import 'component/profile_edit.scss';

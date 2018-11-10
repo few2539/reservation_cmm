@@ -160,3 +160,16 @@
 
 <!-- Chart JS -->
 <script type="text/javascript" src="<?php echo base_url();?>assets/backend/librarys/chartjs/dist/Chart.min.js"></script>
+
+
+<!-- dropify -->
+
+
+<!-- drify -->
+<script type="text/javascript" src="<?php echo base_url();?>assets/backend/js/plugins/dropify.js"></script>
+
+
+<script>
+	$('.dropify').dropify();
+
+</script>

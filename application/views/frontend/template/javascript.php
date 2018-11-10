@@ -178,3 +178,12 @@
 <script type="text/javascript" src="<?php echo base_url();?>assets/backend/librarys/bootstrap-datepicker-thai/js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/backend/librarys/bootstrap-datepicker-thai/js/bootstrap-datepicker-thai.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/backend/librarys/bootstrap-datepicker-thai/js/locales/bootstrap-datepicker.th.js"></script>
+
+<!-- drify -->
+<script type="text/javascript" src="<?php echo base_url();?>assets/backend/js/plugins/dropify.js"></script>
+
+
+<script>
+	$('.dropify').dropify();
+
+</script>

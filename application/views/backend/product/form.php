@@ -96,8 +96,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 						<div class="clearfix"></div>
 
-						<div class="clearfix" style="margin-bottom: 30px;"></div>
+
+
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<div class="form-group has-feedback">
+								<label>อัพโหลดรูป</label>
+								<input type="file" class="dropify" data-default-file="url_of_your_file" />
+								<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+
+
 						<?php endif; ?>
+
+
+
+
+
+
+
 
 						<!-- Form Update -->
 						<?php if($action == 'update'): ?>
@@ -194,10 +213,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<div class="form-group has-feedback">
 								<label>Intro Items</label>
-							
 
-                 <textarea  name="product_intro" class="form-control" placeholder="product_intro" rows="3" id="comment"
-								 required data-error="โปรดกรอกช่องนี้"  value="<?=$product->product_intro;?>"></textarea>
+
+								<textarea name="product_intro" class="form-control" placeholder="product_intro" rows="3" id="comment" required
+								 data-error="โปรดกรอกช่องนี้" value="<?=$product->product_intro;?>"></textarea>
 
 								<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 								<div class="help-block with-errors"></div>
@@ -246,6 +265,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	<!-- ./wrapper -->
 	<?php $this->load->view('backend/template/javascript');?>
+
 </body>
 
 </html>
