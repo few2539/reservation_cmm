@@ -58,14 +58,22 @@
 		// เพิ่มข้อมูล สินค้า
 		public function productinsert(){
 
+			$config['upload_path']          = 'assets/frontend/img/product_thumbnail/';
+			$config['allowed_types']        = 'gif|jpg|png';
+				
+
+                $this->load->library('upload', $config);
+
+            $this->upload->do_upload('userfile');
+
 			$product_id = $this->input->post('product_id');
 
 			$data = array(
 				'product_name' => $this->input->post('product_name'),
 				'product_category_id' => $this->input->post('product_category_id'),
 				'product_import_date' => time(),
-				'product_amount' => $this->input->post('product_amount'),
-				'product_thumbnail' => $this->input->post('product_thumbnail'),
+				'product_amount' => '1',
+				'product_thumbnail' => $this->upload->data('file_name'),
 				'product_intro' => $this->input->post('product_intro'),
 				'product_detail' => $this->input->post('product_detail'),
 				'product_status' => 'free',
@@ -100,25 +108,43 @@
 		}
 
 		function uploadfile() {
-			$upload_path =  APPPATH . 'uploads';
-			if(!file_exitst($upload_path)) mkdir($upload_path);
-			if($_FILES) redirect(base_url('upload'));
+			$upload_path =  'assets/frontend/img/product_thumbnail/';
+			if($_FILES) redirect(base_url('product/admin_add/'));
 
 			$this->load->library('upload', [
 				'upload_path' => $upload_path,
 				'allowed_types' => 'jpg|png|gif'
 			]);
 
-			if($this->upload->do_upload('file'))  
+			if($this->upload->do_upload('product_thumbnail'))  
 			{  
-				return $this->load->view('upload' , [
+				return $this->load->view('product/admin_detail/'.$insert_id , [
 					'data' => $this->upload->data()
 				]);
 
-				return $this->load->view('upload' ,[
+				return $this->load->view('product/admin_detail/'.$insert_id ,[
 					'error' => $this->upload->display_errors()
 				]);
 			}
+		}
+
+		function testupload() {
+				$config['upload_path']          = 'assets/frontend/img/product_thumbnail/';
+				$config['allowed_types']        = 'gif|jpg|png';
+				
+
+                $this->load->library('upload', $config);
+
+                if ( ! $this->upload->do_upload('userfile'))
+				{  
+					return $this->load->view('product/admin_detail/', [
+						'data' => $this->upload->data()
+					]);
+	
+					return $this->load->view('product/admin_detail/' ,[
+						'error' => $this->upload->display_errors()
+					]);
+				}
 		}
 	}
 ?>

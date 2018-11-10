@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<?php if($action == 'insert'): ?>
 						<?php $attributes = array('class' => '','data-toggle' => 'validator','role' => 'form'); ?>
 						<?php $hidden  = array('' => ''); ?>
-						<?= form_open('product/'.$action, $attributes, $hidden); ?>
+						<?= form_open_multipart('product/'.$action, $attributes, $hidden); ?>
 						<?php endif; ?>
 
 						<!-- Go to Update -->
@@ -97,11 +97,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="clearfix"></div>
 
 
-
+						
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<div class="form-group has-feedback">
 								<label>อัพโหลดรูป</label>
-								<input type="file" class="dropify" data-default-file="url_of_your_file" />
+								<input type="file" class="dropify" data-default-file="file_name" name="userfile" hidden/>
 								<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 								<div class="help-block with-errors"></div>
 							</div>
@@ -110,9 +110,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 						<?php endif; ?>
-
-
-
 
 
 
@@ -247,7 +244,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 						<div class="form-group col-md-12">
-							<button type="submit" value="submit" class="btn btn-primary btn-block" style="font-weight: bold;">
+							<button type="submit" value="upload" class="btn btn-primary btn-block" style="font-weight: bold;">
 								<i class="fa fa-edit"></i> ยืนยันการทำรายการ
 							</button>
 						</div>
@@ -264,6 +261,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	</div>
 	<!-- ./wrapper -->
+
+
 	<?php $this->load->view('backend/template/javascript');?>
 
 </body>

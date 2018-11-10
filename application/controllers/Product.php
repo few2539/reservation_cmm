@@ -7,6 +7,8 @@ class product extends CI_Controller {
 		parent::__construct();
 		$this->load->model('frontend_model');
 		$this->load->model('backend/product_model');
+		$this->load->helper('form');
+		
     }
 
 	public function index($error=null)
@@ -45,15 +47,20 @@ class product extends CI_Controller {
 
 		$data['action'] = "insert";
 		$data['categorys'] = $this->frontend_model->getallcategorys();
-		
+	
 		$this->load->view('backend/product/form',$data);
+	}
+
+	public function testuploadfile()
+	{
+		$this->product_model->testupload();
 	}
 
 	public function insert()
 	{
 		// Function Insert Product
 		$insert_id = $this->product_model->productinsert();
-		
+
 		redirect('product/admin_detail/'.$insert_id);
 	}
 
