@@ -98,5 +98,27 @@
 
 			return $utcdate;
 		}
+
+		function uploadfile() {
+			$upload_path =  APPPATH . 'uploads';
+			if(!file_exitst($upload_path)) mkdir($upload_path);
+			if($_FILES) redirect(base_url('upload'));
+
+			$this->load->library('upload', [
+				'upload_path' => $upload_path,
+				'allowed_types' => 'jpg|png|gif'
+			]);
+
+			if($this->upload->do_upload('file'))
+			{
+				return $this->load->view('upload' , [
+					'data' => $this->upload->data()
+				]);
+
+				return $this->load->view('upload' ,[
+					'error' => $this->upload->display_errors()
+				]);
+			}
+		}
 	}
 ?>
