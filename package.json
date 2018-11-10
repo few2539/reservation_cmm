@@ -2,6 +2,7 @@
   "name": "few",
   "version": "1.0.0",
   "dependencies": {
+    "dropify": "^0.2.2",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^1.1.0",
     "pump": "^3.0.0",

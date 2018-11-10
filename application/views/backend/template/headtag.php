@@ -66,3 +66,5 @@
 
 <!-- Bootstrap Fileinput -->
 <link rel="stylesheet" href="<?php echo base_url();?>assets/backend/librarys/bootstrap-fileinput/fileinput.css">
+
+<link href="<?php echo base_url();?>assets/backend/librarys/dropify.css" rel="stylesheet">
