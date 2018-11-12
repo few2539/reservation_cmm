@@ -116,7 +116,7 @@
 				'smtp_host' => 'ssl://smtp.googlemail.com',
 				'smtp_port' => 465,
 				'smtp_user' => 'maxbaeiei@gmail.com',
-				'smtp_pass' => 'notkaksud',
+				'smtp_pass' => 'notpasstestpj',
 				'mailtype'  => 'html', 
 				'charset'   => 'utf-8'
 			);
