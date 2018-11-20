@@ -165,8 +165,12 @@ section {
 			align-items: center;
 			width: 100%;
 			height: 100vh;
-			background: linear-gradient(-45deg,$gd1 0%,  $gd2 100%);
+			// background: linear-gradient(-45deg,$gd1 0%,  $gd2 100%);
+			background: linear-gradient(-45deg, $gd4, $gd3, $gd2, $gd1);
 			background-size: cover;
+			animation: Gradient 10s ease infinite;
+			background-position: 0 0;
+			background-size: 600%;
 		}
 
 		.user_options-container {
@@ -180,8 +184,20 @@ section {
 			width: 100%;
 			background-color: rgba(34, 34, 34, 0.85);
 			border-radius: 3px;
+
 			@media (max-width: $sd-plus) {
 				display: none;
+			}
+		}
+		.user_options-text-mobile{
+			position: absolute;
+			bottom: 100%;
+			transform: translate(0,-60%);
+			@media (min-width: $md) {
+				display: none;
+			}
+			@media (min-width: $sd) {
+				transform: translate(0,-45%);
 			}
 		}
 
@@ -199,14 +215,26 @@ section {
 		.user_registered-title,
 		.user_unregistered-title {
 			margin-bottom: 15px;
-
 			line-height: 1em;
+			text-align: center;
+		}
+
+		.box-img-regis {
+			text-align: center;
+
+			img {}
 		}
 
 		.user_unregistered-text,
 		.user_registered-text {
 			font-family: 'Prompt-Light';
 			line-height: 1.4em;
+			text-align: center;
+			
+			@media (max-width: $sd-plus) {
+				color: white;
+			font-weight: bold;
+			}
 		}
 
 		.user_registered-login,
@@ -248,19 +276,23 @@ section {
 			// transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 
 			@media (max-width: $sd-plus) {
-			
+
 				width: 100%;
 				position: absolute;
 				top: 50%;
-				transform: translate(0, -50%);
+				transform: translate(0, -20%);
 				left: 0px;
 				background-color: #fff;
 				border-radius: 3px;
 				box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
-				overflow: hidden;  
+				overflow: hidden;
 				//e
 				// transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;   
 			}
+			@media (max-width: $sd) {
+			    min-height: 320px !important;
+			}
+			
 		}
 
 		.user_options-forms .user_forms-login {
@@ -304,7 +336,7 @@ section {
 		}
 
 		.user_options-forms .forms_buttons-forgot {
-			
+
 			letter-spacing: 0.1rem;
 			color: #ccc;
 			text-decoration: underline;
@@ -319,12 +351,13 @@ section {
 			background-color: #e8716d;
 			border-radius: 3px;
 			padding: 10px 35px;
-			
+
 			font-weight: 300;
 			color: #fff;
-			text-transform: uppercase;
+			text-transform: uppercase; 
 			letter-spacing: 0.1rem;
 			transition: background-color 0.2s ease-in-out;
+			
 		}
 
 		.user_options-forms .forms_buttons-action:hover {
@@ -414,4 +447,81 @@ section {
 
 
 	}
+}
+
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+
+	50% {
+		background-position: 100% 50%
+	}
+
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+$primary-color: #667eea;
+$secondary-color: #764ba2;
+
+
+
+.shape {
+    margin: 0 auto;
+	position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.random-shape:after {
+    font-family: FontAwesome;
+    content: "\f005";
+}
+
+$circle-size: 100px;
+$colors: #FFD700, #FFF8DC, #DB7093, #C2B7FE, #95A9FF;
+$shapes: '\f005', '\f0c8', '\f1db', '\f096', '\f1d8', '\f1cb';
+$shape-count: 50;
+
+@for $i from 1 through $shape-count {
+    $shape-size: random(10);
+    $rotation: random(360);
+    $speed: 40 + random(10);
+    $color-key: random( length($colors) );
+    $shape-color: nth( $colors, $color-key );
+    $shape-key: random( length($shapes) );
+    $shape-type: nth( $shapes, $shape-key );
+    $text: random(10);
+    
+    @keyframes shape-#{$i} {
+        0% {
+            transform: translate3d(0,0,0) rotate(#{$rotation + 0}deg);
+        }
+        100% {
+            transform: translate3d(0,0,0) rotate(#{$rotation + 360}deg);
+        }
+    }
+  
+    .shape-container--#{$i} { 
+        animation: shape-#{$i} #{$speed}s linear infinite;
+
+        .random-shape:after {
+            margin: #{$shape-size}rem;
+            color: $shape-color;
+            font-size: #{$shape-size * 0.4}rem;
+            content: $shape-type;
+        }
+    }
+}
+
+.exceed{
+	margin-top: 15px;
 }

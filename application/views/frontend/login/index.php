@@ -18,22 +18,54 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 </head>
 
+<style>
+
+</style>
+
 
 
 <body>
 	<!-- <?php $this->load->view('frontend/template/header'); ?> -->
+
+	
+			<div class="shape">
+
+
+			</div>
+	
+
 
 	<section class="login">
 		<section class="user">
 			<div class="user_options-container">
 				<div class="user_options-text">
 					<div class="user_options-registered">
-						<h2 class="user_registered-title">Welcome</h2>
-                        <p class="user_registered-text upper-font">reservation system(CMM)</p>
-                        <p class="user_registered-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore excepturi, blanditiis illum saepe ducimus, aut libero, nostrum consequatur velit temporibus totam earum eligendi at quia sapiente ipsam accusamus iste adipisci?</p>
+						<h2 class="user_registered-title">.:: WELCOME ::.</h2>
+						<div class="box-img-regis">
+							<!-- <img src="<?=base_url();?>assets/frontend/dist/styles/image/final-logo.png" alt=""> -->
+							<img src="<?=base_url();?>assets/frontend/dist/styles/image/final-logo-big.png" alt="">
+						</div>
+
+						<p class="user_registered-text exceed">Device reservation system</p>
+						<p class="user_registered-text">Department of Computer And Information Technology</p>
+						<p class="user_registered-text">KMUTT</p>
 						<!-- <button class="user_registered-login" id="login-button">Login</button> -->
 					</div>
 				</div>
+
+				<div class="user_options-text-mobile">
+
+					<div class="box-img-regis">
+						<img src="<?=base_url();?>assets/frontend/dist/styles/image/logocmm.png" alt="">
+					</div>
+
+					<p class="user_registered-text">Device reservation system</p>
+					<p class="user_registered-text">Department of Computer And Information Technology</p>
+					<p class="user_registered-text">KMUTT</p>
+					<!-- <button class="user_registered-login" id="login-button">Login</button> -->
+
+				</div>
+
 
 				<div class="user_options-forms" id="user_options-forms">
 					<div class="user_forms-login">
@@ -43,21 +75,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							$hidden = array('status' => 'check');
 						?>
 						<?= form_open('login/index',$attribute,$hidden); ?>
-							<fieldset class="forms_fieldset">
-								<div class="forms_field">
-									<input type="email" name="email" placeholder="Email" class="forms_field-input" value="<?=$email?>" required autofocus />
-								</div>
-								<div class="forms_field">
-									<input type="password" name="password" placeholder="Password" class="forms_field-input" value="<?=$password?>" required />
-								</div>
-							</fieldset>
-							<div class="forms_buttons">
-								<!-- <button type="button" class="forms_buttons-forgot">Forgot password?</button> -->
-								<input type="submit" value="Log In" class="forms_buttons-action">
+						<fieldset class="forms_fieldset">
+							<div class="forms_field">
+								<input type="text" name="email" placeholder="Email" class="forms_field-input" />
 							</div>
+							<div class="forms_field">
+								<input type="password" name="password" placeholder="Password" class="forms_field-input" />
+							</div>
+						</fieldset>
+						<div class="forms_buttons">
+							<!-- <button type="button" class="forms_buttons-forgot">Forgot password?</button> -->
+							<input type="submit" value="Log In" class="forms_buttons-action">
+						</div>
 						<?= form_close(); ?>
-                    </div>
-                    <!-- sign up condition -->
+					</div>
+					<!-- sign up condition -->
 					<!-- <div class="user_forms-signup">
 						<h2 class="forms_title">Sign Up</h2>
 						<form class="forms_form">
@@ -77,11 +109,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							</div>
 						</form>
                     </div> -->
-                    
+
 				</div>
 			</div>
 		</section>
 	</section>
+
+
 
 	<?php $this->load->view('frontend/template/footer'); ?>
 	<?php $this->load->view('frontend/template/javascript_frontend');?>
@@ -89,6 +123,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<?php if($result == 'error'): ?>
 	<script>
 		alert("กรุณาตรวจสอบความถูกต้อง");
+
 	</script>
 	<?php endif; ?>
 </body>
@@ -117,6 +152,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		userForms.classList.remove('bounceLeft')
 		userForms.classList.add('bounceRight')
 	}, false)
+
+</script>
+<script>
+	$(document).ready(function () {
+
+		var html = '';
+		for (var i = 1; i <= 50; i++) {
+			html += '<div class="shape-container--' + i + ' shape-animation"><div class="random-shape"></div></div>';
+		}
+
+		document.querySelector('.shape').innerHTML += html;
+
+		var $allShapes = $("[class*='shape-container--']");
+
+
+	});
 
 </script>
 

@@ -3,6 +3,7 @@
 
 		function __construct() {
 			parent::__construct();
+			$this->load->library('authldap');
 		}
 
 		public function checklogin() {
@@ -48,6 +49,19 @@
 			$this->session->sess_destroy();
 
 			redirect('login/index');
+		}
+
+		function loginldap($errorMsg = NULL){
+			if(!$this->authldap->is_authenticated()) {
+				$this->authldap->login(
+					$this->input->post('email'),
+					$this->input->post('password'));
+
+					redirect('product/index');
+			}else {
+                // Login FAIL
+				return "error";
+            }
 		}
 	}
 ?>

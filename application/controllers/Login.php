@@ -7,23 +7,25 @@ class login extends CI_Controller {
 		parent::__construct();
 		$this->load->model('frontend_model');
 		$this->load->model('login_model');
+		$this->load->library('authldap');
     }
 
 	public function index()
 	{
 		$data['title_page'] = 'Title Page : login';
-
+		
+		
 		if(($this->input->post('email') != null) && ($this->input->post('password'))) {
 			$data['result'] = $this->login_model->checklogin();
 
 			$data['email'] = $this->input->post('email');
-			$data['password'] = $this->input->post('password');
+			$data['password'] = $this->input->post('password'); 
+			$this->login_model->loginldap();
 		}else{
 			$data['email'] = '';
 			$data['password'] = '';
 			$data['result'] = '';
-		}
-
+		} 
 		$this->load->view('frontend/login/index',$data);
 	}
 
