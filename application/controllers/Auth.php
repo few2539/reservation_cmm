@@ -33,7 +33,9 @@ class Auth extends CI_Controller {
         $this->login();
 
     }
+
     function login($errorMsg = NULL){
+     
         if(!$this->authldap->is_authenticated()) {
             // Set up rules for form validation
             $rules = $this->form_validation;
@@ -44,21 +46,27 @@ class Auth extends CI_Controller {
                     $rules->set_value('username'),
                     $rules->set_value('password'))) {
                 // Login WIN!
-                $this->session->set_userdata($newdata);
-				redirect('product/index');
+                
+                    redirect('product/index');
+                
             }else {
                 // Login FAIL
                 $this->load->view('auth/login_form', array('login_fail_msg'
                                         => 'Error with LDAP authentication.'));
+                                        
             }
+        }else {
+                // Already logged in...
+                redirect('product/index');
         }
     }
+
     function logout() {
         if($this->session->userdata('logged_in')) {
             $data['name'] = $this->session->userdata('cn');
             $data['username'] = $this->session->userdata('username');
             $data['logged_in'] = TRUE;
-            $this->auth_ldap->logout();
+            $this->authldap->logout();
         } else {
             $data['logged_in'] = FALSE;
         }
