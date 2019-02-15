@@ -9,7 +9,7 @@
 		public function rejectupdate($product_id){
 
 			$data = array(
-				'product_status' => 'free',
+				'product_status' => 'available',
 				'product_amount' => '1'
 			);
 

@@ -6,6 +6,7 @@ class userhistory extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('frontend_model');
+		$this->load->model('login_model');
     }
 
 	public function index()
@@ -13,6 +14,16 @@ class userhistory extends CI_Controller {
 		
         $data['title_page'] = 'Title Page : Userhistory';
 		$this->load->view('frontend/Userhistory/index',$data);
+
+		$student_id = $this->login_model->checklogin();
+
+		$data['reservation'] = $this->frontend_model->getuserhistory($student_id);
+
+	}
+
+	public function ajax($reservation_id) {
+		$reservation = $this->frontend_model->getuserhistory($reservation_id);
+		echo $reservation->reservation_id;
 	}
 
 

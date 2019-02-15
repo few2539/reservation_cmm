@@ -43,34 +43,48 @@ $product = [
 		<div class="row title-history">
 			<h1>ประวัติการจอง</h1>
 		</div>
-
+		
+		<div class="history" data-group="">
+		<?php foreach($reservation as $reservations):?>
 		<div class="row">
 			<div class="col-xs-12 user-history ">
-				<p>ครั้งที่ &ensp; </p>
+				<p> ครั้งที่ &ensp; </p>
 				<p>1</p>
 			</div>
 			<div class="col-xs-12 user-history ">
-				<p>รหัส &ensp; </p>
-				<p>590404040404</p>
+				<p class="student_id">
+				<?=$reservations["reservation_student_id"];?>
+				</p>
+				
 			</div>
 			<div class="col-xs-12  user-history">
-				<p>ชื่อ &ensp; </p>
-				<p>นาย เทสเทส เทสเทสเทสเทส</p>
+				<p class="reservation_tackback_name">
+				<?=$reservations["reservation_tackback_name"];?>
+				</p>
+				
 			</div>
 			<div class="col-xs-12 user-history">
-				<p>ยืม &ensp; </p>
-				<p>กล้อง sony1</p>
+				<p class="product_name">
+				<?=$reservations["product_name"];?>
+				</p>
+				
 			</div>
 			<div class="col-xs-12 user-history">
-				<p>วันที่&ensp; </p>
-				<p>00-00-0000</p>
+				<p class="date">
+				<?=$reservations["reservation_date"];?>
+				<?=$reservations["reservation_return_date"];?>
+				</p>
+				
             </div>
             <div class="col-xs-12 user-history">
 				<p>สถานะ&ensp; </p>
-				<p>อนุมัติ</p>
+				<p class="status">
+				<?=$reservations["product_status"];?>
+				</p>
 			</div>
         </div>
-        
+        </div>
+		<?php endforeach ?>
         <div class="row">
 			<div class="col-xs-12 user-history ">
 				<p>ครั้งที่ &ensp; </p>

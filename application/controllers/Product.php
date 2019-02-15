@@ -9,6 +9,7 @@ class product extends CI_Controller {
 		$this->load->model('backend/product_model');
 		$this->load->helper('form');
 		
+		
     }
 
 	public function index($error=null)

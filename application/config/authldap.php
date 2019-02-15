@@ -42,13 +42,13 @@
 		
 $config['hosts'] = array('10.1.130.12');
 $config['ports'] = array(389);
-$config['basedn'] = 'ou=admin,dc=kmutt,dc=ac,dc=th';
+$config['basedn'] = 'dc=kmutt,dc=ac,dc=th';
 $config['login_attribute'] = 'uid';
-$config['proxy_user'] = '';
-$config['proxy_pass'] = '';
-$config['roles'] = array(1 => 'User', 
-    3 => 'Power User',
-    5 => 'Administrator');
-$config['member_attribute'] = 'memberUid';
+$config['proxy_user'] = 'uid=cmm_manager,ou=admin,dc=kmutt,dc=ac,dc=th';
+$config['proxy_pass'] = '@431dkjsp$1';
+$config['roles'] = array(1 => 'cn=CMM,ou=Group,dc=kmutt,dc=ac,dc=th',
+                2 => 'uid=cmm_manager,ou=admin,dc=kmutt,dc=ac,dc=th',
+                        );
+$config['member_attribute'] = 'gidNumber';
 $config['auditlog'] = 'application/logs/audit.log';  // Some place to log attempted logins (separate from message log)
 ?>

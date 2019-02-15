@@ -91,6 +91,18 @@
 			return $result_data;
 		}
 
+		public function getuserhistory($student_id){
+			$sql = "SELECT * FROM reservation ";
+			$sql.= " LEFT JOIN user ON reservation.reservation_student_id = user.student_id";
+			$sql.= " LEFT JOIN product ON reservation.reservation_product_id = product.product_id";
+			$sql.= " WHERE student_id = '$student_id' ";
+			$query = $this->db->query($sql);
+			$result_data = $query->row();
+
+			return $result_data;
+
+		}
+
 		function thdate2utcdate2($thdate) {
 			list($d,$m,$Y) = explode('/',$thdate);
 			$utcdate  =  $Y."-".$m."-".$d;

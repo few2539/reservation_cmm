@@ -33,32 +33,48 @@ class Auth extends CI_Controller {
         $this->login();
 
     }
+
     function login($errorMsg = NULL){
+     
         if(!$this->authldap->is_authenticated()) {
             // Set up rules for form validation
             $rules = $this->form_validation;
             $rules->set_rules('username', 'Username', 'required|alpha_dash');
             $rules->set_rules('password', 'Password', 'required');
+            
             // Do the login...
             if($rules->run() && $this->authldap->login(
                     $rules->set_value('username'),
                     $rules->set_value('password'))) {
                 // Login WIN!
-                $this->session->set_userdata($newdata);
-				redirect('product/index');
+                
+                    redirect('product/index');
+                
             }else {
+                if($errorMsg = 'loginerror'){
+                    $data['errorMsg'] = 'login failed retry.';
+                }else{
+                    $data['errorMsg'] = '';
+                }
+                
                 // Login FAIL
-                $this->load->view('auth/login_form', array('login_fail_msg'
-                                        => 'Error with LDAP authentication.'));
+                $this->session->userdata('logged_in');
+                $this->load->view('auth/login_form', $data);
+                
+                                        
             }
+        }else {
+                // Already logged in...
+                redirect('product/index');
         }
     }
+
     function logout() {
         if($this->session->userdata('logged_in')) {
             $data['name'] = $this->session->userdata('cn');
             $data['username'] = $this->session->userdata('username');
             $data['logged_in'] = TRUE;
-            $this->auth_ldap->logout();
+            $this->authldap->logout();
         } else {
             $data['logged_in'] = FALSE;
         }

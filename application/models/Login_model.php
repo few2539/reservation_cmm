@@ -19,7 +19,8 @@
 			    $user_email = $row['user_email'];
 			    $user_password = $row['user_password'];
 			    $user_fname = $row['user_fname'];
-			    $user_lname = $row['user_lname'];
+				$user_lname = $row['user_lname'];
+				$student_id = $row['student_id'];
 			}
 
 			if($query->num_rows()>0) {
@@ -30,6 +31,7 @@
 					'user_password' => $user_password,
 					'user_fname' => $user_fname,
 					'user_lname' => $user_lname,
+					'student_id' => $student_id,
 				);
 
 				$this->session->set_userdata($newdata);
@@ -45,6 +47,7 @@
 			$this->session->unset_userdata('user_password');
 			$this->session->unset_userdata('user_fname');
 			$this->session->unset_userdata('user_lname');
+			$this->session->unset_userdata('student_id');
 			
 			$this->session->sess_destroy();
 
@@ -52,16 +55,48 @@
 		}
 
 		function loginldap($errorMsg = NULL){
-			if(!$this->authldap->is_authenticated()) {
-				$this->authldap->login(
-					$this->input->post('email'),
-					$this->input->post('password'));
 
-					redirect('product/index');
-			}else {
-                // Login FAIL
-				return "error";
+			$studentid = $this->input->post('email');
+			$password = $this->input->post('password');
+			
+			if(!$this->authldap->is_authenticated()){
+				$this->authldap->login(
+					$studentid, 
+					$password);	
+//uset($_SESSION['user']['email']); logoyt fubction 
+// $_SESSION['user']['email']='zxczxc';
+				redirect('product/index');
+            }else {
+
+                return 'loginerror';
             }
+        }
+		
+			/*$infoUser = ldap_search('uid', '=', $studentid);
+			if(empty($infoUser)){
+				$this->session->flashdata('alert-warning', 'ผิดพลาด');
+				return redirect('login/index');
+			}elseif($infoUser['attributes']['gidnumber'][0] !=4307) {
+				$this->session->flashdata('alert-warning', 'ผิดพลาดไม่ใช่ cmm');
+				return redirect('login/index');
+			}
+			else{
+				if(!$this->authldap->is_authenticated()){
+					$this->authldap->login(
+						$studentid, 
+						$password,);	
+					redirect('product/index');
+					}else{
+						return "error";
+					}
+				}*/
 		}
-	}
+
+		function loginldap2(){
+			
+		}
+			
+			
+		
+	
 ?>

@@ -79,13 +79,14 @@ class CI_Authldap {
         if(empty($user_info['role'])) {
             log_message('info', $username." has no role to play.");
             show_error($username.' succssfully authenticated, but is not allowed because the username was not found in an allowed access group.');
+            
         }
+
         // Record the login
         $this->_audit("Successful login: ".$user_info['cn']."(".$username.") from ".$this->ci->input->ip_address());
         // Set the session data
         $customdata = array('username' => $username,
                             'cn' => $user_info['cn'],
-                            'role' => $user_info['role'],
                             'logged_in' => TRUE);
     
         $this->ci->session->set_userdata($customdata);
@@ -156,8 +157,8 @@ class CI_Authldap {
         // Find the DN of the user we are binding as
         // If proxy_user and proxy_pass are set, use those, else bind anonymously
         if($this->proxy_user) {
-            $bind = ldap_bind($this->ldapconn, $this->proxy_user, $this->proxy_pass);
-        }else {
+                $bind = ldap_bind($this->ldapconn, $this->proxy_user, $this->proxy_pass);
+            }else {
             $bind = ldap_bind($this->ldapconn);
         }
         if(!$bind){
@@ -173,9 +174,12 @@ class CI_Authldap {
             
         // Now actually try to bind as the user
         $bind = ldap_bind($this->ldapconn, $binddn, $password);
-        if(! $bind) {
+        if(!$bind) {
             $this->_audit("Failed login attempt: ".$username." from ".$_SERVER['REMOTE_ADDR']);
-            return FALSE;
+            echo "login failed";
+
+            exit('Binding failed');
+            
         }
         $cn = $entries[0]['cn'][0];
         $dn = stripslashes($entries[0]['dn']);

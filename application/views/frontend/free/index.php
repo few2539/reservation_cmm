@@ -62,7 +62,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<div class="insert-pdf">
 			<h2>insert info here</h2>
 			<?php $attributes = array('class' => '','data-toggle' => 'validator','role' => 'form'); ?>
-            <?php $hidden  = array('product_id' => $product->product_id); ?>
+            <?php $hidden  = array('product_id' => $product_id); ?>
             <?= form_open('free/detail', $attributes, $hidden); ?>
 			<div class="user-info">
 
