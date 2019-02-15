@@ -15,7 +15,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 	<?php $this->load->view('frontend/template/headtag_frontend');?>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	
 	
 </head>
 
@@ -29,10 +29,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- <?php $this->load->view('frontend/template/header'); ?> -->
 
 	
-			<div class="shape1">
-
-
-			</div>
+			<div class="shape">	</div>
 	
 
 
