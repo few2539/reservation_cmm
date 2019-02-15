@@ -56,7 +56,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="user_options-text-mobile">
 
 					<div class="box-img-regis">
-						<img src="<?=base_url();?>assets/frontend/dist/styles/image/logocmm.png" alt="">
+						<img src="<?=base_url();?>assets/frontend/dist/styles/image/final-logo.png" alt="">
 					</div>
 
 					<p class="user_registered-text">Device reservation system</p>
