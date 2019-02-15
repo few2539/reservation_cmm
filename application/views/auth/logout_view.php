@@ -12,4 +12,6 @@
       <p>You need to <?php echo anchor('/auth/login', 'login', ''); ?> before you log out...</p>
     <?php endif;?>
   </body>
+
+  
 </html>

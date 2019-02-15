@@ -76,7 +76,7 @@
 				'product_thumbnail' => $this->upload->data('file_name'),
 				'product_intro' => $this->input->post('product_intro'),
 				'product_detail' => $this->input->post('product_detail'),
-				'product_status' => 'free',
+				'product_status' => 'available',
 			);
 			
 			$query = $this->db->insert('product',$data);

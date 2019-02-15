@@ -126,8 +126,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	</script>
 	<?php endif; ?>
-</body>
 
+<?=$this->ci->session->userdata('logged_in');?>
+<?php if(!empty($errorMsg)): ?>
+	<script>
+	
+		alert("<?=$errorMsg?>");
+	</script>
+<?php endif; ?>
+</body>
 
 <script>
 	/**

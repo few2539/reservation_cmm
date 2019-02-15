@@ -64,9 +64,10 @@
 					$studentid, 
 					$password);	
 				redirect('product/index');
-				}else{
-					return "error";
-				}
+            }else {
+                return 'loginerror';
+            }
+        }
 		
 			/*$infoUser = ldap_search('uid', '=', $studentid);
 			if(empty($infoUser)){
@@ -94,5 +95,5 @@
 			
 			
 		
-	}
+	
 ?>
