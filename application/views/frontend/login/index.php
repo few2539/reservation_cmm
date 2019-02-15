@@ -15,7 +15,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 	<?php $this->load->view('frontend/template/headtag_frontend');?>
-
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	
 </head>
 
 <style>
@@ -28,7 +29,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- <?php $this->load->view('frontend/template/header'); ?> -->
 
 	
-			<div class="shape">
+			<div class="shape1">
 
 
 			</div>
@@ -82,6 +83,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							<div class="forms_field">
 								<input type="password" name="password" placeholder="Password" class="forms_field-input" />
 							</div>
+							<?php if(isset($login_falses) && !empty($login_falses) ){
+								echo $login_falses;
+							} ?>
 						</fieldset>
 						<div class="forms_buttons">
 							<!-- <button type="button" class="forms_buttons-forgot">Forgot password?</button> -->

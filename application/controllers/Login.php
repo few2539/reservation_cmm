@@ -13,14 +13,17 @@ class login extends CI_Controller {
 	public function index($loginerror=null)
 	{
 		$data['title_page'] = 'Title Page : login';
-		
+
 		if(($this->input->post('email') != null) && ($this->input->post('password') != null)) {
 			//$data['result'] = $this->login_model->checklogin();
 
 			$data['email'] = $this->input->post('email');
 			$data['password'] = $this->input->post('password'); 
-			$this->login_model->loginldap();
-			
+			$data['login_falses']=$this->login_model->loginldap();
+
+
+ 
+			$this->load->view('frontend/login/index',$data);
 			exit;
 			// Login FAIL
 			$this->load->view('frontend/login/index', $data);

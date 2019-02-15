@@ -63,8 +63,11 @@
 				$this->authldap->login(
 					$studentid, 
 					$password);	
+//uset($_SESSION['user']['email']); logoyt fubction 
+// $_SESSION['user']['email']='zxczxc';
 				redirect('product/index');
             }else {
+
                 return 'loginerror';
             }
         }

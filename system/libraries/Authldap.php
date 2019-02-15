@@ -79,6 +79,7 @@ class CI_Authldap {
         if(empty($user_info['role'])) {
             log_message('info', $username." has no role to play.");
             show_error($username.' succssfully authenticated, but is not allowed because the username was not found in an allowed access group.');
+            
         }
 
         // Record the login
