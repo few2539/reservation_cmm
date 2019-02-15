@@ -10,13 +10,6 @@
 	padding: 10px;
 }
 
-.eq:nth-of-type(odd) {
-	background: yellow;
-}
-
-.eq:nth-of-type(even) {
-	background: lightblue;
-}
 
 .equalHW {
 	flex: 1;
@@ -243,10 +236,10 @@ $product = [
 								<?=$product["product_intro"];?>
 							</p>
 							<div class="content">
-								<a href="<?=site_url('free/index');?>/<?=$product["product_id"];?>" type="button" class="btn btn-<?php if($product["product_amount"] == 0) { echo "danger"; }else{ echo "success"; }?> btn-block btn-status"
+								<a href="<?=site_url('free/index');?>/<?=$product["product_id"];?>" type="button" class="btn btn-<?php if($product["product_status"] == 'approved') { echo "danger"; } elseif ($product["product_status"] == 'waiting')  { echo "warning"; } elseif($product["product_status"] == 'free')  { echo "success"; }?> btn-block btn-status"
 									data-prodcut="
 									<?=$product['product_id']?>">
-									<?php if($product["product_amount"] == 0) { echo "Out of Stock"; }else{ echo "Free"; }?>
+									<?php if($product["product_status"] == "approved") { echo "Out of Stock"; } elseif($product["product_status"] == 'free') { echo "Available"; } elseif($product["product_status"] == 'waiting') {echo "Techer";}?>
 								</a>
 							</div>
 							</div>
