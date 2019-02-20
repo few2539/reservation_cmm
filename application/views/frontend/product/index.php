@@ -202,8 +202,14 @@ $product = [
 		<div class="text-welcome">
 			<h1>Welcome to reservation system</h1>
 		</div>
+		<div class="category">
+			<button  type="button" class="btn btn-warning show-category">Category</button>
+		</div>
 
-		<div class="button-product">
+
+
+
+		<div class="button-product cate">
 			<button type="button" id='all' class="btn btn-warning">All</button>
 			<?php foreach($categorys as $category): ?>
 			<button id='btn-<?=$category['category_code']?>' class="btn btn-primary">
@@ -411,4 +417,10 @@ $product = [
 
 </script>
 
+
+<script>
+$('.show-category').click(function() {
+    $('.cate').slideToggle('slow');
+});
+</script>
 </html>

@@ -1,8 +1,30 @@
-section.header .container .row {
-  background: -webkit-gradient(linear, right top, left top, from(#ff334f), to(#ff8e5c));
-  background: -webkit-linear-gradient(right, #ff334f, #ff8e5c);
-  background: linear-gradient(to left, #ff334f, #ff8e5c); }
-  section.header .container .row .name-login {
-    padding: 10px 10px;
-    font-weight: 500;
-    color: #fff; }
+section.header .container {
+  width: 100%; }
+  section.header .container .row {
+    padding-top: 60px;
+    position: relative;
+    padding-bottom: 60px;
+    background-color: #202029; }
+    section.header .container .row .shape {
+      margin: 0 auto;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      overflow: hidden; }
+    section.header .container .row .box-img-regis img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      object-fit: cover;
+      width: 200px;
+      height: auto; }
+    section.header .container .row .name-login {
+      font-weight: 500;
+      color: #fff; }
+      section.header .container .row .name-login p,
+      section.header .container .row .name-login a {
+        color: white; }
