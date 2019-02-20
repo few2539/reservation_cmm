@@ -29,7 +29,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	
 
 	
-			<div class="shape">	</div>
+			<div class="shape">
+			
+			</div>
 	
 
 
@@ -127,8 +129,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	</script>
 	<?php endif; ?>
-
-<?=$this->ci->session->userdata('logged_in');?>
 <?php if(!empty($errorMsg)): ?>
 	<script>
 	

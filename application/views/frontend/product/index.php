@@ -245,7 +245,7 @@ $product = [
 								<a href="<?=site_url('free/index');?>/<?=$product["product_id"];?>" type="button" class="btn btn-<?php if($product["product_status"] == 'approved') { echo "danger"; }elseif ($product["product_status"] == 'waiting'){ echo "warning"; } elseif ($product["product_status"] == 'available'){ echo "success"; }?> btn-block btn-status"
 									data-prodcut="
 									<?=$product['product_id']?>">
-									<?php if($product["product_status"] == "approved") { echo "Out of Stock"; }elseif($product["product_status"] == 'available') { echo "Available"; } elseif($product["product_status"] == 'waiting') {echo "Techer";}?>
+									<?php if($product["product_status"] == "approved") { echo "Out of Stock"; }elseif($product["product_status"] == 'available') { echo "Available"; } elseif($product["product_status"] == 'waiting') {echo "Reservation";}?>
 								</a>
 							</div>
 							</div>

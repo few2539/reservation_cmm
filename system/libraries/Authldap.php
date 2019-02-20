@@ -76,10 +76,11 @@ class CI_Authldap {
          * something else here before hand in the future.
          */
         $user_info = $this->_authenticate($username,$password);
-        if(empty($user_info['role'])) {
-            log_message('info', $username." has no role to play.");
-            show_error($username.' succssfully authenticated, but is not allowed because the username was not found in an allowed access group.');
+        if(empty($user_info['uid'] != 4307 )) {
+           echo $login_falses;
             
+        }elseif(empty($user_info)){
+            echo $login_falses;
         }
 
         // Record the login
@@ -177,7 +178,7 @@ class CI_Authldap {
         if(!$bind) {
             $this->_audit("Failed login attempt: ".$username." from ".$_SERVER['REMOTE_ADDR']);
             echo "login failed";
-
+            return redirect('login/index');
             exit('Binding failed');
             
         }
