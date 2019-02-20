@@ -2,6 +2,11 @@
 
 section {
 	&.product {
+		.btn-primary {
+			background-color: #22264a;
+			border-color: #2e6da4;
+		}
+
 		margin-left: percentage(105/1366);
 		margin-right: percentage(105/1366);
 		margin-top: percentage(70/1366);
@@ -11,12 +16,40 @@ section {
 		}
 
 		.text-welcome {
-			margin-bottom: 15px;
+			margin-top: 35px;
+			margin-bottom: 25px;
+
+			@media (max-width: $sd-plus) {
+				text-align: center;
+			}
+
+			h1 {
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+		}
+
+		.category {
+
+			@media (max-width: $sd-plus) {
+				text-align: center;
+			}
+
+			margin-top: 20px;
+			margin-bottom: 20px;
+
+			.show-category {
+				background-color: #22264a;
+				outline: none;
+				border-color: #2e6da4;
+			}
 		}
 
 		.button-product {
+			display: none;
 			margin-bottom: 15px;
-			*{
+
+			* {
 				margin-top: 10px;
 			}
 		}
@@ -24,6 +57,7 @@ section {
 		.wrap {
 			margin-left: -10px;
 			margin-right: -10px;
+
 			@media(max-width: 414px) {
 				margin-left: -10px;
 				margin-right: -10px;
