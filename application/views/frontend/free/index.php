@@ -56,14 +56,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					</div>
 				</div>
 			</div>
-
+			<hr>
 		</div>
 
-		<div class="insert-pdf">
-			<h2>insert info here</h2>
+		<div class="insert-info">
+			<h2>please fill in all fields</h2>
 			<?php $attributes = array('class' => '','data-toggle' => 'validator','role' => 'form'); ?>
-            <?php $hidden  = array('product_id' => $product_id); ?>
-            <?= form_open('free/detail', $attributes, $hidden); ?>
+			<?php $hidden  = array('product_id' => $product_id); ?>
+			<?= form_open('free/detail', $attributes, $hidden); ?>
 			<div class="user-info">
 
 
@@ -83,7 +83,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group degree">
 						<span class="input-group-addon" id="basic-addon1">your-degree</span>
-						<input type="text" class="form-control" name="degreeid" placeholder="such as bachelor degree" aria-describedby="basic-addon1">
+						<input type="text" class="form-control" name="degreeid" placeholder="(1-4 year) " aria-describedby="basic-addon1">
 
 					</div>
 				</div>
@@ -99,7 +99,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group Use-for">
 						<span class="input-group-addon" id="basic-addon1">Use for</span>
-						<input type="text" class="form-control" name="reservation_usefor" placeholder="like taking photo in some project"
+						<input type="text" class="form-control" name="reservation_usefor" placeholder="Like taking photo in some project"
 						 aria-describedby="basic-addon1">
 
 					</div>
@@ -108,13 +108,26 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group subject">
 						<span class="input-group-addon" id="basic-addon1">subject</span>
-						<input type="text" class="form-control" name="reservation_subject" placeholder="CMM-444" aria-describedby="basic-addon1">
+						<input type="text" class="form-control" name="reservation_subject" placeholder="Like CMM-444" aria-describedby="basic-addon1">
 
 					</div>
 				</div>
+				<div class="box">
+					<fieldset>
+						<h4>Form:</h4>
+						<input type="text" id="input_from" name="reservation_date">
+					</fieldset>
+
+					<fieldset>
+						<h4>To:</h4>
+						<input type="text" id="input_to" name="reservation_return_date">
+					</fieldset>
+
+				</div>
+ <hr>
 				<div class="container-teacher">
-					<h2>To some teacher</h2>
-					<p>send email to teacher:</p>
+					<h2>To Teacher</h2>
+					<p>Send email to teacher for allowing your reservation:</p>
 					<form>
 						<div class="form-group">
 							<label for="sel1">Name (Teacher):</label>
@@ -131,20 +144,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
-				<div class="box">
-					<fieldset>
-						<h4>Form:</h4>
-						<input type="text" id="input_from" name="reservation_date">
-					</fieldset>
 
-					<fieldset>
-						<h4>To:</h4>
-						<input type="text" id="input_to" name="reservation_return_date">
-					</fieldset>
-
-				</div>
-
-				<button type="submit" name="insert" value="add to database" class="btn btn-default">Submit</button>
+				<button type="submit" name="insert" value="add to database" class="btn btn-primary">Submit</button>
 
 				<?=form_close();?>
 

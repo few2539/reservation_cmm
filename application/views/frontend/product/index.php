@@ -423,4 +423,10 @@ $('.show-category').click(function() {
     $('.cate').slideToggle('slow');
 });
 </script>
+
+<script>
+$('.cate').click(function() {
+    $('.cate').slideToggle('slow');
+});
+</script>
 </html>
