@@ -30,44 +30,42 @@ class Auth extends CI_Controller {
         $this->load->library('table');
     }
     function index() {
+        $this->session->keep_flashdata('tried_to');
         $this->login();
-
     }
-
     function login($errorMsg = NULL){
-     
+        $this->session->keep_flashdata('tried_to');
         if(!$this->authldap->is_authenticated()) {
             // Set up rules for form validation
             $rules = $this->form_validation;
             $rules->set_rules('username', 'Username', 'required|alpha_dash');
             $rules->set_rules('password', 'Password', 'required');
-            
+
+
+            //$check = '('['uid']'='.$username.')';
+          // $infoUser = ldap_search($check);
             // Do the login...
             if($rules->run() && $this->authldap->login(
                     $rules->set_value('username'),
                     $rules->set_value('password'))) {
                 // Login WIN!
-                
+                if($this->session->flashdata('tried_to')) {
+                    redirect($this->session->flashdata('tried_to'));
+                }else {
                     redirect('product/index');
-                
-            }else {
-                if($errorMsg = 'loginerror'){
-                    $data['errorMsg'] = 'login failed retry.';
-                }else{
-                    $data['errorMsg'] = '';
                 }
-                
+            }else {
                 // Login FAIL
-                $this->session->userdata('logged_in');
-                $this->load->view('auth/login_form', $data);
-                
-                                        
+                $this->load->view('auth/login_form', array('login_fail_msg'
+                                        => 'Error with LDAP authentication.'));
+                                        echo "login fucking fail";
             }
         }else {
                 // Already logged in...
                 redirect('product/index');
         }
     }
+
 
     function logout() {
         if($this->session->userdata('logged_in')) {

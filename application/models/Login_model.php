@@ -59,6 +59,7 @@
 			$studentid = $this->input->post('email');
 			$password = $this->input->post('password');
 			
+			//$infoUser = ldap_search'('.$this->login_attribute.'='.$username.')';
 			if(!$this->authldap->is_authenticated()){
 				$this->authldap->login(
 					$studentid, 
@@ -91,12 +92,6 @@
 					}
 				}*/
 		}
-
-		function loginldap2(){
-			
-		}
-			
-			
 		
 	
 ?>
