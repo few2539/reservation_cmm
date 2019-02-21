@@ -1,5 +1,55 @@
 @import '../include.scss';
 
+.iso {
+
+	img {
+		animation: mover 1s infinite alternate;
+		position: absolute;
+		width: 450px;
+		top: 5%;
+		left: 2.5%;
+		object-fit: cover;
+	}
+	@media (max-width:$sd-plus){
+		display: none;
+	}
+}
+.iso1 {
+
+	img {
+		animation: mover 1s infinite alternate;
+		position: absolute;
+		width: 220px;
+		bottom: 5%;
+		right: 2.5%;
+		object-fit: cover;
+		z-index: 9;
+		@media (max-width:$sd-plus){
+			width: 100px;
+		}
+	}
+}
+@keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-10px);
+	}
+}
+@keyframes mover1 {
+	100% {
+		transform: translateY(0);
+	}
+
+	0% {
+		transform: translateY(-10px);
+	}
+}
+
+
+
 section {
 	&.login {
 
@@ -220,7 +270,7 @@ section {
 			margin-bottom: 15px;
 			line-height: 1em;
 			text-align: center;
-			
+
 			@media (max-width: $md) {
 				font-size: 25px;
 			}
@@ -228,11 +278,12 @@ section {
 
 		.box-img-regis {
 			text-align: center;
-		
-			@media (max-width: 	$sd-plus) {
+
+			@media (max-width: $sd-plus) {
 				margin-bottom: 15px;
 			}
-			@media (max-width: 	$sd) {
+
+			@media (max-width: $sd) {
 				margin-bottom: 0;
 			}
 

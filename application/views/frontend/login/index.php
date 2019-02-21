@@ -15,8 +15,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 	<?php $this->load->view('frontend/template/headtag_frontend');?>
-	
-	
+
+
 </head>
 
 <style>
@@ -26,16 +26,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 <body>
-	
 
-	
-			<div class="shape">
-			
-			</div>
-	
 
+
+	<div class="shape">
+
+	</div>
+
+	<div class="iso">
+		<img src="<?=base_url();?>assets/frontend/dist/styles/image/iso2.png" alt="">
+	</div>
+
+	<div class="iso1">
+		<img src="<?=base_url();?>assets/frontend/dist/styles/image/iso3.png" alt="">
+	</div>
 
 	<section class="login">
+
 		<section class="user">
 			<div class="user_options-container">
 				<div class="user_options-text">
@@ -71,10 +78,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="user_forms-login">
 						<h2 class="forms_title">Login</h2>
 						<?php
-							$attribute = array('id'=>'login_form','class'=>'forms_form');
-							$hidden = array('status' => 'check');
-						?>
-						<?= form_open('login/index',$attribute,$hidden); ?>
+$attribute = array('id' => 'login_form', 'class' => 'forms_form');
+$hidden = array('status' => 'check');
+?>
+						<?=form_open('login/index', $attribute, $hidden);?>
 						<fieldset class="forms_fieldset">
 							<div class="forms_field">
 								<input type="text" name="email" placeholder="Email" class="forms_field-input" />
@@ -82,15 +89,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							<div class="forms_field">
 								<input type="password" name="password" placeholder="Password" class="forms_field-input" />
 							</div>
-							<?php if(isset($login_falses) && !empty($login_falses) ){
-								echo $login_falses;
-							} ?>
+							<?php if (isset($login_falses) && !empty($login_falses)) {
+    echo $login_falses;
+}?>
 						</fieldset>
 						<div class="forms_buttons">
 							<!-- <button type="button" class="forms_buttons-forgot">Forgot password?</button> -->
 							<input type="submit" value="Log In" class="forms_buttons-action">
 						</div>
-						<?= form_close(); ?>
+						<?=form_close();?>
 					</div>
 					<!-- sign up condition -->
 					<!-- <div class="user_forms-signup">
@@ -120,21 +127,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
-	<?php $this->load->view('frontend/template/footer'); ?>
+	<?php $this->load->view('frontend/template/footer');?>
 	<?php $this->load->view('frontend/template/javascript_frontend');?>
 
-	<?php if($result == 'error'): ?>
+	<?php if ($result == 'error'): ?>
 	<script>
 		alert("กรุณาตรวจสอบความถูกต้อง");
 
 	</script>
-	<?php endif; ?>
-<?php if(!empty($errorMsg)): ?>
+	<?php endif;?>
+	<?php if (!empty($errorMsg)): ?>
 	<script>
-	
 		alert("<?=$errorMsg?>");
+
 	</script>
-<?php endif; ?>
+	<?php endif;?>
 </body>
 
 <script>
