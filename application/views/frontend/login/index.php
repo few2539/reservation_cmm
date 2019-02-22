@@ -38,8 +38,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</div>
 
 	<div class="iso1">
-		<img src="<?=base_url();?>assets/frontend/dist/styles/image/iso3.png" alt="">
+		<img src="<?=base_url();?>assets/frontend/dist/styles/image/iso6.png" alt="">
 	</div>
+
+	<div class="iso2">
+		<img src="<?=base_url();?>assets/frontend/dist/styles/image/iso7.png" alt="">
+	</div>
+
 
 	<section class="login">
 

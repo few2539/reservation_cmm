@@ -9,11 +9,19 @@
 		top: 5%;
 		left: 2.5%;
 		object-fit: cover;
+
+		@media (min-width: $lg) {
+			width: 500px;
+		}
 	}
-	@media (max-width:$sd-plus){
+
+
+	@media (max-width:$sd-plus) {
 		display: none;
 	}
+
 }
+
 .iso1 {
 
 	img {
@@ -24,11 +32,33 @@
 		right: 2.5%;
 		object-fit: cover;
 		z-index: 9;
-		@media (max-width:$sd-plus){
+
+		@media (max-width: $sd-plus) {
 			width: 100px;
 		}
 	}
 }
+
+.iso2 {
+
+	img {
+		animation: mover 1s infinite alternate;
+		position: absolute;
+		width:400px;
+		top: 5%;
+		right: 2.5%;
+		object-fit: cover;
+
+		@media (min-width: $lg) {
+			width: 600px;
+		}
+	}
+
+	@media (max-width:$sd-plus) {
+		display: none;
+	}
+}
+
 @keyframes mover {
 	0% {
 		transform: translateY(0);
@@ -38,6 +68,7 @@
 		transform: translateY(-10px);
 	}
 }
+
 @keyframes mover1 {
 	100% {
 		transform: translateY(0);

@@ -167,7 +167,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<script>
 		$(".datepicker").pickadate({
 			format: 'dd/mm/yyyy',
-
+		
 			clear: '',
 			close: ''
 		});
@@ -197,8 +197,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				if (from_picker.get('value')) {
 					to_picker.set('min', from_picker.get('select'))
 				}
+				
 				if (to_picker.get('value')) {
 					from_picker.set('max', to_picker.get('select'))
+			
 				}
 
 				// When something is selected, update the “from” and “to” limits.
@@ -246,8 +248,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 				$("#input_to").pickadate({
-
+			
 					formatSubmit: 'dd/mm/yyyy',
+					
 					hiddenName: true
 				});
 				window.free_pickadate.init();
