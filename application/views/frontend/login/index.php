@@ -27,7 +27,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <body>
 
+	<div class="wrap-preload">
+		<div class="box">
+			<img src="<?=base_url();?>assets/frontend/dist/styles/image/final-logo-big.png" alt="final-logo.png">
 
+		</div>
+
+	</div>
 
 	<div class="shape">
 
