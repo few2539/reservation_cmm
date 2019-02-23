@@ -100,6 +100,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </button>
                           <?= form_close(); ?>
                         </div>
+                        <div style="margin-top:2%;">
+                          <?php $attributes  = array('id' => 'returnProduct'.$product['product_id']); ?>
+                          <?php $hidden  = array('product_id' => $product['product_id']); ?>
+                          <?= form_open('product/return', $attributes, $hidden); ?>
+                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-danger btn-sm" style="font-weight: bold;width: 49%;float: right;" onclick="returnConfirm(this.value);">
+                              <i class="fa fa-check"></i> คืน
+                            </button>
+                          <?= form_close(); ?>
+                        </div>
                       </td>
                     </tr>
                     <?php $i++; ?>
@@ -175,6 +184,35 @@ function ConfirmDialog(message) {
 		    });
 
 		    setTimeout(function(){ $('#deleteProduct'+id).submit(); }, 3000);
+		  }
+		});
+	}
+</script>
+
+<script type="text/javascript">
+	function returnConfirm(id) {
+    alert(id);
+	  	swal({
+		  title: 'ยืนยันที่จะทำรายการ  ?',
+		  text: "คุณแน่ใจที่จะยืนยันการทำรายการ!",
+		  type: 'warning',
+		  showCancelButton: true,
+		  confirmButtonColor: '#3085d6',
+		  cancelButtonColor: '#d33',
+		  confirmButtonText: 'ยืนยัน',
+		  cancelButtonText: 'ยกเลิก'
+		}).then((result) => {
+		  if (result.value) {
+		    swal({
+		    	type: 'success',
+		    	position: 'center',
+		    	title: 'กำลังดำเนินการ',
+		    	text: 'ข้อมูล ที่ท่านทำรายการดำเนิน การแล้ว.',
+		    	showConfirmButton: false,
+		    	timer: 3000
+		    });
+
+		    setTimeout(function(){ $('#returnProduct'+id).submit(); }, 3000);
 		  }
 		});
 	}

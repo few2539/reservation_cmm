@@ -99,6 +99,19 @@
 			return $query;
 		}
 
+		public function productreturn(){
+			$product_id = $this->input->post('product_id');
+			$data = array(
+				'product_status' => 'available',
+				'product_amount' => '1'
+			);
+
+			$this->db->where('product_id', $product_id);
+			$query = $this->db->update('product',$data);
+
+			return $query;
+		}
+
 		 function thdate2utcdate($thdate) {
 			list($d,$m,$Y) = explode('/',$thdate);
 			$Y = $Y - 543;
