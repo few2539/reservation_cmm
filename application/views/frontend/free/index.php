@@ -192,10 +192,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		if ( from_picker.get('value') ) {
 			to_picker.set('min', from_picker.get('select'));
 			from_picker.set('min', true);
-
-			alert('hello');
-			//var toDate = new Date('2011-07-09');
-			//myDate.setDate(myDate.getDate() + 2);
 		}
 		if ( to_picker.get('value') ) {
 
@@ -207,12 +203,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		if ( event.select ) {
 			to_picker.set('min', from_picker.get('select'));
 			var from_value = from_picker.get('select');
-			to_picker.set('max' , +2);
-			alert(from_value.date);
-			alert(to_value.date);
+			console.log(from_value);
+			var pick = from_value.pick + (2 * 24 * 60 * 60 * 1000);
+			var to_value = new Date(pick);
+			to_picker.set('max', to_value);
+			//var to_date = to_value.year +'-'+ to_value.month +'-'+ to_value.date;
+			//var to_date = to_picker.set('max', to_value);
+			console.log(to_value);
+			//var myDate = new Date('2011-07-09');
+			//myDate.setDate(myDate.getDate() + 2);
+			// Using JavaScript Date objects.
+			//picker.set('max', new Date(2015,7,14);
+			//alert(from_value.date);
+			//alert(to_value.date);
 			//to_picker.set('max', from_picker.get('select'));
-			console.log(from_value); 
-			console.log(to_value); 
 		}
 		else if ( 'clear' in event ) {
 			to_picker.set('min', false)
