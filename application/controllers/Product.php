@@ -101,4 +101,11 @@ class product extends CI_Controller {
 		
 		redirect('product/admin');
 	}
+
+	public function return()
+	{
+		$this->product_model->productreturn();
+
+		redirect('product/admin');
+	}
 }
