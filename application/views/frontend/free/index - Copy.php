@@ -61,9 +61,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 		<div class="insert-info">
 			<h2>please fill in all fields</h2>
-			<?php $attributes = array('class' => '', 'data-toggle' => 'validator', 'role' => 'form');?>
-			<?php $hidden = array('product_id' => $product_id);?>
-			<?=form_open('free/detail', $attributes, $hidden);?>
+			<?php $attributes = array('class' => '','data-toggle' => 'validator','role' => 'form'); ?>
+			<?php $hidden  = array('product_id' => $product_id); ?>
+			<?= form_open('free/detail', $attributes, $hidden); ?>
 			<div class="user-info">
 
 
@@ -115,12 +115,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box">
 					<fieldset>
 						<h4>Form:</h4>
-						<input type="text" id="input_from" name="reservation_date" value="">
+						<input type="text" id="input_from" name="reservation_date">
 					</fieldset>
 
 					<fieldset>
 						<h4>To:</h4>
-						<input type="text" id="input_to" name="reservation_return_date" value="">
+						<input type="text" id="input_to" name="reservation_return_date">
 					</fieldset>
 
 				</div>
@@ -182,50 +182,98 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 	<script>
-		var from_$input = $('#input_from').pickadate(),
-			from_picker = from_$input.pickadate('picker')
+		window.free_pickadate = {
 
-		var to_$input = $('#input_to').pickadate(),
-			to_picker = to_$input.pickadate('picker')
+			init: function () {
+
+
+				var from_$input = $('#input_from').pickadate(),
+					from_picker = from_$input.pickadate('picker')
+
+				var to_$input = $('#input_to').pickadate(),
+					to_picker = to_$input.pickadate('picker')
+
+				// from_picker.set('min',true)
+				from_picker.set('min', true)
+				// Check if there’s a “from” or “to” date to start with.
+				if (from_picker.get('value')) {
+					to_picker.set('min', from_picker.get('select'))
+				}
+
+				if (to_picker.get('value')) {
+
+					from_picker.set('max', to_picker.get('select'))
+
+				}
+
+				// When something is selected, update the “from” and “to” limits.
+
+
+			},
+
+			update: function () {
+
+
+				var from_$input = $('#input_from').pickadate(),
+					from_picker = from_$input.pickadate('picker')
+
+				var to_$input = $('#input_to').pickadate(),
+					to_picker = to_$input.pickadate('picker')
+
+			
+
+				from_picker.on('set', function (event) {
+					if (event.select) {
+						to_picker.set('min', from_picker.get('select'))
+
+					} else if ('clear' in event) {
+						to_picker.set('min', false)
+					}
+
+
+
+				})
+				to_picker.on('set', function (event) {
+					if (event.select) {
+						from_picker.set('max', to_picker.get('select'))
+					} else if ('clear' in event) {
+						from_picker.set('max', false)
+					}
+				})
+
+
+
+
+			},
+
+
+
+			onReady: function () {
+				$("#input_from").pickadate({
+					formatSubmit: 'dd/mm/yyyy',
+					// formatSubmit: '['dd','mm','yyyy']',
+					hiddenName: true
+				});
+
+
+				$("#input_to").pickadate({
+
+					formatSubmit: 'dd/mm/yyyy',
+
+					hiddenName: true
+				});
+				window.free_pickadate.init();
+				window.free_pickadate.update();
+
+			},
+
+
+
+
+		}
 		
-		// Check if there’s a “from” or “to” date to start with.
-		if ( from_picker.get('value') ) {
-			to_picker.set('min', from_picker.get('select'));
-			from_picker.set('min', true);
+		$(window.free_pickadate).ready(free_pickadate.onReady);
 
-			alert('hello');
-			//var toDate = new Date('2011-07-09');
-			//myDate.setDate(myDate.getDate() + 2);
-		}
-		if ( to_picker.get('value') ) {
-
-			from_picker.set('max', to_picker.get('select') );
-		}
-
-		// When something is selected, update the “from” and “to” limits.
-		from_picker.on('set', function(event) {
-		if ( event.select ) {
-			to_picker.set('min', from_picker.get('select'));
-			var from_value = from_picker.get('select');
-			to_picker.set('max' , +2);
-			alert(from_value.date);
-			alert(to_value.date);
-			//to_picker.set('max', from_picker.get('select'));
-			console.log(from_value); 
-			console.log(to_value); 
-		}
-		else if ( 'clear' in event ) {
-			to_picker.set('min', false)
-		}
-		})
-		to_picker.on('set', function(event) {
-		if ( event.select ) {
-			from_picker.set('max', to_picker.get('select'))
-		}
-		else if ( 'clear' in event ) {
-			from_picker.set('max', false)
-		}
-		})
 	</script>
 
 	<script>
