@@ -89,7 +89,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <td class="text-center text-middle">
                         <div style="margin-top:2%;">
                           <a href="<?php echo site_url('product/admin_edit'); ?>/<?php echo $product['product_id']; ?>">
-                            <button class="btn btn-primary btn-sm" style="font-weight: bold;width: 49%;float: left;margin-right: 2%;">
+                            <button class="btn btn-primary btn-sm" style="font-weight: bold;width: 30%;float: left;margin-right: 2%;">
                               <i class="fa fa-edit"></i> แก้ไข
                             </button>
                           </a>
@@ -98,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                           <?php $attributes  = array('id' => 'deleteProduct'.$product['product_id']); ?>
                           <?php $hidden  = array('product_id' => $product['product_id']); ?>
                           <?= form_open('product/delete', $attributes, $hidden); ?>
-                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-danger btn-sm" style="font-weight: bold;width: 49%;float: right;" onclick="deleteConfirm(this.value);">
+                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-danger btn-sm" style="font-weight: bold;width: 30%;float: left; margin-right: 2%;" onclick="deleteConfirm(this.value);">
                               <i class="fa fa-check"></i> ลบ
                             </button>
                           <?= form_close(); ?>
@@ -107,7 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                           <?php $attributes  = array('id' => 'returnProduct'.$product['product_id']); ?>
                           <?php $hidden  = array('product_id' => $product['product_id']); ?>
                           <?= form_open('product/return', $attributes, $hidden); ?>
-                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-danger btn-sm" style="font-weight: bold;width: 49%;float: right;" onclick="returnConfirm(this.value);">
+                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-warning btn-sm" style="font-weight: bold;width: 30%; float: left;" onclick="returnConfirm(this.value);">
                               <i class="fa fa-check"></i> คืน
                             </button>
                           <?= form_close(); ?>

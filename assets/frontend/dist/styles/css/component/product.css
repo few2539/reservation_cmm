@@ -1,3 +1,9 @@
+.active-fillter {
+  background-color: #5c67c5 !important; }
+
+.silbling {
+  outline: none !important; }
+
 section.product {
   margin-left: 100px;
   margin-right: 100px;

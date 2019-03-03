@@ -1,5 +1,11 @@
 @import '../include.scss';
 
+.active-fillter{
+	background-color: rgb(92, 103, 197) !important;
+} 
+.silbling{
+	outline: none !important; 
+}
 section {
 	&.product {
 		.btn-primary {

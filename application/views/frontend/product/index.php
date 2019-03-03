@@ -207,12 +207,12 @@ $product = [
 		</div>
 
 
-
+ <input type="text" id="ModuleSearch" placeholder="Search" />
 
 		<div class="button-product cate">
-			<button type="button" id='all' class="btn btn-warning">All</button>
+			<button type="button" id='all' class="btn btn-warning silbling">All</button>
 			<?php foreach($categorys as $category): ?>
-			<button id='btn-<?=$category['category_code']?>' class="btn btn-primary">
+			<button id='btn-<?=$category['category_code']?>' class="btn btn-primary silbling">
 				<?=$category['category_name']?> /
 				<?=$category['category_name_en']?>
 			</button>
@@ -300,52 +300,18 @@ $product = [
 	<?php $this->load->view('frontend/template/footer'); ?>
 	<?php $this->load->view('frontend/template/javascript_frontend');?>
 </body>
+<script>
+$('.silbling').on('click', function(){
+    $(this).addClass('active-fillter').siblings().removeClass('active-fillter');
+});
+
+
+</script>
+
 
 
 <script>
-	// window.env_shuffle = {
 
-
-	// 	init: function () {
-	// 		window.env_shuffle.onReady();
-
-
-	// 	},
-
-
-	// 	initSlick: function () {
-	// 		var Shuffle = window.Shuffle;
-	// 		var element = document.querySelector('.my-shuffle-container');
-	// 		var sizer = element.querySelector('.my-sizer-element');
-
-	// 		var shuffleInstance = new Shuffle(element, {
-	// 			itemSelector: '.picture-item',
-	// 			sizer: sizer // could also be a selector: '.my-sizer-element'
-	//         });
-
-	// 		$("#all").on("click", function () {
-	//             shuffleInstance.filter();
-	//             console.log( shuffleInstance.filter);
-	// 		});
-	// 		$("#btn-camera").on("click", function () {
-	//             shuffleInstance.filter('camera');
-	//             console.log( shuffleInstance.filter);
-	// 		});
-	// 		$("#btn-mic").on("click", function () {
-	// 			shuffleInstance.filter('mic');
-	// 		});
-	// 		$("#btn-lens").on("click", function () {
-	// 			shuffleInstance.filter('lens');
-	// 		});
-
-
-	// 	},
-	// 	onReady: function () {
-	// 		window.env_shuffle.initSlick();
-	// 	}
-	// }
-
-	// $(window.env_shuffle).ready(env_shuffle.init);
 
 	Shuffle.options = {
 		buffer: 0, // Useful for percentage based heights when they might not always be exactly the same (in pixels).
@@ -386,6 +352,7 @@ $product = [
 	});
 	$("#btn-camera").on("click", function () {
 		shuffleInstance.filter("camera");
+		
 
 	});
 	$("#btn-mic").on("click", function () {
@@ -415,6 +382,27 @@ $product = [
 		shuffleInstance.filter("other");
 	});
 
+		var search = $('#ModuleSearch');
+		var data = $('.box-img').data('title')
+		search.addSearchFilter = function () {
+  document.querySelector('#ModuleSearch').addEventListener('keyup', this._handleSearchKeyup.bind(this));
+};
+
+// Filter the shuffle instance by items with a title that matches the search input.
+search._handleSearchKeyup = function (evt) {
+  var searchText = evt.target.value.toLowerCase();
+
+  this.shuffle.filter(function (element, shuffle) {
+    var titleElement = element.querySelector(data);
+    var titleText = titleElement.textContent.toLowerCase().trim();
+
+    return titleText.indexOf(searchText) !== -1;
+	console.log(searchText);
+  });
+};
+
+
+
 </script>
 
 
@@ -424,9 +412,9 @@ $('.show-category').click(function() {
 });
 </script>
 
-<script>
+<!-- <script>
 $('.cate').click(function() {
     $('.cate').slideToggle('slow');
-});
+}); -->
 </script>
 </html>
