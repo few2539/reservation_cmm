@@ -311,7 +311,7 @@ $('.silbling').on('click', function(){
 
 
 <script>
-
+//ตรงนี้
 
 	Shuffle.options = {
 		buffer: 0, // Useful for percentage based heights when they might not always be exactly the same (in pixels).
