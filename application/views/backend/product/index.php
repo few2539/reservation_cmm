@@ -107,8 +107,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                           <?php $attributes  = array('id' => 'returnProduct'.$product['product_id']); ?>
                           <?php $hidden  = array('product_id' => $product['product_id']); ?>
                           <?= form_open('product/return', $attributes, $hidden); ?>
-                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-warning btn-sm" style="font-weight: bold;width: 30%; float: left;" onclick="returnConfirm(this.value);">
-                              <i class="fa fa-check"></i> คืน
+                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-<?php if($product["product_status"] == 'approved') { echo "warning"; }elseif ($product["product_status"] == 'waiting'){ echo ""; } elseif ($product["product_status"] == 'available'){ echo ""; }?> btn-sm" style="font-weight: bold;width: 30%; float: left;" onclick="returnConfirm(this.value);">
+                              <i class="fa fa-check"></i> คืน 
                             </button>
                           <?= form_close(); ?>
                         </div>
