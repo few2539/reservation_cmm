@@ -382,26 +382,32 @@ $('.silbling').on('click', function(){
 		shuffleInstance.filter("other");
 	});
 
-		var search = $('#ModuleSearch');
-		var data = $('.box-img').data('title')
-		search.addSearchFilter = function () {
-  document.querySelector('#ModuleSearch').addEventListener('keyup', this._handleSearchKeyup.bind(this));
-};
+	var Demo = function (element) {
+		var shuffleInstance = new Shuffle(element, {
+			itemSelector: '.picture-item',
+			sizer: sizer // could also be a selector: '.my-sizer-element'
+		});
+		this.addSearchFilter();
+	
+	};
 
-// Filter the shuffle instance by items with a title that matches the search input.
-search._handleSearchKeyup = function (evt) {
-  var searchText = evt.target.value.toLowerCase();
+	Demo.prototype.addSearchFilter = function () {
+		document.querySelector('#ModuleSearch').addEventListener('keyup', this._handleSearchKeyup.bind(this));
+	};
 
-  this.shuffle.filter(function (element, shuffle) {
-    var titleElement = element.querySelector(data);
-    var titleText = titleElement.textContent.toLowerCase().trim();
+	// Filter the shuffle instance by items with a title that matches the search input.
+			Demo.prototype._handleSearchKeyup = function (evt) {
+				var searchText = evt.target.value.toLowerCase();
 
-    return titleText.indexOf(searchText) !== -1;
-	console.log(searchText);
-  });
-};
-
-
+	shuffleInstance.filter(function (element, shuffle) {
+			var titleElement = element.querySelector('.name_product');
+			var titleText = titleElement.textContent.toLowerCase().trim();
+			return titleText.indexOf(searchText) !== -1;
+		});
+	};
+	document.addEventListener('DOMContentLoaded', function () {
+		window.demo = new Demo(document.querySelector('.my-shuffle-container'));
+	});
 
 </script>
 
