@@ -140,16 +140,6 @@ $hidden = array('status' => 'check');
 
 	<?php $this->load->view('frontend/template/footer');?>
 	<?php $this->load->view('frontend/template/javascript_frontend');?>
-	<script type="text/javascript">
-		
-	  alert('<?=$this->session->userdata('alert_text');?>');
-	</script>
-	<?php
-	  $this->session->unset_userdata('alert');
-	  $this->session->unset_userdata('alert_type');
-	  $this->session->unset_userdata('alert_title');
-	  $this->session->unset_userdata('alert_text');
-	?>
 	
 	<?php if(!empty($this->session->userdata('alert')) && ($this->session->userdata('alert') == 'show')): ?>
 	<script type="text/javascript">

@@ -177,13 +177,13 @@ class CI_Authldap {
         $search = ldap_search($this->ldapconn, $this->basedn, $filter, 
                 array('dn', $this->login_attribute, 'cn'));
         $entries = ldap_get_entries($this->ldapconn, $search);
-        $binddn = $entries[0]['dn'];
-
+        
+        $binddn = (!empty($entries[0]['dn'])) ? $entries[0]['dn'] : false;
         // Now actually try to bind as the user
-        @$bind = ldap_bind($this->ldapconn, $binddn, $password);
+        $bind = @ldap_bind($this->ldapconn, $binddn, $password);
 
         if(!$bind) {
-            //$this->_audit("Failed login attempt: ".$username." from ".$_SERVER['REMOTE_ADDR']);
+            $this->_audit("Failed login attempt: ".$username." from ".$_SERVER['REMOTE_ADDR']);
             //echo "Failed login attempt: ".$username." from ".$_SERVER['REMOTE_ADDR'];
             return FALSE;
             exit('Binding failed');
