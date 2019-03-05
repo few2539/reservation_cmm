@@ -25,6 +25,7 @@ class userhistory extends CI_Controller {
 		$reservation = $this->frontend_model->getuserhistory($reservation_id);
 		echo $reservation->reservation_id;
 	}
+	
 
 
 }

@@ -4,6 +4,7 @@
 		function __construct() {
 			parent::__construct();
 			$this->load->library('authldap');
+			//$this->load->library('adldap');
 		}
 
 		public function checklogin() {
@@ -54,6 +55,31 @@
 			redirect('login/index');
 		}
 
+		//function adldap(){
+		/*	$username = $this->input->post('email');
+			$password = $this->input->post('password');
+			$user = User::where('username', $student_id)->first();
+
+			$infoUser = $adldap->search()->where('uid', '=', $student_id)->first();
+			if (empty($infoUser)) {
+				session()->flash('alert-warning', 'ผิดพลาด!|ไม่พบรหัสนักศึกษานี้อยู่ในระบบ');
+				return redirect('login/index');
+			  }elseif ($infoUser['attributes']['gidnumber'][0] != 4307) {
+				session()->flash('alert-warning', 'ผิดพลาด!|รหัสนักศึกษานี้ไม่ได้อยู่ในภาควิชาคอมพิวเตอร์และเทคโนโลยีสารสนเทศ');
+				return redirect('login/index');
+			  }
+			  else {
+				if (Adldap::auth()->attempt($student_id, $password, $bindAsUser = true)) {
+				  $user = User::where('student_id', $student_id)->first();
+          }
+		  return redirect('product/index');
+			  }
+      }
+
+      session()->flash('alert-warning', 'ผิดพลาด!|ไม่สามารถเข้าสู่ระบบได้ รหัสนักศึกษาหรือรหัสผ่านอาจไม่ถูกต้อง โปรดลองอีกครั้ง หากยังคงพบปัญหากรุณาติดต่อผู้ดูแลระบบ');
+      return redirect('login/index');
+		}*/
+
 		function loginldap($errorMsg = NULL){
 
 			$studentid = $this->input->post('email');
@@ -69,7 +95,7 @@
 				redirect('product/index');
             }else {
 
-                return 'loginerror';
+                return 'error';
             }
         }
 		

@@ -103,7 +103,8 @@
 			$product_id = $this->input->post('product_id');
 			$data = array(
 				'product_status' => 'available',
-				'product_amount' => '1'
+				'product_amount' => '1',
+				'product_intro' => '',
 			);
 
 			$this->db->where('product_id', $product_id);
