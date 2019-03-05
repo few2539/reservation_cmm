@@ -188,14 +188,19 @@ class CI_Authldap {
             return FALSE;
             exit('Binding failed');
         }
+
         $cn = $entries[0]['cn'][0];
         $dn = stripslashes($entries[0]['dn']);
         $id = $entries[0][$this->login_attribute][0];
         
         $get_role_arg = $id;
         
-        return array('cn' => $cn, 'dn' => $dn, 'id' => $id,
-            'role' => $this->_get_role($get_role_arg));
+        return array(
+            'cn' => $cn,
+            'dn' => $dn,
+            'uid' => $id,
+            'role' => $this->_get_role($get_role_arg)
+        );
     }
     /**
      * @access private

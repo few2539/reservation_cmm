@@ -19,7 +19,7 @@ class login extends CI_Controller {
 
 			$data['studentid'] = $this->input->post('studentid');
 			$data['password'] = $this->input->post('password');
-
+			
 			if($this->authldap->login($data['studentid'],$data['password'])==FALSE) {
 				//$result = "error";
 				$alert = array(
