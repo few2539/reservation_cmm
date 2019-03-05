@@ -97,6 +97,7 @@ var Js = {
 		'./' + BASE.src + 'styles/js/vender/slick.js',
 		'./' + BASE.src + 'styles/js/vender/picker.js',
 		'./' + BASE.src + 'styles/js/vender/picker.date.js',
+		'./' + BASE.src + 'styles/js/vender/sweetalert2.all.js',
 		
 		//Js      
 		'./' + BASE.src + 'styles/js/test.js',

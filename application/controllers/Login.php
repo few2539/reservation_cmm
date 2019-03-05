@@ -10,28 +10,34 @@ class login extends CI_Controller {
 		$this->load->library('authldap');
     }
 
-	public function index($loginerror=null)
+	public function index()
 	{
 		$data['title_page'] = 'Title Page : login';
 
-		if(($this->input->post('email') != null) && ($this->input->post('password') != null)) {
+		if(($this->input->post('studentid') != null) && ($this->input->post('password') != null)) {
 			//$data['result'] = $this->login_model->checklogin();
 
-			$data['email'] = $this->input->post('email');
-			$data['password'] = $this->input->post('password'); 
-			$data['login_falses']=$this->login_model->loginldap();
+			$data['studentid'] = $this->input->post('studentid');
+			$data['password'] = $this->input->post('password');
 
-
- 
-			$this->load->view('frontend/login/index',$data);
-			exit;
-			// Login FAIL
-			$this->load->view('frontend/login/index', $data);
+			if($this->authldap->login($data['studentid'],$data['password'])==FALSE) {
+				//$result = "error";
+				$alert = array(
+					'alert' => 'show',
+					'alert_type' => 'error',
+					'alert_title' => 'โปรดตรวจสอบ ความถูกต้อง',
+					'alert_text' => 'รหัสนักศึกษา หรือ รหัสผ่าน มีข้อผิดพลาด',
+				);
+				$this->session->set_userdata($alert);
+			}else{
+				//$result = "success";
+				redirect('product/index');
+			}
 		}else{
-			$data['email'] = '';
+			$data['studentid'] = '';
 			$data['password'] = '';
-			$data['result'] = '';
-		} 
+		}
+
 		$this->load->view('frontend/login/index',$data);
 	}
 
