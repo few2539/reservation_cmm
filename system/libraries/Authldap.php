@@ -75,10 +75,14 @@ class CI_Authldap {
          * For now just pass this along to _authenticate.  We could do
          * something else here before hand in the future.
          */
-        $user_info = $this->_authenticate($username,$password);
+        if($this->_authenticate($username,$password) == TRUE) {
+            $user_info = $this->_authenticate($username,$password);
+        }else{
+            return FALSE;
+        }
+
         if(empty($user_info['uid'] != 4307 )) {
-           echo $login_falses;
-            
+            echo $login_falses;
         }elseif(empty($user_info)){
             echo $login_falses;
         }
@@ -86,9 +90,11 @@ class CI_Authldap {
         // Record the login
         $this->_audit("Successful login: ".$user_info['cn']."(".$username.") from ".$this->ci->input->ip_address());
         // Set the session data
-        $customdata = array('username' => $username,
-                            'cn' => $user_info['cn'],
-                            'logged_in' => TRUE);
+        $customdata = array(
+            'username' => $username,
+            'cn' => $user_info['cn'],
+            'logged_in' => TRUE
+        );
     
         $this->ci->session->set_userdata($customdata);
         return TRUE;
@@ -134,7 +140,7 @@ class CI_Authldap {
      */
     private function _authenticate($username, $password) {
         $needed_attrs = array('dn', 'cn', $this->login_attribute);
-        
+
         foreach($this->hosts as $host) {
             $this->ldapconn = ldap_connect($host);
             if($this->ldapconn) {
@@ -160,7 +166,7 @@ class CI_Authldap {
         if($this->proxy_user) {
                 $bind = ldap_bind($this->ldapconn, $this->proxy_user, $this->proxy_pass);
             }else {
-            $bind = ldap_bind($this->ldapconn);
+                $bind = ldap_bind($this->ldapconn);
         }
         if(!$bind){
             log_message('error', 'Unable to perform anonymous/proxy bind');
@@ -172,20 +178,21 @@ class CI_Authldap {
                 array('dn', $this->login_attribute, 'cn'));
         $entries = ldap_get_entries($this->ldapconn, $search);
         $binddn = $entries[0]['dn'];
-            
+
         // Now actually try to bind as the user
-        $bind = ldap_bind($this->ldapconn, $binddn, $password);
+        @$bind = ldap_bind($this->ldapconn, $binddn, $password);
+
         if(!$bind) {
-            $this->_audit("Failed login attempt: ".$username." from ".$_SERVER['REMOTE_ADDR']);
-            return redirect('login/index');
+            //$this->_audit("Failed login attempt: ".$username." from ".$_SERVER['REMOTE_ADDR']);
+            //echo "Failed login attempt: ".$username." from ".$_SERVER['REMOTE_ADDR'];
+            return FALSE;
             exit('Binding failed');
-            
         }
         $cn = $entries[0]['cn'][0];
         $dn = stripslashes($entries[0]['dn']);
         $id = $entries[0][$this->login_attribute][0];
         
-        $get_role_arg = $id;               
+        $get_role_arg = $id;
         
         return array('cn' => $cn, 'dn' => $dn, 'id' => $id,
             'role' => $this->_get_role($get_role_arg));

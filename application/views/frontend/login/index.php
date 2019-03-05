@@ -95,10 +95,10 @@ $hidden = array('status' => 'check');
 						<?=form_open('login/index', $attribute, $hidden);?>
 						<fieldset class="forms_fieldset">
 							<div class="forms_field">
-								<input type="text" name="email" placeholder="Email" class="forms_field-input" />
+								<input type="text" name="studentid" placeholder="Student ID" class="forms_field-input" value="<?php if(!empty($studentid)) { echo $studentid; } ?>"/>
 							</div>
 							<div class="forms_field">
-								<input type="password" name="password" placeholder="Password" class="forms_field-input" />
+								<input type="password" name="password" placeholder="Password" class="forms_field-input" value="<?php if(!empty($password)) { echo $password; } ?>"/>
 							</div>
 							<?php if (isset($login_falses) && !empty($login_falses)) {
     echo $login_falses;
@@ -140,20 +140,34 @@ $hidden = array('status' => 'check');
 
 	<?php $this->load->view('frontend/template/footer');?>
 	<?php $this->load->view('frontend/template/javascript_frontend');?>
-
-	<?php if ($result == 'error'): ?>
-	<script>
-		alert("กรุณาตรวจสอบความถูกต้อง");
-
+	<script type="text/javascript">
+		
+	  alert('<?=$this->session->userdata('alert_text');?>');
 	</script>
-	<?php endif;?>
+	<?php
+	  $this->session->unset_userdata('alert');
+	  $this->session->unset_userdata('alert_type');
+	  $this->session->unset_userdata('alert_title');
+	  $this->session->unset_userdata('alert_text');
+	?>
 	
-	<?php if (!empty($errorMsg)): ?>
-	<script>
-		alert("<?=$errorMsg?>");
-
+	<?php if(!empty($this->session->userdata('alert')) && ($this->session->userdata('alert') == 'show')): ?>
+	<script type="text/javascript">
+	  swal({
+	    type: '<?=$this->session->userdata('alert_type');?>',
+	    title: '<?=$this->session->userdata('alert_title');?>',
+	      text: '<?=$this->session->userdata('alert_text');?>',
+	      showConfirmButton: true,
+	      width: 600,
+	  });
 	</script>
-	<?php endif;?>
+	<?php
+	  $this->session->unset_userdata('alert');
+	  $this->session->unset_userdata('alert_type');
+	  $this->session->unset_userdata('alert_title');
+	  $this->session->unset_userdata('alert_text');
+	?>
+	<?php endif; ?>
 </body>
 
 <script>

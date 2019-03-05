@@ -102,7 +102,7 @@ class product extends CI_Controller {
 		redirect('product/admin');
 	}
 
-	public function return()
+	public function takeback()
 	{
 		$this->product_model->productreturn();
 
