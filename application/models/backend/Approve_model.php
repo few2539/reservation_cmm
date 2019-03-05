@@ -31,5 +31,17 @@
 
 			return $query;
 		}
+
+		public function borrowdata2(){
+			$product_id = $this->input->post('product_id');
+			$data = array(
+				'product_intro' => $this->session->userdata('cn'),
+			);
+
+			$this->db->where('product_id', $product_id);
+			$query = $this->db->update('product',$data);
+
+			return $query;
+		}
 	}
 ?>

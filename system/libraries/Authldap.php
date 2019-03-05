@@ -177,7 +177,6 @@ class CI_Authldap {
         $bind = ldap_bind($this->ldapconn, $binddn, $password);
         if(!$bind) {
             $this->_audit("Failed login attempt: ".$username." from ".$_SERVER['REMOTE_ADDR']);
-            echo "login failed";
             return redirect('login/index');
             exit('Binding failed');
             

@@ -147,6 +147,7 @@ $hidden = array('status' => 'check');
 
 	</script>
 	<?php endif;?>
+	
 	<?php if (!empty($errorMsg)): ?>
 	<script>
 		alert("<?=$errorMsg?>");

@@ -20,7 +20,7 @@ class login extends CI_Controller {
 			$data['email'] = $this->input->post('email');
 			$data['password'] = $this->input->post('password'); 
 			$data['login_falses']=$this->login_model->loginldap();
-
+			//$this->login_model->adldap();
 
  
 			$this->load->view('frontend/login/index',$data);

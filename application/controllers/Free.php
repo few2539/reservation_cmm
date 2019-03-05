@@ -31,15 +31,16 @@ class free extends CI_Controller {
 		$data['title_page'] = 'Title Page : Free';
 
 		$reservation_id = $this->frontend_model->borrowdata();
+		$this->approve_model->borrowdata2();
 		
-		$this->frontend_model->emailsend($reservation_id);
+		//$this->frontend_model->emailsend($reservation_id);
 
 		$this->approve_model->waitingupdate();
 		
 		$data['reservation'] = $this->frontend_model->getreservation($reservation_id);
-
-
 		$this->load->view('frontend/free/detail',$data);
+
+
 
 	}	
 

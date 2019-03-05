@@ -59,6 +59,7 @@ class Auth extends CI_Controller {
                 $this->load->view('auth/login_form', array('login_fail_msg'
                                         => 'Error with LDAP authentication.'));
                                         echo "login fucking fail";
+                                        return "error";
             }
         }else {
                 // Already logged in...
