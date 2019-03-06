@@ -193,9 +193,17 @@ $product = [
 
 
 
-<body>
-	<?php $this->load->view('frontend/template/header'); ?>
+<body id="for-hid">
 
+	<div class="wrap-preload">
+		<div class="box">
+			<img src="<?=base_url();?>assets/frontend/dist/styles/image/final-logo-big.png" alt="final-logo.png">
+
+		</div>
+
+	</div>
+	<?php $this->load->view('frontend/template/header'); ?>
+	
 
 	<section class="product">
 

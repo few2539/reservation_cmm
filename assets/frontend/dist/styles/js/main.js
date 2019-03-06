@@ -11231,8 +11231,16 @@ $(window).on('load', function () {
 	iso.delay(3500).fadeIn("slow");
 	iso1.delay(3500).fadeIn("slow");;
 	iso2.delay(3500).fadeIn("slow");
+
 });
 
+$(window).on('load', function () {
+	setTimeout(function(){
+		$("#for-hid").css("overflow", "unset");
+	  }, 2000);
+	
+
+});
 
 window.env_shuffle = {
 	CONTAINER_SELECTOR: 'js-slick-container',

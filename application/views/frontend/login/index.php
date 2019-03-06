@@ -25,7 +25,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
-<body>
+<body >
 
 	<div class="wrap-preload">
 		<div class="box">
