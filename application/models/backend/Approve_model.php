@@ -57,7 +57,7 @@
 				'mailtype'  => 'html', 
 				'charset'   => 'utf-8'
 			);
-			$sendtoo2 = '.$product->product_.';
+			$sendtoo2 = $reservation->product_intro;
 			
 
     		$message = '<h2> Reservation Verification </h2>';
