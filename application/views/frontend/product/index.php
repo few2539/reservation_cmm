@@ -250,7 +250,7 @@ $product = [
 								<?=$product["product_intro"];?>
 							</p>
 							<p class="booking">
-								Booking : <span> <?=$product["product_intro"];?> </span> 
+								Booking : <span> <?=$product["product_booking"];?> </span> 
 								<!-- เปลี่ยนตัวแปลตรงนี้  -->
 							</p>
 							<div class="content">

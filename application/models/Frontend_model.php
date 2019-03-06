@@ -129,11 +129,12 @@
 				'smtp_host' => 'ssl://smtp.googlemail.com',
 				'smtp_port' => 465,
 				'smtp_user' => 'maxbaeiei@gmail.com',
-				'smtp_pass' => 'notpasstestpj',
+				'smtp_pass' => 'notkaksud79',
 				'mailtype'  => 'html', 
 				'charset'   => 'utf-8'
 			);
 			$sendtoo = $this->input->post('emailto');
+			
 
     		$message = '<h2> Reservation Verification </h2>';
 			$message .= '<p>ชื่ออุปกรณ์ : '.$reservation->product_name.'</p>';
@@ -172,6 +173,18 @@
 			}
 			}
 
+			public function borrowdataproductdate(){
+				$product_id = $this->input->post('product_id');
+				$data = array(
+					'product_reservation' => $reservation_date,
+					'product_return_date' => $reservation_return_date,
+				);
+	
+				$this->db->where('product_id', $product_id);
+				$query = $this->db->update('product',$data);
+	
+				return $query;
+			}
 		
 		// Old
 

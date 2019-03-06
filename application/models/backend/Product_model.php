@@ -104,7 +104,7 @@
 			$data = array(
 				'product_status' => 'available',
 				'product_amount' => '1',
-				'product_intro' => '',
+				'product_booking' => '',
 			);
 
 			$this->db->where('product_id', $product_id);
