@@ -15,10 +15,10 @@ class admin extends CI_Controller {
 	}
 
 	
-    public function profile()
+    public function add_email()
 	{
         $data['title_page'] = 'Title Page : admin profile';
-		$this->load->view('backend/admin/profile',$data);
+		$this->load->view('backend/admin/add_email',$data);
 	}
 
 	public function profile_edit()

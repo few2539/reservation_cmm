@@ -145,7 +145,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
-				<button type="submit" name="insert" value="add to database" class="btn btn-primary">Submit</button>
+				<button type="submit" name="insert" value="add to database" class="btn btn-primary" onclick="fillConfirm(this.value);" id="fillConfirm">Submit</button>
 
 				<?=form_close();?>
 
@@ -173,6 +173,38 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		});
 
 	</script>
+
+
+<script type="text/javascript">
+	function fillConfirm(id) {
+    alert(id);
+	  	swal({
+		  title: 'ยืนยันที่จะทำรายการ  ?',
+		  text: "คุณแน่ใจที่จะยืนยันการทำรายการ!",
+		  type: 'warning',
+		  showCancelButton: true,
+		  confirmButtonColor: '#3085d6',
+		  cancelButtonColor: '#d33',
+		  confirmButtonText: 'ยืนยัน',
+		  cancelButtonText: 'ยกเลิก'
+		}).then((result) => {
+		  if (result.value) {
+		    swal({
+		    	type: 'success',
+		    	position: 'center',
+		    	title: 'กำลังดำเนินการ',
+		    	text: 'ข้อมูล ที่ท่านทำรายการดำเนิน การแล้ว.',
+		    	showConfirmButton: false,
+		    	timer: 3000
+		    });
+
+		    setTimeout(function(){ $('#fillConfirm'+id).submit(); }, 3000);
+		  }
+		});
+	}
+</script>
+
+
 
 
 	<script>
