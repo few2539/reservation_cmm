@@ -241,6 +241,10 @@ $product = [
 							<p class="detail">
 								<?=$product["product_intro"];?>
 							</p>
+							<p class="booking">
+								Booking : <span> <?=$product["product_intro"];?> </span> 
+								<!-- เปลี่ยนตัวแปลตรงนี้  -->
+							</p>
 							<div class="content">
 								<a href="<?=site_url('free/index');?>/<?=$product["product_id"];?>" type="button" class="btn btn-<?php if($product["product_status"] == 'approved') { echo "danger"; }elseif ($product["product_status"] == 'waiting'){ echo "warning"; } elseif ($product["product_status"] == 'available'){ echo "success"; }?> btn-block btn-status"
 									data-prodcut="
