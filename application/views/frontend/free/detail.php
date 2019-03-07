@@ -28,7 +28,49 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<h1>รายละเอียดการจอง</h1>
 		</div>
 
-		</div>
+		<div class="container-product">
+			<div class="row-product">
+				<div class="item" data-groups="<?=$reservation->product_name?>">
+					<div class="box">
+						<div class="thumb">
+							<img src="<?=base_url();?>assets/frontend/img/product_thumbnail/<?=$reservation	->product_thumbnail?>" alt=""
+							 data-title="<?=$reservation->category_name;?>">
+						</div>
+						<div class="text-detail">
+							<div class="property">
+								<p class="name_product">
+									<?=$reservation->reservation_tackback_name;?>
+								</p>
+								<p class="product_type">
+									<?=$reservation->reservation_student_id;?>
+								</p>
+								<p class="detail">
+									<?=$reservation->reservation_subject;?>
+									
+								</p>
+								<p class="detail">
+									<?=$reservation->reservation_usefor;?>
+									
+								</p>
+								<p class="detail">
+									<?=$reservation->reservation_date;?>
+									
+								</p>
+								<p class="detail">
+									<?=$reservation->reservation_return_date;?>
+									
+								</p>
+
+							</div>
+							<div class="content">
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<hr>
 		</div>
 	</section>
 
