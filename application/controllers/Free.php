@@ -32,8 +32,8 @@ class free extends CI_Controller {
 
 		$reservation_id = $this->frontend_model->borrowdata();
 		$this->approve_model->borrowdata2();
-		
-		//$this->frontend_model->emailsend($reservation_id);
+		$this->frontend_model->borrowdataproductdate();
+		$this->frontend_model->emailsend($reservation_id);
 
 		$this->approve_model->waitingupdate();
 		
