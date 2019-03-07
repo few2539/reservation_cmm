@@ -271,9 +271,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 						<div class="form-group col-md-12">
-							<button  id="renew" type="submit" value="upload" class="btn btn-primary btn-block" style="font-weight: bold;" onclick="renewConfirm(this.value);">
+							<button  id="renew" type="submit" value="upload" class="btn btn-primary btn-block" style="font-weight: bold;">
 								<i class="fa fa-edit"></i> ยืนยันการทำรายการ
 							</button>
+
 							<script type="text/javascript">
 									function renewConfirm(id) {
 									

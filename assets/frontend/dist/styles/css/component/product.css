@@ -79,5 +79,8 @@ section.product {
         section.product .wrap .equalHWrap .equalHW .box-all .property .product_type {
           height: 30px;
           overflow: hidden; }
+        section.product .wrap .equalHWrap .equalHW .box-all .property .detail {
+          height: 40px;
+          overflow: hidden; }
         section.product .wrap .equalHWrap .equalHW .box-all .content a {
           width: 100%; }
