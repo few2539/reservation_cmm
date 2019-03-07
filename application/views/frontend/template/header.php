@@ -14,10 +14,11 @@
 					<?= $this->session->userdata('user_lname'); ?>
 				</p>
 				<p>
-					<?= $this->session->userdata('username'); ?>
-					<?= $this->session->userdata('cn'); ?>
+			
 					<?= $this->session->userdata('mail'); ?>
 				</p>
+				<p><?= $this->session->userdata('username'); ?></p>	
+				<p>	<?= $this->session->userdata('cn'); ?> </p>
 				<a href="<?=site_url('login/logout');?>">Logout</a>
 				<a href="<?=site_url('auth/logout');?>">Logoutldap</a>
 			</div>

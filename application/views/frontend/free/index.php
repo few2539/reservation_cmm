@@ -70,20 +70,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group name">
 						<span class="input-group-addon" id="basic-addon1">name</span>
-						<input type="text" class="form-control " name="reservation_tackback_name" placeholder="Username" aria-describedby="basic-addon1">
+						<input type="text" class="form-control " name="reservation_tackback_name" placeholder="Username" aria-describedby="basic-addon1" required>
 					</div>
 				</div>
 
 				<div class="box-user-info">
 					<div class="input-group pw-student">
 						<span class="input-group-addon" id="basic-addon1">pw-student</span>
-						<input type="text" class="form-control" name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1">
+						<input type="text" class="form-control" name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1" required>
 					</div>
 				</div>
 				<div class="box-user-info">
 					<div class="input-group degree">
 						<span class="input-group-addon" id="basic-addon1">your-degree</span>
-						<input type="text" class="form-control" name="degreeid" placeholder="(1-4 year) " aria-describedby="basic-addon1">
+						<input type="text" class="form-control" name="degreeid" placeholder="(1-4 year) " aria-describedby="basic-addon1" required>
 
 					</div>
 				</div>
@@ -91,7 +91,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group degree">
 						<span class="input-group-addon" id="basic-addon1">Email</span>
-						<input type="text" class="form-control" name="degreeid" placeholder="your-email " aria-describedby="basic-addon1">
+						<input type="text" class="form-control" name="degreeid" placeholder="your-email " aria-describedby="basic-addon1" required>
 
 					</div>
 				</div>
@@ -99,7 +99,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group Phone">
 						<span class="input-group-addon" id="basic-addon1">Phone</span>
-						<input type="text" class="form-control" name="reservation_phonenumber" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
+						<input type="text" class="form-control" name="reservation_phonenumber" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1" required>
 
 					</div>
 				</div>
@@ -108,7 +108,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="input-group Use-for">
 						<span class="input-group-addon" id="basic-addon1">Use for</span>
 						<input type="text" class="form-control" name="reservation_usefor" placeholder="Like taking photo in some project"
-						 aria-describedby="basic-addon1">
+						 aria-describedby="basic-addon1" required>
 
 					</div>
 				</div>
@@ -116,19 +116,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group subject">
 						<span class="input-group-addon" id="basic-addon1">subject</span>
-						<input type="text" class="form-control" name="reservation_subject" placeholder="Like CMM-444" aria-describedby="basic-addon1">
+						<input type="text" class="form-control" name="reservation_subject" placeholder="Like CMM-444" aria-describedby="basic-addon1" required>
 
 					</div>
 				</div>
 				<div class="box">
 					<fieldset>
 						<h4>Form:</h4>
-						<input type="text" id="input_from" name="reservation_date" value="">
+						<input type="text" id="input_from" name="reservation_date" value="" required>
 					</fieldset>
 
 					<fieldset>
 						<h4>To:</h4>
-						<input type="text" id="input_to" name="reservation_return_date" value="">
+						<input type="text" id="input_to" name="reservation_return_date" value="" required>
 					</fieldset>
 
 				</div>
