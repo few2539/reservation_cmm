@@ -89,6 +89,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</div>
 
 				<div class="box-user-info">
+					<div class="input-group degree">
+						<span class="input-group-addon" id="basic-addon1">Email</span>
+						<input type="text" class="form-control" name="degreeid" placeholder="your-email " aria-describedby="basic-addon1">
+
+					</div>
+				</div>
+
+				<div class="box-user-info">
 					<div class="input-group Phone">
 						<span class="input-group-addon" id="basic-addon1">Phone</span>
 						<input type="text" class="form-control" name="reservation_phonenumber" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1">
@@ -207,14 +215,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		$('#input_from').pickadate({
 
 			formatSubmit: 'yyyy/mm/dd',
-			format: 'dd-mm-yyyy',
+			format: 'yyyy/mm/dd',
 
 		});
 
 		$('#input_to').pickadate({
 
 			formatSubmit: 'yyyy/mm/dd',
-			format: 'dd-mm-yyyy',
+			format: 'yyyy/mm/dd',
 
 		});
 
