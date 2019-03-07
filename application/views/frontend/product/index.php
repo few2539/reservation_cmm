@@ -241,7 +241,7 @@ $product = [
 						</div>
 						<div class="property">
 							<p class="name_product">
-								<?=$product["product_name"];?>
+								<b><?=$product["product_name"];?></b>
 							</p>
 							<p class="product_type">
 								<?=$product["category_name_en"];?>
@@ -249,8 +249,8 @@ $product = [
 							<p class="detail">
 								<?=$product["product_intro"];?>
 							</p>
-							<p class="booking">
-								Booking : <span> <?=$product["product_booking"];?> </span> 
+							<p class="booking" style="height:50px; overflow:hidden;">
+							<span>	Booking : Phuridate detvhboonyapichat</span> 
 								<!-- เปลี่ยนตัวแปลตรงนี้  -->
 							</p>
 							<div class="content">
