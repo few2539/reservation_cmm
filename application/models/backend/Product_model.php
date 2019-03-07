@@ -43,8 +43,7 @@
 				'product_reservation' => $product_reservation,
 				'product_return_date' => $product_return_date,
 				'product_update' => time(),
-				'product_amount' => $this->input->post('product_amount'),
-				'product_thumbnail' => $this->input->post('product_thumbnail'),
+				'product_amount' => '1',
 				'product_intro' => $this->input->post('product_intro'),
 				'product_detail' => $this->input->post('product_detail')
 			);
