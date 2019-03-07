@@ -271,9 +271,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 						<div class="form-group col-md-12">
-							<button type="submit" value="upload" class="btn btn-primary btn-block" style="font-weight: bold;">
+							<button  id="renew" type="submit" value="upload" class="btn btn-primary btn-block" style="font-weight: bold;" onclick="renewConfirm(this.value);">
 								<i class="fa fa-edit"></i> ยืนยันการทำรายการ
 							</button>
+							<script type="text/javascript">
+									function renewConfirm(id) {
+									
+										swal({
+											title: 'ยืนยันที่จะทำรายการ  ?',
+											text: "คุณแน่ใจที่จะยืนยันการทำรายการ!",
+											type: 'warning',
+											showCancelButton: true,
+											confirmButtonColor: '#3085d6',
+											cancelButtonColor: '#d33',
+											confirmButtonText: 'ยืนยัน',
+											cancelButtonText: 'ยกเลิก'
+										}).then((result) => {
+											if (result.value) {
+												swal({
+													type: 'success',
+													position: 'center',
+													title: 'กำลังดำเนินการ',
+													text: 'ข้อมูล ที่ท่านทำรายการดำเนินการแล้ว.',
+													showConfirmButton: false,
+													timer: 3000
+												});
+
+												setTimeout(function () {
+													$('#renew').submit();
+												}, 3000);
+											}
+										});
+									}
+
+								</script>
+
+
 						</div>
 						<?= form_close(); ?>
 					</div>
