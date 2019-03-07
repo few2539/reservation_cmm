@@ -112,7 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div style="margin-top:2%;">
                           <?php $attributes  = array('id' => 'returnProduct'.$product['product_id']); ?>
                           <?php $hidden  = array('product_id' => $product['product_id']); ?>
-                          <?= form_open('product/return', $attributes, $hidden); ?>
+                          <?= form_open('product/takeback', $attributes, $hidden); ?>
                             <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-<?php if($product["product_status"] == 'approved') { echo "warning"; }elseif ($product["product_status"] == 'waiting'){ echo "hiddent-btn"; } elseif ($product["product_status"] == 'available'){ echo "hiddent-btn"; }?> btn-sm" style="font-weight: bold;width: 30%; float: left;" onclick="returnConfirm(this.value);">
                               <i class="fa fa-check"></i> คืน 
                             </button>

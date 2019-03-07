@@ -93,6 +93,7 @@ class CI_Authldap {
         $customdata = array(
             'username' => $username,
             'cn' => $user_info['cn'],
+            'mail' => $user_info['mail'],
             'logged_in' => TRUE
         );
     
@@ -139,7 +140,7 @@ class CI_Authldap {
      * @return array 
      */
     private function _authenticate($username, $password) {
-        $needed_attrs = array('dn', 'cn', $this->login_attribute);
+        $needed_attrs = array('dn', 'cn', $this->login_attribute, 'mail');
 
         foreach($this->hosts as $host) {
             $this->ldapconn = ldap_connect($host);
@@ -175,7 +176,7 @@ class CI_Authldap {
         log_message('debug', 'Successfully bound to directory.  Performing dn lookup for '.$username);
         $filter = '('.$this->login_attribute.'='.$username.')';
         $search = ldap_search($this->ldapconn, $this->basedn, $filter, 
-                array('dn', $this->login_attribute, 'cn'));
+                array('dn', $this->login_attribute, 'cn', 'mail'));
         $entries = ldap_get_entries($this->ldapconn, $search);
         
         $binddn = (!empty($entries[0]['dn'])) ? $entries[0]['dn'] : false;
@@ -191,6 +192,7 @@ class CI_Authldap {
 
         $cn = $entries[0]['cn'][0];
         $dn = stripslashes($entries[0]['dn']);
+        $mail = $entries[0]['mail'][0];
         $id = $entries[0][$this->login_attribute][0];
         
         $get_role_arg = $id;
@@ -199,6 +201,7 @@ class CI_Authldap {
             'cn' => $cn,
             'dn' => $dn,
             'uid' => $id,
+            'mail' => $mail,
             'role' => $this->_get_role($get_role_arg)
         );
     }
