@@ -95,19 +95,46 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 						<div class="clearfix"></div>
-
-
-						
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<div class="form-group has-feedback">
-								<label>อัพโหลดรูป</label>
-								<input type="file" class="dropify" data-default-file="file_name" name="userfile" hidden/>
+								<label>Intro_item</label>
+								<input name="product_name" class="form-control" placeholder="Intro_item" required data-error="โปรดกรอกช่องนี้"
+								 value="">
+								<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<div class="form-group has-feedback">
+								<label>Detail Items</label>
+
+								<textarea name="product_detail" class="form-control" placeholder="Detail" rows="5" id="comment"
+								 required data-error="โปรดกรอกช่องนี้" value=""></textarea>
+
 								<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 								<div class="help-block with-errors"></div>
 							</div>
 						</div>
 						<div class="clearfix"></div>
+				
 
+
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="form-group has-feedback">
+								<label>อัพโหลดรูป</label>
+								<input type="file" class="dropify" data-default-file="file_name" name="userfile" hidden />
+								<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+
+						<div class="clearfix"></div>
+
+						
+						<div class="clearfix"></div>
+
+					
 
 						<?php endif; ?>
 
