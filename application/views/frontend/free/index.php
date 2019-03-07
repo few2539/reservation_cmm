@@ -213,14 +213,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<script>
 		$('#input_from').pickadate({
-
+			hiddenName: true
 			formatSubmit: 'yyyy/mm/dd',
 			format: 'yyyy/mm/dd',
 
 		});
 
 		$('#input_to').pickadate({
-
+			hiddenName: true
 			formatSubmit: 'yyyy/mm/dd',
 			format: 'yyyy/mm/dd',
 
@@ -229,7 +229,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</script>
 
 
-	<script>
+	<!-- <script>
 		var from_$input = $('#input_from').pickadate(),
 			from_picker = from_$input.pickadate('picker')
 
@@ -275,7 +275,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			}
 		})
 
-	</script>
+	</script> -->
 
 	<script>
 		/*
