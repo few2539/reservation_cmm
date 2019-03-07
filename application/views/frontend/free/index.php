@@ -213,16 +213,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<script>
 		$('#input_from').pickadate({
-			hiddenName: true
+			
 			formatSubmit: 'yyyy/mm/dd',
-			format: 'yyyy/mm/dd',
+			format: 'dd/mm/yyyy',
 
 		});
 
 		$('#input_to').pickadate({
-			hiddenName: true
+			
 			formatSubmit: 'yyyy/mm/dd',
-			format: 'yyyy/mm/dd',
+			format: 'dd/mm/yyyy',
 
 		});
 
