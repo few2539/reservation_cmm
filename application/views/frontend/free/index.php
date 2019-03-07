@@ -145,7 +145,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
-				<button type="submit" name="insert" value="add to database" class="btn btn-primary" onclick="fillConfirm(this.value);" id="fillConfirm">Submit</button>
+				<button type="submit" name="insert" value="add to database" class="btn btn-primary" onclick="fillConfirm(this.value);"
+				 id="fillConfirm">Submit</button>
 
 				<?=form_close();?>
 
@@ -164,51 +165,58 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<?php $this->load->view('frontend/template/javascript_frontend');?>
 
-	<script>
-		$(".datepicker").pickadate({
-			format: 'dd/mm/yyyy',
 
-			clear: '',
-			close: ''
-		});
+
+
+	<script type="text/javascript">
+		function fillConfirm(id) {
+			alert(id);
+			swal({
+				title: 'ยืนยันที่จะทำรายการ  ?',
+				text: "คุณแน่ใจที่จะยืนยันการทำรายการ!",
+				type: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'ยืนยัน',
+				cancelButtonText: 'ยกเลิก'
+			}).then((result) => {
+				if (result.value) {
+					swal({
+						type: 'success',
+						position: 'center',
+						title: 'กำลังดำเนินการ',
+						text: 'ข้อมูล ที่ท่านทำรายการดำเนิน การแล้ว.',
+						showConfirmButton: false,
+						timer: 3000
+					});
+
+					setTimeout(function () {
+						$('#fillConfirm' + id).submit();
+					}, 3000);
+				}
+			});
+		}
 
 	</script>
 
 
-<script type="text/javascript">
-	function fillConfirm(id) {
-    alert(id);
-	  	swal({
-		  title: 'ยืนยันที่จะทำรายการ  ?',
-		  text: "คุณแน่ใจที่จะยืนยันการทำรายการ!",
-		  type: 'warning',
-		  showCancelButton: true,
-		  confirmButtonColor: '#3085d6',
-		  cancelButtonColor: '#d33',
-		  confirmButtonText: 'ยืนยัน',
-		  cancelButtonText: 'ยกเลิก'
-		}).then((result) => {
-		  if (result.value) {
-		    swal({
-		    	type: 'success',
-		    	position: 'center',
-		    	title: 'กำลังดำเนินการ',
-		    	text: 'ข้อมูล ที่ท่านทำรายการดำเนิน การแล้ว.',
-		    	showConfirmButton: false,
-		    	timer: 3000
-		    });
-
-		    setTimeout(function(){ $('#fillConfirm'+id).submit(); }, 3000);
-		  }
-		});
-	}
-</script>
-
-
 
 
 	<script>
+		$('#input_from').pickadate({
 
+			formatSubmit: 'yyyy/mm/dd',
+			format: 'dd-mm-yyyy',
+
+		});
+
+		$('#input_to').pickadate({
+
+			formatSubmit: 'yyyy/mm/dd',
+			format: 'dd-mm-yyyy',
+
+		});
 
 	</script>
 
@@ -219,42 +227,46 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 		var to_$input = $('#input_to').pickadate(),
 			to_picker = to_$input.pickadate('picker')
-		
+		from_picker.set('min', true);
+
 		// Check if there’s a “from” or “to” date to start with.
-		if ( from_picker.get('value') ) {
+		if (from_picker.get('value')) {
 			to_picker.set('min', from_picker.get('select'));
 			from_picker.set('min', true);
-		}
-		if ( to_picker.get('value') ) {
 
-			from_picker.set('max', to_picker.get('select') );
+		}
+		if (to_picker.get('value')) {
+
+			from_picker.set('max', to_picker.get('select'));
+			console.log(to_picker);
 		}
 
 		// When something is selected, update the “from” and “to” limits.
-		from_picker.on('set', function(event) {
-		if ( event.select ) {
-			to_picker.set('min', from_picker.get('select'));
-			var from_value = from_picker.get('select');
-			console.log(from_value);
-			var pick = from_value.pick + (2 * 24 * 60 * 60 * 1000);
-			var to_value = new Date(pick);
-			to_picker.set('max', to_value);
-	
-			console.log(to_value);
+		from_picker.on('set', function (event) {
+			if (event.select) {
+				to_picker.set('min', from_picker.get('select'));
+				var from_value = from_picker.get('select');
+				var pick = from_value.pick + (2 * 24 * 60 * 60 * 1000);
+				var to_value = new Date(pick);
+				to_picker.set('max', to_value);
+				console.log(from_value);
 
-		}
-		else if ( 'clear' in event ) {
-			to_picker.set('min', false)
-		}
+
+
+			} else if ('clear' in event) {
+				to_picker.set('min', false)
+			}
 		})
-		to_picker.on('set', function(event) {
-		if ( event.select ) {
-			from_picker.set('max', to_picker.get('select'))
-		}
-		else if ( 'clear' in event ) {
-			from_picker.set('max', false)
-		}
+		to_picker.on('set', function (event) {
+			if (event.select) {
+
+				from_picker.set('max', to_picker.get('select'))
+
+			} else if ('clear' in event) {
+				from_picker.set('max', false)
+			}
 		})
+
 	</script>
 
 	<script>
