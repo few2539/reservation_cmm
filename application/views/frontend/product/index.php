@@ -250,7 +250,7 @@ $product = [
 								<?=$product["product_intro"];?>
 							</p>
 							<p class="booking" style="height:50px; overflow:hidden;">
-							<span>	Booking : Phuridate detvhboonyapichat</span> 
+							<span>	Booking : <?=$product["product_booking"];?></span> 
 								<!-- เปลี่ยนตัวแปลตรงนี้  -->
 							</p>
 							<div class="content">
