@@ -174,7 +174,10 @@
 			}
 
 			public function borrowdataproductdate(){
+
 				$product_id = $this->input->post('product_id');
+				$reservation_date = $this->thdate2utcdate2($this->input->post('reservation_date'));
+				$reservation_return_date = $this->thdate2utcdate2($this->input->post('reservation_return_date'));
 				$data = array(
 					'product_reservation' => $reservation_date,
 					'product_return_date' => $reservation_return_date,

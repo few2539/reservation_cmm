@@ -16,6 +16,7 @@
 				<p>
 					<?= $this->session->userdata('username'); ?>
 					<?= $this->session->userdata('cn'); ?>
+					<?= $this->session->userdata('mail'); ?>
 				</p>
 				<a href="<?=site_url('login/logout');?>">Logout</a>
 				<a href="<?=site_url('auth/logout');?>">Logoutldap</a>
