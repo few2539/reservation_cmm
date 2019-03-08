@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #for-hid {
   overflow: hidden; }
 
@@ -84,3 +85,27 @@ section.product {
           overflow: hidden; }
         section.product .wrap .equalHWrap .equalHW .box-all .content a {
           width: 100%; }
+
+.containersearch {
+  margin: 0 auto;
+  width: 100%; }
+  .containersearch .field-input input {
+    text-align: left;
+    border-radius: 6rem;
+    border: 1px solid #a0a0a0;
+    padding: .6rem 2rem .6rem 1rem;
+    font-family: 'roboto';
+    -webkit-transition: .5s;
+    transition: .5s; }
+    .containersearch .field-input input:focus {
+      outline: none;
+      border-color: #212121;
+      -webkit-transition: .5s;
+      transition: .5s; }
+  .containersearch .field-input span:before {
+    content: '';
+    cursor: pointer;
+    position: relative;
+    font-family: 'fontawesome';
+    top: 0;
+    right: 20px; }
