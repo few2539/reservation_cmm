@@ -210,12 +210,22 @@ $product = [
 		<div class="text-welcome">
 			<h1>Welcome to reservation system</h1>
 		</div>
+		<div class="containersearch">
+  				<div class="field-input">
+  				  <input type="text" placeholder="Search..." id="ModuleSearch"/><span> </span>
+  				</div>
+			</div>
 		<div class="category">
 			<button  type="button" class="btn btn-warning show-category">Category</button>
 		</div>
 
 
- <input type="text" id="ModuleSearch" placeholder="Search" />
+ 			<!-- <input type="text" id="ModuleSearch" placeholder="Search" /> -->
+
+			 
+
+
+
 
 		<div class="button-product cate">
 			<button type="button" id='all' class="btn btn-warning silbling">All</button>
@@ -254,11 +264,11 @@ $product = [
 								<!-- เปลี่ยนตัวแปลตรงนี้  -->
 							</p>
 							<div class="content">
-								<a href="<?=site_url('free/index');?>/<?=$product["product_id"];?>" type="button" class="btn btn-<?php if($product["product_status"] == 'approved') { echo "danger"; }elseif ($product["product_status"] == 'waiting'){ echo "warning"; } elseif ($product["product_status"] == 'available'){ echo "success"; }?> btn-block btn-status"
+								<button href="<?=site_url('free/index');?>/<?=$product["product_id"];?>" type="button" class="btn btn-<?php if($product["product_status"] == 'approved') { echo "danger"; }elseif ($product["product_status"] == 'waiting'){ echo "warning"; } elseif ($product["product_status"] == 'available'){ echo "success"; }?> btn-block btn-status"
 									data-prodcut="
 									<?=$product['product_id']?>">
 									<?php if($product["product_status"] == "approved") { echo "Back On "; echo $product['product_return_date']; }elseif($product["product_status"] == 'available') { echo "Available"; } elseif($product["product_status"] == 'waiting') {echo "Reservation";}?>
-								</a>
+</button>
 							</div>
 							</div>
 						</div>
