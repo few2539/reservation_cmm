@@ -188,6 +188,17 @@
 	
 				return $query;
 			}
+
+			
+		public function getalluser(){
+			$sql = "SELECT * FROM user";
+			$sql.= " ORDER BY user_id";
+			$query = $this->db->query($sql);
+			$result_data = $query->result_array();
+
+			return $result_data;
+		}
+
 		
 		// Old
 

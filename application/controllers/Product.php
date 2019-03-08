@@ -61,7 +61,7 @@ class product extends CI_Controller {
 	{
 		// Function Insert Product
 		$insert_id = $this->product_model->productinsert();
-
+		
 		redirect('product/admin_detail/'.$insert_id);
 	}
 
@@ -108,4 +108,5 @@ class product extends CI_Controller {
 
 		redirect('product/admin');
 	}
+
 }

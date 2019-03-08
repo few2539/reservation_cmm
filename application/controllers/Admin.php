@@ -6,6 +6,8 @@ class admin extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('frontend_model');
+		$this->load->model('backend/product_model');
+		$this->load->helper('form');
     }
 
     public function index()
@@ -17,7 +19,9 @@ class admin extends CI_Controller {
 	
     public function add_email()
 	{
-        $data['title_page'] = 'Title Page : admin profile';
+		$data['title_page'] = 'Title Page : admin profile';
+		$data['users'] = $this->frontend_model->getalluser();
+		//$data['user_id'] = $user_id;
 		$this->load->view('backend/admin/add_email',$data);
 	}
 
@@ -25,6 +29,13 @@ class admin extends CI_Controller {
 	{
         $data['title_page'] = 'Title Page : profile_edit';
 		$this->load->view('backend/admin/profile_edit',$data);
+	}
+
+	public function emailinsert()
+	{
+		$user_id = $this->product_model->emailinsert();
+
+		redirect('admin/add_email');
 	}
 	
 }

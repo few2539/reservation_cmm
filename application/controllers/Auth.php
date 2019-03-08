@@ -74,6 +74,7 @@ class Auth extends CI_Controller {
             $data['username'] = $this->session->userdata('username');
             $data['logged_in'] = TRUE;
             $this->authldap->logout();
+            redirect('login/index');
         } else {
             $data['logged_in'] = FALSE;
         }

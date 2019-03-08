@@ -141,6 +141,24 @@
 			}
 		}
 
+
+		public function emailinsert(){
+
+
+			$data = array(
+				'user_fname' => $this->input->post('fname'),
+				'user_lname' => $this->input->post('lname'),
+				'user_email' => $this->input->post('email'),
+				'user_usergroup_id' => '1',
+			);
+
+			$query = $this->db->insert('user',$data);
+			$insert_id = $this->db->insert_id();
+
+			return $insert_id;
+		}
+
+
 		function testupload() {
 				$config['upload_path']          = 'assets/frontend/img/product_thumbnail/';
 				$config['allowed_types']        = 'gif|jpg|png';
@@ -159,5 +177,6 @@
 					]);
 				}
 		}
+
 	}
 ?>
