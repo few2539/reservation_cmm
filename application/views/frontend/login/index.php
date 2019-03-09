@@ -110,27 +110,7 @@ $hidden = array('status' => 'check');
 						</div>
 						<?=form_close();?>
 					</div>
-					<!-- sign up condition -->
-					<!-- <div class="user_forms-signup">
-						<h2 class="forms_title">Sign Up</h2>
-						<form class="forms_form">
-							<fieldset class="forms_fieldset">
-								<div class="forms_field">
-									<input type="text" placeholder="Full Name" class="forms_field-input" required />
-								</div>
-								<div class="forms_field">
-									<input type="email" placeholder="Email" class="forms_field-input" required />
-								</div>
-								<div class="forms_field">
-									<input type="password" placeholder="Password" class="forms_field-input" required />
-								</div>
-							</fieldset>
-							<div class="forms_buttons">
-								<input type="submit" value="Sign up" class="forms_buttons-action">
-							</div>
-						</form>
-                    </div> -->
-
+			
 				</div>
 			</div>
 		</section>

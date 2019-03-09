@@ -1,146 +1,110 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Edit KMUTT XXX</title>
-  <?php $this->load->view('backend/template/headtag');?>
+	<meta charset="utf-8">
+	<title>Edit KMUTT XXX</title>
+	<?php $this->load->view('frontend/template/headtag_frontend');?>
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
-<div id="wrapper">
-		<?php $this->load->view('backend/template/header');?>
-		
-		<div id="page-wrapper">
-            <div class="container-fluid">
 
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Dashboard <small>ภาพรวมข้อร้องเรียน</small>
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li class="active">
-                                <i class="fa fa-dashboard"></i> Dashboard
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- /.row -->
+<body>
+	<div class="wrap-preload">
+		<div class="box">
+			<img src="<?=base_url();?>assets/frontend/dist/styles/image/final-logo-big.png" alt="final-logo.png">
 
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-comments fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">TEST</div>
-                                        <div>ข้อร้องเรียน รอตรวจสอบ</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <form id="count1" action="<?=site_url('admin/dashboard')?>" method="get" accept-charset="utf-8">
-                                <input type="hidden" name="count_query" value="count1"/>
-                            </form>
-                            <a href="#" onclick="$('#count1').submit();">
-                                <div class="panel-footer">
-                                    <span class="pull-left">ดูรายการข้อร้องเรียน</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-yellow">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">TEST</div>
-                                        <div>อยู่ระหว่างการดำเนินการ</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <form id="count2" action="<?=site_url('admin/dashboard')?>" method="get" accept-charset="utf-8">
-                                <input type="hidden" name="count_query" value="count2"/>
-                            </form>
-                            <a href="#" onclick="$('#count2').submit();">
-                                <div class="panel-footer">
-                                    <span class="pull-left">ดูรายการเรื่องที่กำลังดำเนินการ</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-shopping-cart fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">TEST</div>
-                                        <div>ปิดงานแล้ว</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <form id="count3" action="<?=site_url('admin/dashboard')?>" method="get" accept-charset="utf-8">
-                                <input type="hidden" name="count_query" value="count3"/>
-                            </form>
-                            <a href="#" onclick="$('#count3').submit();">
-                                <div class="panel-footer">
-                                    <span class="pull-left">ดูรายการที่ปิดงานแล้ว</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-red">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-support fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">TEST</div>
-                                        <div>ปิดงานแต่ต้องติดตามต่อ</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <form id="count4" action="<?=site_url('admin/dashboard')?>" method="get" accept-charset="utf-8">
-                                <input type="hidden" name="count_query" value="count4"/>
-                            </form>
-                            <a href="#" onclick="$('#count4').submit();">
-                                <div class="panel-footer">
-                                    <span class="pull-left">ดูรายการปิดงานแต่ต้องติดตาม</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container-fluid -->
-        </div>
-        <!-- /#page-wrapper -->
-    </div>
-<!-- ./wrapper -->
-<?php $this->load->view('backend/template/javascript');?>
+		</div>
+
+	</div>
+
+	<div class="shape">
+
+	</div>
+
+	<div class="iso">
+		<img src="<?=base_url();?>assets/frontend/dist/styles/image/iso2.png" alt="">
+	</div>
+
+	<div class="iso1">
+		<img src="<?=base_url();?>assets/frontend/dist/styles/image/iso6.png" alt="">
+	</div>
+
+	<div class="iso2">
+		<img src="<?=base_url();?>assets/frontend/dist/styles/image/iso7.png" alt="">
+	</div>
+
+
+	<section class="login">
+
+		<section class="userr">
+			<div class="user_options-container">
+				<div class="user_options-text">
+					<div class="user_options-registered">
+						<h2 class="user_registered-title">.:: For Admin ::.</h2>
+						<div class="box-img-regis">
+							<!-- <img src="<?=base_url();?>assets/frontend/dist/styles/image/final-logo.png" alt=""> -->
+							<img src="<?=base_url();?>assets/frontend/dist/styles/image/final-logo-big.png" alt="">
+						</div>
+
+						<p class="user_registered-text exceed">Device reservation system</p>
+						<p class="user_registered-text">Department of Computer And Information Technology</p>
+						<p class="user_registered-text">KMUTT</p>
+						<!-- <button class="user_registered-login" id="login-button">Login</button> -->
+					</div>
+				</div>
+
+				<div class="user_options-text-mobile">
+
+					<div class="box-img-regis">
+						<img src="<?=base_url();?>assets/frontend/dist/styles/image/final-logo.png" alt="">
+					</div>
+
+					<p class="user_registered-text">Device reservation system</p>
+					<p class="user_registered-text">Department of Computer And Information Technology</p>
+					<p class="user_registered-text">KMUTT</p>
+					<!-- <button class="user_registered-login" id="login-button">Login</button> -->
+
+				</div>
+
+
+				<div class="user_options-forms" id="user_options-forms">
+					<div class="user_forms-login">
+						<h2 class="forms_title">Login</h2>
+						<?php
+$attribute = array('id' => 'login_form', 'class' => 'forms_form');
+$hidden = array('status' => 'check');
+?>
+						<?=form_open('login/index', $attribute, $hidden);?>
+						<fieldset class="forms_fieldset">
+							<div class="forms_field">
+								<input type="text" name="studentid" placeholder="admin" class="forms_field-input" value="<?php if(!empty($studentid)) { echo $studentid; } ?>" />
+							</div>
+							<div class="forms_field">
+								<input type="password" name="password" placeholder="Password" class="forms_field-input" value="<?php if(!empty($password)) { echo $password; } ?>" />
+							</div>
+							<?php if (isset($login_falses) && !empty($login_falses)) {
+    echo $login_falses;
+}?>
+						</fieldset>
+						<div class="forms_buttons">
+							<!-- <button type="button" class="forms_buttons-forgot">Forgot password?</button> -->
+							<input type="submit" value="Log In" class="forms_buttons-action">
+						</div>
+						<?=form_close();?>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<?php $this->load->view('frontend/template/footer');?>
+	<?php $this->load->view('frontend/template/javascript_frontend');?>
+
+
 
 </body>
+
 </html>
-
-

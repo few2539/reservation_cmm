@@ -228,7 +228,7 @@ $product = [
 
 
 		<div class="button-product cate">
-			<button type="button" id='all' class="btn btn-warning silbling">All</button>
+			<button type="button" id='all' class="btn btn-warning silbling" style="border-color: transparent;">All</button>
 			<?php foreach($categorys as $category): ?>
 			<button id='btn-<?=$category['category_code']?>' class="btn btn-primary silbling">
 				<?=$category['category_name']?> /

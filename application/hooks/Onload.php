@@ -17,7 +17,7 @@ class Onload {
 
 
 
-            // if (isset($_SESSION['user']['email'] )&& !empty($_SESSION['user']['email'])){
+            // if (isset($_SESSION['username']['mail'] )&& !empty($_SESSION['username']['mail'])){
 
 
             // }else{
