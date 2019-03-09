@@ -16,7 +16,7 @@ class free extends CI_Controller {
 
 		if($this->frontend_model->checkstockproduct($product_id) == TRUE) {
 			$data['product'] = $this->frontend_model->getproduct($product_id);
-			
+			$data['users'] = $this->frontend_model->getalluser();
 			$data['product_id'] = $product_id;
 
 			$this->load->view('frontend/free/index',$data);

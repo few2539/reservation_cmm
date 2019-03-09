@@ -141,8 +141,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							<label for="sel1">Name (Teacher):</label>
 							<select class="form-control" id="sel1" name="emailto">
 								<option></option>
-								<option value="phuridatefew2539@gmail.com">few</option>
-								<option value="maxbaeiei@gmail.com">not</option>-
+								<?php foreach($users as $user):?>
+								<option value="<?=$user['user_email']?>" >
+								<?=$category['user_fname']?> 
+								<?=$category['user_lname']?>
+								</option>
+								<?php endforeach; ?>
 							</select>
 
 						</div>
