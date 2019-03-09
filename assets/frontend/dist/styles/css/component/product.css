@@ -9,8 +9,8 @@
   outline: none !important; }
 
 section.product {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 80px;
+  margin-right: 80px;
   margin-top: 20px; }
   section.product .btn-primary {
     background-color: #202029;
@@ -21,7 +21,8 @@ section.product {
       margin-right: 15px; } }
   section.product .text-welcome {
     margin-top: 35px;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    text-align: center; }
     @media (max-width: 414px) {
       section.product .text-welcome {
         text-align: center; } }
@@ -29,6 +30,7 @@ section.product {
       font-weight: bold;
       text-transform: uppercase; }
   section.product .category {
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 20px; }
     section.product .category .show-category {
@@ -58,11 +60,11 @@ section.product {
               flex-wrap: wrap; }
       section.product .wrap .equalHWrap .equalHW {
         -webkit-box-flex: 0;
-        -webkit-flex: 0 0 25%;
-            -ms-flex: 0 0 25%;
-                flex: 0 0 25%;
-        max-width: 25%;
-        width: 25%; }
+        -webkit-flex: 0 0 24.8%;
+            -ms-flex: 0 0 24.8%;
+                flex: 0 0 24.8%;
+        max-width: 24.8%;
+        width: 24.8%; }
         @media (max-width: 414px) {
           section.product .wrap .equalHWrap .equalHW {
             width: 50%;
@@ -87,6 +89,7 @@ section.product {
           width: 100%; }
 
 .containersearch {
+  text-align: center;
   margin: 0 auto;
   width: 100%; }
   .containersearch .field-input input {

@@ -422,7 +422,8 @@ $('.silbling').on('click', function(){
 				var searchText = evt.target.value.toLowerCase();
 
 	shuffleInstance.filter(function (element, shuffle) {
-			var titleElement = element.querySelector('.name_product');
+			var titleElement = element.querySelector('.property');
+		
 			var titleText = titleElement.textContent.toLowerCase().trim();
 			return titleText.indexOf(searchText) !== -1;
 		});

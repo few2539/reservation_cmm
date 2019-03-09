@@ -18,8 +18,8 @@ section {
 			border-color: #2e6da4;
 		}
 
-		margin-left:100px;
-		margin-right: 100px;
+		margin-left:80px;
+		margin-right: 80px;
 		margin-top: 20px;
 
 		@media(max-width: 414px) {
@@ -30,7 +30,7 @@ section {
 		.text-welcome {
 			margin-top: 35px;
 			margin-bottom: 25px;
-
+			text-align: center;
 			@media (max-width: $sd-plus) {
 				text-align: center;
 			}
@@ -42,7 +42,7 @@ section {
 		}
 
 		.category {
-
+			text-align: center;
 			@media (max-width: $sd-plus) {}
 
 			margin-top: 20px;
@@ -80,9 +80,9 @@ section {
 				flex-wrap: wrap;
 
 				.equalHW {
-					flex: 0 0 25%;
-					max-width: 25%;
-					width: 25%;
+					flex: 0 0 24.8%;
+					max-width: 24.8%;
+					width: 24.8%; 
 
 					@media(max-width: 414px) {
 						width: 50%;
@@ -257,7 +257,7 @@ section {
 
 
 .containersearch {
-
+	text-align: center;
 	margin: 0 auto;
 	width: 100%;
 	.field-input {
