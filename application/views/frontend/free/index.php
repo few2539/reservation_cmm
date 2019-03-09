@@ -137,7 +137,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<h2>To Teacher</h2>
 					<p>Send email to teacher for allowing your reservation:</p>
 					<form>
-						<div class="form-group">
+						<div class="form-group add-email-sp">
 							<label for="sel1">Name (Teacher):</label>
 							<select class="form-control" id="sel1" name="emailto">
 								<option></option>

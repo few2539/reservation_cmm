@@ -16,59 +16,70 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
 
 
-	<div id="page-wrapper">
+	<div id="page-wrapper" style="overflow-x:hidden;">
 		<?php $this->load->view('backend/template/header');?>
 		<section class="profile-admin">
 			<div class="container emp-profile">
 				<div class="row">
-					<div class="col-md-6">
-						<div class="file">
-							<h3 style="margin-bottom: 4%"> Email Teacher </h3>
-							<div class="email-teacher-now">
-								<?php foreach($users as $user):?>
-								<div class="email-t">
-									<p><b>อาจารย์</b></p>
-									<div class="name" style="display:flex;">
-										<p style="margin-right: 2%">
-											<?=$user["user_fname"];?>
-										</p>
-										<p>
-											<?=$user["user_email"];?>
-											<div class="wrap " style="margin-bottom:5%">
+					<div class="col-md-5">
 
-												<button class="btn btn-danger" onclick=" deleteEmail(this.value);">Delete</button>
-
-										</div>
+						<h3 style="margin-bottom: 4%"> Email Teacher </h3>
+						<div class="email-teacher-now">
+							<?php foreach($users as $user):?>
+							<div class="email-t" style="margin-bottom: 50px;">
+								<p><b>อาจารย์</b></p>
+								<div class="name" style="display:flex;">
+									<p style="margin-right: 2%">
+										<?=$user["user_fname"];?>
+									</p>
+									<p>
+										<?=$user["user_lname"];?>
 									</p>
 								</div>
-								<?php endforeach ?>
+								<p><b>Email</b></p>
+								<p>
+									<?=$user["user_email"];?>
+									<div class="wrap " style="margin-bottom:5%">
+										<?php $attributes  = array('id' => 'deleteEmail'.$user['user_id']); ?>
+										<?php $hidden  = array('user_id' => $user['user_id']); ?>
+										<?= form_open('admin/deletemail', $attributes, $hidden); ?>
+										<button type="button" value="<?php echo $user['user_id'] ?>" class="btn btn-danger btn-sm" style="font-weight: bold;width: 30%;float: left; margin-right: 2%;"
+										 onclick="deleteEmail(this.value);">
+											ลบ
+										</button>
+										<?=form_close();?>
+									</div>
+
+								</p>
 							</div>
+							<?php endforeach ?>
 						</div>
+
 					</div>
-				
-					<div class="col-md-6">
+
+					<div class="col-md-5">
 						<div class="profile-head">
 							<h3 style="margin-bottom: 2%">
 								แก้ไข/เพิ่ม/ลบ Email ของอาจารย์
 							</h3>
-								<?php $attributes = array('class' => '', 'data-toggle' => 'validator', 'role' => 'form');?>
-								<?php $hidden  = array('user_id' => $user['user_id']); ?>
-								<?=form_open('admin/emailinsert', $attributes, $hidden);?>
-								<div class="form-group">
-									<p style="margin-bottom: 2%">ชื่อ-นามสกุลอาจารย์</p>
-									<input class="form-control" name="fname" type="text" placeholder="Name" style="margin-bottom: 2%">
-									<input class="form-control" name="lname" type="text" placeholder="Surname" style="margin-bottom: 2%">
-									<input class="form-control" name="email" type="text" placeholder="Email" style="margin-bottom: 2%">
+							<?php $attributes = array('class' => '', 'data-toggle' => 'validator', 'role' => 'form');?>
+							<?php $hidden  = array('user_id' => $user['user_id']); ?>
+							<?=form_open('admin/emailinsert', $attributes, $hidden);?>
+							<div class="form-group">
+								<p style="margin-bottom: 2%">ชื่อ-นามสกุลอาจารย์</p>
+								<input class="form-control" name="fname" type="text" placeholder="Name" style="margin-bottom: 2%">
+								<input class="form-control" name="lname" type="text" placeholder="Surname" style="margin-bottom: 2%">
+								<input class="form-control" name="email" type="text" placeholder="Email" style="margin-bottom: 2%">
 
-									<button type="submit" class="btn btn-primary" style="margin-bottom: 2%">add</button>
-								</div>
-								<?=form_close();?>
+								<button type="submit" class="btn btn-primary" style="margin-bottom: 2%">add</button>
 							</div>
+							<?=form_close();?>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
+	</div>
+	</section>
 	</div>
 
 	<?php $this->load->view('backend/template/javascript');?>
