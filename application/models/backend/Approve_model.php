@@ -35,7 +35,8 @@
 		public function borrowdata2(){
 			$product_id = $this->input->post('product_id');
 			$data = array(
-				'product_booking' => $this->session->userdata('cn'),				
+				'product_booking' => $this->session->userdata('cn'),
+				'product_sendmail' => $this->session->userdata('mail')				
 			);
 
 			$this->db->where('product_id', $product_id);
@@ -57,7 +58,7 @@
 				'mailtype'  => 'html', 
 				'charset'   => 'utf-8'
 			);
-			$sendtoo2 = $reservation->product_intro;
+			$sendtoo2 = $reservation->product_sendmail;
 			
 
     		$message = '<h2> Reservation Verification </h2>';

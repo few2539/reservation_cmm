@@ -143,8 +143,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								<option></option>
 								<?php foreach($users as $user):?>
 								<option value="<?=$user['user_email']?>" >
-								<?=$category['user_fname']?> 
-								<?=$category['user_lname']?>
+								<?=$user['user_fname']?> 
+								<?=$user['user_lname']?>
 								</option>
 								<?php endforeach; ?>
 							</select>
