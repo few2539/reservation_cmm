@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php $this->load->view('backend/template/headtag');?>
 
 	<!-- Custom CSS -->
-	<link href="<?php echo base_url();?>assets/frontend/dist/styles/css/main.css" rel="stylesheet">
+	<link href="<?php echo base_url(); ?>assets/frontend/dist/styles/css/main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,54 +19,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div id="page-wrapper">
 		<?php $this->load->view('backend/template/header');?>
 		<section class="profile-admin">
-			<div class="container emp-profile">
-				<form method="post">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="file ">
-								<h3 style="margin-bottom: 4%"> Email Teacher </h3>
-								<div class="email-teacher-now">
-									<?php foreach($users as $user):?>
-									<div class="email-t">
-										<p><b>อาจารย์</b></p>
-										<div class="name" style="display:flex;">
-											<p style="margin-right: 2%">
-												<?=$user["user_fname"];?>
-											</p>
-											<p>
-												<?=$user["user_lname"];?>
-											</p>
-										</div>
-										<p><b>Email</b></p>
-										<p>
-											<?=$user["user_email"];?>
-											<div class="wrap " style="margin-bottom:5%">
 
-												<div class="btn btn-danger" onclick=" deleteEmail(this.value);">Delete</div>
-
-											</div>
-										</p>
-										<?php endforeach ?>
-
-									</div>
-
-
-								</div>
-							</div>
-						</div>
-
-						
-					</div>
-					
-					<div class="col-md-6">
+		<div class="container-email-add">
+		<div class="col-md-12">
 							<div class="profile-head">
 								<h3 style="margin-bottom: 2%">
 									แก้ไข/เพิ่ม/ลบ Email ของอาจารย์
 								</h3>
 								<form>
-									<?php $attributes = array('class' => '', 'data-toggle' => 'validator', 'role' => 'form');?>
-									<?php $hidden  = array('user_id' => $user['user_id']); ?>
-									<?=form_open('admin/emailinsert', $attributes, $hidden);?>
+									<!-- <?php $attributes = array('class' => '', 'data-toggle' => 'validator', 'role' => 'form');?>
+									<?php $hidden = array('user_id' => $user['user_id']);?>
+									<?=form_open('admin/emailinsert', $attributes, $hidden);?> -->
 									<div class="form-group">
 										<p style="margin-bottom: 2%">ชื่อ-นามสกุลอาจารย์</p>
 										<input class="form-control" name="fname" type="text" placeholder="Name" style="margin-bottom: 2%">
@@ -75,15 +38,61 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 										<button type="submit" class="btn btn-primary" style="margin-bottom: 2%">add</button>
 									</div>
-									<?=form_close();?>
+									<!-- <?=form_close();?> -->
 
 								</form>
 							</div>
 						</div>
-				</form>
+		</div>
+			<div class="container emp-profile">
+				<form method="post">
+					<div class="row">
+					<div class="col-md-6">
+				
+							<h3 style="margin-bottom: 4%"> Email Teacher </h3>
+							<div class="email-teacher-now">
+								<?php foreach ($users as $user): ?>
+								<div class="email-t">
+									<p><b>อาจารย์</b></p>
+									<div class="name" style="display:flex;">
+										<p style="margin-right: 2%">
+											<?=$user["user_fname"];?>
+										</p>
+										<p>
+											<?=$user["user_lname"];?>
+										</p>
+									</div>
+									<p><b>Email</b></p>
+									<p>
+										<?=$user["user_email"];?>
+										<div class="wrap " style="margin-bottom:5%">
+
+											<div class="btn btn-danger" onclick=" deleteEmail(this.value);">Delete</div>
+
+										</div>
+									</p>
+									<?php endforeach?>
+
+								</div>
+
+
+							</div>
+					
+					</div>
+
+						
+					</div>
+
+				
+
 			</div>
 
-		</section>
+
+
+			</form>
+	</div>
+
+	</section>
 	</div>
 
 	<?php $this->load->view('backend/template/javascript');?>
