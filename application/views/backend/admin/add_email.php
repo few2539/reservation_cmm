@@ -68,9 +68,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<input class="form-control" name="lname" type="text" placeholder="Surname" style="margin-bottom: 2%">
 											<input class="form-control" name="email" type="text" placeholder="Email" style="margin-bottom: 2%">
 											
-											<button type="submit" name="insert" value="<?php echo $user['user_id'] ?>" class="btn btn-primary" style="margin-bottom: 2%" >add</button>
-											<?=form_close();?>
+											<button type="submit" class="btn btn-primary" style="margin-bottom: 2%">add</button>
 										</div>
+										<?=form_close();?>
 							
 										
 							</div>
