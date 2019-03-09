@@ -158,6 +158,13 @@
 			return $insert_id;
 		}
 
+		public function maildel()
+		{
+			$id = $this->input->post('user_id');
+			$this->db->where('user_id', $id);
+			$this->db->delete('user');
+		}
+
 
 		function testupload() {
 				$config['upload_path']          = 'assets/frontend/img/product_thumbnail/';

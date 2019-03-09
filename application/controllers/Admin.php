@@ -37,5 +37,11 @@ class admin extends CI_Controller {
 
 		redirect('admin/add_email');
 	}
+
+	public function deletemail()
+	{
+		$user_id = $this->product_model->maildel();
+		redirect('admin/add_email');
+	}
 	
 }

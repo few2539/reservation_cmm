@@ -40,10 +40,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<p>
 										<?=$user["user_email"];?>
 										<div class="wrap " style="margin-bottom:5%">
-
-											<div class="btn btn-danger" onclick=" deleteEmail(this.value);">Delete</div>
-
+										<?php $attributes  = array('id' => 'deleteEmail'.$user['user_id']); ?>
+                        				<?php $hidden  = array('user_id' => $user['user_id']); ?>
+                         				<?= form_open('admin/deletemail', $attributes, $hidden); ?>
+										 <button type="button" value="<?php echo $user['user_id'] ?>"  class="btn btn-danger btn-sm" style="font-weight: bold;width: 30%;float: left; margin-right: 2%;" onclick="deleteEmail(this.value);">
+                            			  <i class="fa fa-check"></i> ลบ
+                           				 </button>
+											<?=form_close();?>
 										</div>
+
 									</p>
 								</div>
 								<?php endforeach ?>
