@@ -18,14 +18,15 @@ class Onload extends CI_Model{
         $login_status = $this->session->userdata('logged_in');
 
         if($login_status = TRUE) {
-            if(($this->session->userdata('username') != '') && !empty($this->session->userdata('username'))) {
-                return TRUE;
+            if(($this->session->userdata('logged_in') != '') || !empty($this->session->userdata('logged_in'))) {
+                redirect('product/index');
             }else{
                 // ไม่มีค่า session user id
                 redirect('login/index');
             }
         }else{
-            // ไม่พบ สถานะว่า ผ่านการ login ในระบบ
+            // ไม่พบ 
+            
             redirect('login/index');
         }
     }

@@ -76,17 +76,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $attribute = array('id' => 'login_form', 'class' => 'forms_form');
 $hidden = array('status' => 'check');
 ?>
-						<?=form_open('login/index', $attribute, $hidden);?>
+						<?=form_open('admin/index', $attribute, $hidden);?>
 						<fieldset class="forms_fieldset">
 							<div class="forms_field">
-								<input type="text" name="studentid" placeholder="admin" class="forms_field-input" value="<?php if(!empty($studentid)) { echo $studentid; } ?>" />
+								<input type="text" name="username" placeholder="admin" class="forms_field-input" value="" />
 							</div>
 							<div class="forms_field">
-								<input type="password" name="password" placeholder="Password" class="forms_field-input" value="<?php if(!empty($password)) { echo $password; } ?>" />
+								<input type="password" name="password" placeholder="Password" class="forms_field-input" value="" />
 							</div>
-							<?php if (isset($login_falses) && !empty($login_falses)) {
-    echo $login_falses;
-}?>
+							
+
 						</fieldset>
 						<div class="forms_buttons">
 							<!-- <button type="button" class="forms_buttons-forgot">Forgot password?</button> -->
@@ -103,7 +102,23 @@ $hidden = array('status' => 'check');
 	<?php $this->load->view('frontend/template/footer');?>
 	<?php $this->load->view('frontend/template/javascript_frontend');?>
 
-
+<?php if(!empty($this->session->userdata('alert')) && ($this->session->userdata('alert') == 'show')): ?>
+	<script type="text/javascript">
+	  swal({
+	    type: '<?=$this->session->userdata('alert_type');?>',
+	    title: '<?=$this->session->userdata('alert_title');?>',
+	      text: '<?=$this->session->userdata('alert_text');?>',
+	      showConfirmButton: true,
+	      width: 600,
+	  });
+	</script>
+	<?php
+	  $this->session->unset_userdata('alert');
+	  $this->session->unset_userdata('alert_type');
+	  $this->session->unset_userdata('alert_title');
+	  $this->session->unset_userdata('alert_text');
+	?>
+	<?php endif; ?>
 
 </body>
 

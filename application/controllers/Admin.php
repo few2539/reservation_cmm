@@ -7,13 +7,29 @@ class admin extends CI_Controller {
 		parent::__construct();
 		$this->load->model('frontend_model');
 		$this->load->model('backend/product_model');
+		$this->load->model('login_model');
 		$this->load->helper('form');
     }
 
     public function index()
 	{
         $data['title_page'] = 'Title Page : admin';
+		if(!empty($this->input->post('username') && !empty($this->input->post('password')))){
+			$this->login_model->checklogin();
+		}else{
+			$alert = array(
+				'alert_type' => 'error',
+				'alert_title' => 'กรุณากรอกข้อมูล',
+				'alert_text' => 'เนื่องไม่พบข้อมูล Username และ Password',
+			);
+			$this->session->set_userdata($alert);
+		}
+
+		$data['username'] = $this->input->post('username');
+		$data['password'] = $this->input->post('password');
+
 		$this->load->view('backend/admin/index',$data);
+		
 	}
 
 	
@@ -42,6 +58,13 @@ class admin extends CI_Controller {
 	{
 		$user_id = $this->product_model->maildel();
 		redirect('admin/add_email');
+	}
+
+	public function logout()
+	{
+		if(!empty($this->session->userdata('user_email'))){
+			$this->login_model->logout();
+		}
 	}
 	
 }

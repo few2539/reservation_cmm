@@ -8,7 +8,7 @@
 		}
 
 		public function checklogin() {
-			$email = $this->input->post('email');
+			$email = $this->input->post('username');
 			$password = $this->input->post('password');
 			$sql = "SELECT * FROM user where user_email='$email' and user_password ='$password' ";
 			$query = $this->db->query($sql);
@@ -36,9 +36,15 @@
 				);
 
 				$this->session->set_userdata($newdata);
-				redirect('product/index');
+				redirect('product/admin');
 			}else{
-				return "error";
+				$alert = array(
+					'alert' => 'show',
+					'alert_type' => 'error',
+					'alert_title' => 'ไม่สำเร็จ',
+					'alert_text' => 'เนื่องจากข้อมูลไม่ถูกต้อง กรุณาตรวจสอบ รหัสผ่าน',
+				);
+				$this->session->set_userdata($alert);
 			}
 		}
 
@@ -52,7 +58,7 @@
 			
 			$this->session->sess_destroy();
 
-			redirect('login/index');
+			redirect('admin/index');
 		}
 
 
