@@ -10,6 +10,22 @@ class login extends CI_Controller {
 		$this->load->library('authldap');
     }
 
+	public function checksessiononline() {
+        $login_status = $this->session->userdata('logged_in');
+
+        if($login_status ==TRUE) {
+            if(($this->session->userdata('username') != '') && !empty($this->session->userdata('username'))) {
+                return TRUE;
+            }else{
+                // ไม่มีค่า session user id
+                redirect('login/index');
+            }
+        }else{
+            // ไม่พบ สถานะว่า ผ่านการ login ในระบบ
+            redirect('login/index');
+        }
+	}
+	
 	public function index()
 	{
 		$data['title_page'] = 'Title Page : login';
@@ -47,4 +63,18 @@ class login extends CI_Controller {
 			$this->login_model->logout();
 		}
 	}
+
+	public function logoutldap() {
+		if($this->session->userdata('logged_in')) {
+			$data['name'] = $this->session->userdata('cn');
+			$data['username'] = $this->session->userdata('username');
+			$data['logged_in'] = TRUE;
+			$this->authldap->logout();
+		} else {
+			$data['logged_in'] = FALSE;
+		}
+		redirect('login/index');
+	}
+
+	
 }

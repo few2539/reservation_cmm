@@ -4,7 +4,7 @@
 		function __construct() {
 			parent::__construct();
 			$this->load->library('authldap');
-			//$this->load->library('adldap');
+		
 		}
 
 		public function checklogin() {
@@ -54,6 +54,7 @@
 
 			redirect('login/index');
 		}
+
 
 		//function adldap(){
 		/*	$username = $this->input->post('email');
