@@ -5,9 +5,7 @@ class admin extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
-		
 		$this->load->model('check_model');
-		$this->check_model->checksessiononline();
 		
 		$this->load->model('frontend_model');
 		$this->load->model('backend/product_model');
@@ -39,6 +37,8 @@ class admin extends CI_Controller {
 	
     public function add_email()
 	{
+		$this->check_model->checksessionadminonline();
+
 		$data['title_page'] = 'Title Page : admin profile';
 		$data['users'] = $this->frontend_model->getalluser();
 		//$data['user_id'] = $user_id;
@@ -47,12 +47,16 @@ class admin extends CI_Controller {
 
 	public function profile_edit()
 	{
+		$this->check_model->checksessionadminonline();
+
         $data['title_page'] = 'Title Page : profile_edit';
 		$this->load->view('backend/admin/profile_edit',$data);
 	}
 
 	public function emailinsert()
 	{
+		$this->check_model->checksessionadminonline();
+
 		$user_id = $this->product_model->emailinsert();
 
 		redirect('admin/add_email');
@@ -60,17 +64,10 @@ class admin extends CI_Controller {
 
 	public function deletemail()
 	{
+		$this->check_model->checksessionadminonline();
+
 		$user_id = $this->product_model->maildel();
 		redirect('admin/add_email');
-	}
-
-	public function logout()
-	{
-		if(!empty($this->session->userdata('user_email'))){
-			$this->login_model->logout();
-
-			redirect('admin/index');
-		}
 	}
 	
 }

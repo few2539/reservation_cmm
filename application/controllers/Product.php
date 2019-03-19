@@ -5,9 +5,7 @@ class product extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
-		
 		$this->load->model('check_model');
-		$this->check_model->checksessiononline();
 
 		$this->load->model('frontend_model');
 		$this->load->model('backend/product_model');
@@ -15,6 +13,7 @@ class product extends CI_Controller {
 	}
 	public function index($error=null)
 	{
+		$this->check_model->checksessiononline();
 		
 		$data['title_page'] = 'Title Page : product';
 		
@@ -35,6 +34,7 @@ class product extends CI_Controller {
 
 	public function admin()
 	{
+		$this->check_model->checksessionadminonline();
 		
 		$data['title_page'] = 'Title Page : admin product';
 
@@ -45,6 +45,8 @@ class product extends CI_Controller {
 
 	public function admin_add()
 	{
+		$this->check_model->checksessionadminonline();
+
 		$data['title_page'] = 'Title Page : admin add product';
 
 		$data['action'] = "insert";
@@ -68,6 +70,8 @@ class product extends CI_Controller {
 
 	public function admin_edit()
 	{
+		$this->check_model->checksessionadminonline();
+		
 		$product_id = $this->uri->segment(3);
 
 		$data['title_page'] = 'Title Page : admin edit product';
@@ -89,6 +93,7 @@ class product extends CI_Controller {
 
 	public function admin_detail($product_id)
 	{
+		$this->check_model->checksessionadminonline();
 		// Function Update Product
 		$data['product'] = $this->product_model->getproductedit($product_id);
 		

@@ -73,9 +73,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="user_forms-login">
 						<h2 class="forms_title">Login</h2>
 						<?php
-$attribute = array('id' => 'login_form', 'class' => 'forms_form');
-$hidden = array('status' => 'check');
-?>
+							$attribute = array('id' => 'login_form', 'class' => 'forms_form');
+							$hidden = array('status' => 'check');
+						?>
 						<?=form_open('admin/index', $attribute, $hidden);?>
 						<fieldset class="forms_fieldset">
 							<div class="forms_field">

@@ -20,5 +20,21 @@
 	            redirect('login/logoutldap');
 	        }
 		}
+
+		public function checksessionadminonline() {
+	        $login_status = $this->session->userdata('logged_in');
+
+	        if($login_status == "OK") {
+	            if(($this->session->userdata('user_email') != '') && !empty($this->session->userdata('user_email'))) {
+	                return TRUE;
+	            }else{
+	                // ไม่มีค่า session user id
+	                redirect('login/logout');
+	            }
+	        }else{
+	            // ไม่พบ สถานะว่า ผ่านการ login ในระบบ
+	            redirect('login/logout');
+	        }
+		}
 	}
 ?>
