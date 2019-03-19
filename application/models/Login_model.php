@@ -10,6 +10,7 @@
 		public function checklogin() {
 			$email = $this->input->post('username');
 			$password = $this->input->post('password');
+			
 			$sql = "SELECT * FROM user where user_email='$email' and user_password ='$password' ";
 			$query = $this->db->query($sql);
 
@@ -33,6 +34,7 @@
 					'user_fname' => $user_fname,
 					'user_lname' => $user_lname,
 					'student_id' => $student_id,
+					'logged_in' => "OK",
 				);
 
 				$this->session->set_userdata($newdata);
@@ -55,6 +57,7 @@
 			$this->session->unset_userdata('user_fname');
 			$this->session->unset_userdata('user_lname');
 			$this->session->unset_userdata('student_id');
+			$this->session->unset_userdata('logged_in');
 			
 			$this->session->sess_destroy();
 

@@ -43,21 +43,12 @@ class login extends CI_Controller {
 
 	public function logout()
 	{	
-		if(!empty($this->session->userdata('user_email'))){
-			$this->login_model->logout();
-		}
+		$this->login_model->logout();
 	}
 
 	public function logoutldap() {
-		if($this->session->userdata('logged_in')) {
-			$data['name'] = $this->session->userdata('cn');
-			$data['username'] = $this->session->userdata('username');
-			$data['logged_in'] = TRUE;
-			$this->authldap->logout();
-		} else {
-			$data['logged_in'] = FALSE;
-		}
-		redirect('login/index');
+		$this->authldap->logout();
+		$this->login_model->logoutldap();
 	}
 
 	
