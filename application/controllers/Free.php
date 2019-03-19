@@ -5,9 +5,12 @@ class free extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
+		
+		$this->load->model('check_model');
+		$this->check_model->checksessiononline();
+		
 		$this->load->model('frontend_model');
 		$this->load->model('backend/approve_model');
-		
     }
 
     public function index($product_id)

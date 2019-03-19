@@ -61,6 +61,17 @@
 			redirect('admin/index');
 		}
 
+		public function logoutldap() {
+			$this->session->unset_userdata('username');
+			$this->session->unset_userdata('cn');
+			$this->session->unset_userdata('mail');
+			$this->session->unset_userdata('logged_in');
+			
+			$this->session->sess_destroy();
+
+			redirect('login');
+		}
+
 
 		//function adldap(){
 		/*	$username = $this->input->post('email');
