@@ -13,22 +13,6 @@ class product extends CI_Controller {
 		$this->load->model('backend/product_model');
 		$this->load->helper('form');
 	}
-	public function checksessiononline() {
-        $login_status = $this->session->userdata('logged_in');
-
-        if($login_status = "OK") {
-            if(($this->session->userdata('username') != '') && !empty($this->session->userdata('username'))) {
-                return TRUE;
-            }else{
-                // ไม่มีค่า session user id
-                redirect('login/index');
-            }
-        }else{
-            // ไม่พบ สถานะว่า ผ่านการ login ในระบบ
-            redirect('login/index');
-        }
-    }
-
 	public function index($error=null)
 	{
 		

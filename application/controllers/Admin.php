@@ -68,6 +68,8 @@ class admin extends CI_Controller {
 	{
 		if(!empty($this->session->userdata('user_email'))){
 			$this->login_model->logout();
+
+			redirect('admin/index');
 		}
 	}
 	
