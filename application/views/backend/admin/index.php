@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <head>
 	<meta charset="utf-8">
-	<title>Edit KMUTT XXX</title>
+	<title>admin only</title>
 	<?php $this->load->view('frontend/template/headtag_frontend');?>
 </head>
 

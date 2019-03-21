@@ -1,18 +1,21 @@
 @import '../include.scss';
 
 
-#for-hid{
+#for-hid {
 	overflow: hidden;
 }
-.active-fillter{
+
+.active-fillter {
 	background-color: rgb(92, 103, 197) !important;
-} 
-.silbling{
-	outline: none !important; 
 }
+
+.silbling {
+	outline: none !important;
+}
+
 section {
 	&.product {
-		
+
 		.btn-primary {
 			background-color: $blue;
 			border-color: #2e6da4;
@@ -31,6 +34,7 @@ section {
 			margin-top: 35px;
 			margin-bottom: 25px;
 			text-align: center;
+
 			@media (max-width: $sd-plus) {
 				text-align: center;
 			}
@@ -43,6 +47,7 @@ section {
 
 		.category {
 			text-align: center;
+
 			@media (max-width: $sd-plus) {}
 
 			margin-top: 20px;
@@ -82,7 +87,7 @@ section {
 				.equalHW {
 					flex: 0 0 24.8%;
 					max-width: 24.8%;
-					width: 24.8%; 
+					width: 24.8%;
 
 					@media(max-width: 414px) {
 						width: 50%;
@@ -106,7 +111,10 @@ section {
 						}
 
 						.property {
-							.name_product {}
+							.name_product {
+								height: 30px;
+								overflow: hidden;
+							}
 
 							.product_type {
 								height: 30px;
@@ -114,8 +122,8 @@ section {
 							}
 
 							.detail {
-								height:40px; 
-								overflow:hidden;
+								height: 40px;
+								overflow: hidden;
 							}
 						}
 
@@ -260,29 +268,32 @@ section {
 	text-align: center;
 	margin: 0 auto;
 	width: 100%;
+
 	.field-input {
 
-	  input {
-		text-align: left;
-		border-radius: 6rem;
-		border: 1px solid rgb(160, 160, 160);
-		padding: .6rem 2rem .6rem 1rem;
-	
-		font-family: 'roboto';
-		transition: .5s;
-		&:focus {
-		  outline: none;
-		  border-color: #212121;
-		  transition: .5s;
+		input {
+			text-align: left;
+			border-radius: 6rem;
+			border: 1px solid rgb(160, 160, 160);
+			padding: .6rem 2rem .6rem 1rem;
+
+			font-family: 'roboto';
+			transition: .5s;
+
+			&:focus {
+				outline: none;
+				border-color: #212121;
+				transition: .5s;
+			}
 		}
-	  }
-	  span:before {
-		content: '';
-		cursor: pointer;
-		position: relative;
-		font-family: 'fontawesome';
-		top: 0;
-		right: 20px;
-	  }
+
+		span:before {
+			content: '';
+			cursor: pointer;
+			position: relative;
+			font-family: 'fontawesome';
+			top: 0;
+			right: 20px;
+		}
 	}
-  }
+}
