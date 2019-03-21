@@ -4,12 +4,13 @@
 		function __construct() {
 			parent::__construct();
 			$this->load->library('authldap');
-			//$this->load->library('adldap');
+		
 		}
 
 		public function checklogin() {
-			$email = $this->input->post('email');
+			$email = $this->input->post('username');
 			$password = $this->input->post('password');
+			
 			$sql = "SELECT * FROM user where user_email='$email' and user_password ='$password' ";
 			$query = $this->db->query($sql);
 
@@ -33,12 +34,19 @@
 					'user_fname' => $user_fname,
 					'user_lname' => $user_lname,
 					'student_id' => $student_id,
+					'logged_in' => "OK",
 				);
 
 				$this->session->set_userdata($newdata);
-				redirect('product/index');
+				redirect('product/admin');
 			}else{
-				return "error";
+				$alert = array(
+					'alert' => 'show',
+					'alert_type' => 'error',
+					'alert_title' => 'ไม่สำเร็จ',
+					'alert_text' => 'เนื่องจากข้อมูลไม่ถูกต้อง กรุณาตรวจสอบ รหัสผ่าน',
+				);
+				$this->session->set_userdata($alert);
 			}
 		}
 
@@ -49,11 +57,24 @@
 			$this->session->unset_userdata('user_fname');
 			$this->session->unset_userdata('user_lname');
 			$this->session->unset_userdata('student_id');
+			$this->session->unset_userdata('logged_in');
 			
 			$this->session->sess_destroy();
 
-			redirect('login/index');
+			redirect('admin/index');
 		}
+
+		public function logoutldap() {
+			$this->session->unset_userdata('username');
+			$this->session->unset_userdata('cn');
+			$this->session->unset_userdata('mail');
+			$this->session->unset_userdata('logged_in');
+			
+			$this->session->sess_destroy();
+
+			redirect('login');
+		}
+
 
 		//function adldap(){
 		/*	$username = $this->input->post('email');

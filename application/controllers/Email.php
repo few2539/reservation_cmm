@@ -3,6 +3,9 @@ class email extends CI_Controller {
 
     function __construct() {
 		parent::__construct();
+        
+        $this->load->model('check_model');
+        $this->check_model->checksessiononline();
     }
 function index(){
 

@@ -9,7 +9,7 @@ class login extends CI_Controller {
 		$this->load->model('login_model');
 		$this->load->library('authldap');
     }
-
+	
 	public function index()
 	{
 		$data['title_page'] = 'Title Page : login';
@@ -43,8 +43,13 @@ class login extends CI_Controller {
 
 	public function logout()
 	{	
-		if(!empty($this->session->userdata('user_email'))){
-			$this->login_model->logout();
-		}
+		$this->login_model->logout();
 	}
+
+	public function logoutldap() {
+		$this->authldap->logout();
+		$this->login_model->logoutldap();
+	}
+
+	
 }

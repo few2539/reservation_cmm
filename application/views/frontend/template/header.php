@@ -19,8 +19,8 @@
 				</p>
 				<p><?= $this->session->userdata('username'); ?></p>	
 				<p>	<?= $this->session->userdata('cn'); ?> </p>
-				<a href="<?=site_url('login');?> "type="button" style="-webkit-appearance: inherit;" class="btn btn-primary">Logout</a>
-				<!-- <a href="<?=site_url('auth/logout');?>">Logoutldap</a> -->
+				<a href="<?=site_url('login/logout');?>">Logout</a>
+				<a href="<?=site_url('login/logoutldap');?>">Logoutldap</a>
 			</div>
 		</div>
 </section>

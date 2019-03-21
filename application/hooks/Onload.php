@@ -2,37 +2,34 @@
 /**
  *
  */
-class Onload {
+class Onload extends CI_Model{
     private $ci;
 
     public function __construct()
     {
-        $this->ci =& get_instance();
-//        $this->ci->load->model('permission_model');
+        parent::__construct();
+        $this->load->model('frontend_model');
+        $this->load->model('backend/product_model');
+        $this->load->library('authldap');
 
     }
 
-    public function check_login()
-    {
+    public function checksessiononline() {
+        $login_status = $this->session->userdata('logged_in');
 
-
-
-            // if (isset($_SESSION['username']['mail'] )&& !empty($_SESSION['username']['mail'])){
-
-
-            // }else{
-            //     $controller = $this->ci->router->class;
-
-            //         if ($controller != 'login' ) {
-            //             redirect('login', 'refresh');
-            //         }
-
-            // }
-
+        if($login_status = TRUE) {
+            if(($this->session->userdata('logged_in') != '') || !empty($this->session->userdata('logged_in'))) {
+                redirect('product/index');
+            }else{
+                // ไม่มีค่า session user id
+                redirect('login/index');
+            }
+        }else{
+            // ไม่พบ 
+            
+            redirect('login/index');
         }
-
-
-
+    }
 
 
 }

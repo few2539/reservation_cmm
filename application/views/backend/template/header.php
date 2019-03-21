@@ -17,12 +17,10 @@
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $this->session->userdata('fname') ?> <?php echo $this->session->userdata('lname') ?> <b class="caret"></b></a>
             <ul class="dropdown-menu">
-                <li>
-                    <a href="<?=site_url('admin/profile');?>"><i class="fa fa-fw fa-user"></i> Profile</a>
-                </li>
+              
                 <li class="divider"></li>
                 <li>
-                    <a href="<?=site_url('admin/logout');?>"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                    <a href="<?=site_url('login/logout');?>"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                 </li>
             </ul>
         </li>
