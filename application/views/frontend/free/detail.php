@@ -63,7 +63,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 							</div>
 							<div class="content">
-
+							<br>
+								<p>System will send your requirement to teacher by e-mail.</p>
+								<p>approval or denying will sent to your KMUTT e-mail.</p>
+								<p>Please wait and check it</p>
 							</div>
 						</div>
 

@@ -8,7 +8,7 @@
 			</div>
 
 			<div class="col-xs-12 name-login">
-				
+			<button type="button" class="btn btn-primary"><a href="<?=site_url('product/index');?>" >Home</a></button>
 				<p>
 					<?= $this->session->userdata('user_fname'); ?>
 					<?= $this->session->userdata('user_lname'); ?>
@@ -19,8 +19,9 @@
 				</p>
 				<p><?= $this->session->userdata('username'); ?></p>	
 				<p>	<?= $this->session->userdata('cn'); ?> </p>
-				<a href="<?=site_url('login/logout');?>">Logout</a>
-				<a href="<?=site_url('login/logoutldap');?>">Logoutldap</a>
+			
+				<button type="button" class="btn btn-primary"><a href="<?=site_url('login/index');?>" >Logout</a></button>
+				<!-- <a href="<?=site_url('login/logoutldap');?>">Logoutldap</a> -->
 			</div>
 		</div>
 </section>
