@@ -79,7 +79,7 @@
 			$result = $this->email->send();
 			if ( ! $this->email->send()) 
 			{
-				echo 'emailsendback';
+				echo 'Sent email to student ';
 			}
 			else
 			{

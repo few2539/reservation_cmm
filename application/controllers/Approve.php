@@ -19,7 +19,7 @@ class approve extends CI_Controller {
 
 		$this->approve_model->approveupdate($product_id);
 		$this->approve_model->emailsendback($product_id);
-        echo "Accept แล้ว";
+        echo " already done";
         exit;
 	}
 
