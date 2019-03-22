@@ -129,6 +129,9 @@ section {
 							.detail {
 								height: 40px;
 								overflow: hidden;
+								@media (max-width: $sd-plus) {
+									display: none;
+								}
 							}
 						}
 
@@ -301,4 +304,10 @@ section {
 			right: 20px;
 		}
 	}
+}
+
+
+.check-submit{
+	color: #f03;
+	margin-bottom: 5px;
 }

@@ -70,20 +70,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group name">
 						<span class="input-group-addon" id="basic-addon1">name</span>
-						<input type="text" class="form-control " name="reservation_tackback_name" placeholder="Username" aria-describedby="basic-addon1" required>
+						<input type="text" class="form-control freepage " name="reservation_tackback_name" placeholder="Username" aria-describedby="basic-addon1" required>
 					</div>
+					
 				</div>
 
 				<div class="box-user-info">
 					<div class="input-group pw-student">
 						<span class="input-group-addon" id="basic-addon1">pw-student</span>
-						<input type="text" class="form-control" name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1" required>
+						<input type="number" class="form-control freepage" name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1" required>
 					</div>
 				</div>
 				<div class="box-user-info">
 					<div class="input-group degree">
 						<span class="input-group-addon" id="basic-addon1">your-degree</span>
-						<input type="text" class="form-control" name="degreeid" placeholder="(1-4 year) " aria-describedby="basic-addon1" required>
+						<input type="number" class="form-control freepage" name="degreeid" placeholder="(1-4 year) " aria-describedby="basic-addon1" required>
 
 					</div>
 				</div>
@@ -91,7 +92,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<!-- <div class="box-user-info">
 					<div class="input-group degree">
 						<span class="input-group-addon" id="basic-addon1">Email</span>
-						<input type="text" class="form-control" name="degreeid" placeholder="your-email " aria-describedby="basic-addon1" required>
+						<input type="text" class="form-control freepage" name="degreeid" placeholder="your-email " aria-describedby="basic-addon1" required>
 
 					</div>
 				</div> -->
@@ -99,7 +100,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group Phone">
 						<span class="input-group-addon" id="basic-addon1">Phone</span>
-						<input type="text" class="form-control" name="reservation_phonenumber" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1" required>
+						<input type="number" class="form-control freepage" name="reservation_phonenumber" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1" required>
 
 					</div>
 				</div>
@@ -107,7 +108,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group Use-for">
 						<span class="input-group-addon" id="basic-addon1">Use for</span>
-						<input type="text" class="form-control" name="reservation_usefor" placeholder="Like taking photo in some project"
+						<input type="text" class="form-control freepage" name="reservation_usefor" placeholder="Like taking photo in some project"
 						 aria-describedby="basic-addon1" required>
 
 					</div>
@@ -116,7 +117,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group subject">
 						<span class="input-group-addon" id="basic-addon1">subject</span>
-						<input type="text" class="form-control" name="reservation_subject" placeholder="Like CMM-444" aria-describedby="basic-addon1" required>
+						<input type="text" class="form-control freepage" name="reservation_subject" placeholder="Like CMM-444" aria-describedby="basic-addon1" required>
 
 					</div>
 				</div>
@@ -139,7 +140,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<form>
 						<div class="form-group add-email-sp">
 							<label for="sel1">Name (Teacher):</label>
-							<select class="form-control" id="sel1" name="emailto">
+							<select class="form-control freepage" id="sel1" name="emailto">
 								<option></option>
 								<?php foreach($users as $user):?>
 								<option value="<?=$user['user_email']?>" >
@@ -155,7 +156,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 
-
+				<p class="check-submit"><b> * Please check all of info carefully before press "Submit" button</b></p>
 
 				<button type="submit" name="insert" value="add to database" class="btn btn-primary" onclick="fillConfirm(this.value);"
 				 id="fillConfirm">Submit</button>

@@ -92,6 +92,9 @@ section.product {
         section.product .wrap .equalHWrap .equalHW .box-all .property .detail {
           height: 40px;
           overflow: hidden; }
+          @media (max-width: 414px) {
+            section.product .wrap .equalHWrap .equalHW .box-all .property .detail {
+              display: none; } }
         section.product .wrap .equalHWrap .equalHW .box-all .content a {
           width: 100%; }
 
@@ -119,3 +122,7 @@ section.product {
     font-family: 'fontawesome';
     top: 0;
     right: 20px; }
+
+.check-submit {
+  color: #f03;
+  margin-bottom: 5px; }
