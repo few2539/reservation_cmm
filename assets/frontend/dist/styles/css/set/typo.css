@@ -164,3 +164,11 @@ a:visited {
 .picker__holder {
   background-color: transparent !important;
   overflow: hidden !important; }
+
+@media (max-width: 414px) {
+  .hiddent-on-phone {
+    display: none; } }
+
+@media (min-width: 1366px) {
+  .hiddent-on-pc {
+    display: none; } }

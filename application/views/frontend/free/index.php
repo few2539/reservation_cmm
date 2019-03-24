@@ -69,7 +69,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				<div class="box-user-info">
 					<div class="input-group name">
-						<span class="input-group-addon" id="basic-addon1">name</span>
+						<span class="input-group-addon" id="basic-addon1"><b>Name</b></span>
 						<input type="text" class="form-control freepage " name="reservation_tackback_name" placeholder="Username" aria-describedby="basic-addon1" required>
 					</div>
 					
@@ -77,13 +77,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				<div class="box-user-info">
 					<div class="input-group pw-student">
-						<span class="input-group-addon" id="basic-addon1">pw-student</span>
+						<span class="input-group-addon" id="basic-addon1"><b>pw-student</b></span>
 						<input type="number" class="form-control freepage" onkeydown="javascript: return event.keyCode == 69 ? false : true"  name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1" required>
 					</div>
 				</div>
 				<div class="box-user-info">
 					<div class="input-group degree">
-						<span class="input-group-addon" id="basic-addon1">your-degree</span>
+						<span class="input-group-addon" id="basic-addon1"><b>your-degree</b></span>
 						<input type="number" class="form-control freepage" onkeydown="javascript: return event.keyCode == 69 ? false : true" name="degreeid" placeholder="(1-4 year) " aria-describedby="basic-addon1" required>
 
 					</div>
@@ -99,7 +99,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				<div class="box-user-info">
 					<div class="input-group Phone">
-						<span class="input-group-addon" id="basic-addon1">Phone</span>
+						<span class="input-group-addon" id="basic-addon1"><b>Phone</b></span>
 						<input type="number" class="form-control freepage" onkeydown="javascript: return event.keyCode == 69 ? false : true" name="reservation_phonenumber" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1" required >
 
 					</div>
@@ -107,7 +107,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				<div class="box-user-info">
 					<div class="input-group Use-for">
-						<span class="input-group-addon" id="basic-addon1">Use for</span>
+						<span class="input-group-addon" id="basic-addon1"><b>Use for</b></span>
 						<input type="text" class="form-control freepage" name="reservation_usefor" placeholder="Like taking photo in some project"
 						 aria-describedby="basic-addon1" required>
 
@@ -116,7 +116,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				<div class="box-user-info">
 					<div class="input-group subject">
-						<span class="input-group-addon" id="basic-addon1">subject</span>
+						<span class="input-group-addon" id="basic-addon1"><b>subject</b></span>
 						<input type="text" class="form-control freepage" name="reservation_subject" placeholder="Like CMM-444" aria-describedby="basic-addon1" required>
 
 					</div>

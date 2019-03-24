@@ -138,7 +138,19 @@ a:visited {
 }
 
 
-.picker__holder{
+.picker__holder {
 	background-color: transparent !important;
-    overflow: hidden !important;
+	overflow: hidden !important;
+}
+
+.hiddent-on-phone {
+	@media (max-width: $sd-plus) {
+		display: none;
+	}
+}
+
+.hiddent-on-pc {
+	@media (min-width: $md-laptop) {
+		display: none;
+	}
 }
