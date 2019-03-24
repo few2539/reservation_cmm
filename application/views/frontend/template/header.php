@@ -24,7 +24,7 @@
 				<!-- <button type="button" class="btn btn-primary"><a
 						href="<?=site_url('login/index');?>">Logout</a></button> -->
 				<button type="button" class="btn btn-primary"> <a
-						href="<?=site_url('login/logoutldap');?>">Logoutldap</a></button>
+						href="<?=site_url('login/logoutldap');?>">Logout</a></button>
 			</div>
 		</div>
 </section>

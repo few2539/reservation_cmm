@@ -268,7 +268,7 @@ $product = [
 								<a href="<?=site_url('free/index');?>/<?=$product["product_id"];?> "type="button" style="-webkit-appearance: inherit;" class="btn btn-<?php if($product["product_status"] == 'approved') { echo "danger"; }elseif ($product["product_status"] == 'waiting'){ echo "warning"; } elseif ($product["product_status"] == 'available'){ echo "success"; }?> btn-block btn-status"
 									data-prodcut="
 									<?=$product['product_id']?>">
-									<?php if($product["product_status"] == "approved") { echo "Back On "; echo $product['product_return_date']; }elseif($product["product_status"] == 'available') { echo "Available"; } elseif($product["product_status"] == 'waiting') {echo "Reservation";}?>
+									<?php if($product["product_status"] == "approved") { echo "Back On "; echo $product['product_return_date']; }elseif($product["product_status"] == 'available') { echo "Available"; } elseif($product["product_status"] == 'waiting') {echo "reserved";}?>
 </a>
 							</div>
 							</div>

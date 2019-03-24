@@ -239,8 +239,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<label>Intro Items</label>
 
 
-								<textarea name="product_intro" class="form-control" placeholder="product_intro" rows="3" id="comment" required
-								 data-error="โปรดกรอกช่องนี้" value="<?=$product->product_intro;?>"></textarea>
+								<textarea name="product_intro" class="form-control" placeholder="product_intro" rows="3" id="comment" value="<?=$product->product_intro;?>"><?=$product->product_intro;?></textarea>
 
 								<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 								<div class="help-block with-errors"></div>

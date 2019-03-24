@@ -160,3 +160,7 @@ a:visited {
   @media (max-width: 414px) {
     .freepage {
       width: 100% !important; } }
+
+.picker__holder {
+  background-color: transparent;
+  overflow: hidden; }
