@@ -28,9 +28,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <!-- Page Heading -->
           <div class="row">
               <div class="col-lg-12">
+                
                   <h1 class="page-header text-center">
-                      ข้อมูล รายการอุปกรณ์
+                  รายการ อุปกรณ์ที่ถูกจอง
                   </h1>
+                
               </div>
           </div>
           <div style="float: left;">
@@ -139,35 +141,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ./wrapper -->
 
 <?php $this->load->view('backend/template/javascript');?>
-<!-- <script type="text/javascript">
-function ConfirmDialog(message) {
-    $('<div></div>').appendTo('body')
-    .html('<div><h6>'+message+'?</h6></div>')
-    .dialog({
-        modal: true, title: 'Delete message', zIndex: 10000, autoOpen: true,
-        width: 'auto', resizable: false,
-        buttons: {
-            Yes: function () {
-                // $(obj).removeAttr('onclick');                                
-                // $(obj).parents('.Parent').remove();
-                
-                $('#form_delete').submit();
-                $('body').append('<h1>Confirm Dialog Result: <i>Yes</i></h1>');
 
-                $(this).dialog("close");
-            },
-            No: function () {                                                                 
-                $('body').append('<h1>Confirm Dialog Result: <i>No</i></h1>');
-
-                $(this).dialog("close");
-            }
-        },
-        close: function (event, ui) {
-            $(this).remove();
-        }
-    });
-};
-</script> -->
 
 	<script type="text/javascript">
 		function deleteConfirm(id) {

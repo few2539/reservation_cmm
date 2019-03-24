@@ -67,9 +67,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							<?=form_open('admin/emailinsert', $attributes, $hidden);?>
 							<div class="form-group">
 								<p style="margin-bottom: 2%">ชื่อ-นามสกุลอาจารย์</p>
-								<input class="form-control" name="fname" type="text" placeholder="Name" style="margin-bottom: 2%">
-								<input class="form-control" name="lname" type="text" placeholder="Surname" style="margin-bottom: 2%">
-								<input class="form-control" name="email" type="text" placeholder="Email" style="margin-bottom: 2%">
+								<input class="form-control" name="fname" type="text" placeholder="Name" style="margin-bottom: 2%" required>
+								<input class="form-control" name="lname" type="text" placeholder="Surname" style="margin-bottom: 2%" required>
+								<input class="form-control" type="email" name="email" type="text" placeholder="Email" style="margin-bottom: 2%" required>
 
 								<button type="submit" class="btn btn-primary" style="margin-bottom: 2%">add</button>
 							</div>

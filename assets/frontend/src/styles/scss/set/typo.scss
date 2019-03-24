@@ -3,22 +3,23 @@
 //set something
 body,
 html {
-    // overflow: hidden;
-  font-family: $Prompt-Light;
-    
+	// overflow: hidden;
+	font-family: $Prompt-Light;
+
 	height: 100%;
 }
 
-a:link, a:visited {
- 
-    text-decoration: none;
-   
+a:link,
+a:visited {
+
+	text-decoration: none;
+
 }
 
 
 
 //over size
-.upper-font{
+.upper-font {
 	text-transform: uppercase;
 }
 
@@ -32,13 +33,14 @@ a:link, a:visited {
 	// font-size: 70px;
 }
 
-.font-title{
-    @include fp(font-size, 15, 32);
+.font-title {
+	@include fp(font-size, 15, 32);
 }
 
-.font-regular{
+.font-regular {
 	font-weight: 400;
-}   
+}
+
 .font-smallTitle {
 	font-size: 20px;
 }
@@ -108,6 +110,47 @@ a:visited {
 // font-family: $$Open-sans;
 
 
-.btn-hiddent-btn{
-	display: none; 
+.btn-hiddent-btn {
+	display: none;
+}
+
+.input-group-addon {
+	border: 0 !important;
+	min-width: 150px !important;
+	text-align: left !important;
+	background-color: transparent !important;
+
+	@media (max-width: $sd-plus) {
+		min-width: 110px !important;
+	}
+
+
+}
+
+.freepage {
+	width: 50% !important;
+
+	@media (max-width: $sd-plus) {
+		width: 100% !important;
+	}
+
+	border-radius: 10px !important;
+}
+
+
+.picker__holder {
+	background-color: transparent !important;
+	overflow: hidden !important;
+}
+
+.hiddent-on-phone {
+	@media (max-width: $sd-plus) {
+		display: none;
+	}
+}
+
+.hiddent-on-pc {
+	@media (min-width: $md-laptop) {
+		display: none;
+	}
 }

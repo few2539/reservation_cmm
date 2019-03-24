@@ -34,7 +34,7 @@ function index(){
     $result = $this->email->send();
     if ( ! $this->email->send()) 
     {
-        echo 'emailsend';
+        // echo 'emailsend';
     }
     else
     {

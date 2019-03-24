@@ -25,11 +25,13 @@ section.header .container {
       @media (max-width: 414px) {
         section.header .container .row .box-img-regis img {
           width: 160px;
-          left: 75%; } }
+          left: 75%;
+          opacity: 0.25; } }
       @media (max-width: 320px) {
         section.header .container .row .box-img-regis img {
           width: 130px;
-          left: 75%; } }
+          left: 75%;
+          opacity: 0.25; } }
     section.header .container .row .name-login {
       font-weight: 500;
       color: #fff; }

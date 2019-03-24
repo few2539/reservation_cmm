@@ -3,7 +3,8 @@ html {
   font-family: "Prompt-Light";
   height: 100%; }
 
-a:link, a:visited {
+a:link,
+a:visited {
   text-decoration: none; }
 
 .upper-font {
@@ -143,3 +144,31 @@ a:visited {
 
 .btn-hiddent-btn {
   display: none; }
+
+.input-group-addon {
+  border: 0 !important;
+  min-width: 150px !important;
+  text-align: left !important;
+  background-color: transparent !important; }
+  @media (max-width: 414px) {
+    .input-group-addon {
+      min-width: 110px !important; } }
+
+.freepage {
+  width: 50% !important;
+  border-radius: 10px !important; }
+  @media (max-width: 414px) {
+    .freepage {
+      width: 100% !important; } }
+
+.picker__holder {
+  background-color: transparent !important;
+  overflow: hidden !important; }
+
+@media (max-width: 414px) {
+  .hiddent-on-phone {
+    display: none; } }
+
+@media (min-width: 1366px) {
+  .hiddent-on-pc {
+    display: none; } }

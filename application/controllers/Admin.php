@@ -41,9 +41,22 @@ class admin extends CI_Controller {
 
 		$data['title_page'] = 'Title Page : admin profile';
 		$data['users'] = $this->frontend_model->getalluser();
-		//$data['user_id'] = $user_id;
+		
 		$this->load->view('backend/admin/add_email',$data);
 	}
+
+	public function waiting()
+	{
+		$this->check_model->checksessionadminonline();
+		
+		$data['title_page'] = 'Title Page :waiting item';
+
+		$data['products'] = $this->product_model->getallproducts();
+		
+		$this->load->view('backend/admin/waiting',$data);
+	}
+
+
 
 	public function profile_edit()
 	{

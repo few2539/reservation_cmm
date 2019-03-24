@@ -245,6 +245,7 @@ $product = [
 				<div class="equalHW eq picture-item " data-groups='["<?=$product['category_code'];?>"]'>
 					<div class="box-all ">
 						<div class="box-img">
+							<div class="hover-img"></div>
 							<img src="<?=base_url();?>assets/frontend/img/product_thumbnail/<?=$product["product_thumbnail"];?>" alt=""
 							data-title="
 							<?=$product["product_thumbnail"];?>">
@@ -268,7 +269,7 @@ $product = [
 								<a href="<?=site_url('free/index');?>/<?=$product["product_id"];?> "type="button" style="-webkit-appearance: inherit;" class="btn btn-<?php if($product["product_status"] == 'approved') { echo "danger"; }elseif ($product["product_status"] == 'waiting'){ echo "warning"; } elseif ($product["product_status"] == 'available'){ echo "success"; }?> btn-block btn-status"
 									data-prodcut="
 									<?=$product['product_id']?>">
-									<?php if($product["product_status"] == "approved") { echo "Back On "; echo $product['product_return_date']; }elseif($product["product_status"] == 'available') { echo "Available"; } elseif($product["product_status"] == 'waiting') {echo "Reservation";}?>
+									<?php if($product["product_status"] == "approved") { echo "Back On "; echo $product['product_return_date']; }elseif($product["product_status"] == 'available') { echo "Available"; } elseif($product["product_status"] == 'waiting') {echo "reserved";}?>
 </a>
 							</div>
 							</div>
