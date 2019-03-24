@@ -78,13 +78,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group pw-student">
 						<span class="input-group-addon" id="basic-addon1">pw-student</span>
-						<input type="number" class="form-control freepage" name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1" required>
+						<input type="number" class="form-control freepage" onkeydown="javascript: return event.keyCode == 69 ? false : true"  name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1" required>
 					</div>
 				</div>
 				<div class="box-user-info">
 					<div class="input-group degree">
 						<span class="input-group-addon" id="basic-addon1">your-degree</span>
-						<input type="number" class="form-control freepage" name="degreeid" placeholder="(1-4 year) " aria-describedby="basic-addon1" required>
+						<input type="number" class="form-control freepage" onkeydown="javascript: return event.keyCode == 69 ? false : true" name="degreeid" placeholder="(1-4 year) " aria-describedby="basic-addon1" required>
 
 					</div>
 				</div>
@@ -100,7 +100,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="box-user-info">
 					<div class="input-group Phone">
 						<span class="input-group-addon" id="basic-addon1">Phone</span>
-						<input type="number" class="form-control freepage" name="reservation_phonenumber" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1" required>
+						<input type="number" class="form-control freepage" onkeydown="javascript: return event.keyCode == 69 ? false : true" name="reservation_phonenumber" placeholder="xxx-xxxxxxx" aria-describedby="basic-addon1" required >
 
 					</div>
 				</div>
@@ -123,12 +123,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</div>
 				<div class="box">
 					<fieldset>
-						<h4>Form:</h4>
+						<h4><b>Form <span style="color:red;">***</span></b></h4>
 						<input type="text" id="input_from" name="reservation_date" value="" required>
 					</fieldset>
 
 					<fieldset>
-						<h4>To:</h4>
+						<h4> <b>To <span  style="color:red;">***</span></b> </h4>
 						<input type="text" id="input_to" name="reservation_return_date" value="" required>
 					</fieldset>
 
@@ -140,7 +140,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<form>
 						<div class="form-group add-email-sp">
 							<label for="sel1">Name (Teacher):</label>
-							<select class="form-control freepage" id="sel1" name="emailto">
+							<select class="form-control freepage" id="sel1" name="emailto" required>
 								<option></option>
 								<?php foreach($users as $user):?>
 								<option value="<?=$user['user_email']?>" >
@@ -218,7 +218,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<script>
 		$('#input_from').pickadate({
-			
+		
 			formatSubmit: 'yyyy/mm/dd',
 			format: 'dd/mm/yyyy',
 
@@ -241,17 +241,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		var to_$input = $('#input_to').pickadate(),
 			to_picker = to_$input.pickadate('picker')
 		from_picker.set('min', true);
-
+		to_picker.set('min', true);
 		// Check if there’s a “from” or “to” date to start with.
 		if (from_picker.get('value')) {
 			to_picker.set('min', from_picker.get('select'));
-			from_picker.set('min', true);
+		
 
 		}
 		if (to_picker.get('value')) {
 
 			from_picker.set('max', to_picker.get('select'));
-			console.log(to_picker);
+	
 		}
 
 		// When something is selected, update the “from” and “to” limits.
@@ -262,7 +262,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				var pick = from_value.pick + (2 * 24 * 60 * 60 * 1000);
 				var to_value = new Date(pick);
 				to_picker.set('max', to_value);
-				console.log(from_value);
+			
 
 
 
@@ -274,7 +274,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			if (event.select) {
 
 				from_picker.set('max', to_picker.get('select'))
-
+				var to_value = to_picker.get('select');
+				var toto = to_value.pick - (2 * 24 * 60 * 60 * 1000);
+				var form_value1 = new Date(toto);
+				from_picker.set('min', form_value1);
 			} else if ('clear' in event) {
 				from_picker.set('max', false)
 			}

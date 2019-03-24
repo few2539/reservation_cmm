@@ -245,6 +245,7 @@ $product = [
 				<div class="equalHW eq picture-item " data-groups='["<?=$product['category_code'];?>"]'>
 					<div class="box-all ">
 						<div class="box-img">
+							<div class="hover-img"></div>
 							<img src="<?=base_url();?>assets/frontend/img/product_thumbnail/<?=$product["product_thumbnail"];?>" alt=""
 							data-title="
 							<?=$product["product_thumbnail"];?>">

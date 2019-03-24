@@ -162,5 +162,5 @@ a:visited {
       width: 100% !important; } }
 
 .picker__holder {
-  background-color: transparent;
-  overflow: hidden; }
+  background-color: transparent !important;
+  overflow: hidden !important; }

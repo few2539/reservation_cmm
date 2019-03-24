@@ -50,6 +50,12 @@ section.product-free .container-product {
       @media (max-width: 414px) {
         section.product-free .container-product .row-product .item .box .text-detail {
           margin-bottom: 20px; } }
+      section.product-free .container-product .row-product .item .box .text-detail .property .name_product {
+        font-size: 20px; }
+      section.product-free .container-product .row-product .item .box .text-detail .property .product_type {
+        font-size: 20px; }
+      section.product-free .container-product .row-product .item .box .text-detail .property .detail {
+        font-size: 20px; }
 
 section.product-free .insert-info {
   margin-left: 7.68668%;

@@ -69,34 +69,64 @@ section.product {
           section.product .wrap .equalHWrap .equalHW {
             width: 50%;
             max-width: 50% !important; } }
-        section.product .wrap .equalHWrap .equalHW .box-all .box-img {
-          position: relative;
-          padding-top: 100%; }
-          section.product .wrap .equalHWrap .equalHW .box-all .box-img img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; }
-        section.product .wrap .equalHWrap .equalHW .box-all .property .name_product {
-          font-size: 16px;
-          height: 25px;
-          overflow: hidden; }
-          @media (min-width: 1366px) {
-            section.product .wrap .equalHWrap .equalHW .box-all .property .name_product {
-              margin-top: 5px; } }
-        section.product .wrap .equalHWrap .equalHW .box-all .property .product_type {
-          height: 30px;
-          overflow: hidden; }
-        section.product .wrap .equalHWrap .equalHW .box-all .property .detail {
-          height: 40px;
-          overflow: hidden; }
+        section.product .wrap .equalHWrap .equalHW .box-all {
+          overflow: hidden !important; }
+          section.product .wrap .equalHWrap .equalHW .box-all:hover .hover-img {
+            opacity: 0.5 !important;
+            -webkit-transition: opacity 0.3s ease-out;
+            transition: opacity 0.3s ease-out; }
+          section.product .wrap .equalHWrap .equalHW .box-all:hover img {
+            -webkit-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                    transform: scale(1.05);
+            -webkit-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in; }
+          section.product .wrap .equalHWrap .equalHW .box-all .box-img {
+            position: relative;
+            padding-top: 100%;
+            overflow: hidden; }
+            section.product .wrap .equalHWrap .equalHW .box-all .box-img .hover-img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              z-index: 55;
+              -webkit-transition: opacity 0.3s ease-in-out;
+              transition: opacity 0.3s ease-in-out;
+              background: -webkit-linear-gradient(135deg, #f3cf3f 0%, #f33f58 100%);
+              background: linear-gradient(-45deg, #f3cf3f 0%, #f33f58 100%); }
+            section.product .wrap .equalHWrap .equalHW .box-all .box-img img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              -webkit-transition: all 0.3s ease-in;
+              transition: all 0.3s ease-in; }
+          section.product .wrap .equalHWrap .equalHW .box-all .property .name_product {
+            font-size: 16px;
+            height: 25px;
+            overflow: hidden; }
+            @media (min-width: 1366px) {
+              section.product .wrap .equalHWrap .equalHW .box-all .property .name_product {
+                margin-top: 5px; } }
+          section.product .wrap .equalHWrap .equalHW .box-all .property .product_type {
+            height: 30px;
+            overflow: hidden; }
+          section.product .wrap .equalHWrap .equalHW .box-all .property .detail {
+            height: 40px;
+            overflow: hidden; }
+            @media (max-width: 414px) {
+              section.product .wrap .equalHWrap .equalHW .box-all .property .detail {
+                display: none; } }
           @media (max-width: 414px) {
-            section.product .wrap .equalHWrap .equalHW .box-all .property .detail {
-              display: none; } }
-        section.product .wrap .equalHWrap .equalHW .box-all .content a {
-          width: 100%; }
+            section.product .wrap .equalHWrap .equalHW .box-all .property .booking {
+              font-size: 14px; } }
+          section.product .wrap .equalHWrap .equalHW .box-all .content a {
+            width: 100%; }
 
 .containersearch {
   text-align: center;
@@ -125,4 +155,9 @@ section.product {
 
 .check-submit {
   color: #f03;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  font-size: 19px; }
+
+@media (min-width: 1366px) {
+  #ModuleSearch {
+    width: 500px; } }

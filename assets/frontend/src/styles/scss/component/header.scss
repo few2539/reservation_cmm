@@ -33,11 +33,13 @@ section.header {
 					@media (max-width: $sd-plus) {
 						width: 160px;
 						left: 75%;
-                    }
-                    
-                    @media (max-width:$sd) {
+						opacity: 0.25;
+					}
+
+					@media (max-width:$sd) {
 						width: 130px;
 						left: 75%;
+						opacity: 0.25;
 					}
 				}
 			}
