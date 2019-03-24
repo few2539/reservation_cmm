@@ -78,7 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <?php foreach ($products as $product): ?>
                     <tr>
                       <td class="text-center text-middle">
-                        <?php echo $i; ?>
+                      <?php echo $product['product_id']; ?>
                       </td>
                       <td class="text-center text-middle">
                         <?php echo $product['product_name']; ?>

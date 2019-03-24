@@ -17,6 +17,19 @@
 			return $result_data;
 		}
 
+		//ดึงเฉพาะตัว waiting
+		public function getallwaitingproducts(){
+			$sql = "SELECT * FROM product";
+			$sql.= " LEFT JOIN category ON product.product_category_id = category.category_id";
+			$sql.= " WHERE product_show = 'yes' ";
+			$sql.= " AND product_status = 'waiting' ";
+			$sql.= " ORDER BY product_category_id";
+			$query = $this->db->query($sql);
+			$result_data = $query->result_array();
+
+			return $result_data;
+		}
+
 		// แก้ไข สินค้า
 		public function getproductedit($product_id){
 			$sql = "SELECT * FROM product";

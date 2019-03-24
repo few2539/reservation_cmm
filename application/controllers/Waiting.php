@@ -22,7 +22,7 @@ class waiting extends CI_Controller {
 		
 		$data['title_page'] = 'Title Page :waiting item';
 
-		$data['products'] = $this->product_model->getallproducts();
+		$data['products'] = $this->product_model->getallwaitingproducts();
 		
 		$this->load->view('backend/waiting/index',$data);
 	}

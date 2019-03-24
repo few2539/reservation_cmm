@@ -11,6 +11,7 @@
 			$data = array(
 				'product_status' => 'available',
 				'product_amount' => '1'
+				'product_booking' => '',
 			);
 
 			$this->db->where('product_id', $product_id);

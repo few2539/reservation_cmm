@@ -92,6 +92,17 @@
 			return $result_data;
 		}
 
+		public function getallreservation(){
+			$sql = "SELECT * FROM reservation";
+			$sql.= " LEFT JOIN product ON reservation.reservation_product_id = product.product_id";
+			$sql.= " LEFT JOIN category ON product.product_category_id = category.category_id";
+			$sql.= " ORDER BY reservation_id";
+			$query = $this->db->query($sql);
+			$result_data = $query->result_array();
+
+			return $result_data;
+		}
+
 		public function getuserhistory($student_id){
 			$sql = "SELECT * FROM reservation ";
 			$sql.= " LEFT JOIN user ON reservation.reservation_student_id = user.student_id";

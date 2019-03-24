@@ -22,7 +22,7 @@ class backon extends CI_Controller {
 		
 		$data['title_page'] = 'Title Page :waiting item';
 
-		$data['products'] = $this->product_model->getallproducts();
+		$data['reservations'] = $this->frontend_model->getallreservation();
 		
 		$this->load->view('backend/backon/index',$data);
 	}
