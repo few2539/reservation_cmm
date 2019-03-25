@@ -25,7 +25,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<section class="product-free">
 		<div class="title-free-page">
-			<h1>รายละเอียดการจอง</h1>
+			<h1>คำร้องของการจองอุปกรณ์ถูกส่งไปให้อาจารย์พิจารณาแล้ว</h1>
 		</div>
 
 		<div class="container-product">
