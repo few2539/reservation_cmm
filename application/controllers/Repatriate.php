@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class backon extends CI_Controller {
+class repatriate extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
@@ -20,11 +20,11 @@ class backon extends CI_Controller {
 	{
 		$this->check_model->checksessionadminonline();
 		
-		$data['title_page'] = 'Title Page :Back on item';
+		$data['title_page'] = 'Title Page : Repatriate item';
 
-		$data['reservations'] = $this->frontend_model->getallreservation();
+		$data['products'] = $this->product_model->getallwaitingproducts();
 		
-		$this->load->view('backend/backon/index',$data);
+		$this->load->view('backend/repatriate/index',$data);
 	}
 
 

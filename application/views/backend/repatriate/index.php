@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="col-lg-12">
                 
                   <h1 class="page-header text-center">
-                  ประวัติการยืมอุปกรณ์
+                  รายการ อุปกรณ์ที่ถูกจอง
                   </h1>
                 
               </div>
@@ -59,49 +59,73 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         ลำดับ
                       </th>
                       <th class="text-center text-middle">
-                        ชื่อ
+                        ชื่อรายการ
                       </th>
                       <th class="text-center text-middle">
-                        รหัสนักศึกษา
+                        ชื่อผู้จอง/รหัสนักศึกษา
                       </th>
                       <th class="text-center text-middle">
-                        สินค้า
+                        จำนวน
                       </th>
                       <th class="text-center text-middle">
-                        วันที่ยืม
+                        ประเภทรายการ
                       </th>
                       <th class="text-center text-middle">
-                        วันที่คืน
+                        สถานะ
                       </th>
-                      <th class="text-center text-middle">
-                        เบอร์โทร
+                      <th class="text-center text-middle" style="min-width: 180px;">
+                        คืน
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php $i = 1; ?>
-                    <?php foreach ($reservations as $reservation): ?>
+                    <?php foreach ($products as $product): ?>
                     <tr>
                       <td class="text-center text-middle">
-                      <?php echo $reservation['reservation_id']; ?>
+                        <?php echo $i; ?>
                       </td>
                       <td class="text-center text-middle">
-                        <?php echo $reservation['reservation_tackback_name']; ?>
+                        <?php echo $product['product_name']; ?>
                       </td>
                       <td class="text-center text-middle">
-                      <?php echo $reservation['reservation_student_id']; ?>
+                        <?php echo $product['product_booking']; ?> / 58080500232
                       </td>
                       <td class="text-center text-middle">
-                      <?php echo $reservation['product_name']; ?>
+                        <?php echo $product['product_amount']; ?>
                       </td>
                       <td class="text-center text-middle">
-                      <?php echo $reservation['reservation_date']; ?>
+                        <?php echo $product['category_name']; ?>
                       </td>
                       <td class="text-center text-middle">
-                      <?php echo $reservation['reservation_return_date']; ?>
+                        <?php echo $product['product_status']; ?>
                       </td>
                       <td class="text-center text-middle">
-                      <?php echo $reservation['reservation_phonenumber']; ?>
+                        <!-- <div style="margin-top:2%;">
+                          <a href="<?php echo site_url('product/admin_edit'); ?>/<?php echo $product['product_id']; ?>">
+                            <button class="btn btn-primary btn-sm" style="font-weight: bold;width: 30%;float: left;margin-right: 2%;">
+                              <i class="fa fa-edit"></i> แก้ไข
+                            </button>
+                          </a>
+                        </div>
+                        <div style="margin-top:2%;">
+                          <?php $attributes  = array('id' => 'deleteProduct'.$product['product_id']); ?>
+                          <?php $hidden  = array('product_id' => $product['product_id']); ?>
+                          <?= form_open('product/delete', $attributes, $hidden); ?>
+                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-danger btn-sm" style="font-weight: bold;width: 30%;float: left; margin-right: 2%;" onclick="deleteConfirm(this.value);">
+                              <i class="fa fa-check"></i> ลบ
+                            </button>
+                          <?= form_close(); ?>
+                        </div> -->
+                        <div style="margin-top:2%;">
+                          <?php $attributes  = array('id' => 'returnProduct'.$product['product_id']); ?>
+                          <?php $hidden  = array('product_id' => $product['product_id']); ?>
+                          <?= form_open('product/takeback', $attributes, $hidden); ?>
+                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-<?php if($product["product_status"] == 'approved') { echo "warning"; }elseif ($product["product_status"] == 'waiting'){ echo "hiddent-btn"; } elseif ($product["product_status"] == 'available'){ echo "hiddent-btn"; }?> btn-sm" style="font-weight: bold;width: 30%; float: left;" onclick="returnConfirm(this.value);">
+                              <i class="fa fa-check"></i> คืน 
+                            </button>
+                          <?= form_close(); ?>
+                        </div>
                       </td>
                     </tr>
                     <?php $i++; ?>

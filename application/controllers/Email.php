@@ -34,7 +34,8 @@ function index(){
     $result = $this->email->send();
     if ( ! $this->email->send()) 
     {
-        // echo 'emailsend';
+        $message = "E-mail already sent to teacher";
+        echo "<script type='text/javascript'>alert('$message');</script>";
     }
     else
     {

@@ -19,7 +19,9 @@ class approve extends CI_Controller {
 
 		$this->approve_model->approveupdate($product_id);
 		$this->approve_model->emailsendback($product_id);
-        echo " already done";
+		echo "already done";
+		echo "Thank you so much for using our reservation system";
+		echo "we will continuous develop system utterly";
         exit;
 	}
 

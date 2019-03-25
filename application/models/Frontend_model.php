@@ -177,6 +177,9 @@
 			if ( ! $this->email->send()) 
 			{
 				// echo 'emailsend';
+				echo "already done";
+				echo "Thank you so much for using our reservation system";
+				echo "we will continuous develop system utterly";
 			}
 			else
 			{

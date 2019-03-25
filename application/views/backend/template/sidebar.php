@@ -5,7 +5,11 @@
             <a href="<?= site_url('admin/add_email'); ?>"><i class="fa fa-fw fa-dashboard"></i> Add teacher email </a>
         </li>
         <li class="<?php echo activate_menu('product'); ?>">
-            <a href="<?= site_url('product/admin'); ?>"><i class="fa fa-fw fa-plus"></i> เพิ่ม / แก้ไข อุปกรณ์ </a>
+            <a href="<?= site_url('product/admin'); ?>"><i class="fa fa-fw fa-plus"></i> Add / Edit device </a>
+        </li>
+
+         <li class="<?php echo activate_menu('repatriate'); ?>">
+            <a href="<?= site_url('repatriate/index'); ?>"><i class="fa fa-fw fa-refresh"></i> Repatriate device </a>
         </li>
 
 
@@ -14,7 +18,7 @@
         </li>
 
          <li class="<?php echo activate_menu('backon'); ?>">
-            <a href="<?= site_url('backon/index'); ?>"><i class="fa fa-fw fa-exchange"></i> Reservation</a>
+            <a href="<?= site_url('backon/index'); ?>"><i class="fa fa-fw fa-exchange"></i> History of reservation</a>
         </li>
 
     </ul>

@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         สถานะ
                       </th>
                       <th class="text-center text-middle" style="min-width: 180px;">
-                        แก้ไข / ลบ
+                        ชื่อ / รหัสนักศึกษา
                       </th>
                     </tr>
                   </thead>
@@ -95,31 +95,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo $product['product_status']; ?>
                       </td>
                       <td class="text-center text-middle">
-                        <div style="margin-top:2%;">
-                          <a href="<?php echo site_url('product/admin_edit'); ?>/<?php echo $product['product_id']; ?>">
-                            <button class="btn btn-primary btn-sm" style="font-weight: bold;width: 30%;float: left;margin-right: 2%;">
-                              <i class="fa fa-edit"></i> แก้ไข
-                            </button>
-                          </a>
-                        </div>
-                        <div style="margin-top:2%;">
-                          <?php $attributes  = array('id' => 'deleteProduct'.$product['product_id']); ?>
-                          <?php $hidden  = array('product_id' => $product['product_id']); ?>
-                          <?= form_open('product/delete', $attributes, $hidden); ?>
-                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-danger btn-sm" style="font-weight: bold;width: 30%;float: left; margin-right: 2%;" onclick="deleteConfirm(this.value);">
-                              <i class="fa fa-check"></i> ลบ
-                            </button>
-                          <?= form_close(); ?>
-                        </div>
-                        <div style="margin-top:2%;">
-                          <?php $attributes  = array('id' => 'returnProduct'.$product['product_id']); ?>
-                          <?php $hidden  = array('product_id' => $product['product_id']); ?>
-                          <?= form_open('product/takeback', $attributes, $hidden); ?>
-                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-<?php if($product["product_status"] == 'approved') { echo "warning"; }elseif ($product["product_status"] == 'waiting'){ echo "hiddent-btn"; } elseif ($product["product_status"] == 'available'){ echo "hiddent-btn"; }?> btn-sm" style="font-weight: bold;width: 30%; float: left;" onclick="returnConfirm(this.value);">
-                              <i class="fa fa-check"></i> คืน 
-                            </button>
-                          <?= form_close(); ?>
-                        </div>
+                      <?php echo $product['product_booking']; ?> /
                       </td>
                     </tr>
                     <?php $i++; ?>

@@ -123,7 +123,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</div>
 				<div class="box">
 					<fieldset>
-						<h4><b>Form <span style="color:red;">***</span></b></h4>
+						<h4><b>From <span style="color:red;">***</span></b></h4>
 						<input type="text" id="input_from" name="reservation_date" value="" required>
 					</fieldset>
 

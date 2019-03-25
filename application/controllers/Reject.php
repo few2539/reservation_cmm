@@ -18,7 +18,10 @@ class reject extends CI_Controller {
 
 		$this->reject_model->rejectupdate($product_id);
 		$this->reject_model->emailsendback2($product_id);
-        echo "Denied แล้ว";
+		echo "Requirement is denied already";
+		echo "You have to deny requirement";
+		echo "Thank you so much for using our reservation system";
+		echo "We will continuous develop system utterly";
         exit;
 	}
 
