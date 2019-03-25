@@ -3,6 +3,14 @@ html {
   font-family: "Prompt-Light";
   height: 100%; }
 
+::-moz-selection {
+  color: white;
+  background: #00da91; }
+
+::selection {
+  color: white;
+  background: #00da91; }
+
 a:link,
 a:visited {
   text-decoration: none; }
