@@ -10,7 +10,7 @@
 
 			$data = array(
 				'product_status' => 'available',
-				'product_amount' => '1'
+				'product_amount' => '1',
 				'product_booking' => '',
 			);
 
