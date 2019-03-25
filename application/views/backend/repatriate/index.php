@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         ชื่อผู้จอง/รหัสนักศึกษา
                       </th>
                       <th class="text-center text-middle">
-                        จำนวน
+                        รหัสสินค้า
                       </th>
                       <th class="text-center text-middle">
                         ประเภทรายการ
@@ -89,10 +89,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo $product['product_name']; ?>
                       </td>
                       <td class="text-center text-middle">
-                        <?php echo $product['product_booking']; ?> / 58080500232
+                        <?php echo $product['product_booking']; ?> /   <?php echo $product['product_usernameid']; ?>
                       </td>
                       <td class="text-center text-middle">
-                        <?php echo $product['product_amount']; ?>
+                        <?php echo $product['product_detail']; ?>
                       </td>
                       <td class="text-center text-middle">
                         <?php echo $product['category_name']; ?>

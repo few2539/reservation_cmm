@@ -95,7 +95,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo $product['product_status']; ?>
                       </td>
                       <td class="text-center text-middle">
-                      <?php echo $product['product_booking']; ?> /
+                      <?php echo $product['product_booking']; ?> / <?php echo $product['product_usernameid']; ?>
                       </td>
                     </tr>
                     <?php $i++; ?>

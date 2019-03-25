@@ -36,7 +36,8 @@
 			$product_id = $this->input->post('product_id');
 			$data = array(
 				'product_booking' => $this->session->userdata('cn'),
-				'product_sendmail' => $this->session->userdata('mail')				
+				'product_sendmail' => $this->session->userdata('mail'),
+				'product_usernameid' => $this->session->userdata('username'),					
 			);
 
 			$this->db->where('product_id', $product_id);

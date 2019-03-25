@@ -22,7 +22,7 @@ class repatriate extends CI_Controller {
 		
 		$data['title_page'] = 'Title Page : Repatriate item';
 
-		$data['products'] = $this->product_model->getallwaitingproducts();
+		$data['products'] = $this->product_model->getallapproveproducts();
 		
 		$this->load->view('backend/repatriate/index',$data);
 	}
