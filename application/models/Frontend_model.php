@@ -177,9 +177,13 @@
 			if ( ! $this->email->send()) 
 			{
 				// echo 'emailsend';
-				echo "already done";
-				echo "Thank you so much for using our reservation system";
-				echo "we will continuous develop system utterly";
+				$message = "System sent your requirement to teacher already";
+				$messagethx =" Thank you so much for using our reservation system";
+				$messagethx1 =" We will continuous develop system utterly";
+		
+				echo "<script type='text/javascript'>alert(['$message','$messagethx','$messagethx1']);</script>";
+		
+			
 			}
 			else
 			{

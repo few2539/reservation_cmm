@@ -38,13 +38,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<div class="text-detail">
 							<div class="property">
 								<p class="name_product">
-									<?=$product->product_name;?>
+							<b>Product Name :</b>		<?=$product->product_name;?>
 								</p>
 								<p class="product_type">
-									<?=$product->category_code;?>
+								<b>Type :</b>		<?=$product->category_code;?>
 								</p>
 								<p class="detail">
-									<?=$product->product_detail;?>
+								<b>Supplies Numbers :</b>	<?=$product->product_detail;?>
 								</p>
 
 							</div>
