@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         สถานะ
                       </th>
                       <th class="text-center text-middle" style="min-width: 180px;">
-                        ชื่อ / รหัสนักศึกษา
+                      รหัสครุภัณฑ์
                       </th>
                     </tr>
                   </thead>
@@ -95,7 +95,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo $product['product_status']; ?>
                       </td>
                       <td class="text-center text-middle">
-                      <?php echo $product['product_booking']; ?> / <?php echo $product['product_usernameid']; ?>
+                      <?php echo $product['product_detail']; ?> 
                       </td>
                     </tr>
                     <?php $i++; ?>

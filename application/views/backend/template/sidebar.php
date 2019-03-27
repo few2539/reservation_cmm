@@ -9,7 +9,7 @@
         </li>
 
          <li class="<?php echo activate_menu('repatriate'); ?>">
-            <a href="<?= site_url('repatriate/index'); ?>"><i class="fa fa-fw fa-refresh"></i> Repatriate device </a>
+            <a href="<?= site_url('repatriate/index'); ?>"><i class="fa fa-fw fa-refresh"></i> Devices of Repatriation</a>
         </li>
 
 

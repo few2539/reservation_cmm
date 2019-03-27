@@ -49,6 +49,9 @@ section.product-free .container-product {
       padding-left: 3.66032%; }
       @media (max-width: 414px) {
         section.product-free .container-product .row-product .item .box .text-detail {
+          -webkit-flex-basis: 100% !important;
+              -ms-flex-preferred-size: 100% !important;
+                  flex-basis: 100% !important;
           margin-bottom: 20px; } }
       section.product-free .container-product .row-product .item .box .text-detail .property .name_product {
         font-size: 20px; }
