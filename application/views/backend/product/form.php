@@ -193,7 +193,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<input id="product_reservation" name="product_reservation" type="text" class="form-control datepicker"
 									 placeholder="วันที่จอง" data-provide="datepicker" data-date-language="th-th" readonly="readonly"
 									 aria-describedby="vspp_cod_label" style="text-align: center;" value="<?php if(!empty($product->product_reservation)) {echo $product_reservation;}?>"
-									 required data-error="กรุณากรอก วันที่จอง">
+									 >
 									<span class="input-group-addon" onclick="$('#product_reservation').focus();">
 										<i class="glyphicon glyphicon-calendar"></i>
 									</span>
@@ -214,7 +214,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   }
                   else{
                     $product_return_date = '';
-                  }
+                  } 
                   ?>
 								<?php 
                   echo "Database =". $product->product_return_date . " --> ".$product_return_date;
@@ -223,7 +223,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<input id="product_return_date" name="product_return_date" type="text" class="form-control datepicker"
 									 placeholder="วันที่จอง" data-provide="datepicker" data-date-language="th-th" readonly="readonly"
 									 aria-describedby="vspp_cod_label" style="text-align: center;" value="<?php if(!empty($product->product_return_date)) {echo $product_return_date;}?>"
-									 required data-error="กรุณากรอก วันที่จอง">
+									 >
 									<span class="input-group-addon" onclick="$('#product_return_date').focus();">
 										<i class="glyphicon glyphicon-calendar"></i>
 									</span>

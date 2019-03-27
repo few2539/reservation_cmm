@@ -139,10 +139,14 @@
 		}
 
 		 function thdate2utcdate($thdate) {
+			if(!empty($thdate)) {
 			list($d,$m,$Y) = explode('/',$thdate);
 			$Y = $Y - 543;
 			$utcdate  =  $Y."-".$m."-".$d;
-
+			}
+			else{
+				$utcdate = '';
+				} 
 			return $utcdate;
 		}
 
