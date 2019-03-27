@@ -12,6 +12,8 @@
 				'product_status' => 'available',
 				'product_amount' => '1',
 				'product_booking' => '',
+				'product_sendemail' => '',
+				'product_usernameid' => '',
 			);
 
 			$this->db->where('product_id', $product_id);
