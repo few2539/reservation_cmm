@@ -252,7 +252,7 @@ $product = [
 						</div>
 						<div class="property">
 							<p class="name_product">
-							<b><?=$product["product_name"];?></b>
+							<b class"nameunderline"><?=$product["product_name"];?></b>
 							</p>
 							<p class="product_type">
 								<?=$product["category_name_en"];?>

@@ -65,22 +65,39 @@ section.product {
                 flex: 0 0 24.8%;
         max-width: 24.8%;
         width: 24.8%; }
+        @media (max-width: 1024px) {
+          section.product .wrap .equalHWrap .equalHW {
+            width: 32%;
+            max-width: 32% !important; } }
         @media (max-width: 414px) {
           section.product .wrap .equalHWrap .equalHW {
             width: 50%;
             max-width: 50% !important; } }
+        @media (max-width: 320px) {
+          section.product .wrap .equalHWrap .equalHW {
+            width: 100%;
+            max-width: 100% !important; } }
         section.product .wrap .equalHWrap .equalHW .box-all {
-          overflow: hidden !important; }
-          section.product .wrap .equalHWrap .equalHW .box-all:hover .hover-img {
-            opacity: 0.5 !important;
-            -webkit-transition: opacity 0.3s ease-out;
-            transition: opacity 0.3s ease-out; }
-          section.product .wrap .equalHWrap .equalHW .box-all:hover img {
-            -webkit-transform: scale(1.05);
-                -ms-transform: scale(1.05);
-                    transform: scale(1.05);
+          overflow: hidden !important;
+          box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          -webkit-transition: all 0.3s ease-in;
+          transition: all 0.3s ease-in; }
+          section.product .wrap .equalHWrap .equalHW .box-all:hover {
+            -webkit-transform: scale(0.97);
+                -ms-transform: scale(0.97);
+                    transform: scale(0.97);
             -webkit-transition: all 0.3s ease-in;
             transition: all 0.3s ease-in; }
+            section.product .wrap .equalHWrap .equalHW .box-all:hover .hover-img {
+              opacity: 0.5 !important;
+              -webkit-transition: opacity 0.3s ease-out;
+              transition: opacity 0.3s ease-out; }
+            section.product .wrap .equalHWrap .equalHW .box-all:hover img {
+              -webkit-transform: scale(1.05);
+                  -ms-transform: scale(1.05);
+                      transform: scale(1.05);
+              -webkit-transition: all 0.3s ease-in;
+              transition: all 0.3s ease-in; }
           section.product .wrap .equalHWrap .equalHW .box-all .box-img {
             position: relative;
             padding-top: 100%;
@@ -106,8 +123,14 @@ section.product {
               object-fit: cover;
               -webkit-transition: all 0.3s ease-in;
               transition: all 0.3s ease-in; }
+          @media (min-width: 1024px) {
+            section.product .wrap .equalHWrap .equalHW .box-all .property {
+              padding-left: 10px;
+              padding-bottom: 10px;
+              padding-right: 10px;
+              padding-top: 10px; } }
           section.product .wrap .equalHWrap .equalHW .box-all .property .name_product {
-            font-size: 16px;
+            font-size: 18px;
             height: 25px;
             overflow: hidden; }
             @media (min-width: 1366px) {
@@ -152,6 +175,10 @@ section.product {
     font-family: 'fontawesome';
     top: 0;
     right: 20px; }
+    @media (min-width: 1366px) {
+      .containersearch .field-input span:before {
+        right: 27px;
+        font-size: 17px; } }
 
 .check-submit {
   color: #f03;
@@ -160,4 +187,5 @@ section.product {
 
 @media (min-width: 1366px) {
   #ModuleSearch {
-    width: 500px; } }
+    width: 500px;
+    height: 35px; } }
