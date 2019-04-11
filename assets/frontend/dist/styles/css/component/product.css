@@ -136,9 +136,15 @@ section.product {
             @media (min-width: 1366px) {
               section.product .wrap .equalHWrap .equalHW .box-all .property .name_product {
                 margin-top: 5px; } }
+            @media (max-width: 414px) {
+              section.product .wrap .equalHWrap .equalHW .box-all .property .name_product {
+                padding-left: 5px; } }
           section.product .wrap .equalHWrap .equalHW .box-all .property .product_type {
             height: 30px;
             overflow: hidden; }
+            @media (max-width: 414px) {
+              section.product .wrap .equalHWrap .equalHW .box-all .property .product_type {
+                padding-left: 5px; } }
           section.product .wrap .equalHWrap .equalHW .box-all .property .detail {
             height: 40px;
             overflow: hidden; }
@@ -147,7 +153,8 @@ section.product {
                 display: none; } }
           @media (max-width: 414px) {
             section.product .wrap .equalHWrap .equalHW .box-all .property .booking {
-              font-size: 14px; } }
+              font-size: 14px;
+              padding-left: 5px; } }
           section.product .wrap .equalHWrap .equalHW .box-all .content a {
             width: 100%; }
 

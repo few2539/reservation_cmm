@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="panel panel-default">
             <div class="panel-heading">รายการ สินค้า</div>
             <div class="panel-body">
-              TEST : <?=$product->product_name?>
+              Success : <?=$product->product_name?>
             </div>
           </div>
           <!-- /.panel -->
