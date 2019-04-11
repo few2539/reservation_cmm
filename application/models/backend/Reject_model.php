@@ -12,7 +12,7 @@
 				'product_status' => 'available',
 				'product_amount' => '1',
 				'product_booking' => '',
-				'product_sendemail' => '',
+				'product_sendmail' => '',
 				'product_usernameid' => '',
 			);
 
