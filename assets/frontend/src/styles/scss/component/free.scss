@@ -114,3 +114,11 @@ section {
 		}
 	}
 }
+
+
+.detail-page-fix{
+	@media (min-width:$md-laptop) {
+		flex-basis: 30% !important;
+		padding-top: 30% !important;
+	}
+}

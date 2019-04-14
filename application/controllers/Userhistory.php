@@ -16,7 +16,7 @@ class userhistory extends CI_Controller {
 	public function index()
 	{
 		
-        $data['title_page'] = 'Title Page : Userhistory';
+        $data['title_page'] = 'CMM:Reservation';
 		$this->load->view('frontend/Userhistory/index',$data);
 
 		$student_id = $this->login_model->checklogin();

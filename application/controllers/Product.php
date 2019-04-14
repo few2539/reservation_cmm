@@ -15,7 +15,7 @@ class product extends CI_Controller {
 	{
 		$this->check_model->checksessiononline();
 		
-		$data['title_page'] = 'Title Page : product';
+		$data['title_page'] = 'product';
 		
 		$data['categorys'] = $this->frontend_model->getallcategorys();
 		$data['products'] = $this->frontend_model->getallproducts();
@@ -36,7 +36,7 @@ class product extends CI_Controller {
 	{
 		$this->check_model->checksessionadminonline();
 		
-		$data['title_page'] = 'Title Page : admin product';
+		$data['title_page'] = 'admin product';
 
 		$data['products'] = $this->product_model->getallproducts();
 		
@@ -47,7 +47,7 @@ class product extends CI_Controller {
 	{
 		$this->check_model->checksessionadminonline();
 
-		$data['title_page'] = 'Title Page : admin add product';
+		$data['title_page'] = 'admin add product';
 
 		$data['action'] = "insert";
 		$data['categorys'] = $this->frontend_model->getallcategorys();
@@ -74,7 +74,7 @@ class product extends CI_Controller {
 		
 		$product_id = $this->uri->segment(3);
 
-		$data['title_page'] = 'Title Page : admin edit product';
+		$data['title_page'] = 'admin edit product';
 
 		$data['action'] = "update";
 		$data['product'] = $this->product_model->getproductedit($product_id);

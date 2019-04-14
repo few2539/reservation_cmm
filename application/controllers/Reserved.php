@@ -15,7 +15,7 @@ class reserved extends CI_Controller {
     public function index()
 	{
 		
-        $data['title_page'] = 'Title Page : reserved';
+        $data['title_page'] = 'reserved';
 		$this->load->view('frontend/reserved/index',$data);
 	}
 

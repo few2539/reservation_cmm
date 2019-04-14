@@ -76,3 +76,10 @@ section.product-free .insert-info {
     text-transform: capitalize; }
   section.product-free .insert-info form .user-info .container-teacher .form-group {
     margin-top: 15px; }
+
+@media (min-width: 1366px) {
+  .detail-page-fix {
+    -webkit-flex-basis: 30% !important;
+        -ms-flex-preferred-size: 30% !important;
+            flex-basis: 30% !important;
+    padding-top: 30% !important; } }

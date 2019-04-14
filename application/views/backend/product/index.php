@@ -6,7 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <head>
 	<meta charset="utf-8">
-	<title>สินค้า (กล้อง เลนส์)</title>
+  <title>สินค้า (กล้อง เลนส์)</title>
+  <link rel="shortcut icon" type="image/png" href="<?=base_url();?>assets/frontend/dist/styles/image/fav.png">
   <?php $this->load->view('backend/template/headtag');?>
   
   <style>

@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<title>admin only</title>
+	<link rel="shortcut icon" type="image/png" href="<?=base_url();?>assets/frontend/dist/styles/image/fav.png">
 	<?php $this->load->view('frontend/template/headtag_frontend');?>
 </head>
 

@@ -20,7 +20,7 @@ class waiting extends CI_Controller {
 	{
 		$this->check_model->checksessionadminonline();
 		
-		$data['title_page'] = 'Title Page :waiting item';
+		$data['title_page'] = 'waiting item';
 
 		$data['products'] = $this->product_model->getallwaitingproducts();
 		
