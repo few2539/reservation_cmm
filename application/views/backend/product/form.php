@@ -98,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 							<div class="form-group has-feedback">
 								<label>Intro_item</label>
-								<input name="product_name" class="form-control" placeholder="Intro_item" required data-error="โปรดกรอกช่องนี้"
+								<input name="product_intro" class="form-control" placeholder="Intro_item" required data-error="โปรดกรอกช่องนี้"
 								 value="">
 								<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 								<div class="help-block with-errors"></div>
