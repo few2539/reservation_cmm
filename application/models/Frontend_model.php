@@ -62,8 +62,8 @@
 			}
 
 			$data = array(
-				'reservation_tackback_name' => $this->input->post('reservation_tackback_name'),
-				'reservation_student_id' => $this->input->post('reservation_student_id'),
+				'reservation_tackback_name' => $this->session->userdata('cn'),
+				'reservation_student_id' => $this->session->userdata('username'),
 				'reservation_date' => $reservation_date,
 				'reservation_return_date' => $reservation_return_date,
 				'reservation_product_id' => $this->input->post('product_id'),
