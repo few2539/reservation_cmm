@@ -13,7 +13,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+<link rel="shortcut icon" type="image/png" href="<?=base_url();?>assets/frontend/dist/styles/image/fav.png">
 	<?php $this->load->view('frontend/template/headtag_frontend');?>
 
 

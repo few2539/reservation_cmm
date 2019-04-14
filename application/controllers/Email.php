@@ -13,7 +13,7 @@ function index(){
         'protocol' => 'smtp',
         'smtp_host' => 'ssl://smtp.googlemail.com',
         'smtp_port' => 465,
-        'smtp_user' => 'maxbaeiei@gmail.com',
+        'smtp_user' => '@gmail.comaxbaeieim',
         'smtp_pass' => 'notpasstestpj',
         'mailtype'  => 'html', 
         'charset'   => 'iso-8859-1'
@@ -26,7 +26,7 @@ function index(){
     $this->email->set_newline("\r\n");
     $this->email->from('maxbaeiei@gmail.com', 'Admin');
     $this->email->to($sendtoo);
-    $this->email->subject('testoption');
+    $this->email->subject('CMM Reservation');
     $this->email->message($message);
     
     // Set to, from, message, etc.

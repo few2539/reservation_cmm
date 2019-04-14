@@ -15,7 +15,7 @@ class approve extends CI_Controller {
 
     public function accept($product_id)
 	{
-		$data['title_page'] = 'Title Page : Approve';
+		$data['title_page'] = 'Approve';
 
 		$this->approve_model->approveupdate($product_id);
 		$this->approve_model->emailsendback($product_id);

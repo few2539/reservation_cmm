@@ -20,7 +20,7 @@ class repatriate extends CI_Controller {
 	{
 		$this->check_model->checksessionadminonline();
 		
-		$data['title_page'] = 'Title Page : Repatriate item';
+		$data['title_page'] = 'Repatriate item';
 
 		$data['products'] = $this->product_model->getallapproveproducts();
 		

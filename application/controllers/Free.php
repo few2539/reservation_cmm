@@ -15,7 +15,7 @@ class free extends CI_Controller {
 
     public function index($product_id)
 	{
-		$data['title_page'] = 'Title Page : Free';
+		$data['title_page'] = 'CMM:Reservation';
 
 		if($this->frontend_model->checkstockproduct($product_id) == TRUE) {
 			$data['product'] = $this->frontend_model->getproduct($product_id);
@@ -31,7 +31,7 @@ class free extends CI_Controller {
 
 	public function detail()
 	{
-		$data['title_page'] = 'Title Page : Free';
+		$data['title_page'] = 'CMM:Reservation';
 		
 		$reservation_id = $this->frontend_model->borrowdata();
 		$this->approve_model->borrowdata2();

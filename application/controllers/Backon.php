@@ -20,7 +20,7 @@ class backon extends CI_Controller {
 	{
 		$this->check_model->checksessionadminonline();
 		
-		$data['title_page'] = 'Title Page :Back on item';
+		$data['title_page'] = 'Back on item';
 
 		$data['reservations'] = $this->frontend_model->getallreservation();
 		

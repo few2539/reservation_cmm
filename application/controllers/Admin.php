@@ -15,7 +15,7 @@ class admin extends CI_Controller {
 
     public function index()
 	{
-        $data['title_page'] = 'Title Page : admin';
+        $data['title_page'] = 'admin';
 		if(!empty($this->input->post('username') && !empty($this->input->post('password')))){
 			$this->login_model->checklogin();
 		}else{
@@ -39,7 +39,7 @@ class admin extends CI_Controller {
 	{
 		$this->check_model->checksessionadminonline();
 
-		$data['title_page'] = 'Title Page : admin profile';
+		$data['title_page'] = 'admin profile';
 		$data['users'] = $this->frontend_model->getalluser();
 		
 		$this->load->view('backend/admin/add_email',$data);
@@ -49,7 +49,7 @@ class admin extends CI_Controller {
 	{
 		$this->check_model->checksessionadminonline();
 		
-		$data['title_page'] = 'Title Page :waiting item';
+		$data['title_page'] = 'waiting item';
 
 		$data['products'] = $this->product_model->getallproducts();
 		
@@ -62,7 +62,7 @@ class admin extends CI_Controller {
 	{
 		$this->check_model->checksessionadminonline();
 
-        $data['title_page'] = 'Title Page : profile_edit';
+        $data['title_page'] = 'profile_edit';
 		$this->load->view('backend/admin/profile_edit',$data);
 	}
 

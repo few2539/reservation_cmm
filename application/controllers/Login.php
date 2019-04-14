@@ -12,7 +12,7 @@ class login extends CI_Controller {
 	
 	public function index()
 	{
-		$data['title_page'] = 'Title Page : login';
+		$data['title_page'] = 'CMM:Reservation';
 
 		if(($this->input->post('studentid') != null) && ($this->input->post('password') != null)) {
 			//$data['result'] = $this->login_model->checklogin();

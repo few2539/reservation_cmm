@@ -168,7 +168,7 @@
 			$this->email->set_newline("\r\n");
 			$this->email->from('maxbaeiei@gmail.com', 'Admin');
 			$this->email->to($sendtoo);
-			$this->email->subject('testoptionselect');
+			$this->email->subject('CMM Reservation');
 			$this->email->message($message);
 			
 			// Set to, from, message, etc.

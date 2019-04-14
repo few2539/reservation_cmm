@@ -14,7 +14,7 @@ class reject extends CI_Controller {
 
     public function denied($product_id)
 	{
-		$data['title_page'] = 'Title Page : Reject';
+		$data['title_page'] = 'Reject';
 
 		$this->reject_model->rejectupdate($product_id);
 		$this->reject_model->emailsendback2($product_id);

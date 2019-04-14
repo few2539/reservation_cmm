@@ -12,7 +12,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<?=$title_page;?>
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link rel="shortcut icon" type="image/png" href="<?=base_url();?>assets/frontend/dist/styles/image/fav.png">
 	<?php $this->load->view('frontend/template/headtag_frontend');?>
 </head>
 
@@ -32,32 +32,32 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="row-product">
 				<div class="item" data-groups="<?=$reservation->product_name?>">
 					<div class="box">
-						<div class="thumb">
+						<div class="thumb detail-page-fix">
 							<img src="<?=base_url();?>assets/frontend/img/product_thumbnail/<?=$reservation	->product_thumbnail?>" alt=""
 							 data-title="<?=$reservation->category_name;?>">
 						</div>
 						<div class="text-detail">
 							<div class="property">
 								<p class="name_product">
-									<?=$reservation->reservation_tackback_name;?>
+							<b>Name: </b><?=$reservation->reservation_tackback_name;?>
 								</p>
 								<p class="product_type">
-									<?=$reservation->reservation_student_id;?>
+							<b>Student's ID: </b><?=$reservation->reservation_student_id;?>
 								</p>
 								<p class="detail">
-									<?=$reservation->reservation_subject;?>
+							<b>Class: </b><?=$reservation->reservation_subject;?>
 									
 								</p>
 								<p class="detail">
-									<?=$reservation->reservation_usefor;?>
+							<b>For: </b><?=$reservation->reservation_usefor;?>
 									
 								</p>
 								<p class="detail">
-									<?=$reservation->reservation_date;?>
+							<b>Loan date: </b><?=$reservation->reservation_date;?>
 									
 								</p>
 								<p class="detail">
-									<?=$reservation->reservation_return_date;?>
+							<b>Returned date: </b><?=$reservation->reservation_return_date;?>
 									
 								</p>
 

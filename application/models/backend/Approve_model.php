@@ -72,7 +72,7 @@
 			$this->email->set_newline("\r\n");
 			$this->email->from('maxbaeiei@gmail.com', 'Admin');
 			$this->email->to($sendtoo2);
-			$this->email->subject('sendbacktest');
+			$this->email->subject('Approve CMM Reservation');
 			$this->email->message($message);
 			
 			// Set to, from, message, etc.

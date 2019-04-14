@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
   <meta charset="utf-8">
   <title>สินค้า (กล้อง เลนส์)</title>
+  <link rel="shortcut icon" type="image/png" href="<?=base_url();?>assets/frontend/dist/styles/image/fav.png">
   <?php $this->load->view('backend/template/headtag');?>
 </head>
 <body>
@@ -40,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="panel panel-default">
             <div class="panel-heading">รายการ สินค้า</div>
             <div class="panel-body">
-              TEST : <?=$product->product_name?>
+              Success : <?=$product->product_name?>
             </div>
           </div>
           <!-- /.panel -->
