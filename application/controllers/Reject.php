@@ -15,9 +15,10 @@ class reject extends CI_Controller {
     public function denied($product_id)
 	{
 		$data['title_page'] = 'Reject';
-
-		$this->reject_model->rejectupdate($product_id);
+		
 		$this->reject_model->emailsendback2($product_id);
+		$this->reject_model->rejectupdate($product_id);
+	
 		echo " Requirement is denied already. ";echo "<br>";
 		echo " You have to deny requirement. ";echo "<br>";
 		echo " Thank you so much for using our reservation system. ";echo "<br>";
