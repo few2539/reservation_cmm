@@ -62,7 +62,13 @@
 			$sendtoo2 = $reservation->product_sendmail;
 			
 
-    		$message = '<h2> Reservation Verification </h2>';
+			$message = '<h2> Reservation Verification </h2>';
+			$message .= '<p>ชื่อ : '.$reservation->product_booking.'</p>';
+			$message .= '<p>รหัสนักศึกษา : '.$reservation->product_usernameid.'</p>';
+			$message .= '<p>ชื่ออุปกรณ์ : '.$reservation->product_name.'</p>';
+			$message .= '<p>หมวดหมู่ : '.$reservation->category_name.'</p>';
+			$message .= '<p>วันที่ยืม : '.$reservation->product_reservation.'</p>';
+			$message .= '<p>วันที่คืน : '.$reservation->product_return_date.'</p>';
 			$message .= '<p>ได้รับการอนุมัติแล้ว</p>';
 			
 
