@@ -44,7 +44,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								<b>Type :</b>		<?=$product->category_code;?>
 								</p>
 								<p class="detail">
-								<b>Supplies Numbers :</b>	<?=$product->product_detail;?>
+								<b>Detail :</b>	<?=$product->product_detail;?>
 								</p>
 
 							</div>
@@ -67,7 +67,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="user-info">
 
 
-				<div class="box-user-info">
+				<!-- <div class="box-user-info">
 					<div class="input-group name">
 						<span class="input-group-addon" id="basic-addon1"><b>Name</b></span>
 						<input type="text" class="form-control freepage " name="reservation_tackback_name" placeholder="Username" aria-describedby="basic-addon1" required>
@@ -80,7 +80,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<span class="input-group-addon" id="basic-addon1"><b>pw-student</b></span>
 						<input type="number" class="form-control freepage" onkeydown="javascript: return event.keyCode == 69 ? false : true"  name="reservation_student_id" placeholder="pw-student" aria-describedby="basic-addon1" required>
 					</div>
-				</div>
+				</div> -->
 				<div class="box-user-info">
 					<div class="input-group degree">
 						<span class="input-group-addon" id="basic-addon1"><b>your-degree</b></span>

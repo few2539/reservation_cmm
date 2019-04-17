@@ -215,27 +215,61 @@ $product = [
   				  <input type="text" placeholder="Search..." id="ModuleSearch"/><span> </span>
   				</div>
 			</div>
-		<div class="category">
+		<!-- <div class="category">
 			<button  type="button" class="btn btn-warning show-category">Category</button>
-		</div>
+		</div> -->
 
 
  			<!-- <input type="text" id="ModuleSearch" placeholder="Search" /> -->
 
-			 
+		<div class="wrap-newmenu">
+		
+			
+		<div class="xs-menu-cont">
+			<a id="menutoggle"><i class="fa fa-align-justify"></i> </a>
+				<nav class="xs-menu displaynone">
+					<ul>
+						<li class="active">
+							<a href="#"  class='all'>All</a>
+						</li>
+						<?php foreach($categorys as $category): ?>
+						<li>
+							<a href="#"  class='btn-<?=$category['category_code']?>'><?=$category['category_name_en']?></a>
+						</li>
+						<?php endforeach; ?>
+					
+					</ul>
+				</nav>
+			</div>
+			<nav class="menu cmm-respon-menu">
+				<ul>
+					<li class="active">
+						<a href="#" id='all'>All</a>
+					</li>
+					<?php foreach($categorys as $category): ?>
+					<li>
+						<a href="#" id='btn-<?=$category['category_code']?>'>
+				<?=$category['category_name_en']?></a>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+			</nav>
+		</div>
+
+		</div>	 
 
 
 
 
-		<div class="button-product cate">
-			<button type="button" id='all' class="btn btn-warning silbling" style="border-color: transparent;">All</button>
+		<!-- <div class="button-product cate">
+			<button type="button" id='all' class="btn btn-warning silbling" style="border-color: transparent; border-radius: 0;">All</button>
 			<?php foreach($categorys as $category): ?>
 			<button id='btn-<?=$category['category_code']?>' class="btn btn-primary silbling">
 				<?=$category['category_name']?> /
 				<?=$category['category_name_en']?>
 			</button>
 			<?php endforeach; ?>
-		</div>
+		</div> -->
 
 
 		<div class="wrap ">
@@ -269,7 +303,7 @@ $product = [
 								<a href="<?=site_url('free/index');?>/<?=$product["product_id"];?> "type="button" style="-webkit-appearance: inherit;" class="btn btn-<?php if($product["product_status"] == 'approved') { echo "danger"; }elseif ($product["product_status"] == 'waiting'){ echo "warning"; } elseif ($product["product_status"] == 'available'){ echo "success"; }?> btn-block btn-status"
 									data-prodcut="
 									<?=$product['product_id']?>">
-									<?php if($product["product_status"] == "approved") { echo "Back On "; echo $product['product_return_date']; }elseif($product["product_status"] == 'available') { echo "Available"; } elseif($product["product_status"] == 'waiting') {echo "reserved";}?>
+									<?php if($product["product_status"] == "approved") { echo "Back On "; echo $product['product_return_date']; }elseif($product["product_status"] == 'available') { echo "Available"; } elseif($product["product_status"] == 'waiting') {echo "Reserved";}?>
 </a>
 							</div>
 							</div>
@@ -406,6 +440,43 @@ $('.silbling').on('click', function(){
 		shuffleInstance.filter("other");
 	});
 
+
+	$(".all").on("click", function () {
+		shuffleInstance.filter();
+	});
+	$(".btn-camera").on("click", function () {
+		shuffleInstance.filter("camera");
+		
+
+	});
+	$(".btn-mic").on("click", function () {
+		shuffleInstance.filter("mic");
+	});
+	$(".btn-lens").on("click", function () {
+		shuffleInstance.filter("lens");
+	});
+	$(".btn-flash").on("click", function () {
+		shuffleInstance.filter("flash");
+	});
+	$(".btn-tripod").on("click", function () {
+		shuffleInstance.filter("tripod");
+	});
+	$(".btn-light_set").on("click", function () {
+		shuffleInstance.filter("light_set");
+	});
+
+	$(".btn-accessary").on("click", function () {
+		shuffleInstance.filter("accessary");
+	});
+	$(".btn-computer").on("click", function () {
+		shuffleInstance.filter("computer");
+	});
+
+	$(".btn-other").on("click", function () {
+		shuffleInstance.filter("other");
+	});
+
+
 	var Demo = function (element) {
 		var shuffleInstance = new Shuffle(element, {
 			itemSelector: '.picture-item',
@@ -443,9 +514,34 @@ $('.show-category').click(function() {
 });
 </script>
 
-<!-- <script>
-$('.cate').click(function() {
-    $('.cate').slideToggle('slow');
-}); -->
-</script>
+
+<script>
+ 
+ $(document).ready(function() {
+				//responsive menu toggle
+				$("#menutoggle").click(function() {
+					$('.xs-menu').toggleClass('displaynone');
+
+					});
+				//add active class on menu
+				$('ul li').click(function(e) {
+					e.preventDefault();
+					$('li').removeClass('active');
+					$(this).addClass('active');
+
+				});
+			//drop down menu	
+					$(".drop-down").hover(function() {
+						$('.mega-menu').addClass('display-on');
+					});
+					$(".drop-down").mouseleave(function() {
+						$('.mega-menu').removeClass('display-on');
+					});
+					$(".drop-down").click(function() {
+						$('.mega-menu').slideup('slow');
+					});
+			
+			});
+
+	 </script>
 </html>
