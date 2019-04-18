@@ -553,1252 +553,1252 @@ section.login {
 
 @-webkit-keyframes shape-1 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(296deg);
-            transform: translate3d(0, 0, 0) rotate(296deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(124deg);
+            transform: translate3d(0, 0, 0) rotate(124deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(656deg);
-            transform: translate3d(0, 0, 0) rotate(656deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(484deg);
+            transform: translate3d(0, 0, 0) rotate(484deg); } }
 
 @keyframes shape-1 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(296deg);
-            transform: translate3d(0, 0, 0) rotate(296deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(124deg);
+            transform: translate3d(0, 0, 0) rotate(124deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(656deg);
-            transform: translate3d(0, 0, 0) rotate(656deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(484deg);
+            transform: translate3d(0, 0, 0) rotate(484deg); } }
 
 .shape-container--1 {
-  -webkit-animation: shape-1 47s linear infinite;
-          animation: shape-1 47s linear infinite; }
+  -webkit-animation: shape-1 44s linear infinite;
+          animation: shape-1 44s linear infinite; }
   .shape-container--1 .random-shape:after {
-    margin: 2rem;
-    color: #FFF8DC;
-    font-size: 0.8rem;
-    content: ""; }
+    margin: 4rem;
+    color: #C2B7FE;
+    font-size: 1.6rem;
+    content: ""; }
 
 @-webkit-keyframes shape-2 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(311deg);
-            transform: translate3d(0, 0, 0) rotate(311deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(258deg);
+            transform: translate3d(0, 0, 0) rotate(258deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(671deg);
-            transform: translate3d(0, 0, 0) rotate(671deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(618deg);
+            transform: translate3d(0, 0, 0) rotate(618deg); } }
 
 @keyframes shape-2 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(311deg);
-            transform: translate3d(0, 0, 0) rotate(311deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(258deg);
+            transform: translate3d(0, 0, 0) rotate(258deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(671deg);
-            transform: translate3d(0, 0, 0) rotate(671deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(618deg);
+            transform: translate3d(0, 0, 0) rotate(618deg); } }
 
 .shape-container--2 {
-  -webkit-animation: shape-2 41s linear infinite;
-          animation: shape-2 41s linear infinite; }
+  -webkit-animation: shape-2 42s linear infinite;
+          animation: shape-2 42s linear infinite; }
   .shape-container--2 .random-shape:after {
     margin: 1rem;
-    color: #FFF8DC;
+    color: #95A9FF;
     font-size: 0.4rem;
-    content: ""; }
+    content: ""; }
 
 @-webkit-keyframes shape-3 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(162deg);
-            transform: translate3d(0, 0, 0) rotate(162deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(157deg);
+            transform: translate3d(0, 0, 0) rotate(157deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(522deg);
-            transform: translate3d(0, 0, 0) rotate(522deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(517deg);
+            transform: translate3d(0, 0, 0) rotate(517deg); } }
 
 @keyframes shape-3 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(162deg);
-            transform: translate3d(0, 0, 0) rotate(162deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(157deg);
+            transform: translate3d(0, 0, 0) rotate(157deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(522deg);
-            transform: translate3d(0, 0, 0) rotate(522deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(517deg);
+            transform: translate3d(0, 0, 0) rotate(517deg); } }
 
 .shape-container--3 {
-  -webkit-animation: shape-3 43s linear infinite;
-          animation: shape-3 43s linear infinite; }
+  -webkit-animation: shape-3 50s linear infinite;
+          animation: shape-3 50s linear infinite; }
   .shape-container--3 .random-shape:after {
-    margin: 3rem;
+    margin: 2rem;
     color: #DB7093;
-    font-size: 1.2rem;
-    content: ""; }
+    font-size: 0.8rem;
+    content: ""; }
 
 @-webkit-keyframes shape-4 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(119deg);
-            transform: translate3d(0, 0, 0) rotate(119deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(309deg);
+            transform: translate3d(0, 0, 0) rotate(309deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(479deg);
-            transform: translate3d(0, 0, 0) rotate(479deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(669deg);
+            transform: translate3d(0, 0, 0) rotate(669deg); } }
 
 @keyframes shape-4 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(119deg);
-            transform: translate3d(0, 0, 0) rotate(119deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(309deg);
+            transform: translate3d(0, 0, 0) rotate(309deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(479deg);
-            transform: translate3d(0, 0, 0) rotate(479deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(669deg);
+            transform: translate3d(0, 0, 0) rotate(669deg); } }
 
 .shape-container--4 {
-  -webkit-animation: shape-4 50s linear infinite;
-          animation: shape-4 50s linear infinite; }
+  -webkit-animation: shape-4 45s linear infinite;
+          animation: shape-4 45s linear infinite; }
   .shape-container--4 .random-shape:after {
-    margin: 9rem;
+    margin: 10rem;
     color: #FFF8DC;
-    font-size: 3.6rem;
-    content: ""; }
+    font-size: 4rem;
+    content: ""; }
 
 @-webkit-keyframes shape-5 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(172deg);
-            transform: translate3d(0, 0, 0) rotate(172deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(357deg);
+            transform: translate3d(0, 0, 0) rotate(357deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(532deg);
-            transform: translate3d(0, 0, 0) rotate(532deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(717deg);
+            transform: translate3d(0, 0, 0) rotate(717deg); } }
 
 @keyframes shape-5 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(172deg);
-            transform: translate3d(0, 0, 0) rotate(172deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(357deg);
+            transform: translate3d(0, 0, 0) rotate(357deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(532deg);
-            transform: translate3d(0, 0, 0) rotate(532deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(717deg);
+            transform: translate3d(0, 0, 0) rotate(717deg); } }
 
 .shape-container--5 {
   -webkit-animation: shape-5 43s linear infinite;
           animation: shape-5 43s linear infinite; }
   .shape-container--5 .random-shape:after {
-    margin: 8rem;
-    color: #FFD700;
-    font-size: 3.2rem;
-    content: ""; }
+    margin: 10rem;
+    color: #DB7093;
+    font-size: 4rem;
+    content: ""; }
 
 @-webkit-keyframes shape-6 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(89deg);
-            transform: translate3d(0, 0, 0) rotate(89deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(126deg);
+            transform: translate3d(0, 0, 0) rotate(126deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(449deg);
-            transform: translate3d(0, 0, 0) rotate(449deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(486deg);
+            transform: translate3d(0, 0, 0) rotate(486deg); } }
 
 @keyframes shape-6 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(89deg);
-            transform: translate3d(0, 0, 0) rotate(89deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(126deg);
+            transform: translate3d(0, 0, 0) rotate(126deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(449deg);
-            transform: translate3d(0, 0, 0) rotate(449deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(486deg);
+            transform: translate3d(0, 0, 0) rotate(486deg); } }
 
 .shape-container--6 {
-  -webkit-animation: shape-6 48s linear infinite;
-          animation: shape-6 48s linear infinite; }
+  -webkit-animation: shape-6 43s linear infinite;
+          animation: shape-6 43s linear infinite; }
   .shape-container--6 .random-shape:after {
-    margin: 5rem;
-    color: #DB7093;
-    font-size: 2rem;
+    margin: 6rem;
+    color: #95A9FF;
+    font-size: 2.4rem;
     content: ""; }
 
 @-webkit-keyframes shape-7 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(201deg);
-            transform: translate3d(0, 0, 0) rotate(201deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(327deg);
+            transform: translate3d(0, 0, 0) rotate(327deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(561deg);
-            transform: translate3d(0, 0, 0) rotate(561deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(687deg);
+            transform: translate3d(0, 0, 0) rotate(687deg); } }
 
 @keyframes shape-7 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(201deg);
-            transform: translate3d(0, 0, 0) rotate(201deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(327deg);
+            transform: translate3d(0, 0, 0) rotate(327deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(561deg);
-            transform: translate3d(0, 0, 0) rotate(561deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(687deg);
+            transform: translate3d(0, 0, 0) rotate(687deg); } }
 
 .shape-container--7 {
-  -webkit-animation: shape-7 46s linear infinite;
-          animation: shape-7 46s linear infinite; }
+  -webkit-animation: shape-7 47s linear infinite;
+          animation: shape-7 47s linear infinite; }
   .shape-container--7 .random-shape:after {
-    margin: 8rem;
-    color: #C2B7FE;
-    font-size: 3.2rem;
-    content: ""; }
+    margin: 4rem;
+    color: #95A9FF;
+    font-size: 1.6rem;
+    content: ""; }
 
 @-webkit-keyframes shape-8 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(205deg);
-            transform: translate3d(0, 0, 0) rotate(205deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(213deg);
+            transform: translate3d(0, 0, 0) rotate(213deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(565deg);
-            transform: translate3d(0, 0, 0) rotate(565deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(573deg);
+            transform: translate3d(0, 0, 0) rotate(573deg); } }
 
 @keyframes shape-8 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(205deg);
-            transform: translate3d(0, 0, 0) rotate(205deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(213deg);
+            transform: translate3d(0, 0, 0) rotate(213deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(565deg);
-            transform: translate3d(0, 0, 0) rotate(565deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(573deg);
+            transform: translate3d(0, 0, 0) rotate(573deg); } }
 
 .shape-container--8 {
-  -webkit-animation: shape-8 41s linear infinite;
-          animation: shape-8 41s linear infinite; }
+  -webkit-animation: shape-8 47s linear infinite;
+          animation: shape-8 47s linear infinite; }
   .shape-container--8 .random-shape:after {
-    margin: 7rem;
-    color: #DB7093;
-    font-size: 2.8rem;
-    content: ""; }
+    margin: 6rem;
+    color: #FFF8DC;
+    font-size: 2.4rem;
+    content: ""; }
 
 @-webkit-keyframes shape-9 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(200deg);
-            transform: translate3d(0, 0, 0) rotate(200deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(17deg);
+            transform: translate3d(0, 0, 0) rotate(17deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(560deg);
-            transform: translate3d(0, 0, 0) rotate(560deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(377deg);
+            transform: translate3d(0, 0, 0) rotate(377deg); } }
 
 @keyframes shape-9 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(200deg);
-            transform: translate3d(0, 0, 0) rotate(200deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(17deg);
+            transform: translate3d(0, 0, 0) rotate(17deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(560deg);
-            transform: translate3d(0, 0, 0) rotate(560deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(377deg);
+            transform: translate3d(0, 0, 0) rotate(377deg); } }
 
 .shape-container--9 {
-  -webkit-animation: shape-9 46s linear infinite;
-          animation: shape-9 46s linear infinite; }
+  -webkit-animation: shape-9 47s linear infinite;
+          animation: shape-9 47s linear infinite; }
   .shape-container--9 .random-shape:after {
-    margin: 8rem;
-    color: #DB7093;
-    font-size: 3.2rem;
+    margin: 7rem;
+    color: #95A9FF;
+    font-size: 2.8rem;
     content: ""; }
 
 @-webkit-keyframes shape-10 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(227deg);
-            transform: translate3d(0, 0, 0) rotate(227deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(262deg);
+            transform: translate3d(0, 0, 0) rotate(262deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(587deg);
-            transform: translate3d(0, 0, 0) rotate(587deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(622deg);
+            transform: translate3d(0, 0, 0) rotate(622deg); } }
 
 @keyframes shape-10 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(227deg);
-            transform: translate3d(0, 0, 0) rotate(227deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(262deg);
+            transform: translate3d(0, 0, 0) rotate(262deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(587deg);
-            transform: translate3d(0, 0, 0) rotate(587deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(622deg);
+            transform: translate3d(0, 0, 0) rotate(622deg); } }
 
 .shape-container--10 {
-  -webkit-animation: shape-10 41s linear infinite;
-          animation: shape-10 41s linear infinite; }
+  -webkit-animation: shape-10 48s linear infinite;
+          animation: shape-10 48s linear infinite; }
   .shape-container--10 .random-shape:after {
-    margin: 2rem;
-    color: #C2B7FE;
-    font-size: 0.8rem;
-    content: ""; }
+    margin: 3rem;
+    color: #95A9FF;
+    font-size: 1.2rem;
+    content: ""; }
 
 @-webkit-keyframes shape-11 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
-            transform: translate3d(0, 0, 0) rotate(360deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(161deg);
+            transform: translate3d(0, 0, 0) rotate(161deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(720deg);
-            transform: translate3d(0, 0, 0) rotate(720deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(521deg);
+            transform: translate3d(0, 0, 0) rotate(521deg); } }
 
 @keyframes shape-11 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
-            transform: translate3d(0, 0, 0) rotate(360deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(161deg);
+            transform: translate3d(0, 0, 0) rotate(161deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(720deg);
-            transform: translate3d(0, 0, 0) rotate(720deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(521deg);
+            transform: translate3d(0, 0, 0) rotate(521deg); } }
 
 .shape-container--11 {
-  -webkit-animation: shape-11 43s linear infinite;
-          animation: shape-11 43s linear infinite; }
+  -webkit-animation: shape-11 44s linear infinite;
+          animation: shape-11 44s linear infinite; }
   .shape-container--11 .random-shape:after {
-    margin: 7rem;
-    color: #95A9FF;
-    font-size: 2.8rem;
-    content: ""; }
+    margin: 6rem;
+    color: #DB7093;
+    font-size: 2.4rem;
+    content: ""; }
 
 @-webkit-keyframes shape-12 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(79deg);
-            transform: translate3d(0, 0, 0) rotate(79deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(241deg);
+            transform: translate3d(0, 0, 0) rotate(241deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(439deg);
-            transform: translate3d(0, 0, 0) rotate(439deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(601deg);
+            transform: translate3d(0, 0, 0) rotate(601deg); } }
 
 @keyframes shape-12 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(79deg);
-            transform: translate3d(0, 0, 0) rotate(79deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(241deg);
+            transform: translate3d(0, 0, 0) rotate(241deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(439deg);
-            transform: translate3d(0, 0, 0) rotate(439deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(601deg);
+            transform: translate3d(0, 0, 0) rotate(601deg); } }
 
 .shape-container--12 {
-  -webkit-animation: shape-12 41s linear infinite;
-          animation: shape-12 41s linear infinite; }
+  -webkit-animation: shape-12 42s linear infinite;
+          animation: shape-12 42s linear infinite; }
   .shape-container--12 .random-shape:after {
-    margin: 5rem;
-    color: #DB7093;
-    font-size: 2rem;
-    content: ""; }
+    margin: 7rem;
+    color: #FFD700;
+    font-size: 2.8rem;
+    content: ""; }
 
 @-webkit-keyframes shape-13 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(234deg);
-            transform: translate3d(0, 0, 0) rotate(234deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(94deg);
+            transform: translate3d(0, 0, 0) rotate(94deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(594deg);
-            transform: translate3d(0, 0, 0) rotate(594deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(454deg);
+            transform: translate3d(0, 0, 0) rotate(454deg); } }
 
 @keyframes shape-13 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(234deg);
-            transform: translate3d(0, 0, 0) rotate(234deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(94deg);
+            transform: translate3d(0, 0, 0) rotate(94deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(594deg);
-            transform: translate3d(0, 0, 0) rotate(594deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(454deg);
+            transform: translate3d(0, 0, 0) rotate(454deg); } }
 
 .shape-container--13 {
-  -webkit-animation: shape-13 42s linear infinite;
-          animation: shape-13 42s linear infinite; }
+  -webkit-animation: shape-13 47s linear infinite;
+          animation: shape-13 47s linear infinite; }
   .shape-container--13 .random-shape:after {
-    margin: 8rem;
+    margin: 2rem;
     color: #C2B7FE;
-    font-size: 3.2rem;
+    font-size: 0.8rem;
     content: ""; }
 
 @-webkit-keyframes shape-14 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(195deg);
-            transform: translate3d(0, 0, 0) rotate(195deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(337deg);
+            transform: translate3d(0, 0, 0) rotate(337deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(555deg);
-            transform: translate3d(0, 0, 0) rotate(555deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(697deg);
+            transform: translate3d(0, 0, 0) rotate(697deg); } }
 
 @keyframes shape-14 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(195deg);
-            transform: translate3d(0, 0, 0) rotate(195deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(337deg);
+            transform: translate3d(0, 0, 0) rotate(337deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(555deg);
-            transform: translate3d(0, 0, 0) rotate(555deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(697deg);
+            transform: translate3d(0, 0, 0) rotate(697deg); } }
 
 .shape-container--14 {
   -webkit-animation: shape-14 46s linear infinite;
           animation: shape-14 46s linear infinite; }
   .shape-container--14 .random-shape:after {
-    margin: 2rem;
-    color: #FFD700;
-    font-size: 0.8rem;
-    content: ""; }
+    margin: 7rem;
+    color: #FFF8DC;
+    font-size: 2.8rem;
+    content: ""; }
 
 @-webkit-keyframes shape-15 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(11deg);
-            transform: translate3d(0, 0, 0) rotate(11deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(150deg);
+            transform: translate3d(0, 0, 0) rotate(150deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(371deg);
-            transform: translate3d(0, 0, 0) rotate(371deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(510deg);
+            transform: translate3d(0, 0, 0) rotate(510deg); } }
 
 @keyframes shape-15 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(11deg);
-            transform: translate3d(0, 0, 0) rotate(11deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(150deg);
+            transform: translate3d(0, 0, 0) rotate(150deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(371deg);
-            transform: translate3d(0, 0, 0) rotate(371deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(510deg);
+            transform: translate3d(0, 0, 0) rotate(510deg); } }
 
 .shape-container--15 {
   -webkit-animation: shape-15 44s linear infinite;
           animation: shape-15 44s linear infinite; }
   .shape-container--15 .random-shape:after {
-    margin: 1rem;
-    color: #FFF8DC;
-    font-size: 0.4rem;
-    content: ""; }
+    margin: 6rem;
+    color: #C2B7FE;
+    font-size: 2.4rem;
+    content: ""; }
 
 @-webkit-keyframes shape-16 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(18deg);
-            transform: translate3d(0, 0, 0) rotate(18deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(46deg);
+            transform: translate3d(0, 0, 0) rotate(46deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(378deg);
-            transform: translate3d(0, 0, 0) rotate(378deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(406deg);
+            transform: translate3d(0, 0, 0) rotate(406deg); } }
 
 @keyframes shape-16 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(18deg);
-            transform: translate3d(0, 0, 0) rotate(18deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(46deg);
+            transform: translate3d(0, 0, 0) rotate(46deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(378deg);
-            transform: translate3d(0, 0, 0) rotate(378deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(406deg);
+            transform: translate3d(0, 0, 0) rotate(406deg); } }
 
 .shape-container--16 {
-  -webkit-animation: shape-16 46s linear infinite;
-          animation: shape-16 46s linear infinite; }
+  -webkit-animation: shape-16 49s linear infinite;
+          animation: shape-16 49s linear infinite; }
   .shape-container--16 .random-shape:after {
-    margin: 4rem;
-    color: #FFD700;
-    font-size: 1.6rem;
-    content: ""; }
+    margin: 6rem;
+    color: #DB7093;
+    font-size: 2.4rem;
+    content: ""; }
 
 @-webkit-keyframes shape-17 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(27deg);
-            transform: translate3d(0, 0, 0) rotate(27deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(308deg);
+            transform: translate3d(0, 0, 0) rotate(308deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(387deg);
-            transform: translate3d(0, 0, 0) rotate(387deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(668deg);
+            transform: translate3d(0, 0, 0) rotate(668deg); } }
 
 @keyframes shape-17 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(27deg);
-            transform: translate3d(0, 0, 0) rotate(27deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(308deg);
+            transform: translate3d(0, 0, 0) rotate(308deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(387deg);
-            transform: translate3d(0, 0, 0) rotate(387deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(668deg);
+            transform: translate3d(0, 0, 0) rotate(668deg); } }
 
 .shape-container--17 {
-  -webkit-animation: shape-17 49s linear infinite;
-          animation: shape-17 49s linear infinite; }
+  -webkit-animation: shape-17 43s linear infinite;
+          animation: shape-17 43s linear infinite; }
   .shape-container--17 .random-shape:after {
-    margin: 8rem;
-    color: #95A9FF;
-    font-size: 3.2rem;
-    content: ""; }
+    margin: 7rem;
+    color: #FFD700;
+    font-size: 2.8rem;
+    content: ""; }
 
 @-webkit-keyframes shape-18 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(271deg);
-            transform: translate3d(0, 0, 0) rotate(271deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(56deg);
+            transform: translate3d(0, 0, 0) rotate(56deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(631deg);
-            transform: translate3d(0, 0, 0) rotate(631deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(416deg);
+            transform: translate3d(0, 0, 0) rotate(416deg); } }
 
 @keyframes shape-18 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(271deg);
-            transform: translate3d(0, 0, 0) rotate(271deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(56deg);
+            transform: translate3d(0, 0, 0) rotate(56deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(631deg);
-            transform: translate3d(0, 0, 0) rotate(631deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(416deg);
+            transform: translate3d(0, 0, 0) rotate(416deg); } }
 
 .shape-container--18 {
-  -webkit-animation: shape-18 43s linear infinite;
-          animation: shape-18 43s linear infinite; }
+  -webkit-animation: shape-18 41s linear infinite;
+          animation: shape-18 41s linear infinite; }
   .shape-container--18 .random-shape:after {
-    margin: 9rem;
-    color: #FFD700;
-    font-size: 3.6rem;
-    content: ""; }
+    margin: 2rem;
+    color: #C2B7FE;
+    font-size: 0.8rem;
+    content: ""; }
 
 @-webkit-keyframes shape-19 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(46deg);
-            transform: translate3d(0, 0, 0) rotate(46deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(131deg);
+            transform: translate3d(0, 0, 0) rotate(131deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(406deg);
-            transform: translate3d(0, 0, 0) rotate(406deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(491deg);
+            transform: translate3d(0, 0, 0) rotate(491deg); } }
 
 @keyframes shape-19 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(46deg);
-            transform: translate3d(0, 0, 0) rotate(46deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(131deg);
+            transform: translate3d(0, 0, 0) rotate(131deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(406deg);
-            transform: translate3d(0, 0, 0) rotate(406deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(491deg);
+            transform: translate3d(0, 0, 0) rotate(491deg); } }
 
 .shape-container--19 {
-  -webkit-animation: shape-19 48s linear infinite;
-          animation: shape-19 48s linear infinite; }
+  -webkit-animation: shape-19 50s linear infinite;
+          animation: shape-19 50s linear infinite; }
   .shape-container--19 .random-shape:after {
-    margin: 6rem;
-    color: #FFD700;
-    font-size: 2.4rem;
-    content: ""; }
+    margin: 8rem;
+    color: #C2B7FE;
+    font-size: 3.2rem;
+    content: ""; }
 
 @-webkit-keyframes shape-20 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(254deg);
-            transform: translate3d(0, 0, 0) rotate(254deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(164deg);
+            transform: translate3d(0, 0, 0) rotate(164deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(614deg);
-            transform: translate3d(0, 0, 0) rotate(614deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(524deg);
+            transform: translate3d(0, 0, 0) rotate(524deg); } }
 
 @keyframes shape-20 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(254deg);
-            transform: translate3d(0, 0, 0) rotate(254deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(164deg);
+            transform: translate3d(0, 0, 0) rotate(164deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(614deg);
-            transform: translate3d(0, 0, 0) rotate(614deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(524deg);
+            transform: translate3d(0, 0, 0) rotate(524deg); } }
 
 .shape-container--20 {
-  -webkit-animation: shape-20 50s linear infinite;
-          animation: shape-20 50s linear infinite; }
+  -webkit-animation: shape-20 46s linear infinite;
+          animation: shape-20 46s linear infinite; }
   .shape-container--20 .random-shape:after {
-    margin: 4rem;
-    color: #DB7093;
-    font-size: 1.6rem;
+    margin: 7rem;
+    color: #FFD700;
+    font-size: 2.8rem;
     content: ""; }
 
 @-webkit-keyframes shape-21 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(162deg);
-            transform: translate3d(0, 0, 0) rotate(162deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(128deg);
+            transform: translate3d(0, 0, 0) rotate(128deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(522deg);
-            transform: translate3d(0, 0, 0) rotate(522deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(488deg);
+            transform: translate3d(0, 0, 0) rotate(488deg); } }
 
 @keyframes shape-21 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(162deg);
-            transform: translate3d(0, 0, 0) rotate(162deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(128deg);
+            transform: translate3d(0, 0, 0) rotate(128deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(522deg);
-            transform: translate3d(0, 0, 0) rotate(522deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(488deg);
+            transform: translate3d(0, 0, 0) rotate(488deg); } }
 
 .shape-container--21 {
-  -webkit-animation: shape-21 48s linear infinite;
-          animation: shape-21 48s linear infinite; }
+  -webkit-animation: shape-21 43s linear infinite;
+          animation: shape-21 43s linear infinite; }
   .shape-container--21 .random-shape:after {
-    margin: 7rem;
-    color: #FFD700;
-    font-size: 2.8rem;
-    content: ""; }
+    margin: 1rem;
+    color: #C2B7FE;
+    font-size: 0.4rem;
+    content: ""; }
 
 @-webkit-keyframes shape-22 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(243deg);
-            transform: translate3d(0, 0, 0) rotate(243deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(265deg);
+            transform: translate3d(0, 0, 0) rotate(265deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(603deg);
-            transform: translate3d(0, 0, 0) rotate(603deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(625deg);
+            transform: translate3d(0, 0, 0) rotate(625deg); } }
 
 @keyframes shape-22 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(243deg);
-            transform: translate3d(0, 0, 0) rotate(243deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(265deg);
+            transform: translate3d(0, 0, 0) rotate(265deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(603deg);
-            transform: translate3d(0, 0, 0) rotate(603deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(625deg);
+            transform: translate3d(0, 0, 0) rotate(625deg); } }
 
 .shape-container--22 {
-  -webkit-animation: shape-22 46s linear infinite;
-          animation: shape-22 46s linear infinite; }
+  -webkit-animation: shape-22 43s linear infinite;
+          animation: shape-22 43s linear infinite; }
   .shape-container--22 .random-shape:after {
-    margin: 8rem;
-    color: #FFF8DC;
-    font-size: 3.2rem;
-    content: ""; }
+    margin: 4rem;
+    color: #95A9FF;
+    font-size: 1.6rem;
+    content: ""; }
 
 @-webkit-keyframes shape-23 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(344deg);
-            transform: translate3d(0, 0, 0) rotate(344deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(223deg);
+            transform: translate3d(0, 0, 0) rotate(223deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(704deg);
-            transform: translate3d(0, 0, 0) rotate(704deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(583deg);
+            transform: translate3d(0, 0, 0) rotate(583deg); } }
 
 @keyframes shape-23 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(344deg);
-            transform: translate3d(0, 0, 0) rotate(344deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(223deg);
+            transform: translate3d(0, 0, 0) rotate(223deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(704deg);
-            transform: translate3d(0, 0, 0) rotate(704deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(583deg);
+            transform: translate3d(0, 0, 0) rotate(583deg); } }
 
 .shape-container--23 {
-  -webkit-animation: shape-23 45s linear infinite;
-          animation: shape-23 45s linear infinite; }
+  -webkit-animation: shape-23 42s linear infinite;
+          animation: shape-23 42s linear infinite; }
   .shape-container--23 .random-shape:after {
-    margin: 9rem;
-    color: #FFD700;
-    font-size: 3.6rem;
-    content: ""; }
+    margin: 8rem;
+    color: #95A9FF;
+    font-size: 3.2rem;
+    content: ""; }
 
 @-webkit-keyframes shape-24 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(69deg);
-            transform: translate3d(0, 0, 0) rotate(69deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(74deg);
+            transform: translate3d(0, 0, 0) rotate(74deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(429deg);
-            transform: translate3d(0, 0, 0) rotate(429deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(434deg);
+            transform: translate3d(0, 0, 0) rotate(434deg); } }
 
 @keyframes shape-24 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(69deg);
-            transform: translate3d(0, 0, 0) rotate(69deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(74deg);
+            transform: translate3d(0, 0, 0) rotate(74deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(429deg);
-            transform: translate3d(0, 0, 0) rotate(429deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(434deg);
+            transform: translate3d(0, 0, 0) rotate(434deg); } }
 
 .shape-container--24 {
-  -webkit-animation: shape-24 41s linear infinite;
-          animation: shape-24 41s linear infinite; }
+  -webkit-animation: shape-24 44s linear infinite;
+          animation: shape-24 44s linear infinite; }
   .shape-container--24 .random-shape:after {
-    margin: 10rem;
-    color: #FFF8DC;
-    font-size: 4rem;
-    content: ""; }
-
-@-webkit-keyframes shape-25 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(32deg);
-            transform: translate3d(0, 0, 0) rotate(32deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(392deg);
-            transform: translate3d(0, 0, 0) rotate(392deg); } }
-
-@keyframes shape-25 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(32deg);
-            transform: translate3d(0, 0, 0) rotate(32deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(392deg);
-            transform: translate3d(0, 0, 0) rotate(392deg); } }
-
-.shape-container--25 {
-  -webkit-animation: shape-25 47s linear infinite;
-          animation: shape-25 47s linear infinite; }
-  .shape-container--25 .random-shape:after {
     margin: 6rem;
-    color: #95A9FF;
+    color: #FFF8DC;
     font-size: 2.4rem;
     content: ""; }
 
+@-webkit-keyframes shape-25 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(65deg);
+            transform: translate3d(0, 0, 0) rotate(65deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(425deg);
+            transform: translate3d(0, 0, 0) rotate(425deg); } }
+
+@keyframes shape-25 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(65deg);
+            transform: translate3d(0, 0, 0) rotate(65deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(425deg);
+            transform: translate3d(0, 0, 0) rotate(425deg); } }
+
+.shape-container--25 {
+  -webkit-animation: shape-25 46s linear infinite;
+          animation: shape-25 46s linear infinite; }
+  .shape-container--25 .random-shape:after {
+    margin: 2rem;
+    color: #FFF8DC;
+    font-size: 0.8rem;
+    content: ""; }
+
 @-webkit-keyframes shape-26 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(72deg);
-            transform: translate3d(0, 0, 0) rotate(72deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(55deg);
+            transform: translate3d(0, 0, 0) rotate(55deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(432deg);
-            transform: translate3d(0, 0, 0) rotate(432deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(415deg);
+            transform: translate3d(0, 0, 0) rotate(415deg); } }
 
 @keyframes shape-26 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(72deg);
-            transform: translate3d(0, 0, 0) rotate(72deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(55deg);
+            transform: translate3d(0, 0, 0) rotate(55deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(432deg);
-            transform: translate3d(0, 0, 0) rotate(432deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(415deg);
+            transform: translate3d(0, 0, 0) rotate(415deg); } }
 
 .shape-container--26 {
-  -webkit-animation: shape-26 42s linear infinite;
-          animation: shape-26 42s linear infinite; }
+  -webkit-animation: shape-26 41s linear infinite;
+          animation: shape-26 41s linear infinite; }
   .shape-container--26 .random-shape:after {
-    margin: 4rem;
+    margin: 2rem;
     color: #DB7093;
-    font-size: 1.6rem;
-    content: ""; }
+    font-size: 0.8rem;
+    content: ""; }
 
 @-webkit-keyframes shape-27 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(242deg);
-            transform: translate3d(0, 0, 0) rotate(242deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(48deg);
+            transform: translate3d(0, 0, 0) rotate(48deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(602deg);
-            transform: translate3d(0, 0, 0) rotate(602deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(408deg);
+            transform: translate3d(0, 0, 0) rotate(408deg); } }
 
 @keyframes shape-27 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(242deg);
-            transform: translate3d(0, 0, 0) rotate(242deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(48deg);
+            transform: translate3d(0, 0, 0) rotate(48deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(602deg);
-            transform: translate3d(0, 0, 0) rotate(602deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(408deg);
+            transform: translate3d(0, 0, 0) rotate(408deg); } }
 
 .shape-container--27 {
-  -webkit-animation: shape-27 44s linear infinite;
-          animation: shape-27 44s linear infinite; }
+  -webkit-animation: shape-27 42s linear infinite;
+          animation: shape-27 42s linear infinite; }
   .shape-container--27 .random-shape:after {
-    margin: 4rem;
-    color: #DB7093;
-    font-size: 1.6rem;
-    content: ""; }
+    margin: 5rem;
+    color: #95A9FF;
+    font-size: 2rem;
+    content: ""; }
 
 @-webkit-keyframes shape-28 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(15deg);
-            transform: translate3d(0, 0, 0) rotate(15deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(172deg);
+            transform: translate3d(0, 0, 0) rotate(172deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(375deg);
-            transform: translate3d(0, 0, 0) rotate(375deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(532deg);
+            transform: translate3d(0, 0, 0) rotate(532deg); } }
 
 @keyframes shape-28 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(15deg);
-            transform: translate3d(0, 0, 0) rotate(15deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(172deg);
+            transform: translate3d(0, 0, 0) rotate(172deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(375deg);
-            transform: translate3d(0, 0, 0) rotate(375deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(532deg);
+            transform: translate3d(0, 0, 0) rotate(532deg); } }
 
 .shape-container--28 {
-  -webkit-animation: shape-28 45s linear infinite;
-          animation: shape-28 45s linear infinite; }
+  -webkit-animation: shape-28 49s linear infinite;
+          animation: shape-28 49s linear infinite; }
   .shape-container--28 .random-shape:after {
-    margin: 8rem;
-    color: #FFF8DC;
-    font-size: 3.2rem;
-    content: ""; }
+    margin: 5rem;
+    color: #C2B7FE;
+    font-size: 2rem;
+    content: ""; }
 
 @-webkit-keyframes shape-29 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(332deg);
-            transform: translate3d(0, 0, 0) rotate(332deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(249deg);
+            transform: translate3d(0, 0, 0) rotate(249deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(692deg);
-            transform: translate3d(0, 0, 0) rotate(692deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(609deg);
+            transform: translate3d(0, 0, 0) rotate(609deg); } }
 
 @keyframes shape-29 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(332deg);
-            transform: translate3d(0, 0, 0) rotate(332deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(249deg);
+            transform: translate3d(0, 0, 0) rotate(249deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(692deg);
-            transform: translate3d(0, 0, 0) rotate(692deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(609deg);
+            transform: translate3d(0, 0, 0) rotate(609deg); } }
 
 .shape-container--29 {
   -webkit-animation: shape-29 46s linear infinite;
           animation: shape-29 46s linear infinite; }
   .shape-container--29 .random-shape:after {
-    margin: 6rem;
+    margin: 2rem;
     color: #FFF8DC;
-    font-size: 2.4rem;
+    font-size: 0.8rem;
     content: ""; }
 
 @-webkit-keyframes shape-30 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(72deg);
-            transform: translate3d(0, 0, 0) rotate(72deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(74deg);
+            transform: translate3d(0, 0, 0) rotate(74deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(432deg);
-            transform: translate3d(0, 0, 0) rotate(432deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(434deg);
+            transform: translate3d(0, 0, 0) rotate(434deg); } }
 
 @keyframes shape-30 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(72deg);
-            transform: translate3d(0, 0, 0) rotate(72deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(74deg);
+            transform: translate3d(0, 0, 0) rotate(74deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(432deg);
-            transform: translate3d(0, 0, 0) rotate(432deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(434deg);
+            transform: translate3d(0, 0, 0) rotate(434deg); } }
 
 .shape-container--30 {
-  -webkit-animation: shape-30 47s linear infinite;
-          animation: shape-30 47s linear infinite; }
+  -webkit-animation: shape-30 48s linear infinite;
+          animation: shape-30 48s linear infinite; }
   .shape-container--30 .random-shape:after {
-    margin: 7rem;
-    color: #FFF8DC;
-    font-size: 2.8rem;
-    content: ""; }
+    margin: 6rem;
+    color: #C2B7FE;
+    font-size: 2.4rem;
+    content: ""; }
 
 @-webkit-keyframes shape-31 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(66deg);
-            transform: translate3d(0, 0, 0) rotate(66deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(351deg);
+            transform: translate3d(0, 0, 0) rotate(351deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(426deg);
-            transform: translate3d(0, 0, 0) rotate(426deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(711deg);
+            transform: translate3d(0, 0, 0) rotate(711deg); } }
 
 @keyframes shape-31 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(66deg);
-            transform: translate3d(0, 0, 0) rotate(66deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(351deg);
+            transform: translate3d(0, 0, 0) rotate(351deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(426deg);
-            transform: translate3d(0, 0, 0) rotate(426deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(711deg);
+            transform: translate3d(0, 0, 0) rotate(711deg); } }
 
 .shape-container--31 {
-  -webkit-animation: shape-31 42s linear infinite;
-          animation: shape-31 42s linear infinite; }
+  -webkit-animation: shape-31 41s linear infinite;
+          animation: shape-31 41s linear infinite; }
   .shape-container--31 .random-shape:after {
-    margin: 1rem;
-    color: #C2B7FE;
-    font-size: 0.4rem;
+    margin: 6rem;
+    color: #95A9FF;
+    font-size: 2.4rem;
     content: ""; }
 
 @-webkit-keyframes shape-32 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(181deg);
-            transform: translate3d(0, 0, 0) rotate(181deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(316deg);
+            transform: translate3d(0, 0, 0) rotate(316deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(541deg);
-            transform: translate3d(0, 0, 0) rotate(541deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(676deg);
+            transform: translate3d(0, 0, 0) rotate(676deg); } }
 
 @keyframes shape-32 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(181deg);
-            transform: translate3d(0, 0, 0) rotate(181deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(316deg);
+            transform: translate3d(0, 0, 0) rotate(316deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(541deg);
-            transform: translate3d(0, 0, 0) rotate(541deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(676deg);
+            transform: translate3d(0, 0, 0) rotate(676deg); } }
 
 .shape-container--32 {
-  -webkit-animation: shape-32 42s linear infinite;
-          animation: shape-32 42s linear infinite; }
+  -webkit-animation: shape-32 48s linear infinite;
+          animation: shape-32 48s linear infinite; }
   .shape-container--32 .random-shape:after {
-    margin: 3rem;
+    margin: 4rem;
     color: #FFF8DC;
-    font-size: 1.2rem;
-    content: ""; }
+    font-size: 1.6rem;
+    content: ""; }
 
 @-webkit-keyframes shape-33 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(104deg);
-            transform: translate3d(0, 0, 0) rotate(104deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(247deg);
+            transform: translate3d(0, 0, 0) rotate(247deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(464deg);
-            transform: translate3d(0, 0, 0) rotate(464deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(607deg);
+            transform: translate3d(0, 0, 0) rotate(607deg); } }
 
 @keyframes shape-33 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(104deg);
-            transform: translate3d(0, 0, 0) rotate(104deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(247deg);
+            transform: translate3d(0, 0, 0) rotate(247deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(464deg);
-            transform: translate3d(0, 0, 0) rotate(464deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(607deg);
+            transform: translate3d(0, 0, 0) rotate(607deg); } }
 
 .shape-container--33 {
-  -webkit-animation: shape-33 42s linear infinite;
-          animation: shape-33 42s linear infinite; }
+  -webkit-animation: shape-33 49s linear infinite;
+          animation: shape-33 49s linear infinite; }
   .shape-container--33 .random-shape:after {
-    margin: 8rem;
-    color: #95A9FF;
-    font-size: 3.2rem;
-    content: ""; }
-
-@-webkit-keyframes shape-34 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(102deg);
-            transform: translate3d(0, 0, 0) rotate(102deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(462deg);
-            transform: translate3d(0, 0, 0) rotate(462deg); } }
-
-@keyframes shape-34 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(102deg);
-            transform: translate3d(0, 0, 0) rotate(102deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(462deg);
-            transform: translate3d(0, 0, 0) rotate(462deg); } }
-
-.shape-container--34 {
-  -webkit-animation: shape-34 50s linear infinite;
-          animation: shape-34 50s linear infinite; }
-  .shape-container--34 .random-shape:after {
-    margin: 5rem;
-    color: #DB7093;
-    font-size: 2rem;
-    content: ""; }
-
-@-webkit-keyframes shape-35 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(114deg);
-            transform: translate3d(0, 0, 0) rotate(114deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(474deg);
-            transform: translate3d(0, 0, 0) rotate(474deg); } }
-
-@keyframes shape-35 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(114deg);
-            transform: translate3d(0, 0, 0) rotate(114deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(474deg);
-            transform: translate3d(0, 0, 0) rotate(474deg); } }
-
-.shape-container--35 {
-  -webkit-animation: shape-35 49s linear infinite;
-          animation: shape-35 49s linear infinite; }
-  .shape-container--35 .random-shape:after {
-    margin: 7rem;
-    color: #95A9FF;
-    font-size: 2.8rem;
-    content: ""; }
-
-@-webkit-keyframes shape-36 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(63deg);
-            transform: translate3d(0, 0, 0) rotate(63deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(423deg);
-            transform: translate3d(0, 0, 0) rotate(423deg); } }
-
-@keyframes shape-36 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(63deg);
-            transform: translate3d(0, 0, 0) rotate(63deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(423deg);
-            transform: translate3d(0, 0, 0) rotate(423deg); } }
-
-.shape-container--36 {
-  -webkit-animation: shape-36 44s linear infinite;
-          animation: shape-36 44s linear infinite; }
-  .shape-container--36 .random-shape:after {
-    margin: 6rem;
-    color: #C2B7FE;
-    font-size: 2.4rem;
-    content: ""; }
-
-@-webkit-keyframes shape-37 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(33deg);
-            transform: translate3d(0, 0, 0) rotate(33deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(393deg);
-            transform: translate3d(0, 0, 0) rotate(393deg); } }
-
-@keyframes shape-37 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(33deg);
-            transform: translate3d(0, 0, 0) rotate(33deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(393deg);
-            transform: translate3d(0, 0, 0) rotate(393deg); } }
-
-.shape-container--37 {
-  -webkit-animation: shape-37 47s linear infinite;
-          animation: shape-37 47s linear infinite; }
-  .shape-container--37 .random-shape:after {
-    margin: 3rem;
-    color: #FFD700;
-    font-size: 1.2rem;
-    content: ""; }
-
-@-webkit-keyframes shape-38 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(336deg);
-            transform: translate3d(0, 0, 0) rotate(336deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(696deg);
-            transform: translate3d(0, 0, 0) rotate(696deg); } }
-
-@keyframes shape-38 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(336deg);
-            transform: translate3d(0, 0, 0) rotate(336deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(696deg);
-            transform: translate3d(0, 0, 0) rotate(696deg); } }
-
-.shape-container--38 {
-  -webkit-animation: shape-38 47s linear infinite;
-          animation: shape-38 47s linear infinite; }
-  .shape-container--38 .random-shape:after {
-    margin: 9rem;
-    color: #FFD700;
-    font-size: 3.6rem;
-    content: ""; }
-
-@-webkit-keyframes shape-39 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(348deg);
-            transform: translate3d(0, 0, 0) rotate(348deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(708deg);
-            transform: translate3d(0, 0, 0) rotate(708deg); } }
-
-@keyframes shape-39 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(348deg);
-            transform: translate3d(0, 0, 0) rotate(348deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(708deg);
-            transform: translate3d(0, 0, 0) rotate(708deg); } }
-
-.shape-container--39 {
-  -webkit-animation: shape-39 41s linear infinite;
-          animation: shape-39 41s linear infinite; }
-  .shape-container--39 .random-shape:after {
-    margin: 10rem;
-    color: #DB7093;
-    font-size: 4rem;
-    content: ""; }
-
-@-webkit-keyframes shape-40 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(61deg);
-            transform: translate3d(0, 0, 0) rotate(61deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(421deg);
-            transform: translate3d(0, 0, 0) rotate(421deg); } }
-
-@keyframes shape-40 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(61deg);
-            transform: translate3d(0, 0, 0) rotate(61deg); }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(421deg);
-            transform: translate3d(0, 0, 0) rotate(421deg); } }
-
-.shape-container--40 {
-  -webkit-animation: shape-40 45s linear infinite;
-          animation: shape-40 45s linear infinite; }
-  .shape-container--40 .random-shape:after {
     margin: 4rem;
     color: #FFF8DC;
     font-size: 1.6rem;
     content: ""; }
 
-@-webkit-keyframes shape-41 {
+@-webkit-keyframes shape-34 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(313deg);
-            transform: translate3d(0, 0, 0) rotate(313deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(274deg);
+            transform: translate3d(0, 0, 0) rotate(274deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(673deg);
-            transform: translate3d(0, 0, 0) rotate(673deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(634deg);
+            transform: translate3d(0, 0, 0) rotate(634deg); } }
 
-@keyframes shape-41 {
+@keyframes shape-34 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(313deg);
-            transform: translate3d(0, 0, 0) rotate(313deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(274deg);
+            transform: translate3d(0, 0, 0) rotate(274deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(673deg);
-            transform: translate3d(0, 0, 0) rotate(673deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(634deg);
+            transform: translate3d(0, 0, 0) rotate(634deg); } }
 
-.shape-container--41 {
-  -webkit-animation: shape-41 44s linear infinite;
-          animation: shape-41 44s linear infinite; }
-  .shape-container--41 .random-shape:after {
-    margin: 5rem;
-    color: #FFD700;
-    font-size: 2rem;
+.shape-container--34 {
+  -webkit-animation: shape-34 45s linear infinite;
+          animation: shape-34 45s linear infinite; }
+  .shape-container--34 .random-shape:after {
+    margin: 2rem;
+    color: #95A9FF;
+    font-size: 0.8rem;
+    content: ""; }
+
+@-webkit-keyframes shape-35 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(317deg);
+            transform: translate3d(0, 0, 0) rotate(317deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(677deg);
+            transform: translate3d(0, 0, 0) rotate(677deg); } }
+
+@keyframes shape-35 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(317deg);
+            transform: translate3d(0, 0, 0) rotate(317deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(677deg);
+            transform: translate3d(0, 0, 0) rotate(677deg); } }
+
+.shape-container--35 {
+  -webkit-animation: shape-35 42s linear infinite;
+          animation: shape-35 42s linear infinite; }
+  .shape-container--35 .random-shape:after {
+    margin: 2rem;
+    color: #DB7093;
+    font-size: 0.8rem;
     content: ""; }
 
-@-webkit-keyframes shape-42 {
+@-webkit-keyframes shape-36 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(182deg);
-            transform: translate3d(0, 0, 0) rotate(182deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(79deg);
+            transform: translate3d(0, 0, 0) rotate(79deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(542deg);
-            transform: translate3d(0, 0, 0) rotate(542deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(439deg);
+            transform: translate3d(0, 0, 0) rotate(439deg); } }
 
-@keyframes shape-42 {
+@keyframes shape-36 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(182deg);
-            transform: translate3d(0, 0, 0) rotate(182deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(79deg);
+            transform: translate3d(0, 0, 0) rotate(79deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(542deg);
-            transform: translate3d(0, 0, 0) rotate(542deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(439deg);
+            transform: translate3d(0, 0, 0) rotate(439deg); } }
 
-.shape-container--42 {
-  -webkit-animation: shape-42 47s linear infinite;
-          animation: shape-42 47s linear infinite; }
-  .shape-container--42 .random-shape:after {
+.shape-container--36 {
+  -webkit-animation: shape-36 47s linear infinite;
+          animation: shape-36 47s linear infinite; }
+  .shape-container--36 .random-shape:after {
+    margin: 8rem;
+    color: #FFD700;
+    font-size: 3.2rem;
+    content: ""; }
+
+@-webkit-keyframes shape-37 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(47deg);
+            transform: translate3d(0, 0, 0) rotate(47deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(407deg);
+            transform: translate3d(0, 0, 0) rotate(407deg); } }
+
+@keyframes shape-37 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(47deg);
+            transform: translate3d(0, 0, 0) rotate(47deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(407deg);
+            transform: translate3d(0, 0, 0) rotate(407deg); } }
+
+.shape-container--37 {
+  -webkit-animation: shape-37 49s linear infinite;
+          animation: shape-37 49s linear infinite; }
+  .shape-container--37 .random-shape:after {
+    margin: 1rem;
+    color: #DB7093;
+    font-size: 0.4rem;
+    content: ""; }
+
+@-webkit-keyframes shape-38 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(245deg);
+            transform: translate3d(0, 0, 0) rotate(245deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(605deg);
+            transform: translate3d(0, 0, 0) rotate(605deg); } }
+
+@keyframes shape-38 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(245deg);
+            transform: translate3d(0, 0, 0) rotate(245deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(605deg);
+            transform: translate3d(0, 0, 0) rotate(605deg); } }
+
+.shape-container--38 {
+  -webkit-animation: shape-38 50s linear infinite;
+          animation: shape-38 50s linear infinite; }
+  .shape-container--38 .random-shape:after {
+    margin: 9rem;
+    color: #95A9FF;
+    font-size: 3.6rem;
+    content: ""; }
+
+@-webkit-keyframes shape-39 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(133deg);
+            transform: translate3d(0, 0, 0) rotate(133deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(493deg);
+            transform: translate3d(0, 0, 0) rotate(493deg); } }
+
+@keyframes shape-39 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(133deg);
+            transform: translate3d(0, 0, 0) rotate(133deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(493deg);
+            transform: translate3d(0, 0, 0) rotate(493deg); } }
+
+.shape-container--39 {
+  -webkit-animation: shape-39 43s linear infinite;
+          animation: shape-39 43s linear infinite; }
+  .shape-container--39 .random-shape:after {
     margin: 6rem;
     color: #FFF8DC;
     font-size: 2.4rem;
-    content: ""; }
+    content: ""; }
+
+@-webkit-keyframes shape-40 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(327deg);
+            transform: translate3d(0, 0, 0) rotate(327deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(687deg);
+            transform: translate3d(0, 0, 0) rotate(687deg); } }
+
+@keyframes shape-40 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(327deg);
+            transform: translate3d(0, 0, 0) rotate(327deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(687deg);
+            transform: translate3d(0, 0, 0) rotate(687deg); } }
+
+.shape-container--40 {
+  -webkit-animation: shape-40 41s linear infinite;
+          animation: shape-40 41s linear infinite; }
+  .shape-container--40 .random-shape:after {
+    margin: 5rem;
+    color: #C2B7FE;
+    font-size: 2rem;
+    content: ""; }
+
+@-webkit-keyframes shape-41 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(276deg);
+            transform: translate3d(0, 0, 0) rotate(276deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(636deg);
+            transform: translate3d(0, 0, 0) rotate(636deg); } }
+
+@keyframes shape-41 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(276deg);
+            transform: translate3d(0, 0, 0) rotate(276deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(636deg);
+            transform: translate3d(0, 0, 0) rotate(636deg); } }
+
+.shape-container--41 {
+  -webkit-animation: shape-41 49s linear infinite;
+          animation: shape-41 49s linear infinite; }
+  .shape-container--41 .random-shape:after {
+    margin: 8rem;
+    color: #FFF8DC;
+    font-size: 3.2rem;
+    content: ""; }
+
+@-webkit-keyframes shape-42 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(56deg);
+            transform: translate3d(0, 0, 0) rotate(56deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(416deg);
+            transform: translate3d(0, 0, 0) rotate(416deg); } }
+
+@keyframes shape-42 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(56deg);
+            transform: translate3d(0, 0, 0) rotate(56deg); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(416deg);
+            transform: translate3d(0, 0, 0) rotate(416deg); } }
+
+.shape-container--42 {
+  -webkit-animation: shape-42 44s linear infinite;
+          animation: shape-42 44s linear infinite; }
+  .shape-container--42 .random-shape:after {
+    margin: 4rem;
+    color: #95A9FF;
+    font-size: 1.6rem;
+    content: ""; }
 
 @-webkit-keyframes shape-43 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(278deg);
-            transform: translate3d(0, 0, 0) rotate(278deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(2deg);
+            transform: translate3d(0, 0, 0) rotate(2deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(638deg);
-            transform: translate3d(0, 0, 0) rotate(638deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(362deg);
+            transform: translate3d(0, 0, 0) rotate(362deg); } }
 
 @keyframes shape-43 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(278deg);
-            transform: translate3d(0, 0, 0) rotate(278deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(2deg);
+            transform: translate3d(0, 0, 0) rotate(2deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(638deg);
-            transform: translate3d(0, 0, 0) rotate(638deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(362deg);
+            transform: translate3d(0, 0, 0) rotate(362deg); } }
 
 .shape-container--43 {
-  -webkit-animation: shape-43 44s linear infinite;
-          animation: shape-43 44s linear infinite; }
+  -webkit-animation: shape-43 49s linear infinite;
+          animation: shape-43 49s linear infinite; }
   .shape-container--43 .random-shape:after {
-    margin: 2rem;
-    color: #FFF8DC;
-    font-size: 0.8rem;
-    content: ""; }
+    margin: 1rem;
+    color: #FFD700;
+    font-size: 0.4rem;
+    content: ""; }
 
 @-webkit-keyframes shape-44 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(256deg);
-            transform: translate3d(0, 0, 0) rotate(256deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(287deg);
+            transform: translate3d(0, 0, 0) rotate(287deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(616deg);
-            transform: translate3d(0, 0, 0) rotate(616deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(647deg);
+            transform: translate3d(0, 0, 0) rotate(647deg); } }
 
 @keyframes shape-44 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(256deg);
-            transform: translate3d(0, 0, 0) rotate(256deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(287deg);
+            transform: translate3d(0, 0, 0) rotate(287deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(616deg);
-            transform: translate3d(0, 0, 0) rotate(616deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(647deg);
+            transform: translate3d(0, 0, 0) rotate(647deg); } }
 
 .shape-container--44 {
-  -webkit-animation: shape-44 49s linear infinite;
-          animation: shape-44 49s linear infinite; }
+  -webkit-animation: shape-44 42s linear infinite;
+          animation: shape-44 42s linear infinite; }
   .shape-container--44 .random-shape:after {
     margin: 1rem;
     color: #FFD700;
     font-size: 0.4rem;
-    content: ""; }
+    content: ""; }
 
 @-webkit-keyframes shape-45 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
-            transform: translate3d(0, 0, 0) rotate(360deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(251deg);
+            transform: translate3d(0, 0, 0) rotate(251deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(720deg);
-            transform: translate3d(0, 0, 0) rotate(720deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(611deg);
+            transform: translate3d(0, 0, 0) rotate(611deg); } }
 
 @keyframes shape-45 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
-            transform: translate3d(0, 0, 0) rotate(360deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(251deg);
+            transform: translate3d(0, 0, 0) rotate(251deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(720deg);
-            transform: translate3d(0, 0, 0) rotate(720deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(611deg);
+            transform: translate3d(0, 0, 0) rotate(611deg); } }
 
 .shape-container--45 {
-  -webkit-animation: shape-45 44s linear infinite;
-          animation: shape-45 44s linear infinite; }
+  -webkit-animation: shape-45 48s linear infinite;
+          animation: shape-45 48s linear infinite; }
   .shape-container--45 .random-shape:after {
-    margin: 3rem;
-    color: #95A9FF;
-    font-size: 1.2rem;
+    margin: 10rem;
+    color: #C2B7FE;
+    font-size: 4rem;
     content: ""; }
 
 @-webkit-keyframes shape-46 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(295deg);
-            transform: translate3d(0, 0, 0) rotate(295deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(55deg);
+            transform: translate3d(0, 0, 0) rotate(55deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(655deg);
-            transform: translate3d(0, 0, 0) rotate(655deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(415deg);
+            transform: translate3d(0, 0, 0) rotate(415deg); } }
 
 @keyframes shape-46 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(295deg);
-            transform: translate3d(0, 0, 0) rotate(295deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(55deg);
+            transform: translate3d(0, 0, 0) rotate(55deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(655deg);
-            transform: translate3d(0, 0, 0) rotate(655deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(415deg);
+            transform: translate3d(0, 0, 0) rotate(415deg); } }
 
 .shape-container--46 {
-  -webkit-animation: shape-46 45s linear infinite;
-          animation: shape-46 45s linear infinite; }
+  -webkit-animation: shape-46 49s linear infinite;
+          animation: shape-46 49s linear infinite; }
   .shape-container--46 .random-shape:after {
-    margin: 2rem;
-    color: #95A9FF;
-    font-size: 0.8rem;
-    content: ""; }
+    margin: 4rem;
+    color: #FFD700;
+    font-size: 1.6rem;
+    content: ""; }
 
 @-webkit-keyframes shape-47 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(348deg);
-            transform: translate3d(0, 0, 0) rotate(348deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(142deg);
+            transform: translate3d(0, 0, 0) rotate(142deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(708deg);
-            transform: translate3d(0, 0, 0) rotate(708deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(502deg);
+            transform: translate3d(0, 0, 0) rotate(502deg); } }
 
 @keyframes shape-47 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(348deg);
-            transform: translate3d(0, 0, 0) rotate(348deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(142deg);
+            transform: translate3d(0, 0, 0) rotate(142deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(708deg);
-            transform: translate3d(0, 0, 0) rotate(708deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(502deg);
+            transform: translate3d(0, 0, 0) rotate(502deg); } }
 
 .shape-container--47 {
-  -webkit-animation: shape-47 47s linear infinite;
-          animation: shape-47 47s linear infinite; }
+  -webkit-animation: shape-47 48s linear infinite;
+          animation: shape-47 48s linear infinite; }
   .shape-container--47 .random-shape:after {
-    margin: 10rem;
-    color: #C2B7FE;
-    font-size: 4rem;
-    content: ""; }
+    margin: 4rem;
+    color: #FFD700;
+    font-size: 1.6rem;
+    content: ""; }
 
 @-webkit-keyframes shape-48 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(87deg);
-            transform: translate3d(0, 0, 0) rotate(87deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(316deg);
+            transform: translate3d(0, 0, 0) rotate(316deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(447deg);
-            transform: translate3d(0, 0, 0) rotate(447deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(676deg);
+            transform: translate3d(0, 0, 0) rotate(676deg); } }
 
 @keyframes shape-48 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(87deg);
-            transform: translate3d(0, 0, 0) rotate(87deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(316deg);
+            transform: translate3d(0, 0, 0) rotate(316deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(447deg);
-            transform: translate3d(0, 0, 0) rotate(447deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(676deg);
+            transform: translate3d(0, 0, 0) rotate(676deg); } }
 
 .shape-container--48 {
-  -webkit-animation: shape-48 43s linear infinite;
-          animation: shape-48 43s linear infinite; }
+  -webkit-animation: shape-48 48s linear infinite;
+          animation: shape-48 48s linear infinite; }
   .shape-container--48 .random-shape:after {
-    margin: 2rem;
-    color: #95A9FF;
-    font-size: 0.8rem;
-    content: ""; }
+    margin: 5rem;
+    color: #FFF8DC;
+    font-size: 2rem;
+    content: ""; }
 
 @-webkit-keyframes shape-49 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(260deg);
-            transform: translate3d(0, 0, 0) rotate(260deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(343deg);
+            transform: translate3d(0, 0, 0) rotate(343deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(620deg);
-            transform: translate3d(0, 0, 0) rotate(620deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(703deg);
+            transform: translate3d(0, 0, 0) rotate(703deg); } }
 
 @keyframes shape-49 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(260deg);
-            transform: translate3d(0, 0, 0) rotate(260deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(343deg);
+            transform: translate3d(0, 0, 0) rotate(343deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(620deg);
-            transform: translate3d(0, 0, 0) rotate(620deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(703deg);
+            transform: translate3d(0, 0, 0) rotate(703deg); } }
 
 .shape-container--49 {
-  -webkit-animation: shape-49 43s linear infinite;
-          animation: shape-49 43s linear infinite; }
+  -webkit-animation: shape-49 46s linear infinite;
+          animation: shape-49 46s linear infinite; }
   .shape-container--49 .random-shape:after {
-    margin: 3rem;
-    color: #95A9FF;
-    font-size: 1.2rem;
-    content: ""; }
+    margin: 1rem;
+    color: #DB7093;
+    font-size: 0.4rem;
+    content: ""; }
 
 @-webkit-keyframes shape-50 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(268deg);
-            transform: translate3d(0, 0, 0) rotate(268deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(252deg);
+            transform: translate3d(0, 0, 0) rotate(252deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(628deg);
-            transform: translate3d(0, 0, 0) rotate(628deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(612deg);
+            transform: translate3d(0, 0, 0) rotate(612deg); } }
 
 @keyframes shape-50 {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(268deg);
-            transform: translate3d(0, 0, 0) rotate(268deg); }
+    -webkit-transform: translate3d(0, 0, 0) rotate(252deg);
+            transform: translate3d(0, 0, 0) rotate(252deg); }
   100% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(628deg);
-            transform: translate3d(0, 0, 0) rotate(628deg); } }
+    -webkit-transform: translate3d(0, 0, 0) rotate(612deg);
+            transform: translate3d(0, 0, 0) rotate(612deg); } }
 
 .shape-container--50 {
-  -webkit-animation: shape-50 43s linear infinite;
-          animation: shape-50 43s linear infinite; }
+  -webkit-animation: shape-50 42s linear infinite;
+          animation: shape-50 42s linear infinite; }
   .shape-container--50 .random-shape:after {
-    margin: 7rem;
-    color: #FFD700;
-    font-size: 2.8rem;
+    margin: 1rem;
+    color: #FFF8DC;
+    font-size: 0.4rem;
     content: ""; }
 
 .exceed {
