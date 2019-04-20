@@ -159,12 +159,16 @@ a:visited {
 }
 
 .hiddent-on-phone {
+	
 	@media (max-width: $sd-plus) {
 		display: none;
 	}
 }
 
 .hiddent-on-pc {
+	@media (min-width: 415px) {
+		display: none;
+	}
 	@media (min-width: $md-laptop) {
 		display: none;
 	}

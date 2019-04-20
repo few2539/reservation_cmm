@@ -21,7 +21,7 @@ class product extends CI_Controller {
 		$data['products'] = $this->frontend_model->getallproducts();
 
 		if($error!=null){
-			echo "<script type=\"text/javascript\">alert(\"ไม่สามารถทำรายการได้ เนื่องจากสินค้าเพิ่ง Out of Stock\");</script>";
+			echo "<script type=\"text/javascript\">alert(\"ไม่สามารถทำรายการได้ เนื่องจากอุปกรณ์เพิ่ง Out of Stock\");</script>";
 		}
 
 		$this->load->view('frontend/product/index',$data);

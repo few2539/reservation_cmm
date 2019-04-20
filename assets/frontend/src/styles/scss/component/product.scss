@@ -27,6 +27,11 @@ section {
 		margin-right: 80px;
 		margin-top: 20px;
 
+		@media(max-width: 767px) {
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+
 		@media(max-width: 414px) {
 			margin-left: 15px;
 			margin-right: 15px;
@@ -101,11 +106,15 @@ section {
 
 					}
 
+					@media(max-width: 767px) {
+						width: 50%;
+						max-width:50% !important;
+
+					}
 
 					@media(max-width: 414px) {
 						width: 50%;
 						max-width: 50% !important;
-
 					}
 
 					@media(max-width: $sd) {
@@ -747,6 +756,11 @@ section {
 }
 
 .xs-menu-cont {
+
+	@media(max-width: 767px) {
+	display: none !important;
+
+	}
 	@media (max-width: $sd-plus) {
 		display: none !important;
 	}
@@ -754,6 +768,9 @@ section {
 
 .cmm-respon-menu {
 	cursor: pointer;
+	@media (max-width: 1023px) {
+		display: none !important;
+	}
 	@media (max-width: $md) {
 		display: none !important;
 	}

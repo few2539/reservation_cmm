@@ -190,6 +190,10 @@ a:visited {
   .hiddent-on-phone {
     display: none; } }
 
+@media (min-width: 415px) {
+  .hiddent-on-pc {
+    display: none; } }
+
 @media (min-width: 1366px) {
   .hiddent-on-pc {
     display: none; } }

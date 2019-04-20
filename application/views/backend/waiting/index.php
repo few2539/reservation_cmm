@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <head>
 	<meta charset="utf-8">
-	<title>สินค้า (กล้อง เลนส์)</title>
+	<title>อุปกรณ์</title>
   <?php $this->load->view('backend/template/headtag');?>
   
   <style>
@@ -43,13 +43,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </ol>
           </div>
           <div style="float: right;">
-              <a href="<?=site_url('product/admin_add');?>">เพิ่มรายการสินค้าใหม่</a>
+              <a href="<?=site_url('product/admin_add');?>">เพิ่มรายการอุปกรณ์ใหม่</a>
           </div>
           <!-- /.Breadcrumb -->
           <div class="clearfix"></div>
           
           <div class="panel panel-default">
-            <div class="panel-heading">รายการ สินค้า</div>
+            <div class="panel-heading">รายการ อุปกรณ์</div>
             <div class="panel-body">
               <div class="table-responsive" style="overflow-y:hidden;">
                 <table id="data-table" class="table table-bordered table-condensed">
