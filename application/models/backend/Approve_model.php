@@ -52,8 +52,8 @@
 
 			$config = Array(
 				'protocol' => 'smtp',
-				'smtp_host' => 'ssl://smtp.googlemail.com',
-				'smtp_port' => 465,
+				'smtp_host' => 'smtp.gmail.com',
+				'smtp_port' => 587,
 				'smtp_user' => 'maxbaeiei@gmail.com',
 				'smtp_pass' => 'notkaksud79',
 				'mailtype'  => 'html', 
