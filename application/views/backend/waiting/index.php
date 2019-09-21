@@ -61,17 +61,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <th class="text-center text-middle">
                         ชื่อรายการ
                       </th>
-                      <th class="text-center text-middle">
-                        จำนวน
-                      </th>
+                     
                       <th class="text-center text-middle">
                         ประเภทรายการ
                       </th>
                       <th class="text-center text-middle">
                         สถานะ
                       </th>
-                      <th class="text-center text-middle" style="min-width: 180px;">
+                      <th class="text-center text-middle" >
                       รหัสครุภัณฑ์
+                      </th>
+                      <th class="text-center text-middle" style="min-width: 180px;">
+                        เรียกคืน
                       </th>
                     </tr>
                   </thead>
@@ -85,9 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <td class="text-center text-middle">
                         <?php echo $product['product_name']; ?>
                       </td>
-                      <td class="text-center text-middle">
-                        <?php echo $product['product_amount']; ?>
-                      </td>
+                      
                       <td class="text-center text-middle">
                         <?php echo $product['category_name']; ?>
                       </td>
@@ -96,6 +95,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       </td>
                       <td class="text-center text-middle">
                       <?php echo $product['product_detail']; ?> 
+                      </td>
+                      <td class="text-center text-middle">
+                      <div style="margin-top:2%;">
+                          <?php $attributes  = array('id' => 'returnProduct'.$product['product_id']); ?>
+                          <?php $hidden  = array('product_id' => $product['product_id']); ?>
+                          <?= form_open('product/callback', $attributes, $hidden); ?>
+                            <button type="button" value="<?php echo $product['product_id'] ?>"  class="btn btn-<?php if($product["product_status"] == 'approved') { echo "hiddent-btn"; }elseif ($product["product_status"] == 'waiting'){ echo "warning"; } elseif ($product["product_status"] == 'available'){ echo "hiddent-btn"; }?> btn-sm" style="font-weight: bold;width: 30%; float: left;" onclick="returnConfirm(this.value);">
+                              <i class="fa fa-check"></i> เรียกคืน 
+                            </button>
+                          <?= form_close(); ?>
+                        </div>
                       </td>
                     </tr>
                     <?php $i++; ?>

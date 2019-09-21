@@ -140,6 +140,22 @@
 			return $query;
 		}
 
+		public function productcallback(){
+			$product_id = $this->input->post('product_id');
+			$data = array(
+				'product_status' => 'available',
+				'product_amount' => '1',
+				'product_booking' => '',
+				'product_sendmail' => '',
+				'product_usernameid' => '',
+			);
+
+			$this->db->where('product_id', $product_id);
+			$query = $this->db->update('product',$data);
+
+			return $query;
+		}
+
 		 function thdate2utcdate($thdate) {
 			if(!empty($thdate)) {
 			list($d,$m,$Y) = explode('/',$thdate);

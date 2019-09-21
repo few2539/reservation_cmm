@@ -112,7 +112,15 @@ class product extends CI_Controller {
 	{
 		$this->product_model->productreturn();
 
-		redirect('product/admin');
+		redirect('repatriate/index');
 	}
+
+	public function callback()
+	{
+		$this->product_model->productcallback();
+
+		redirect('waiting/index');
+	}
+
 
 }
