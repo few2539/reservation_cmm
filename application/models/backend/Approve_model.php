@@ -54,8 +54,8 @@
 				'protocol' => 'smtp',
 				'smtp_host' => 'smtp.gmail.com',
 				'smtp_port' => 587,
-				'smtp_user' => 'maxbaeiei@gmail.com',
-				'smtp_pass' => 'notkaksud79',
+				'smtp_user' => 'reservationcmm@gmail.com',
+				'smtp_pass' => 'citcmmkmutt',
 				'mailtype'  => 'html', 
 				'charset'   => 'utf-8'
 			);
