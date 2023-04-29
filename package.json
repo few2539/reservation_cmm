@@ -4,12 +4,12 @@
   "dependencies": {
     "dropify": "^0.2.2",
     "gulp-concat": "^2.6.1",
-    "gulp-copy": "^1.1.0",
+    "gulp-copy": "^4.0.1",
     "pump": "^3.0.0",
     "shufflejs": "^5.2.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-js-minify": "0.0.3",
